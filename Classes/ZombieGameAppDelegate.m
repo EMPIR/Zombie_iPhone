@@ -7,7 +7,7 @@
 //
 
 #import "ZombieGameAppDelegate.h"
-#import "ZombieGameViewController.h"
+#import "MainMenuViewController.h"
 
 @implementation ZombieGameAppDelegate
 
@@ -19,6 +19,10 @@
     // Override point for customization after app launch    
     [window addSubview:viewController.view];
     [window makeKeyAndVisible];
+	
+	// Now try to set the orientation to landscape (right)
+	[[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeRight];
+	
 	
 	return YES;
 }

@@ -8,18 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@class ZombieGameViewController;
+@class MainMenuViewController;
 
 @interface ZombieGameAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-    ZombieGameViewController *viewController;
+   MainMenuViewController *viewController;
 	
 	
 	
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet ZombieGameViewController *viewController;
+@property (nonatomic, retain) IBOutlet MainMenuViewController *viewController;
 
 
 @end

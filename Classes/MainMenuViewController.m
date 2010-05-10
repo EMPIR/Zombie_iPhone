@@ -1,0 +1,78 @@
+//
+//  MainMenuViewController.m
+//  ZombieGame
+//
+//  Created by David Guinnip on 5/4/10.
+//  Copyright 2010 ArchVision. All rights reserved.
+//
+
+#import "MainMenuViewController.h"
+#import "ZombieGameViewController.h"
+#import "SetGame.h"
+
+@implementation MainMenuViewController
+@synthesize viewController;
+@synthesize setGame;
+
+-(IBAction) play:(id) sender{
+	[setGame newGame:1];
+	self.viewController.setGame = self.setGame;
+	NSLog(@"Play Clicked, not load Game View!");
+	[self presentModalViewController:viewController animated:YES];
+}
+-(IBAction) playRamero:(id) sender{
+	[setGame newGame:2];
+	self.viewController.setGame = self.setGame;
+	NSLog(@"Play Clicked, not load Game View!");
+	[self presentModalViewController:viewController animated:YES];
+}
+/*
+ // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+        // Custom initialization
+    }
+    return self;
+}
+*/
+
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+	setGame = [[SetGame alloc] init];
+	
+}
+
+
+
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations
+    //return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+
+}
+
+
+- (void)didReceiveMemoryWarning {
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc that aren't in use.
+}
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+
+- (void)dealloc {
+    [super dealloc];
+	[setGame dealloc];
+}
+
+
+@end

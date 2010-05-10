@@ -8,11 +8,15 @@
 #include <stdlib.h>
 
 @interface GameLogic : NSObject {
-	BOOL flipper;
+	//BOOL seed;
 }
 
--(double) randomNumber;
+//returns a randomNumber between [0.0-1.0]
++(double) randomNumber;
 
-@property (nonatomic,assign) BOOL flipper;
+//returns a rundom number between the specidied bounds
++(int) randomNumber:(int) floor, int ceiling;
+
+//@property (nonatomic,assign) BOOL seed;
 
 @end

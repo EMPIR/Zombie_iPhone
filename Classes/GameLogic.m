@@ -7,18 +7,42 @@
 //
 
 #import "GameLogic.h"
-
+#import "SetPiece.h"
+#import <stdio.h>
+#import <stdlib.h>
+#import <time.h>
 
 @implementation GameLogic
-@synthesize flipper;
+//@synthesize seed;
+BOOL seed = NO;
 
-
--(double) randomNumber
++(double) randomNumber
 {
+	/* initialize random seed: */
+	if(!seed){
+		srandom(time(NULL));
+		seed = YES;
+	}
+		
 	int r = random();
 	double rd = r / (double) RAND_MAX;
 	return rd;
 }
+
++(int) randomNumber:(int) floor, int ceiling
+{
+	double r = [self randomNumber];
+	
+	double dret = ((r  * (ceiling - floor)));
+	int ret = (int) round(dret);
+	ret+=floor;
+	
+	return ret;
+}
+
+
+
+
 
 
 
