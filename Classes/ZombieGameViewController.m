@@ -15,6 +15,7 @@
 
 @implementation ZombieGameViewController
 @synthesize button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,button11,button12;
+
 @synthesize selected1View,selected2View,selected3View;
 @synthesize selected4View,selected5View,selected6View;
 @synthesize selected7View,selected8View,selected9View;
@@ -24,7 +25,19 @@
 @synthesize setGame;
 
 BOOL firstClick = NO;
+int showWrong = 0;
+int showRight = 0;
+int showPiece1 = 0;
+int showPiece2 = 0;
+int showPiece3 = 0;
 
+
+-(BOOL) isButtonPressed:(int) index
+{
+	if(0 == [[setGame.pressed_state objectAtIndex:index] intValue])
+		return NO;
+	return YES;
+}
 
 
 -(UIButton *) getButton:(int) val
@@ -147,7 +160,7 @@ BOOL firstClick = NO;
 		message =[[NSString alloc] initWithFormat:@"Time: %0.0f", (timeInterval)];
 		[timerLabel setText:message];
 		[message release];
-	}
+	}		
 
 	
 	
@@ -157,56 +170,128 @@ BOOL firstClick = NO;
 	int val = [[setGame.state objectAtIndex:0] intValue];
 	NSLog(@"Setting image for piece index %d", val);
 	//SetPiece *p = (SetPiece)[setGame.pieces objectAtIndex:[inta]];
-	SetPiece *p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:0] intValue]];
-	UIImage  *img = [UIImage  imageNamed:p.image];
+	SetPiece *p;
+	UIImage  *img;
+		
+	for(int i=0;i<12;++i)
+	{
+		
+		p= (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:i] intValue]];
+	
+		if(showWrong > 0 && (showPiece1 == i || showPiece2 == i || showPiece3 == i))
+		{
+			img = [UIImage imageNamed:@"allBad.png"];
+			
+		}
+		else if(showRight > 0 && (showPiece1 == i || showPiece2 == i || showPiece3 == i))
+		{
+			img = [UIImage imageNamed:@"allGood.png"];
+		}
+		else {
+			if(![self isButtonPressed:i])
+				img = [UIImage  imageNamed:p.image];
+			else
+				img = [UIImage imageNamed:p.image2];
+			
+		}
+		UIButton *btn = [self getButton:i];
+		[btn setImage:img forState:UIControlStateNormal];
+		
+	}
+/*
+	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:0] intValue]];
+	
+	if(![self isButtonPressed:0])
+		img = [UIImage  imageNamed:p.image];
+	else
+		img = [UIImage imageNamed:p.image2];
 	[button1 setImage:img forState:UIControlStateNormal];
 	
+	
 	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:1] intValue]];
-	img = [UIImage  imageNamed:p.image];
+	if(![self isButtonPressed:1])
+		img = [UIImage  imageNamed:p.image];
+	else
+		img = [UIImage imageNamed:p.image2];
 	[button2 setImage:img forState:UIControlStateNormal];
 	
 	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:2] intValue]];
-	img = [UIImage  imageNamed:p.image];
-	[button3 setImage:img forState:UIControlStateNormal];
+	if(![self isButtonPressed:2])
+		img = [UIImage  imageNamed:p.image];
+	else
+		img = [UIImage imageNamed:p.image2];	[button3 setImage:img forState:UIControlStateNormal];
 	
 	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:3] intValue]];
-	img = [UIImage  imageNamed:p.image];
+	if(![self isButtonPressed:3])
+		img = [UIImage  imageNamed:p.image];
+	else
+		img = [UIImage imageNamed:p.image2];
 	[button4 setImage:img forState:UIControlStateNormal];
 	
 	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:4] intValue]];
-	img = [UIImage  imageNamed:p.image];
+	if(![self isButtonPressed:4])
+		img = [UIImage  imageNamed:p.image];
+	else
+		img = [UIImage imageNamed:p.image2];
 	[button5 setImage:img forState:UIControlStateNormal];
 	
 	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:5] intValue]];
-	img = [UIImage  imageNamed:p.image];
+	if(![self isButtonPressed:5])
+		img = [UIImage  imageNamed:p.image];
+	else
+		img = [UIImage imageNamed:p.image2];
 	[button6 setImage:img forState:UIControlStateNormal];
 	
 	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:6] intValue]];
-	img = [UIImage  imageNamed:p.image];
+	if(![self isButtonPressed:6])
+		img = [UIImage  imageNamed:p.image];
+	else
+		img = [UIImage imageNamed:p.image2];
 	[button7 setImage:img forState:UIControlStateNormal];
 	
 	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:7] intValue]];
-	img = [UIImage  imageNamed:p.image];
+	if(![self isButtonPressed:7])
+		img = [UIImage  imageNamed:p.image];
+	else
+		img = [UIImage imageNamed:p.image2];
 	[button8 setImage:img forState:UIControlStateNormal];
 	
 	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:8] intValue]];
-	img = [UIImage  imageNamed:p.image];
+	if(![self isButtonPressed:8])
+		img = [UIImage  imageNamed:p.image];
+	else
+		img = [UIImage imageNamed:p.image2];
 	[button9 setImage:img forState:UIControlStateNormal];
 	
 	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:9] intValue]];
-	img = [UIImage  imageNamed:p.image];
+	if(![self isButtonPressed:9])
+		img = [UIImage  imageNamed:p.image];
+	else
+		img = [UIImage imageNamed:p.image2];
 	[button10 setImage:img forState:UIControlStateNormal];
 	
 	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:10] intValue]];
-	img = [UIImage  imageNamed:p.image];
+	if(![self isButtonPressed:10])
+		img = [UIImage  imageNamed:p.image];
+	else
+		img = [UIImage imageNamed:p.image2];
 	[button11 setImage:img forState:UIControlStateNormal];
 	
 	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:11] intValue]];
-	img = [UIImage  imageNamed:p.image];
+	if(![self isButtonPressed:11])
+		img = [UIImage  imageNamed:p.image];
+	else
+		img = [UIImage imageNamed:p.image2];
 	[button12 setImage:img forState:UIControlStateNormal];
-	
+	*/
 	
 }
+
+-(void) setButtonPressed:(int) index:(int) value
+{
+	[setGame.pressed_state replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:value]];
+}
+
 
 -(void) drawFinished
 {
@@ -263,6 +348,7 @@ BOOL firstClick = NO;
 {
 	
 	UIButton *btn = sender;
+	[self setButtonPressed:index-1:1];	
 	if([setGame onPress:index])
 	{
 		
@@ -272,56 +358,62 @@ BOOL firstClick = NO;
 			self.selected1View.frame = btn.frame;
 			self.selected1View.hidden = NO;
 			
+			
 		}
 		else if(index == 2)
 		{
 			self.selected2View.frame = btn.frame;
 			self.selected2View.hidden = NO;
-			
 		}
 		else if(index == 3)
 		{
 			self.selected3View.frame = btn.frame;
 			self.selected3View.hidden = NO;
+			
 		}
 		if(index == 4)
 		{
 			self.selected4View.frame = btn.frame;
 			self.selected4View.hidden = NO;
 			
+			
 		}
 		else if(index == 5)
 		{
 			self.selected5View.frame = btn.frame;
 			self.selected5View.hidden = NO;
-			
+						
 		}
 		else if(index ==6) 		{
 			self.selected6View.frame = btn.frame;
 			self.selected6View.hidden = NO;
+			
 		}
 		if(index == 7)
 		{
 			self.selected7View.frame = btn.frame;
 			self.selected7View.hidden = NO;
 			
+			
 		}
 		else if(index == 8)
 		{
 			self.selected8View.frame = btn.frame;
 			self.selected8View.hidden = NO;
-			
+						
 		}
 		else if(index ==9) 
 		{
 			self.selected9View.frame = btn.frame;
 			self.selected9View.hidden = NO;
+			
 		}
 		
-		if(index == 10)
+		else if(index == 10)
 		{
 			self.selected10View.frame = btn.frame;
 			self.selected10View.hidden = NO;
+			
 			
 		}
 		else if(index == 11)
@@ -329,10 +421,12 @@ BOOL firstClick = NO;
 			self.selected11View.frame = btn.frame;
 			self.selected11View.hidden = NO;
 			
+			
 		}
 		else if(index ==12) 		{
 			self.selected12View.frame = btn.frame;
 			self.selected12View.hidden = NO;
+			
 		}
 		
 		if(setGame.count ==3)
@@ -342,6 +436,11 @@ BOOL firstClick = NO;
 			{
 				
 				NSLog(@"You found a match!  Hooray!");
+				showRight = 2;
+				showPiece1 = setGame.selection_a -1;
+				showPiece2 = setGame.selection_b -1;
+				showPiece3 = setGame.selection_c -1;
+				
 				setGame.currentMove ++;
 				setGame.setsComplete ++;
 				if(setGame.gameType == 1)
@@ -364,6 +463,10 @@ BOOL firstClick = NO;
 				
 			}
 			else {
+				showWrong= 2;
+				showPiece1 = setGame.selection_a -1;
+				showPiece2 = setGame.selection_b -1;
+				showPiece3 = setGame.selection_c -1;
 				setGame.selection_a = -1;
 				setGame.selection_b = -1;
 				setGame.selection_c = -1;
@@ -404,7 +507,7 @@ BOOL firstClick = NO;
 		else if(index ==6) 		{
 			self.selected6View.hidden = YES;
 		}
-		if(index == 7)
+		else if(index == 7)
 		{
 			self.selected7View.hidden = YES;
 			
@@ -419,7 +522,7 @@ BOOL firstClick = NO;
 			self.selected9View.hidden = YES;
 		}
 		
-		if(index == 10)
+		else if(index == 10)
 		{
 			self.selected10View.hidden = YES;
 			
@@ -502,6 +605,51 @@ BOOL firstClick = NO;
 		theGame.flipper = NO;
 	}*/
 }
+-(BOOL) buttonUp:(int) index:(id)sender
+{
+	//button was released
+	[self setButtonPressed:index-1:0];
+	return NO;
+}
+
+-(IBAction) button12Up:(id)sender{
+	[self buttonUp:12:sender];
+}
+-(IBAction) button11Up:(id)sender{
+	[self buttonUp:11:sender];
+}
+-(IBAction) button10Up:(id)sender{
+	[self buttonUp:10:sender];
+}
+-(IBAction) button9Up:(id)sender{
+	[self buttonUp:9:sender];
+}
+-(IBAction) button8Up:(id)sender{
+	[self buttonUp:8:sender];
+}
+-(IBAction) button7Up:(id)sender{
+	[self buttonUp:7:sender];
+}
+-(IBAction) button6Up:(id)sender{
+	[self buttonUp:6:sender];
+}
+-(IBAction) button5Up:(id)sender{
+	[self buttonUp:5:sender];
+}
+-(IBAction) button4Up:(id)sender{
+	[self buttonUp:4:sender];
+}
+-(IBAction) button3Up:(id)sender{
+	[self buttonUp:3:sender];
+}
+-(IBAction) button2Up:(id)sender{
+	[self buttonUp:2:sender];
+}
+-(IBAction) button1Up:(id)sender{
+	[self buttonUp:1:sender];
+}
+
+
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -528,6 +676,7 @@ BOOL firstClick = NO;
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
 }
 
 -(void) gameloop {
@@ -536,6 +685,12 @@ BOOL firstClick = NO;
 		[self drawFinished];
 	else
 		[self drawPieces];
+	
+	if(showRight > 0)
+		showRight --;
+	
+	if(showWrong > 0)
+		showWrong --;
 
 	
 }

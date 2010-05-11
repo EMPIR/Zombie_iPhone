@@ -354,9 +354,10 @@
 				for (int l = 1; l <= 3; ++l)
 				{
 					NSString *imagestr = [[[NSString alloc]init]autorelease]; 
-					
-					imagestr = [NSString stringWithFormat:@"%d%d%d%d.jpg", i,j,k,l];
-					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr];
+					imagestr = [NSString stringWithFormat:@"%d%d%d%da.png", i,j,k,l];
+					NSString *imagestr2 = [[[NSString alloc]init]autorelease]; 
+					imagestr2 = [NSString stringWithFormat:@"%d%d%d%db.png", i,j,k,l];
+					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr :imagestr2];
 					[ret addObject:(SetPiece *)p];
 					
 				}
@@ -380,9 +381,10 @@
 				for (int l = 0; l <= 0; ++l)
 				{
 					NSString *imagestr = [[[NSString alloc]init]autorelease]; 
-					NSLog(@"%", imagestr);
 					imagestr = [NSString stringWithFormat:@"%d%d%d%da.png", i,j,k,l];
-					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr];
+					NSString *imagestr2 = [[[NSString alloc]init]autorelease]; 
+					imagestr2 = [NSString stringWithFormat:@"%d%d%d%db.png", i,j,k,l];
+					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr :imagestr2];
 					[ret addObject:(SetPiece *)p];
 					
 				}
@@ -406,11 +408,11 @@
 				for (int l = 1; l <= 1; ++l)
 				{
 					NSString *imagestr = [[[NSString alloc]init]autorelease]; 
-					
-					imagestr = [NSString stringWithFormat:@"%d%d%d%d.jpg", i,j,k,l];
-					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr];
-					[ret addObject:(SetPiece *)p];
-					
+					imagestr = [NSString stringWithFormat:@"%d%d%d%da.png", i,j,k,l];
+					NSString *imagestr2 = [[[NSString alloc]init]autorelease]; 
+					imagestr2 = [NSString stringWithFormat:@"%d%d%d%db.png", i,j,k,l];
+					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr :imagestr2];
+					[ret addObject:(SetPiece *)p];					
 				}
 			}
 		}

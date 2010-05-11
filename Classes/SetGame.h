@@ -13,11 +13,9 @@
 	NSMutableArray *state;
 	NSMutableArray *pieces;
 	NSMutableArray *matches;
+	NSMutableArray *pressed_state;
 	int count;
 	BOOL match;
-	int selection_a;
-	int selection_b;
-	int selection_c;
 	int currentMove;
 	int totalMoves;
 	int totalPieces;
@@ -25,7 +23,12 @@
 	int setsComplete;
 	int gameTime;
 	int currentTime;
+	
+	int selection_a;
+	int selection_b;
+	int selection_c;
 
+	
 	
 	NSDate *startDate;
 	NSDate *finishedDate;
@@ -35,6 +38,7 @@
 @property (assign, nonatomic) NSMutableArray *state;
 @property (assign, nonatomic) NSMutableArray *pieces;
 @property (assign, nonatomic) NSMutableArray *matches;
+@property (assign, nonatomic) NSMutableArray *pressed_state;
 @property (assign, nonatomic) BOOL match;
 @property (assign, nonatomic) int count;
 @property (copy,nonatomic) NSDate *startDate;
@@ -43,9 +47,12 @@
 @property (assign, nonatomic) int totalMoves;
 @property (assign, nonatomic) int totalPieces;
 @property (assign, nonatomic) int gameType;
+
 @property (assign, nonatomic) int selection_a;
 @property (assign, nonatomic) int selection_b;
 @property (assign, nonatomic) int selection_c;
+
+
 
 @property (assign, nonatomic) int setsComplete;
 @property (assign, nonatomic) int gameTime;

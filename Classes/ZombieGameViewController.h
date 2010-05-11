@@ -60,7 +60,22 @@
 -(IBAction) button11Down:(id)sender;
 -(IBAction) button12Down:(id)sender;
 
+
+-(IBAction) button1Up:(id)sender;
+-(IBAction) button2Up:(id)sender;
+-(IBAction) button3Up:(id)sender;
+-(IBAction) button4Up:(id)sender;
+-(IBAction) button5Up:(id)sender;
+-(IBAction) button6Up:(id)sender;
+-(IBAction) button7Up:(id)sender;
+-(IBAction) button8Up:(id)sender;
+-(IBAction) button9Up:(id)sender;
+-(IBAction) button10Up:(id)sender;
+-(IBAction) button11Up:(id)sender;
+-(IBAction) button12Up:(id)sender;
+
 -(IBAction) finishedButtonDown:(id)sender;
+-(BOOL) isButtonPressed:(int) index;
 
 
 @property (nonatomic, retain) UILabel *finishedLabel;
@@ -79,6 +94,9 @@
 @property (nonatomic,retain) UIButton *button10;
 @property (nonatomic,retain) UIButton *button11;
 @property (nonatomic,retain) UIButton *button12;
+
+
+
 
 @property (nonatomic,retain) UIImageView *selected1View;
 @property (nonatomic,retain) UIImageView *selected2View;

@@ -15,6 +15,8 @@
 @synthesize match,state,pieces,matches,count, startDate,currentMove, finishedDate, totalMoves, totalPieces, gameType;
 @synthesize selection_a,selection_b,selection_c;
 @synthesize gameTime, currentTime, setsComplete;
+@synthesize pressed_state;
+
 
 typedef enum GameType
 {
@@ -57,8 +59,14 @@ typedef enum GameType
 		setsComplete = 0;
 		gameTime = 60; //seconds
 		currentTime = 0;
-		
-		
+		pressed_state = [[[NSMutableArray alloc] init] retain];
+		for(int i=0;i<12; ++i)
+		{
+			NSNumber *ns = [NSNumber numberWithInt:0];
+			[pressed_state addObject: ns];
+			
+			
+		}
 	}
 	return self;
 }
@@ -85,7 +93,6 @@ typedef enum GameType
 	setsComplete = 0;
 	gameTime = 60; //seconds
 	currentTime = 0;
-	
 	
 	
 }
@@ -215,6 +222,7 @@ typedef enum GameType
 	selection_a = selection_b = selection_c = -1;
 	
 	
+	
 }
 
 -(void) GameLoop{
@@ -230,5 +238,6 @@ typedef enum GameType
 	[matches release];
 	[startDate release];
 	[finishedDate release];
+	[pressed_state release];
 }
 @end

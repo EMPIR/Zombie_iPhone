@@ -17,10 +17,13 @@
 	int number;
 	int index;
 	NSString *image;
+	NSString *image2;
+	BOOL isDown;
+	
 
 }
 
--(id) initPiece:(int)_shape:(int)_color:(int)_fill:(int)_number:(NSString *)_image;
+-(id) initPiece:(int)_shape:(int)_color:(int)_fill:(int)_number:(NSString *)_image:(NSString *)_image2;
 - (BOOL)isEqual:(id)other;
 
 
@@ -30,7 +33,8 @@
 @property (assign, nonatomic) int number;
 @property (assign, nonatomic) int index;
 @property (copy, nonatomic) NSString *image;
-
+@property (copy, nonatomic) NSString *image2;
+@property (assign, nonatomic) BOOL isDown;
 
 
 @end

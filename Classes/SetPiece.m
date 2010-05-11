@@ -10,7 +10,7 @@
 
 
 @implementation SetPiece
-@synthesize color,fill,number,shape,index,image;
+@synthesize color,fill,number,shape,index,image,image2,isDown;
 
 typedef enum ColorType
 {
@@ -53,13 +53,15 @@ enum NumberType
 }
 
 
--(id) initPiece:(int)_shape:(int)_color:(int)_fill:(int)_number:(NSString *)_image{
+-(id) initPiece:(int)_shape:(int)_color:(int)_fill:(int)_number:(NSString *)_image:(NSString *) _image2{
 	if(self = [super init]){
 		self.shape = _shape;
 		self.color = _color;
 		self.fill = _fill;
 		self.number = _number;
 		self.image = [_image retain];
+		self.image2 = [_image2 retain];
+		self.isDown = NO;
 	}
 	return self;
 }
@@ -68,6 +70,8 @@ enum NumberType
 
 -(void) dealloc{
 	[super dealloc];
+	[image release];
+	[image2 release];
 	
 }
 
