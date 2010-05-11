@@ -31,6 +31,8 @@ int showPiece1 = 0;
 int showPiece2 = 0;
 int showPiece3 = 0;
 
+int randomTwitch = 0;
+int twitchRate = 30;
 
 -(BOOL) isButtonPressed:(int) index
 {
@@ -123,6 +125,15 @@ int showPiece3 = 0;
 	if(selView != NULL)
 		selView.hidden = NO;
 	
+	
+	int twitchey = -1;
+	
+	if(randomTwitch == 0)
+	{
+		twitchey = (int)[GameLogic randomNumber:0,11];
+		
+	}
+	
 
 	
 	
@@ -162,10 +173,7 @@ int showPiece3 = 0;
 		[message release];
 	}		
 
-	
-	
-	
-	
+
 	
 	int val = [[setGame.state objectAtIndex:0] intValue];
 	NSLog(@"Setting image for piece index %d", val);
@@ -188,7 +196,7 @@ int showPiece3 = 0;
 			img = [UIImage imageNamed:@"allGood.png"];
 		}
 		else {
-			if(![self isButtonPressed:i])
+			if(![self isButtonPressed:i] && twitchey != i)
 				img = [UIImage  imageNamed:p.image];
 			else
 				img = [UIImage imageNamed:p.image2];
@@ -198,92 +206,7 @@ int showPiece3 = 0;
 		[btn setImage:img forState:UIControlStateNormal];
 		
 	}
-/*
-	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:0] intValue]];
-	
-	if(![self isButtonPressed:0])
-		img = [UIImage  imageNamed:p.image];
-	else
-		img = [UIImage imageNamed:p.image2];
-	[button1 setImage:img forState:UIControlStateNormal];
-	
-	
-	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:1] intValue]];
-	if(![self isButtonPressed:1])
-		img = [UIImage  imageNamed:p.image];
-	else
-		img = [UIImage imageNamed:p.image2];
-	[button2 setImage:img forState:UIControlStateNormal];
-	
-	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:2] intValue]];
-	if(![self isButtonPressed:2])
-		img = [UIImage  imageNamed:p.image];
-	else
-		img = [UIImage imageNamed:p.image2];	[button3 setImage:img forState:UIControlStateNormal];
-	
-	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:3] intValue]];
-	if(![self isButtonPressed:3])
-		img = [UIImage  imageNamed:p.image];
-	else
-		img = [UIImage imageNamed:p.image2];
-	[button4 setImage:img forState:UIControlStateNormal];
-	
-	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:4] intValue]];
-	if(![self isButtonPressed:4])
-		img = [UIImage  imageNamed:p.image];
-	else
-		img = [UIImage imageNamed:p.image2];
-	[button5 setImage:img forState:UIControlStateNormal];
-	
-	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:5] intValue]];
-	if(![self isButtonPressed:5])
-		img = [UIImage  imageNamed:p.image];
-	else
-		img = [UIImage imageNamed:p.image2];
-	[button6 setImage:img forState:UIControlStateNormal];
-	
-	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:6] intValue]];
-	if(![self isButtonPressed:6])
-		img = [UIImage  imageNamed:p.image];
-	else
-		img = [UIImage imageNamed:p.image2];
-	[button7 setImage:img forState:UIControlStateNormal];
-	
-	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:7] intValue]];
-	if(![self isButtonPressed:7])
-		img = [UIImage  imageNamed:p.image];
-	else
-		img = [UIImage imageNamed:p.image2];
-	[button8 setImage:img forState:UIControlStateNormal];
-	
-	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:8] intValue]];
-	if(![self isButtonPressed:8])
-		img = [UIImage  imageNamed:p.image];
-	else
-		img = [UIImage imageNamed:p.image2];
-	[button9 setImage:img forState:UIControlStateNormal];
-	
-	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:9] intValue]];
-	if(![self isButtonPressed:9])
-		img = [UIImage  imageNamed:p.image];
-	else
-		img = [UIImage imageNamed:p.image2];
-	[button10 setImage:img forState:UIControlStateNormal];
-	
-	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:10] intValue]];
-	if(![self isButtonPressed:10])
-		img = [UIImage  imageNamed:p.image];
-	else
-		img = [UIImage imageNamed:p.image2];
-	[button11 setImage:img forState:UIControlStateNormal];
-	
-	p = (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:11] intValue]];
-	if(![self isButtonPressed:11])
-		img = [UIImage  imageNamed:p.image];
-	else
-		img = [UIImage imageNamed:p.image2];
-	[button12 setImage:img forState:UIControlStateNormal];
-	*/
+
 	
 }
 
@@ -676,6 +599,7 @@ int showPiece3 = 0;
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	twitchRate = 30;
 	
 }
 
@@ -692,13 +616,34 @@ int showPiece3 = 0;
 	if(showWrong > 0)
 		showWrong --;
 
+	randomTwitch  = randomTwitch ++;
+	
+	if(setGame.gameType == 1){
+		randomTwitch  = randomTwitch % twitchRate;
+	}
+	else if (setGame.gameType == 2){
+		
+		NSTimeInterval timeInterval = -1 * [setGame.startDate timeIntervalSinceNow];
+		double timeLeft = ((setGame.gameTime - timeInterval) / (double) setGame.gameTime);
+		
+		if(timeLeft < 0)
+			timeLeft = 0.001;
+		
+		twitchRate = 30 * timeLeft;
+		if(twitchRate < 1)
+			twitchRate = 1;
+		randomTwitch  = randomTwitch % twitchRate;
+		NSLog(@"Twitch Rate %d", twitchRate);
+		NSLog(@"Time Left %f", timeLeft);
+	
+	}
 	
 }
 
 -(void) viewWillAppear:(BOOL)animated{
 	
 	[self drawPieces];
-	
+	twitchRate = 30;
 	[NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(gameloop) userInfo:nil repeats:YES];
 
 }
