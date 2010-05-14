@@ -18,13 +18,18 @@
 	[setGame newGame:1];
 	self.viewController.setGame = self.setGame;
 	NSLog(@"Play Clicked, not load Game View!");
-	[self presentModalViewController:viewController animated:YES];
+	[self presentModalViewController:viewController animated:NO];
 }
 -(IBAction) playRamero:(id) sender{
 	[setGame newGame:2];
 	self.viewController.setGame = self.setGame;
 	NSLog(@"Play Clicked, not load Game View!");
-	[self presentModalViewController:viewController animated:YES];
+	[self presentModalViewController:viewController animated:NO];
+}
+
+-(IBAction) mainMenu:(id)sender{
+	
+	[[self parentViewController] dismissModalViewControllerAnimated:NO];
 }
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.

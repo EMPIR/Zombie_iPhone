@@ -7,10 +7,13 @@
 //
 
 #import "ZombieGameViewController.h"
+#import "ZombieGameAppDelegate.h"
 #import "GameLogic.h"
 #import "SetPiece.h"
 #import "SetLogic.h"
 #import "SetGame.h"
+#import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 
 @implementation ZombieGameViewController
@@ -189,21 +192,27 @@ int twitchRate = 30;
 		if(showWrong > 0 && (showPiece1 == i || showPiece2 == i || showPiece3 == i))
 		{
 			img = [UIImage imageNamed:@"allBad.png"];
+			[self playSound];
 			
 		}
 		else if(showRight > 0 && (showPiece1 == i || showPiece2 == i || showPiece3 == i))
 		{
 			img = [UIImage imageNamed:@"allGood.png"];
+			[self playSound];
 		}
 		else {
 			if(![self isButtonPressed:i] && twitchey != i)
 				img = [UIImage  imageNamed:p.image];
 			else
+			{
 				img = [UIImage imageNamed:p.image2];
+				[self playSound];
+			}
 			
 		}
 		UIButton *btn = [self getButton:i];
 		[btn setImage:img forState:UIControlStateNormal];
+		[btn setShowsTouchWhenHighlighted:YES];
 		
 	}
 
@@ -467,7 +476,8 @@ int twitchRate = 30;
 
 -(IBAction) finishedButtonDown:(id)sender{
 	
-	[[self parentViewController] dismissModalViewControllerAnimated:YES];
+	setGame.isActive = NO;
+	[[self parentViewController] dismissModalViewControllerAnimated:NO];
 }
 
 -(IBAction) button12Down:(id)sender{
@@ -592,18 +602,42 @@ int twitchRate = 30;
 }
 */
 
-
+-(void) playSound {
+	//Get the filename of the sound file:
+	NSString *path = [NSString stringWithFormat:@"%@%@",
+					  [[NSBundle mainBundle] resourcePath],
+					  @"/clip_crept.mp3"];
+	
+	//declare a system sound id
+	SystemSoundID soundID;
+	
+	//Get a URL for the sound file
+	NSURL *filePath = [NSURL fileURLWithPath:path isDirectory:NO];
+	
+	//Use audio sevices to create the sound
+	AudioServicesCreateSystemSoundID((CFURLRef)filePath, &soundID);
+	
+	//Use audio services to play the sound
+	AudioServicesPlaySystemSound(soundID);
+	
+}
 
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	int scoreCount = appDelegate.scores.count;
+	
+	[self playSound];
     [super viewDidLoad];
 	twitchRate = 30;
 	
 }
 
 -(void) gameloop {
+	if(!setGame.isActive)
+		return;
 	//[setGame GameLoop];
 	if([setGame isFinished])
 		[self drawFinished];
@@ -644,6 +678,7 @@ int twitchRate = 30;
 	
 	[self drawPieces];
 	twitchRate = 30;
+	setGame.isActive = YES;
 	[NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(gameloop) userInfo:nil repeats:YES];
 
 }

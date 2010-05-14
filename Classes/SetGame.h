@@ -28,7 +28,7 @@
 	int selection_b;
 	int selection_c;
 
-	
+	BOOL isActive;
 	
 	NSDate *startDate;
 	NSDate *finishedDate;
@@ -40,6 +40,7 @@
 @property (assign, nonatomic) NSMutableArray *matches;
 @property (assign, nonatomic) NSMutableArray *pressed_state;
 @property (assign, nonatomic) BOOL match;
+@property (assign, nonatomic) BOOL isActive;
 @property (assign, nonatomic) int count;
 @property (copy,nonatomic) NSDate *startDate;
 @property (copy,nonatomic) NSDate *finishedDate;

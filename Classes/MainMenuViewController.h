@@ -22,4 +22,6 @@
 
 -(IBAction) playRamero:(id) sender;
 
+-(IBAction) mainMenu:(id) sender;
+
 @end

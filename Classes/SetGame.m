@@ -15,7 +15,7 @@
 @synthesize match,state,pieces,matches,count, startDate,currentMove, finishedDate, totalMoves, totalPieces, gameType;
 @synthesize selection_a,selection_b,selection_c;
 @synthesize gameTime, currentTime, setsComplete;
-@synthesize pressed_state;
+@synthesize pressed_state, isActive;
 
 
 typedef enum GameType
@@ -67,6 +67,7 @@ typedef enum GameType
 			
 			
 		}
+		isActive = NO;
 	}
 	return self;
 }
@@ -94,6 +95,7 @@ typedef enum GameType
 	gameTime = 60; //seconds
 	currentTime = 0;
 	
+	isActive = NO;
 	
 }
 
