@@ -3,8 +3,7 @@
 //  ZombieGame
 //
 //  Created by David Guinnip on 5/4/10.
-//  Copyright 2010 ArchVision. All rights reserved.
-//
+
 
 #import "MainMenuViewController.h"
 #import "ZombieGameViewController.h"

@@ -3,8 +3,7 @@
 //  ZombieGame
 //
 //  Created by David Guinnip on 4/30/10.
-//  Copyright 2010 ArchVision. All rights reserved.
-//
+
 
 //#import <Cocoa/Cocoa.h>
 

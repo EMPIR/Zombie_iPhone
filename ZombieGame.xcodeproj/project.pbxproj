@@ -14,6 +14,44 @@
 		2741D1661186723D001BD582 /* GameLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2741D1651186723D001BD582 /* GameLogic.m */; };
 		276069F6118921C2008E1327 /* SetPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 276069F5118921C2008E1327 /* SetPiece.m */; };
 		27606A83118BC498008E1327 /* SetLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 27606A82118BC498008E1327 /* SetLogic.m */; };
+		27768C1C119E2F830027AE23 /* ZombieAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 27768C1B119E2F830027AE23 /* ZombieAudio.m */; };
+		27768D09119E5E980027AE23 /* 15.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768CF7119E5E980027AE23 /* 15.wav */; };
+		27768D0A119E5E980027AE23 /* 14.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768CF8119E5E980027AE23 /* 14.wav */; };
+		27768D0B119E5E980027AE23 /* 13.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768CF9119E5E980027AE23 /* 13.wav */; };
+		27768D0C119E5E980027AE23 /* 12.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768CFA119E5E980027AE23 /* 12.wav */; };
+		27768D0D119E5E980027AE23 /* 11.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768CFB119E5E980027AE23 /* 11.wav */; };
+		27768D0E119E5E980027AE23 /* 16.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768CFC119E5E980027AE23 /* 16.wav */; };
+		27768D0F119E5E980027AE23 /* 24.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768CFD119E5E980027AE23 /* 24.wav */; };
+		27768D10119E5E980027AE23 /* 25.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768CFE119E5E980027AE23 /* 25.wav */; };
+		27768D11119E5E980027AE23 /* 26.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768CFF119E5E980027AE23 /* 26.wav */; };
+		27768D12119E5E980027AE23 /* 23.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768D00119E5E980027AE23 /* 23.wav */; };
+		27768D13119E5E980027AE23 /* 22.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768D01119E5E980027AE23 /* 22.wav */; };
+		27768D14119E5E980027AE23 /* 21.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768D02119E5E980027AE23 /* 21.wav */; };
+		27768D15119E5E980027AE23 /* 35.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768D03119E5E980027AE23 /* 35.wav */; };
+		27768D16119E5E980027AE23 /* 34.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768D04119E5E980027AE23 /* 34.wav */; };
+		27768D17119E5E980027AE23 /* 33.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768D05119E5E980027AE23 /* 33.wav */; };
+		27768D18119E5E980027AE23 /* 32.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768D06119E5E980027AE23 /* 32.wav */; };
+		27768D19119E5E980027AE23 /* 36.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768D07119E5E980027AE23 /* 36.wav */; };
+		27768D1A119E5E980027AE23 /* 31.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768D08119E5E980027AE23 /* 31.wav */; };
+		27768FBE11A0CE480027AE23 /* b_Classic_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 27768FAF11A0CE480027AE23 /* b_Classic_off.png */; };
+		27768FBF11A0CE480027AE23 /* b_HowTo_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 27768FB011A0CE480027AE23 /* b_HowTo_on.png */; };
+		27768FC011A0CE480027AE23 /* b_HowTo_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 27768FB111A0CE480027AE23 /* b_HowTo_off.png */; };
+		27768FC111A0CE480027AE23 /* b_Back_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 27768FB211A0CE480027AE23 /* b_Back_on.png */; };
+		27768FC211A0CE480027AE23 /* b_Back_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 27768FB311A0CE480027AE23 /* b_Back_off.png */; };
+		27768FC311A0CE480027AE23 /* b_Berzerk_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 27768FB411A0CE480027AE23 /* b_Berzerk_on.png */; };
+		27768FC411A0CE480027AE23 /* b_Berzerk_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 27768FB511A0CE480027AE23 /* b_Berzerk_off.png */; };
+		27768FC511A0CE480027AE23 /* b_Classic_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 27768FB611A0CE480027AE23 /* b_Classic_on.png */; };
+		27768FC611A0CE480027AE23 /* bg_GameMode.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27768FB711A0CE480027AE23 /* bg_GameMode.jpg */; };
+		27768FC711A0CE480027AE23 /* b_Options_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 27768FB811A0CE480027AE23 /* b_Options_on.png */; };
+		27768FC811A0CE480027AE23 /* b_Options_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 27768FB911A0CE480027AE23 /* b_Options_off.png */; };
+		27768FC911A0CE480027AE23 /* b_HighScores_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 27768FBA11A0CE480027AE23 /* b_HighScores_on.png */; };
+		27768FCA11A0CE480027AE23 /* b_HighScores_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 27768FBB11A0CE480027AE23 /* b_HighScores_off.png */; };
+		27768FCB11A0CE480027AE23 /* b_Play_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 27768FBC11A0CE480027AE23 /* b_Play_on.png */; };
+		27768FCC11A0CE480027AE23 /* b_Play_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 27768FBD11A0CE480027AE23 /* b_Play_off.png */; };
+		27768FDF11A0D71D0027AE23 /* bg_Splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27768FDE11A0D71D0027AE23 /* bg_Splash.jpg */; };
+		27768FFB11A0DC640027AE23 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27768FF911A0DC640027AE23 /* OptionsViewController.m */; };
+		27768FFC11A0DC640027AE23 /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27768FFA11A0DC640027AE23 /* OptionsViewController.xib */; };
+		2776907511A0FCDA0027AE23 /* bg_GamePlay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2776907411A0FCDA0027AE23 /* bg_GamePlay.jpg */; };
 		277B57BA119BA440006137F5 /* bg_gameplay01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 277B57B9119BA440006137F5 /* bg_gameplay01.jpg */; };
 		277B57C3119BA633006137F5 /* MenuImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 277B57C2119BA633006137F5 /* MenuImage.png */; };
 		277B5821119C97F8006137F5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277B5820119C97F8006137F5 /* AudioToolbox.framework */; };
@@ -107,6 +145,46 @@
 		276069F5118921C2008E1327 /* SetPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPiece.m; sourceTree = "<group>"; };
 		27606A81118BC498008E1327 /* SetLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetLogic.h; sourceTree = "<group>"; };
 		27606A82118BC498008E1327 /* SetLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetLogic.m; sourceTree = "<group>"; };
+		27768C1A119E2F830027AE23 /* ZombieAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZombieAudio.h; sourceTree = "<group>"; };
+		27768C1B119E2F830027AE23 /* ZombieAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZombieAudio.m; sourceTree = "<group>"; };
+		27768CF7119E5E980027AE23 /* 15.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 15.wav; path = audio/15.wav; sourceTree = "<group>"; };
+		27768CF8119E5E980027AE23 /* 14.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 14.wav; path = audio/14.wav; sourceTree = "<group>"; };
+		27768CF9119E5E980027AE23 /* 13.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 13.wav; path = audio/13.wav; sourceTree = "<group>"; };
+		27768CFA119E5E980027AE23 /* 12.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 12.wav; path = audio/12.wav; sourceTree = "<group>"; };
+		27768CFB119E5E980027AE23 /* 11.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 11.wav; path = audio/11.wav; sourceTree = "<group>"; };
+		27768CFC119E5E980027AE23 /* 16.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 16.wav; path = audio/16.wav; sourceTree = "<group>"; };
+		27768CFD119E5E980027AE23 /* 24.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 24.wav; path = audio/24.wav; sourceTree = "<group>"; };
+		27768CFE119E5E980027AE23 /* 25.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 25.wav; path = audio/25.wav; sourceTree = "<group>"; };
+		27768CFF119E5E980027AE23 /* 26.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 26.wav; path = audio/26.wav; sourceTree = "<group>"; };
+		27768D00119E5E980027AE23 /* 23.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 23.wav; path = audio/23.wav; sourceTree = "<group>"; };
+		27768D01119E5E980027AE23 /* 22.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 22.wav; path = audio/22.wav; sourceTree = "<group>"; };
+		27768D02119E5E980027AE23 /* 21.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 21.wav; path = audio/21.wav; sourceTree = "<group>"; };
+		27768D03119E5E980027AE23 /* 35.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 35.wav; path = audio/35.wav; sourceTree = "<group>"; };
+		27768D04119E5E980027AE23 /* 34.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 34.wav; path = audio/34.wav; sourceTree = "<group>"; };
+		27768D05119E5E980027AE23 /* 33.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 33.wav; path = audio/33.wav; sourceTree = "<group>"; };
+		27768D06119E5E980027AE23 /* 32.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 32.wav; path = audio/32.wav; sourceTree = "<group>"; };
+		27768D07119E5E980027AE23 /* 36.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 36.wav; path = audio/36.wav; sourceTree = "<group>"; };
+		27768D08119E5E980027AE23 /* 31.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 31.wav; path = audio/31.wav; sourceTree = "<group>"; };
+		27768FAF11A0CE480027AE23 /* b_Classic_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_Classic_off.png; sourceTree = "<group>"; };
+		27768FB011A0CE480027AE23 /* b_HowTo_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_HowTo_on.png; sourceTree = "<group>"; };
+		27768FB111A0CE480027AE23 /* b_HowTo_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_HowTo_off.png; sourceTree = "<group>"; };
+		27768FB211A0CE480027AE23 /* b_Back_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_Back_on.png; sourceTree = "<group>"; };
+		27768FB311A0CE480027AE23 /* b_Back_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_Back_off.png; sourceTree = "<group>"; };
+		27768FB411A0CE480027AE23 /* b_Berzerk_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_Berzerk_on.png; sourceTree = "<group>"; };
+		27768FB511A0CE480027AE23 /* b_Berzerk_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_Berzerk_off.png; sourceTree = "<group>"; };
+		27768FB611A0CE480027AE23 /* b_Classic_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_Classic_on.png; sourceTree = "<group>"; };
+		27768FB711A0CE480027AE23 /* bg_GameMode.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_GameMode.jpg; sourceTree = "<group>"; };
+		27768FB811A0CE480027AE23 /* b_Options_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_Options_on.png; sourceTree = "<group>"; };
+		27768FB911A0CE480027AE23 /* b_Options_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_Options_off.png; sourceTree = "<group>"; };
+		27768FBA11A0CE480027AE23 /* b_HighScores_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_HighScores_on.png; sourceTree = "<group>"; };
+		27768FBB11A0CE480027AE23 /* b_HighScores_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_HighScores_off.png; sourceTree = "<group>"; };
+		27768FBC11A0CE480027AE23 /* b_Play_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_Play_on.png; sourceTree = "<group>"; };
+		27768FBD11A0CE480027AE23 /* b_Play_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_Play_off.png; sourceTree = "<group>"; };
+		27768FDE11A0D71D0027AE23 /* bg_Splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_Splash.jpg; sourceTree = "<group>"; };
+		27768FF811A0DC640027AE23 /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionsViewController.h; path = ../OptionsViewController.h; sourceTree = "<group>"; };
+		27768FF911A0DC640027AE23 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OptionsViewController.m; path = ../OptionsViewController.m; sourceTree = "<group>"; };
+		27768FFA11A0DC640027AE23 /* OptionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionsViewController.xib; sourceTree = "<group>"; };
+		2776907411A0FCDA0027AE23 /* bg_GamePlay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_GamePlay.jpg; sourceTree = "<group>"; };
 		277B57B9119BA440006137F5 /* bg_gameplay01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_gameplay01.jpg; sourceTree = "<group>"; };
 		277B57C2119BA633006137F5 /* MenuImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuImage.png; sourceTree = "<group>"; };
 		277B5820119C97F8006137F5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -216,6 +294,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				27768FF811A0DC640027AE23 /* OptionsViewController.h */,
+				27768FF911A0DC640027AE23 /* OptionsViewController.m */,
 				277B5862119CE4E6006137F5 /* GameMenu.h */,
 				277B5863119CE4E6006137F5 /* GameMenu.m */,
 				1D3623240D0F684500981E51 /* ZombieGameAppDelegate.h */,
@@ -236,6 +316,8 @@
 				27C2AEEF119A40490049EFEB /* Scores.m */,
 				27CFFB4B119CF423002FD064 /* HighScoresViewController.h */,
 				27CFFB4C119CF423002FD064 /* HighScoresViewController.m */,
+				27768C1A119E2F830027AE23 /* ZombieAudio.h */,
+				27768C1B119E2F830027AE23 /* ZombieAudio.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -246,6 +328,32 @@
 				1D6058910D05DD3D006BFB54 /* ZombieGame.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		27768CF6119E5E790027AE23 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				27CFFB85119CFF6E002FD064 /* clip_crept.mp3 */,
+				27768CF7119E5E980027AE23 /* 15.wav */,
+				27768CF8119E5E980027AE23 /* 14.wav */,
+				27768CF9119E5E980027AE23 /* 13.wav */,
+				27768CFA119E5E980027AE23 /* 12.wav */,
+				27768CFB119E5E980027AE23 /* 11.wav */,
+				27768CFC119E5E980027AE23 /* 16.wav */,
+				27768CFD119E5E980027AE23 /* 24.wav */,
+				27768CFE119E5E980027AE23 /* 25.wav */,
+				27768CFF119E5E980027AE23 /* 26.wav */,
+				27768D00119E5E980027AE23 /* 23.wav */,
+				27768D01119E5E980027AE23 /* 22.wav */,
+				27768D02119E5E980027AE23 /* 21.wav */,
+				27768D03119E5E980027AE23 /* 35.wav */,
+				27768D04119E5E980027AE23 /* 34.wav */,
+				27768D05119E5E980027AE23 /* 33.wav */,
+				27768D06119E5E980027AE23 /* 32.wav */,
+				27768D07119E5E980027AE23 /* 36.wav */,
+				27768D08119E5E980027AE23 /* 31.wav */,
+			);
+			name = audio;
 			sourceTree = "<group>";
 		};
 		27F6DF501185220D007705A9 /* Pieces */ = {
@@ -312,6 +420,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				2776907411A0FCDA0027AE23 /* bg_GamePlay.jpg */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -334,7 +443,23 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				27CFFB85119CFF6E002FD064 /* clip_crept.mp3 */,
+				27768FDE11A0D71D0027AE23 /* bg_Splash.jpg */,
+				27768FAF11A0CE480027AE23 /* b_Classic_off.png */,
+				27768FB011A0CE480027AE23 /* b_HowTo_on.png */,
+				27768FB111A0CE480027AE23 /* b_HowTo_off.png */,
+				27768FB211A0CE480027AE23 /* b_Back_on.png */,
+				27768FB311A0CE480027AE23 /* b_Back_off.png */,
+				27768FB411A0CE480027AE23 /* b_Berzerk_on.png */,
+				27768FB511A0CE480027AE23 /* b_Berzerk_off.png */,
+				27768FB611A0CE480027AE23 /* b_Classic_on.png */,
+				27768FB711A0CE480027AE23 /* bg_GameMode.jpg */,
+				27768FB811A0CE480027AE23 /* b_Options_on.png */,
+				27768FB911A0CE480027AE23 /* b_Options_off.png */,
+				27768FBA11A0CE480027AE23 /* b_HighScores_on.png */,
+				27768FBB11A0CE480027AE23 /* b_HighScores_off.png */,
+				27768FBC11A0CE480027AE23 /* b_Play_on.png */,
+				27768FBD11A0CE480027AE23 /* b_Play_off.png */,
+				27768CF6119E5E790027AE23 /* audio */,
 				27CFFB80119CFDCF002FD064 /* temp_button_PLAY.png */,
 				277B57C2119BA633006137F5 /* MenuImage.png */,
 				277B57B9119BA440006137F5 /* bg_gameplay01.jpg */,
@@ -349,6 +474,7 @@
 				2899E5210DE3E06400AC0155 /* ZombieGameViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				27CFFB4D119CF423002FD064 /* HighScoresViewController.xib */,
+				27768FFA11A0DC640027AE23 /* OptionsViewController.xib */,
 				8D1107310486CEB800E47090 /* ZombieGame-Info.plist */,
 				27C2A4AE11910D880049EFEB /* MainMenuViewController.xib */,
 				277B5864119CE4E6006137F5 /* GameMenu.xib */,
@@ -479,6 +605,42 @@
 				27CFFB4F119CF423002FD064 /* HighScoresViewController.xib in Resources */,
 				27CFFB81119CFDCF002FD064 /* temp_button_PLAY.png in Resources */,
 				27CFFB86119CFF6E002FD064 /* clip_crept.mp3 in Resources */,
+				27768D09119E5E980027AE23 /* 15.wav in Resources */,
+				27768D0A119E5E980027AE23 /* 14.wav in Resources */,
+				27768D0B119E5E980027AE23 /* 13.wav in Resources */,
+				27768D0C119E5E980027AE23 /* 12.wav in Resources */,
+				27768D0D119E5E980027AE23 /* 11.wav in Resources */,
+				27768D0E119E5E980027AE23 /* 16.wav in Resources */,
+				27768D0F119E5E980027AE23 /* 24.wav in Resources */,
+				27768D10119E5E980027AE23 /* 25.wav in Resources */,
+				27768D11119E5E980027AE23 /* 26.wav in Resources */,
+				27768D12119E5E980027AE23 /* 23.wav in Resources */,
+				27768D13119E5E980027AE23 /* 22.wav in Resources */,
+				27768D14119E5E980027AE23 /* 21.wav in Resources */,
+				27768D15119E5E980027AE23 /* 35.wav in Resources */,
+				27768D16119E5E980027AE23 /* 34.wav in Resources */,
+				27768D17119E5E980027AE23 /* 33.wav in Resources */,
+				27768D18119E5E980027AE23 /* 32.wav in Resources */,
+				27768D19119E5E980027AE23 /* 36.wav in Resources */,
+				27768D1A119E5E980027AE23 /* 31.wav in Resources */,
+				27768FBE11A0CE480027AE23 /* b_Classic_off.png in Resources */,
+				27768FBF11A0CE480027AE23 /* b_HowTo_on.png in Resources */,
+				27768FC011A0CE480027AE23 /* b_HowTo_off.png in Resources */,
+				27768FC111A0CE480027AE23 /* b_Back_on.png in Resources */,
+				27768FC211A0CE480027AE23 /* b_Back_off.png in Resources */,
+				27768FC311A0CE480027AE23 /* b_Berzerk_on.png in Resources */,
+				27768FC411A0CE480027AE23 /* b_Berzerk_off.png in Resources */,
+				27768FC511A0CE480027AE23 /* b_Classic_on.png in Resources */,
+				27768FC611A0CE480027AE23 /* bg_GameMode.jpg in Resources */,
+				27768FC711A0CE480027AE23 /* b_Options_on.png in Resources */,
+				27768FC811A0CE480027AE23 /* b_Options_off.png in Resources */,
+				27768FC911A0CE480027AE23 /* b_HighScores_on.png in Resources */,
+				27768FCA11A0CE480027AE23 /* b_HighScores_off.png in Resources */,
+				27768FCB11A0CE480027AE23 /* b_Play_on.png in Resources */,
+				27768FCC11A0CE480027AE23 /* b_Play_off.png in Resources */,
+				27768FDF11A0D71D0027AE23 /* bg_Splash.jpg in Resources */,
+				27768FFC11A0DC640027AE23 /* OptionsViewController.xib in Resources */,
+				2776907511A0FCDA0027AE23 /* bg_GamePlay.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +662,8 @@
 				27C2AEF0119A40490049EFEB /* Scores.m in Sources */,
 				277B5865119CE4E6006137F5 /* GameMenu.m in Sources */,
 				27CFFB4E119CF423002FD064 /* HighScoresViewController.m in Sources */,
+				27768C1C119E2F830027AE23 /* ZombieAudio.m in Sources */,
+				27768FFB11A0DC640027AE23 /* OptionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

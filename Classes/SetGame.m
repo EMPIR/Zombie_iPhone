@@ -3,8 +3,7 @@
 //  ZombieGame
 //
 //  Created by David Guinnip on 5/4/10.
-//  Copyright 2010 ArchVision. All rights reserved.
-//
+
 
 #import "SetGame.h"
 #import "SetLogic.h"
@@ -15,7 +14,7 @@
 @synthesize match,state,pieces,matches,count, startDate,currentMove, finishedDate, totalMoves, totalPieces, gameType;
 @synthesize selection_a,selection_b,selection_c;
 @synthesize gameTime, currentTime, setsComplete;
-@synthesize pressed_state, isActive;
+@synthesize pressed_state, isActive, showHint, isPaused;
 
 
 typedef enum GameType
@@ -40,6 +39,8 @@ typedef enum GameType
 	return YES;
 }
 
+
+
 -(id) init{
 	if(self = [super init]){
 		gameType = 2;
@@ -49,7 +50,17 @@ typedef enum GameType
 		
 	
 		matches = [[SetLogic ContainsMatch:pieces:state] retain];
+		pressed_state = [[[NSMutableArray alloc] init] retain];
+		for(int i=0;i<12; ++i)
+		{
+			NSNumber *ns = [NSNumber numberWithInt:0];
+			[pressed_state addObject: ns];
+			
+			
+		}
+		
 		startDate = [[NSDate date] retain];
+		
 		count = 0;
 		totalMoves = 10;
 		currentMove = 0;
@@ -59,15 +70,10 @@ typedef enum GameType
 		setsComplete = 0;
 		gameTime = 60; //seconds
 		currentTime = 0;
-		pressed_state = [[[NSMutableArray alloc] init] retain];
-		for(int i=0;i<12; ++i)
-		{
-			NSNumber *ns = [NSNumber numberWithInt:0];
-			[pressed_state addObject: ns];
-			
-			
-		}
+		
 		isActive = NO;
+		showHint = YES;
+		isPaused = NO;
 	}
 	return self;
 }
@@ -96,7 +102,8 @@ typedef enum GameType
 	currentTime = 0;
 	
 	isActive = NO;
-	
+	showHint = YES;
+	isPaused = NO;
 }
 
 -(BOOL) move:(int) a:(int) b: (int) c{

@@ -3,8 +3,7 @@
 //  ZombieGame
 //
 //  Created by David Guinnip on 4/25/10.
-//  Copyright ArchVision 2010. All rights reserved.
-//
+
 
 #import "ZombieGameViewController.h"
 #import "ZombieGameAppDelegate.h"
@@ -12,6 +11,7 @@
 #import "SetPiece.h"
 #import "SetLogic.h"
 #import "SetGame.h"
+#import "ZombieAudio.h"
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 
@@ -23,6 +23,11 @@
 @synthesize selected4View,selected5View,selected6View;
 @synthesize selected7View,selected8View,selected9View;
 @synthesize selected10View,selected11View,selected12View;
+
+@synthesize hint1View,hint2View,hint3View;
+@synthesize hint4View,hint5View,hint6View;
+@synthesize hint7View,hint8View,hint9View;
+@synthesize hint10View,hint11View,hint12View;
 @synthesize finishedLabel, moveLabel,timerLabel;
 
 @synthesize setGame;
@@ -36,6 +41,35 @@ int showPiece3 = 0;
 
 int randomTwitch = 0;
 int twitchRate = 30;
+int timeSinceLastRightAnswer = 0;
+BOOL hintVisible = NO;
+NSTimer *gameTimer;
+
+-(void) playSound:(int) pieceID:(int) expression {
+	
+	NSString *filename = [[ZombieAudio getZombieAudioFile:pieceID:expression] retain];
+	//Get the filename of the sound file:
+	NSString *path = [NSString stringWithFormat:@"%@%@",
+					  [[NSBundle mainBundle] resourcePath],
+					  filename];
+	
+	NSLog(@"%",path);
+	
+	//declare a system sound id
+	SystemSoundID soundID;
+	
+	//Get a URL for the sound file
+	NSURL *filePath = [NSURL fileURLWithPath:path isDirectory:NO];
+	
+	//Use audio sevices to create the sound
+	AudioServicesCreateSystemSoundID((CFURLRef)filePath, &soundID);
+	
+	//Use audio services to play the sound
+	AudioServicesPlaySystemSound(soundID);
+	[filename release];
+	
+}
+
 
 -(BOOL) isButtonPressed:(int) index
 {
@@ -104,6 +138,35 @@ int twitchRate = 30;
 	return NULL;
 }
 
+-(UIImageView *) getHint:(int) val
+{
+	if( val == 0)
+		return hint1View;
+	if(val == 1)
+		return hint2View;
+	if(val == 2)
+		return hint3View;
+	if(val == 3)
+		return hint4View;
+	if(val == 4)
+		return hint5View;
+	if(val == 5)
+		return hint6View;
+	if(val == 6)
+		return hint7View;
+	if(val == 7)
+		return hint8View;
+	if(val == 8)
+		return hint9View;
+	if(val == 9)
+		return hint10View;
+	if(val == 10)
+		return hint11View;
+	if(val == 11)
+		return hint12View;
+	return NULL;
+}
+
 -(void) drawPieces
 {
 	
@@ -116,6 +179,7 @@ int twitchRate = 30;
 	{
 		[self getView:i].hidden = YES;
 		[self getButton:i].hidden = NO;
+		[self getHint:i].hidden = YES;
 	}
 	
 	UIImageView *selView = [self getView:setGame.selection_a-1];
@@ -127,6 +191,26 @@ int twitchRate = 30;
 	selView = [self getView:setGame.selection_c-1];
 	if(selView != NULL)
 		selView.hidden = NO;
+	
+	NSMutableArray *match = [[setGame getMatch]retain];
+	NSNumber *aa = (NSNumber *) [match objectAtIndex:0];
+	NSNumber *bb = (NSNumber *) [match objectAtIndex:1];
+	NSNumber *cc = (NSNumber *) [match objectAtIndex:2];
+	int a = [aa intValue];
+	int b = [bb intValue];
+	int c = [cc intValue];
+	
+	
+	if(setGame.showHint == YES && hintVisible == YES)
+	{
+		selView = [self getHint:a];
+		if(selView != NULL)
+			selView.hidden = NO;
+		selView = [self getHint:b];
+		if(selView != NULL)
+			selView.hidden = NO;
+		
+	}
 	
 	
 	int twitchey = -1;
@@ -140,14 +224,7 @@ int twitchRate = 30;
 
 	
 	
-	NSMutableArray *match = [[setGame getMatch]retain];
-	NSNumber *aa = (NSNumber *) [match objectAtIndex:0];
-	NSNumber *bb = (NSNumber *) [match objectAtIndex:1];
-	NSNumber *cc = (NSNumber *) [match objectAtIndex:2];
-	int a = [aa intValue];
-	int b = [bb intValue];
-	int c = [cc intValue];
-	
+		
 	
 	
 	NSString *message =[[NSString alloc] initWithFormat:@"Move %d of %d Hint: %d %d %d", setGame.currentMove + 1, setGame.totalMoves, a+1, b+1, c+1];
@@ -192,22 +269,27 @@ int twitchRate = 30;
 		if(showWrong > 0 && (showPiece1 == i || showPiece2 == i || showPiece3 == i))
 		{
 			img = [UIImage imageNamed:@"allBad.png"];
-			[self playSound];
+			[self playSound:0:1]; //0 = synth, 1 = wrong
 			
 		}
 		else if(showRight > 0 && (showPiece1 == i || showPiece2 == i || showPiece3 == i))
 		{
 			img = [UIImage imageNamed:@"allGood.png"];
-			[self playSound];
+			[self playSound:0:2]; //0 = synth, 2 = correct
 		}
 		else {
 			if(![self isButtonPressed:i] && twitchey != i)
-				img = [UIImage  imageNamed:p.image];
+				img = [UIImage  imageNamed:p.image]; //p.shape
 			else
 			{
 				img = [UIImage imageNamed:p.image2];
-				[self playSound];
+				if(setGame.gameType == 2)
+					[self playSound:p.shape:2]; //p.shape =zombieID, 2 = HAPPY!
+				else
+					[self playSound:p.shape:1]; //p.shape =zombieID, 2 = HAPPY!
+
 			}
+			
 			
 		}
 		UIButton *btn = [self getButton:i];
@@ -247,31 +329,12 @@ int twitchRate = 30;
 	self.moveLabel.hidden = YES;
 	
 	self.finishedLabel.hidden = NO;
-	self.selected12View.hidden = YES;
-	self.selected11View.hidden = YES;
-	self.selected10View.hidden = YES;
-	self.selected9View.hidden = YES;
-	self.selected8View.hidden = YES;
-	self.selected7View.hidden = YES;
-	self.selected6View.hidden = YES;
-	self.selected5View.hidden = YES;
-	self.selected4View.hidden = YES;
-	self.selected3View.hidden = YES;
-	self.selected2View.hidden = YES;
-	self.selected1View.hidden = YES;
-	self.button1.hidden = YES;
-	self.button2.hidden = YES;
-	self.button3.hidden = YES;
-	self.button4.hidden = YES;
-	self.button5.hidden = YES;
-	self.button6.hidden = YES;
-	self.button7.hidden = YES;
-	self.button8.hidden = YES;
-	self.button9.hidden = YES;
-	self.button10.hidden = YES;
-	self.button11.hidden = YES;
-	self.button12.hidden = YES;
-	
+	for(int i=0;i<12; ++i)
+	{
+		[self getView:i].hidden = YES;
+		[self getButton:i].hidden = YES;
+		[self getHint:i].hidden = YES;
+	}	
 	
 }
 
@@ -368,6 +431,8 @@ int twitchRate = 30;
 			{
 				
 				NSLog(@"You found a match!  Hooray!");
+				setGame.showHint = YES;
+				hintVisible = NO;
 				showRight = 2;
 				showPiece1 = setGame.selection_a -1;
 				showPiece2 = setGame.selection_b -1;
@@ -384,13 +449,41 @@ int twitchRate = 30;
 					}
 					else {
 						setGame.finishedDate = [[NSDate date]retain];
+						ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+						
+						if(setGame.gameType == 1)
+						{
+							NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
+							//NSLog(@"Game Over, here was your time in seconds: %@", message);
+							//[appDelegate readScoresFromDatabase];
+							[appDelegate insertScore:-timeInterval :setGame.gameType :setGame.finishedDate];
+							
+						}
+						else {
+							//NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
+							//NSLog(@"Game Over, here was your time in seconds: %@", message);
+							//[appDelegate readScoresFromDatabase];
+							
+							
+						}						
+						
 						//[self drawFinished];
 					}
 				}
 				else if(setGame.gameType == 2)
 				{
+					/*if(timeSinceLastRightAnswer > 200)
+						timeSinceLastRightAnswer = 200;
+					double addTime = (1.0 - (timeSinceLastRightAnswer / 100.0)) * 50.0;
+					
+					setGame.currentTime += addTime;
+					*/
+					if(setGame.currentTime > setGame.gameTime)
+						setGame.currentTime = setGame.gameTime;
 					[setGame SwitchPieces];
 				}
+				timeSinceLastRightAnswer = 0;
+				
 
 				
 			}
@@ -476,6 +569,8 @@ int twitchRate = 30;
 
 -(IBAction) finishedButtonDown:(id)sender{
 	
+	[gameTimer invalidate];
+	[gameTimer release];
 	setGame.isActive = NO;
 	[[self parentViewController] dismissModalViewControllerAnimated:NO];
 }
@@ -602,25 +697,7 @@ int twitchRate = 30;
 }
 */
 
--(void) playSound {
-	//Get the filename of the sound file:
-	NSString *path = [NSString stringWithFormat:@"%@%@",
-					  [[NSBundle mainBundle] resourcePath],
-					  @"/clip_crept.mp3"];
-	
-	//declare a system sound id
-	SystemSoundID soundID;
-	
-	//Get a URL for the sound file
-	NSURL *filePath = [NSURL fileURLWithPath:path isDirectory:NO];
-	
-	//Use audio sevices to create the sound
-	AudioServicesCreateSystemSoundID((CFURLRef)filePath, &soundID);
-	
-	//Use audio services to play the sound
-	AudioServicesPlaySystemSound(soundID);
-	
-}
+
 
 
 
@@ -629,8 +706,11 @@ int twitchRate = 30;
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	int scoreCount = appDelegate.scores.count;
 	
-	[self playSound];
+	//PLAY START SOUND??
     [super viewDidLoad];
+	
+	
+	
 	twitchRate = 30;
 	
 }
@@ -640,10 +720,17 @@ int twitchRate = 30;
 		return;
 	//[setGame GameLoop];
 	if([setGame isFinished])
+	{
 		[self drawFinished];
+		setGame.isActive = NO;
+		ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+		
+		[appDelegate insertScore:setGame.setsComplete :setGame.gameType :setGame.finishedDate];
+	}
 	else
+	{
 		[self drawPieces];
-	
+	}
 	if(showRight > 0)
 		showRight --;
 	
@@ -651,6 +738,11 @@ int twitchRate = 30;
 		showWrong --;
 
 	randomTwitch  = randomTwitch ++;
+	timeSinceLastRightAnswer ++;
+	if(timeSinceLastRightAnswer >= 50 && hintVisible == NO)
+	{
+		hintVisible = YES;
+	}
 	
 	if(setGame.gameType == 1){
 		randomTwitch  = randomTwitch % twitchRate;
@@ -675,11 +767,18 @@ int twitchRate = 30;
 }
 
 -(void) viewWillAppear:(BOOL)animated{
-	
+	timeSinceLastRightAnswer = 0;
+	hintVisible = NO;
 	[self drawPieces];
 	twitchRate = 30;
 	setGame.isActive = YES;
-	[NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(gameloop) userInfo:nil repeats:YES];
+	SetPiece *p= (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:0] intValue]];
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
+	//[appDelegate readScoresFromDatabase];
+	
+	[self playSound:p.shape:6];
+	gameTimer = [[NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(gameloop) userInfo:nil repeats:YES] retain];
 
 }
 

@@ -3,16 +3,15 @@
 //  ZombieGame
 //
 //  Created by David Guinnip on 5/13/10.
-//  Copyright 2010 ArchVision. All rights reserved.
-//
+
 
 #import "GameMenu.h"
 #import "MainMenuViewController.h"
 #import "HighScoresViewController.h"
-
+#import "OptionsViewController.h"
 @implementation GameMenu
 
-@synthesize viewController, highScoresViewController;
+@synthesize viewController, highScoresViewController, optionsViewController;
 
 -(IBAction) playGame:(id) sender{
 	NSLog(@"playGame start");
@@ -21,6 +20,7 @@
 }
 -(IBAction) playDemo:(id) sender{
 	NSLog(@"playDemo start");
+	
 	NSLog(@"playDemo end");
 }
 
@@ -28,6 +28,15 @@
 	NSLog(@"highScores start");
 	[self presentModalViewController:highScoresViewController animated:NO];
 	NSLog(@"highScores end");
+}
+
+-(IBAction) options:(id) sender{
+	NSLog(@"options start");
+	
+	[self presentModalViewController:optionsViewController animated:NO];
+	
+	
+	NSLog(@"options end");
 }
 
 

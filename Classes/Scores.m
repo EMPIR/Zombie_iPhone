@@ -3,8 +3,6 @@
 //  ZombieGame
 //
 //  Created by David Guinnip on 5/11/10.
-//  Copyright 2010 ArchVision. All rights reserved.
-//
 
 #import "Scores.h"
 

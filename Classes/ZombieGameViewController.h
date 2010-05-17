@@ -34,6 +34,19 @@
 	IBOutlet UIImageView *selected10View;
 	IBOutlet UIImageView *selected11View;
 	IBOutlet UIImageView *selected12View;
+
+	IBOutlet UIImageView *hint1View;
+	IBOutlet UIImageView *hint2View;
+	IBOutlet UIImageView *hint3View;
+	IBOutlet UIImageView *hint4View;
+	IBOutlet UIImageView *hint5View;
+	IBOutlet UIImageView *hint6View;
+	IBOutlet UIImageView *hint7View;
+	IBOutlet UIImageView *hint8View;
+	IBOutlet UIImageView *hint9View;
+	IBOutlet UIImageView *hint10View;
+	IBOutlet UIImageView *hint11View;
+	IBOutlet UIImageView *hint12View;
 	
 	IBOutlet UILabel *finishedLabel;
 	IBOutlet UILabel *moveLabel;
@@ -110,5 +123,21 @@
 @property (nonatomic,retain) UIImageView *selected10View;
 @property (nonatomic,retain) UIImageView *selected11View;
 @property (nonatomic,retain) UIImageView *selected12View;
+
+
+@property (nonatomic,retain) UIImageView *hint1View;
+@property (nonatomic,retain) UIImageView *hint2View;
+@property (nonatomic,retain) UIImageView *hint3View;
+@property (nonatomic,retain) UIImageView *hint4View;
+@property (nonatomic,retain) UIImageView *hint5View;
+@property (nonatomic,retain) UIImageView *hint6View;
+@property (nonatomic,retain) UIImageView *hint7View;
+@property (nonatomic,retain) UIImageView *hint8View;
+@property (nonatomic,retain) UIImageView *hint9View;
+@property (nonatomic,retain) UIImageView *hint10View;
+@property (nonatomic,retain) UIImageView *hint11View;
+@property (nonatomic,retain) UIImageView *hint12View;
+
+
 @end
 

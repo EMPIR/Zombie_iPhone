@@ -3,8 +3,7 @@
 //  ZombieGame
 //
 //  Created by David Guinnip on 4/28/10.
-//  Copyright 2010 ArchVision. All rights reserved.
-//
+
 
 #import "SetPiece.h"
 

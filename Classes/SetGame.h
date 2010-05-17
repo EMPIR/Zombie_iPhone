@@ -3,8 +3,6 @@
 //  ZombieGame
 //
 //  Created by David Guinnip on 5/4/10.
-//  Copyright 2010 ArchVision. All rights reserved.
-//
 
 //#import <Cocoa/Cocoa.h>
 
@@ -16,6 +14,7 @@
 	NSMutableArray *pressed_state;
 	int count;
 	BOOL match;
+	BOOL showHint;
 	int currentMove;
 	int totalMoves;
 	int totalPieces;
@@ -29,6 +28,7 @@
 	int selection_c;
 
 	BOOL isActive;
+	BOOL isPaused;
 	
 	NSDate *startDate;
 	NSDate *finishedDate;
@@ -41,6 +41,8 @@
 @property (assign, nonatomic) NSMutableArray *pressed_state;
 @property (assign, nonatomic) BOOL match;
 @property (assign, nonatomic) BOOL isActive;
+@property (assign, nonatomic) BOOL isPaused;
+@property (assign, nonatomic) BOOL showHint;
 @property (assign, nonatomic) int count;
 @property (copy,nonatomic) NSDate *startDate;
 @property (copy,nonatomic) NSDate *finishedDate;
