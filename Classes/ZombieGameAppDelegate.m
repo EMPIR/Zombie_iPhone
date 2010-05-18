@@ -26,6 +26,36 @@
     [super dealloc];
 }
 
+-(void) deleteAllScores {
+	// Setup the database object
+	sqlite3 *database;
+	
+	// Init the animals Array
+	scores = [[NSMutableArray alloc] init];
+	
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+		// Setup the SQL Statement and compile it for faster access
+		const char *sqlStatement = "delete from highScores";
+		sqlite3_stmt *compiledStatement;
+		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
+			
+		}
+		if(SQLITE_DONE != sqlite3_step(compiledStatement)){
+			NSAssert1(0, @"Error while deleting data. '%s'", sqlite3_errmsg(database));
+		}
+		else{
+			//SQLite provides a method to get the last primary key inserted by using sqlite3_last_insert_rowid
+			//int ID = sqlite3_last_insert_rowid(database);
+		}
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+		
+	}
+	sqlite3_close(database);
+	
+}
+
 
 -(void) checkAndCreateDatabase{
 	// Check if the SQL database has already been saved to the users phone, if not then copy it over
@@ -41,8 +71,11 @@
 	success = [fileManager fileExistsAtPath:databasePath];
 	
 	// If the database already exists then return without doing anything
-	if(success) return;
-	
+	if(success) 
+	{
+		
+		return;
+	}
 	// If not then proceed to copy the database from the application to the users filesystem
 	
 	// Get the path to the database in the application package
@@ -95,6 +128,9 @@
 	sqlite3_close(database);
 	
 }
+
+
+
 
 -(NSMutableArray *) getCrawlerTopScores
 {
@@ -229,6 +265,8 @@
 	
 	// Query the database for all animal records and construct the "scores" array
 	[self readScoresFromDatabase];
+	
+	[self deleteAllScores];
 	
 
 	// Override point for customization after app launch    

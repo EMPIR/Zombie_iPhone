@@ -52,6 +52,13 @@
 		27768FFB11A0DC640027AE23 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27768FF911A0DC640027AE23 /* OptionsViewController.m */; };
 		27768FFC11A0DC640027AE23 /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27768FFA11A0DC640027AE23 /* OptionsViewController.xib */; };
 		2776907511A0FCDA0027AE23 /* bg_GamePlay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2776907411A0FCDA0027AE23 /* bg_GamePlay.jpg */; };
+		2776913111A2211A0027AE23 /* b_PlayAgain_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 2776912C11A2211A0027AE23 /* b_PlayAgain_on.png */; };
+		2776913211A2211A0027AE23 /* b_PlayAgain_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2776912D11A2211A0027AE23 /* b_PlayAgain_off.png */; };
+		2776913311A2211A0027AE23 /* b_MainMenu_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 2776912E11A2211A0027AE23 /* b_MainMenu_on.png */; };
+		2776913411A2211A0027AE23 /* b_MainMenu_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2776912F11A2211A0027AE23 /* b_MainMenu_off.png */; };
+		2776913511A2211A0027AE23 /* bg_HighScores.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2776913011A2211A0027AE23 /* bg_HighScores.jpg */; };
+		277691E511A230F10027AE23 /* brain_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 277691E311A230F10027AE23 /* brain_2.png */; };
+		277691E611A230F10027AE23 /* brain_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 277691E411A230F10027AE23 /* brain_1.png */; };
 		277B57BA119BA440006137F5 /* bg_gameplay01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 277B57B9119BA440006137F5 /* bg_gameplay01.jpg */; };
 		277B57C3119BA633006137F5 /* MenuImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 277B57C2119BA633006137F5 /* MenuImage.png */; };
 		277B5821119C97F8006137F5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277B5820119C97F8006137F5 /* AudioToolbox.framework */; };
@@ -185,6 +192,13 @@
 		27768FF911A0DC640027AE23 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OptionsViewController.m; path = ../OptionsViewController.m; sourceTree = "<group>"; };
 		27768FFA11A0DC640027AE23 /* OptionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionsViewController.xib; sourceTree = "<group>"; };
 		2776907411A0FCDA0027AE23 /* bg_GamePlay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_GamePlay.jpg; sourceTree = "<group>"; };
+		2776912C11A2211A0027AE23 /* b_PlayAgain_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_PlayAgain_on.png; sourceTree = "<group>"; };
+		2776912D11A2211A0027AE23 /* b_PlayAgain_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_PlayAgain_off.png; sourceTree = "<group>"; };
+		2776912E11A2211A0027AE23 /* b_MainMenu_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_MainMenu_on.png; sourceTree = "<group>"; };
+		2776912F11A2211A0027AE23 /* b_MainMenu_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_MainMenu_off.png; sourceTree = "<group>"; };
+		2776913011A2211A0027AE23 /* bg_HighScores.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_HighScores.jpg; sourceTree = "<group>"; };
+		277691E311A230F10027AE23 /* brain_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brain_2.png; sourceTree = "<group>"; };
+		277691E411A230F10027AE23 /* brain_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brain_1.png; sourceTree = "<group>"; };
 		277B57B9119BA440006137F5 /* bg_gameplay01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_gameplay01.jpg; sourceTree = "<group>"; };
 		277B57C2119BA633006137F5 /* MenuImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuImage.png; sourceTree = "<group>"; };
 		277B5820119C97F8006137F5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -443,6 +457,13 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				277691E311A230F10027AE23 /* brain_2.png */,
+				277691E411A230F10027AE23 /* brain_1.png */,
+				2776912C11A2211A0027AE23 /* b_PlayAgain_on.png */,
+				2776912D11A2211A0027AE23 /* b_PlayAgain_off.png */,
+				2776912E11A2211A0027AE23 /* b_MainMenu_on.png */,
+				2776912F11A2211A0027AE23 /* b_MainMenu_off.png */,
+				2776913011A2211A0027AE23 /* bg_HighScores.jpg */,
 				27768FDE11A0D71D0027AE23 /* bg_Splash.jpg */,
 				27768FAF11A0CE480027AE23 /* b_Classic_off.png */,
 				27768FB011A0CE480027AE23 /* b_HowTo_on.png */,
@@ -641,6 +662,13 @@
 				27768FDF11A0D71D0027AE23 /* bg_Splash.jpg in Resources */,
 				27768FFC11A0DC640027AE23 /* OptionsViewController.xib in Resources */,
 				2776907511A0FCDA0027AE23 /* bg_GamePlay.jpg in Resources */,
+				2776913111A2211A0027AE23 /* b_PlayAgain_on.png in Resources */,
+				2776913211A2211A0027AE23 /* b_PlayAgain_off.png in Resources */,
+				2776913311A2211A0027AE23 /* b_MainMenu_on.png in Resources */,
+				2776913411A2211A0027AE23 /* b_MainMenu_off.png in Resources */,
+				2776913511A2211A0027AE23 /* bg_HighScores.jpg in Resources */,
+				277691E511A230F10027AE23 /* brain_2.png in Resources */,
+				277691E611A230F10027AE23 /* brain_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

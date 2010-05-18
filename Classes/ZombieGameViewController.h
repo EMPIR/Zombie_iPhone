@@ -51,6 +51,8 @@
 	IBOutlet UILabel *finishedLabel;
 	IBOutlet UILabel *moveLabel;
 	IBOutlet UILabel *timerLabel;
+	IBOutlet UILabel *moveLabel2;
+	IBOutlet UIImageView *brainView;
 	SetGame *setGame;
 }
 
@@ -93,7 +95,9 @@
 
 @property (nonatomic, retain) UILabel *finishedLabel;
 @property (nonatomic, retain) UILabel *moveLabel;
+@property (nonatomic, retain) UILabel *moveLabel2;
 @property (nonatomic, retain) UILabel *timerLabel;
+@property (nonatomic,retain) UIImageView *brainView;
 
 @property (nonatomic,retain) UIButton *button1;
 @property (nonatomic,retain) UIButton *button2;

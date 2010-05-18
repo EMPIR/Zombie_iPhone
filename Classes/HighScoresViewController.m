@@ -73,6 +73,8 @@
 			NSString *message =[[NSString alloc] initWithFormat:@"%d: %d seconds", i+1, score.score];
 			UILabel *label = [self getLabel:1:i];
 			label.hidden = NO;
+			//rotate label in 45 degrees
+			label.transform = CGAffineTransformMakeRotation( -0.015);
 			[label setText:message];
 			[message release];
 		}
@@ -80,6 +82,7 @@
 			NSString *message =[[NSString alloc] initWithFormat:@"-----"];
 			UILabel *label = [self getLabel:1:i];
 			label.hidden = NO;
+			label.transform = CGAffineTransformMakeRotation( -0.015);
 			[label setText:message];
 			[message release];
 		}
@@ -90,6 +93,7 @@
 			NSString *message =[[NSString alloc] initWithFormat:@"%d: %d Zombies", i+1,score.score];
 			UILabel *label = [self getLabel:2:i];
 			label.hidden = NO;
+			label.transform = CGAffineTransformMakeRotation( 0.015);
 			[label setText:message];
 			[message release];
 		}
@@ -97,6 +101,7 @@
 			NSString *message =[[NSString alloc] initWithFormat:@"-----"];
 			UILabel *label = [self getLabel:2:i];
 			label.hidden = NO;
+			label.transform = CGAffineTransformMakeRotation( 0.015);
 			[label setText:message];
 			[message release];
 			

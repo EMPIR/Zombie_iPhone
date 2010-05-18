@@ -22,13 +22,13 @@
 @synthesize selected1View,selected2View,selected3View;
 @synthesize selected4View,selected5View,selected6View;
 @synthesize selected7View,selected8View,selected9View;
-@synthesize selected10View,selected11View,selected12View;
+@synthesize selected10View,selected11View,selected12View, brainView;
 
 @synthesize hint1View,hint2View,hint3View;
 @synthesize hint4View,hint5View,hint6View;
 @synthesize hint7View,hint8View,hint9View;
 @synthesize hint10View,hint11View,hint12View;
-@synthesize finishedLabel, moveLabel,timerLabel;
+@synthesize finishedLabel, moveLabel,moveLabel2,timerLabel;
 
 @synthesize setGame;
 
@@ -41,9 +41,19 @@ int showPiece3 = 0;
 
 int randomTwitch = 0;
 int twitchRate = 30;
+int brain_randomTwitch = 1;
+int brain_twitchRate = 30;
+
 int timeSinceLastRightAnswer = 0;
 BOOL hintVisible = NO;
 NSTimer *gameTimer;
+
+int brainPulseTimer = 0;
+
+-(void) pulseBrain
+{		
+		
+}
 
 -(void) playSound:(int) pieceID:(int) expression {
 	
@@ -173,7 +183,7 @@ NSTimer *gameTimer;
 	
 	self.moveLabel.hidden = NO;
 	self.finishedLabel.hidden = YES;
-	
+	self.moveLabel2.hidden = NO;
 	
 	for(int i=0;i<12; ++i)
 	{
@@ -214,11 +224,16 @@ NSTimer *gameTimer;
 	
 	
 	int twitchey = -1;
-	
+	int brain_twitchey = -1;
 	if(randomTwitch == 0)
 	{
 		twitchey = (int)[GameLogic randomNumber:0,11];
 		
+	}
+	
+	if(brain_randomTwitch == 0)
+	{
+		brain_twitchey = 1;
 	}
 	
 
@@ -227,12 +242,17 @@ NSTimer *gameTimer;
 		
 	
 	
-	NSString *message =[[NSString alloc] initWithFormat:@"Move %d of %d Hint: %d %d %d", setGame.currentMove + 1, setGame.totalMoves, a+1, b+1, c+1];
+	NSString *message =[[NSString alloc] initWithFormat:@"Move %d of %d", setGame.currentMove + 1, setGame.totalMoves, a+1, b+1, c+1];
 	
 	
 	[moveLabel setText:message];
+	
 	[message release];
 	[match release];
+	
+	message =[[NSString alloc] initWithFormat:@"Comboz %d", setGame.setsComplete];
+	[moveLabel2 setText:message];
+	
 	
 	NSTimeInterval timeInterval = -1 * [setGame.startDate timeIntervalSinceNow];
 	setGame.currentTime = timeInterval;
@@ -240,7 +260,7 @@ NSTimer *gameTimer;
 	{
 		if(![setGame isFinished])
 		{
-			message =[[NSString alloc] initWithFormat:@"Time Remaining: %0.0f, Total Moves %d", (setGame.gameTime - timeInterval), setGame.setsComplete];
+			message =[[NSString alloc] initWithFormat:@"Time: %0.0f", (setGame.gameTime - timeInterval)];
 			[timerLabel setText:message];
 			[message release];
 		}			
@@ -280,23 +300,41 @@ NSTimer *gameTimer;
 		else {
 			if(![self isButtonPressed:i] && twitchey != i)
 				img = [UIImage  imageNamed:p.image]; //p.shape
-			else
+			else 
 			{
 				img = [UIImage imageNamed:p.image2];
-				if(setGame.gameType == 2)
-					[self playSound:p.shape:2]; //p.shape =zombieID, 2 = HAPPY!
-				else
-					[self playSound:p.shape:1]; //p.shape =zombieID, 2 = HAPPY!
-
+				//if(twitchey != -1)
+				//{
+					if(setGame.gameType == 2)
+						[self playSound:p.shape:2]; //p.shape =zombieID, 2 = HAPPY!
+					else
+						[self playSound:p.shape:1]; //p.shape =zombieID, 2 = HAPPY!
+				//}
+				
 			}
 			
 			
 		}
+		
 		UIButton *btn = [self getButton:i];
 		[btn setImage:img forState:UIControlStateNormal];
 		[btn setShowsTouchWhenHighlighted:YES];
 		
 	}
+	if(brain_twitchey != -1)
+	{
+		UIImage *img;
+		img = [UIImage imageNamed:@"brain_2.png"];
+		[brainView setImage:img];
+		
+	}
+	else{
+		UIImage *img;
+		img = [UIImage imageNamed:@"brain_1.png"];
+		[brainView setImage:img];
+		
+	}
+	
 
 	
 }
@@ -327,7 +365,7 @@ NSTimer *gameTimer;
 	}
 
 	self.moveLabel.hidden = YES;
-	
+	self.moveLabel2.hidden = YES;
 	self.finishedLabel.hidden = NO;
 	for(int i=0;i<12; ++i)
 	{
@@ -703,6 +741,9 @@ NSTimer *gameTimer;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+	showPiece1 = 0;
+	showPiece2 = 0;
+	showPiece3 = 0;
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	int scoreCount = appDelegate.scores.count;
 	
@@ -724,8 +765,8 @@ NSTimer *gameTimer;
 		[self drawFinished];
 		setGame.isActive = NO;
 		ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
-		
-		[appDelegate insertScore:setGame.setsComplete :setGame.gameType :setGame.finishedDate];
+		if(setGame.gameType == 2)
+			[appDelegate insertScore:setGame.setsComplete :setGame.gameType :setGame.finishedDate];
 	}
 	else
 	{
@@ -736,8 +777,10 @@ NSTimer *gameTimer;
 	
 	if(showWrong > 0)
 		showWrong --;
+	
 
 	randomTwitch  = randomTwitch ++;
+	brain_randomTwitch = brain_randomTwitch ++;
 	timeSinceLastRightAnswer ++;
 	if(timeSinceLastRightAnswer >= 50 && hintVisible == NO)
 	{
@@ -746,6 +789,7 @@ NSTimer *gameTimer;
 	
 	if(setGame.gameType == 1){
 		randomTwitch  = randomTwitch % twitchRate;
+		brain_randomTwitch = brain_randomTwitch % brain_twitchRate;
 	}
 	else if (setGame.gameType == 2){
 		
@@ -756,9 +800,13 @@ NSTimer *gameTimer;
 			timeLeft = 0.001;
 		
 		twitchRate = 30 * timeLeft;
+		brain_twitchRate = 40 * timeLeft;
+		if(brain_twitchRate < 3)
+			brain_twitchRate = 3;
 		if(twitchRate < 1)
 			twitchRate = 1;
 		randomTwitch  = randomTwitch % twitchRate;
+		brain_randomTwitch = brain_randomTwitch % brain_twitchRate;
 		NSLog(@"Twitch Rate %d", twitchRate);
 		NSLog(@"Time Left %f", timeLeft);
 	
@@ -770,6 +818,10 @@ NSTimer *gameTimer;
 	timeSinceLastRightAnswer = 0;
 	hintVisible = NO;
 	[self drawPieces];
+	showPiece1 = 0;
+	showPiece2 = 0;
+	showPiece3 = 0;
+	
 	twitchRate = 30;
 	setGame.isActive = YES;
 	SetPiece *p= (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:0] intValue]];

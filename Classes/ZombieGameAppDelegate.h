@@ -27,6 +27,7 @@
 }
 -(void) readScoresFromDatabase;
 -(void) insertScore:(int) score:(int)gameType:(NSDate *) date;
+-(void) deleteAllScores;
 
 -(NSMutableArray *) getCrawlerTopScores;
 -(NSMutableArray *) getBerserkTopScores;
