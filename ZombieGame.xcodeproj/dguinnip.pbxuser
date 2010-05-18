@@ -102,7 +102,7 @@
 	};
 	27768C1A119E2F830027AE23 /* ZombieAudio.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1046, 501}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1046, 478}}";
 			sepNavSelRange = "{75, 0}";
 			sepNavVisRange = "{0, 228}";
 		};
@@ -110,8 +110,8 @@
 	27768C1B119E2F830027AE23 /* ZombieAudio.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1046, 1391}}";
-			sepNavSelRange = "{1777, 0}";
-			sepNavVisRange = "{1222, 1403}";
+			sepNavSelRange = "{1596, 0}";
+			sepNavVisRange = "{3, 706}";
 		};
 	};
 	27768C2A119E36A50027AE23 /* PBXTextBookmark */ = {
@@ -1381,9 +1381,9 @@
 	};
 	2776922C11A2420D0027AE23 /* HowToPlayViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1146, 780}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 832}}";
 			sepNavSelRange = "{706, 0}";
-			sepNavVisRange = "{227, 1219}";
+			sepNavVisRange = "{343, 1246}";
 		};
 	};
 	2776923111A243030027AE23 /* PBXTextBookmark */ = {
@@ -1666,6 +1666,76 @@
 		vrLen = 1219;
 		vrLoc = 227;
 	};
+	277692AE11A257CE0027AE23 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2776922C11A2420D0027AE23 /* HowToPlayViewController.m */;
+		name = "HowToPlayViewController.m: 25";
+		rLen = 0;
+		rLoc = 706;
+		rType = 0;
+		vrLen = 1246;
+		vrLoc = 343;
+	};
+	277692AF11A257CE0027AE23 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27768C1A119E2F830027AE23 /* ZombieAudio.h */;
+		name = "ZombieAudio.h: 6";
+		rLen = 0;
+		rLoc = 75;
+		rType = 0;
+		vrLen = 228;
+		vrLoc = 0;
+	};
+	277692B011A257CE0027AE23 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27768C1B119E2F830027AE23 /* ZombieAudio.m */;
+		name = "ZombieAudio.m: 70";
+		rLen = 0;
+		rLoc = 1596;
+		rType = 0;
+		vrLen = 706;
+		vrLoc = 3;
+	};
+	277692B411A25B800027AE23 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27768C1B119E2F830027AE23 /* ZombieAudio.m */;
+		name = "ZombieAudio.m: 70";
+		rLen = 0;
+		rLoc = 1596;
+		rType = 0;
+		vrLen = 706;
+		vrLoc = 3;
+	};
+	277692B511A25B800027AE23 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 767";
+		rLen = 107;
+		rLoc = 16361;
+		rType = 0;
+		vrLen = 740;
+		vrLoc = 16182;
+	};
+	277692B611A25B800027AE23 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 807";
+		rLen = 0;
+		rLoc = 17435;
+		rType = 0;
+		vrLen = 924;
+		vrLoc = 16868;
+	};
+	277692B911A25BED0027AE23 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 805";
+		rLen = 0;
+		rLoc = 17395;
+		rType = 0;
+		vrLen = 943;
+		vrLoc = 16892;
+	};
 	277B580C119C9744006137F5 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = 277B57C2119BA633006137F5 /* MenuImage.png */;
@@ -1888,16 +1958,16 @@
 	};
 	28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1046, 11531}}";
-			sepNavSelRange = "{16361, 107}";
-			sepNavVisRange = "{16182, 785}";
+			sepNavIntBoundsRect = "{{0, 0}, {1046, 11193}}";
+			sepNavSelRange = "{17395, 0}";
+			sepNavVisRange = "{16892, 943}";
 			sepNavWindowFrame = "{{15, 119}, {1384, 754}}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Release;
 		activeExecutable = 27F6DF4911852111007705A9 /* ZombieGame */;
-		activeSDKPreference = iphoneos3.1.3;
+		activeSDKPreference = iphonesimulator3.1.3;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* ZombieGame */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* ZombieGame */,
@@ -2155,6 +2225,13 @@
 			2776928011A24F450027AE23 /* PBXTextBookmark */ = 2776928011A24F450027AE23 /* PBXTextBookmark */;
 			2776928111A24F450027AE23 /* PBXTextBookmark */ = 2776928111A24F450027AE23 /* PBXTextBookmark */;
 			2776929811A250F20027AE23 /* PBXTextBookmark */ = 2776929811A250F20027AE23 /* PBXTextBookmark */;
+			277692AE11A257CE0027AE23 /* PBXTextBookmark */ = 277692AE11A257CE0027AE23 /* PBXTextBookmark */;
+			277692AF11A257CE0027AE23 /* PBXTextBookmark */ = 277692AF11A257CE0027AE23 /* PBXTextBookmark */;
+			277692B011A257CE0027AE23 /* PBXTextBookmark */ = 277692B011A257CE0027AE23 /* PBXTextBookmark */;
+			277692B411A25B800027AE23 /* PBXTextBookmark */ = 277692B411A25B800027AE23 /* PBXTextBookmark */;
+			277692B511A25B800027AE23 /* PBXTextBookmark */ = 277692B511A25B800027AE23 /* PBXTextBookmark */;
+			277692B611A25B800027AE23 /* PBXTextBookmark */ = 277692B611A25B800027AE23 /* PBXTextBookmark */;
+			277692B911A25BED0027AE23 /* PBXTextBookmark */ = 277692B911A25BED0027AE23 /* PBXTextBookmark */;
 			277B580C119C9744006137F5 = 277B580C119C9744006137F5 /* PBXBookmark */;
 			27C2A70A1195CCB00049EFEB = 27C2A70A1195CCB00049EFEB /* PBXBookmark */;
 			27C2A7131195CE650049EFEB = 27C2A7131195CE650049EFEB /* PBXBookmark */;

@@ -81,11 +81,11 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="NSCustomResource" key="IBUIHighlightedImage" id="871915650">
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="129835371">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">b_MainMenu_on.png</string>
 						</object>
-						<reference key="IBUISelectedImage" ref="871915650"/>
+						<reference key="IBUISelectedImage" ref="129835371"/>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">b_MainMenu_off.png</string>
@@ -146,6 +146,15 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">6</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">onDeletedButton:</string>
+						<reference key="source" ref="444957879"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">9</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -235,7 +244,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">8</int>
+			<int key="maxID">9</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

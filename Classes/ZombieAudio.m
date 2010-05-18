@@ -67,7 +67,7 @@ Input:
 }
 */
 
-static int TOTAL_EXPRESSIONS  = 2;
+static int TOTAL_EXPRESSIONS  = 5;
 
 +(NSString *) getZombieAudioFile:(int) zombieID: (int) expression
 {

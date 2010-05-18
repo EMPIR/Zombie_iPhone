@@ -801,10 +801,10 @@ int brainPulseTimer = 0;
 		
 		twitchRate = 30 * timeLeft;
 		brain_twitchRate = 40 * timeLeft;
-		if(brain_twitchRate < 3)
-			brain_twitchRate = 3;
-		if(twitchRate < 1)
-			twitchRate = 1;
+		if(brain_twitchRate < 2)
+			brain_twitchRate = 2;
+		if(twitchRate < 5)
+			twitchRate = 5;
 		randomTwitch  = randomTwitch % twitchRate;
 		brain_randomTwitch = brain_randomTwitch % brain_twitchRate;
 		NSLog(@"Twitch Rate %d", twitchRate);
