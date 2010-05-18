@@ -75,7 +75,9 @@ static int TOTAL_EXPRESSIONS  = 5;
 	//return [NSString stringWithFormat:@"/15.wav"];
 	
 	int number = [GameLogic randomNumber:1,TOTAL_EXPRESSIONS];
-	if(zombieID == 0){
+	if(zombieID == -1)
+	   return [[NSString stringWithFormat:@"/brainPump.wav"] autorelease];
+	else if(zombieID == 0){
 		if(expression ==1)
 			return [[NSString stringWithFormat:@"/wrong.wav"] autorelease];
 		if(expression ==2)

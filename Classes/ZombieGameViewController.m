@@ -59,9 +59,15 @@ int brainPulseTimer = 0;
 	
 	NSString *filename = [[ZombieAudio getZombieAudioFile:pieceID:expression] retain];
 	//Get the filename of the sound file:
-	NSString *path = [NSString stringWithFormat:@"%@%@",
+	NSString *path;
+	
+	
+		path = [NSString stringWithFormat:@"%@%@",
 					  [[NSBundle mainBundle] resourcePath],
 					  filename];
+	
+	
+
 	
 	NSLog(@"%",path);
 	
@@ -250,7 +256,7 @@ int brainPulseTimer = 0;
 	[message release];
 	[match release];
 	
-	message =[[NSString alloc] initWithFormat:@"Comboz %d", setGame.setsComplete];
+	 message =[[NSString alloc] initWithFormat:@"Comboz %d", setGame.setsComplete];
 	[moveLabel2 setText:message];
 	
 	
@@ -309,6 +315,7 @@ int brainPulseTimer = 0;
 						[self playSound:p.shape:2]; //p.shape =zombieID, 2 = HAPPY!
 					else
 						[self playSound:p.shape:1]; //p.shape =zombieID, 2 = HAPPY!
+				
 				//}
 				
 			}
@@ -323,6 +330,7 @@ int brainPulseTimer = 0;
 	}
 	if(brain_twitchey != -1)
 	{
+		[self playSound:-1:-1];
 		UIImage *img;
 		img = [UIImage imageNamed:@"brain_2.png"];
 		[brainView setImage:img];

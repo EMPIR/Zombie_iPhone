@@ -61,6 +61,7 @@
 		277691E611A230F10027AE23 /* brain_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 277691E411A230F10027AE23 /* brain_1.png */; };
 		2776922E11A2420D0027AE23 /* HowToPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776922C11A2420D0027AE23 /* HowToPlayViewController.m */; };
 		2776922F11A2420D0027AE23 /* HowToPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2776922D11A2420D0027AE23 /* HowToPlayViewController.xib */; };
+		277692BB11A25F150027AE23 /* brainPump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 277692BA11A25F150027AE23 /* brainPump.wav */; };
 		277B57BA119BA440006137F5 /* bg_gameplay01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 277B57B9119BA440006137F5 /* bg_gameplay01.jpg */; };
 		277B57C3119BA633006137F5 /* MenuImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 277B57C2119BA633006137F5 /* MenuImage.png */; };
 		277B5821119C97F8006137F5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277B5820119C97F8006137F5 /* AudioToolbox.framework */; };
@@ -204,6 +205,7 @@
 		2776922B11A2420D0027AE23 /* HowToPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToPlayViewController.h; sourceTree = "<group>"; };
 		2776922C11A2420D0027AE23 /* HowToPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowToPlayViewController.m; sourceTree = "<group>"; };
 		2776922D11A2420D0027AE23 /* HowToPlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HowToPlayViewController.xib; path = Classes/HowToPlayViewController.xib; sourceTree = "<group>"; };
+		277692BA11A25F150027AE23 /* brainPump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = brainPump.wav; sourceTree = "<group>"; };
 		277B57B9119BA440006137F5 /* bg_gameplay01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_gameplay01.jpg; sourceTree = "<group>"; };
 		277B57C2119BA633006137F5 /* MenuImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuImage.png; sourceTree = "<group>"; };
 		277B5820119C97F8006137F5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -464,6 +466,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				277692BA11A25F150027AE23 /* brainPump.wav */,
 				277691E311A230F10027AE23 /* brain_2.png */,
 				277691E411A230F10027AE23 /* brain_1.png */,
 				2776912C11A2211A0027AE23 /* b_PlayAgain_on.png */,
@@ -678,6 +681,7 @@
 				277691E511A230F10027AE23 /* brain_2.png in Resources */,
 				277691E611A230F10027AE23 /* brain_1.png in Resources */,
 				2776922F11A2420D0027AE23 /* HowToPlayViewController.xib in Resources */,
+				277692BB11A25F150027AE23 /* brainPump.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
