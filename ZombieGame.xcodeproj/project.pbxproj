@@ -59,6 +59,8 @@
 		2776913511A2211A0027AE23 /* bg_HighScores.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2776913011A2211A0027AE23 /* bg_HighScores.jpg */; };
 		277691E511A230F10027AE23 /* brain_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 277691E311A230F10027AE23 /* brain_2.png */; };
 		277691E611A230F10027AE23 /* brain_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 277691E411A230F10027AE23 /* brain_1.png */; };
+		2776922E11A2420D0027AE23 /* HowToPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776922C11A2420D0027AE23 /* HowToPlayViewController.m */; };
+		2776922F11A2420D0027AE23 /* HowToPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2776922D11A2420D0027AE23 /* HowToPlayViewController.xib */; };
 		277B57BA119BA440006137F5 /* bg_gameplay01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 277B57B9119BA440006137F5 /* bg_gameplay01.jpg */; };
 		277B57C3119BA633006137F5 /* MenuImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 277B57C2119BA633006137F5 /* MenuImage.png */; };
 		277B5821119C97F8006137F5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277B5820119C97F8006137F5 /* AudioToolbox.framework */; };
@@ -199,6 +201,9 @@
 		2776913011A2211A0027AE23 /* bg_HighScores.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_HighScores.jpg; sourceTree = "<group>"; };
 		277691E311A230F10027AE23 /* brain_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brain_2.png; sourceTree = "<group>"; };
 		277691E411A230F10027AE23 /* brain_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brain_1.png; sourceTree = "<group>"; };
+		2776922B11A2420D0027AE23 /* HowToPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToPlayViewController.h; sourceTree = "<group>"; };
+		2776922C11A2420D0027AE23 /* HowToPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowToPlayViewController.m; sourceTree = "<group>"; };
+		2776922D11A2420D0027AE23 /* HowToPlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HowToPlayViewController.xib; path = Classes/HowToPlayViewController.xib; sourceTree = "<group>"; };
 		277B57B9119BA440006137F5 /* bg_gameplay01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_gameplay01.jpg; sourceTree = "<group>"; };
 		277B57C2119BA633006137F5 /* MenuImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuImage.png; sourceTree = "<group>"; };
 		277B5820119C97F8006137F5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -332,6 +337,8 @@
 				27CFFB4C119CF423002FD064 /* HighScoresViewController.m */,
 				27768C1A119E2F830027AE23 /* ZombieAudio.h */,
 				27768C1B119E2F830027AE23 /* ZombieAudio.m */,
+				2776922B11A2420D0027AE23 /* HowToPlayViewController.h */,
+				2776922C11A2420D0027AE23 /* HowToPlayViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -495,6 +502,7 @@
 				2899E5210DE3E06400AC0155 /* ZombieGameViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				27CFFB4D119CF423002FD064 /* HighScoresViewController.xib */,
+				2776922D11A2420D0027AE23 /* HowToPlayViewController.xib */,
 				27768FFA11A0DC640027AE23 /* OptionsViewController.xib */,
 				8D1107310486CEB800E47090 /* ZombieGame-Info.plist */,
 				27C2A4AE11910D880049EFEB /* MainMenuViewController.xib */,
@@ -669,6 +677,7 @@
 				2776913511A2211A0027AE23 /* bg_HighScores.jpg in Resources */,
 				277691E511A230F10027AE23 /* brain_2.png in Resources */,
 				277691E611A230F10027AE23 /* brain_1.png in Resources */,
+				2776922F11A2420D0027AE23 /* HowToPlayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +701,7 @@
 				27CFFB4E119CF423002FD064 /* HighScoresViewController.m in Sources */,
 				27768C1C119E2F830027AE23 /* ZombieAudio.m in Sources */,
 				27768FFB11A0DC640027AE23 /* OptionsViewController.m in Sources */,
+				2776922E11A2420D0027AE23 /* HowToPlayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

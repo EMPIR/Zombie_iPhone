@@ -5,7 +5,7 @@
 //  Created by David Guinnip on 5/16/10.
 
 #import "OptionsViewController.h"
-
+#import "ZombieGameAppDelegate.h"
 
 @implementation OptionsViewController
 
@@ -16,6 +16,11 @@
 }
 
 
+-(IBAction) onDeletedButton:(id) sender{
+	
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	[appDelegate deleteAllScores];
+}
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.

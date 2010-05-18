@@ -1,38 +1,20 @@
 //
-//  MainMenuViewController.m
+//  HowToPlayViewController.m
 //  ZombieGame
 //
-//  Created by David Guinnip on 5/4/10.
+//  Created by David Guinnip on 5/17/10.
+//  Copyright 2010 ArchVision. All rights reserved.
+//
+
+#import "HowToPlayViewController.h"
 
 
-#import "MainMenuViewController.h"
-#import "ZombieGameViewController.h"
-#import "SetGame.h"
-
-@implementation MainMenuViewController
-@synthesize viewController,howToPlayController;
-@synthesize setGame;
-
--(IBAction) play:(id) sender{
-	[setGame newGame:1];
-	self.viewController.setGame = self.setGame;
-	NSLog(@"Play Clicked, not load Game View!");
-	[self presentModalViewController:viewController animated:NO];
-}
--(IBAction) playRamero:(id) sender{
-	[setGame newGame:2];
-	self.viewController.setGame = self.setGame;
-	NSLog(@"Play Clicked, not load Game View!");
-	[self presentModalViewController:viewController animated:NO];
-}
+@implementation HowToPlayViewController
 
 
--(IBAction) howToPlay:(id) sender{
-	[self presentModalViewController:howToPlayController animated:NO];
-}
 
--(IBAction) mainMenu:(id)sender{
-	
+-(IBAction) backMainMenu:(id) sender
+{
 	[[self parentViewController] dismissModalViewControllerAnimated:NO];
 }
 /*
@@ -45,24 +27,20 @@
 }
 */
 
-
+/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	setGame = [[SetGame alloc] init];
-	
 }
-
-
+*/
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     //return (interfaceOrientation == UIInterfaceOrientationPortrait);
 	return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
-
+	
 }
-
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -80,7 +58,6 @@
 
 - (void)dealloc {
     [super dealloc];
-	[setGame dealloc];
 }
 
 

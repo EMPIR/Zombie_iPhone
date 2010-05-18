@@ -602,14 +602,13 @@
 					<object class="IBUIButton" id="603942376">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{336, 271}, {91, 24}}</string>
+						<string key="NSFrame">{{370, 275}, {86, 33}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="1061433150"/>
-						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">Main Menu</string>
 						<reference key="IBUIHighlightedTitleColor" ref="22053288"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
@@ -619,6 +618,10 @@
 						<object class="NSColor" key="IBUINormalTitleShadowColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
+						</object>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">b_Options_off.png</string>
 						</object>
 					</object>
 					<object class="IBUILabel" id="845693222">
@@ -2140,6 +2143,7 @@
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>1120a.png</string>
+				<string>b_Options_off.png</string>
 				<string>bg_GamePlay.jpg</string>
 				<string>brain_1.png</string>
 				<string>checkHover.png</string>
@@ -2148,6 +2152,7 @@
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{105, 70}</string>
+				<string>{86, 33}</string>
 				<string>{480, 320}</string>
 				<string>{62, 45}</string>
 				<string>{105, 70}</string>

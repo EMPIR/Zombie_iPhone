@@ -266,7 +266,7 @@
 	// Query the database for all animal records and construct the "scores" array
 	[self readScoresFromDatabase];
 	
-	[self deleteAllScores];
+	
 	
 
 	// Override point for customization after app launch    

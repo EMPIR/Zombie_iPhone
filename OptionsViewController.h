@@ -9,9 +9,14 @@
 
 
 @interface OptionsViewController : UIViewController {
-
+	IBOutlet UIButton *deleteButton;
+	
+	
 }
 
 -(IBAction) onFinished:(id) sender;
+
+-(IBAction) onDeletedButton:(id) sender;
+
 
 @end
