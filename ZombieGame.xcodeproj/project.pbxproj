@@ -67,6 +67,8 @@
 		277B5821119C97F8006137F5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277B5820119C97F8006137F5 /* AudioToolbox.framework */; };
 		277B5865119CE4E6006137F5 /* GameMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 277B5863119CE4E6006137F5 /* GameMenu.m */; };
 		277B5866119CE4E6006137F5 /* GameMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277B5864119CE4E6006137F5 /* GameMenu.xib */; };
+		278FA46211A36A9300F20538 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 278FA46111A36A9300F20538 /* AVFoundation.framework */; };
+		278FA51311A3847E00F20538 /* Audio_BG01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 278FA51211A3847E00F20538 /* Audio_BG01.mp3 */; };
 		27C29F4E119044D40049EFEB /* SetGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C29F4D119044D40049EFEB /* SetGame.m */; };
 		27C2A4AF11910D880049EFEB /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C2A4AD11910D880049EFEB /* MainMenuViewController.m */; };
 		27C2A4B011910D880049EFEB /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C2A4AE11910D880049EFEB /* MainMenuViewController.xib */; };
@@ -212,6 +214,8 @@
 		277B5862119CE4E6006137F5 /* GameMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameMenu.h; path = ../GameMenu.h; sourceTree = "<group>"; };
 		277B5863119CE4E6006137F5 /* GameMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameMenu.m; path = ../GameMenu.m; sourceTree = "<group>"; };
 		277B5864119CE4E6006137F5 /* GameMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameMenu.xib; sourceTree = "<group>"; };
+		278FA46111A36A9300F20538 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		278FA51211A3847E00F20538 /* Audio_BG01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Audio_BG01.mp3; sourceTree = "<group>"; };
 		27C29F4C119044D40049EFEB /* SetGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetGame.h; sourceTree = "<group>"; };
 		27C29F4D119044D40049EFEB /* SetGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetGame.m; sourceTree = "<group>"; };
 		27C2A4AC11910D880049EFEB /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
@@ -306,6 +310,7 @@
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				27C2AED1119A379C0049EFEB /* libsqlite3.dylib in Frameworks */,
 				277B5821119C97F8006137F5 /* AudioToolbox.framework in Frameworks */,
+				278FA46211A36A9300F20538 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +454,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				27C2AED0119A379C0049EFEB /* libsqlite3.dylib */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -466,6 +470,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				278FA51211A3847E00F20538 /* Audio_BG01.mp3 */,
 				277692BA11A25F150027AE23 /* brainPump.wav */,
 				277691E311A230F10027AE23 /* brain_2.png */,
 				277691E411A230F10027AE23 /* brain_1.png */,
@@ -517,6 +522,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27C2AED0119A379C0049EFEB /* libsqlite3.dylib */,
+				278FA46111A36A9300F20538 /* AVFoundation.framework */,
 				277B5820119C97F8006137F5 /* AudioToolbox.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
@@ -682,6 +689,7 @@
 				277691E611A230F10027AE23 /* brain_1.png in Resources */,
 				2776922F11A2420D0027AE23 /* HowToPlayViewController.xib in Resources */,
 				277692BB11A25F150027AE23 /* brainPump.wav in Resources */,
+				278FA51311A3847E00F20538 /* Audio_BG01.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

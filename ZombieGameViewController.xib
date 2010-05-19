@@ -601,8 +601,8 @@
 					</object>
 					<object class="IBUIButton" id="603942376">
 						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{370, 275}, {86, 33}}</string>
+						<int key="NSvFlags">-2147483356</int>
+						<string key="NSFrame">{{351, 275}, {123, 33}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -619,9 +619,17 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
+						<object class="NSCustomResource" key="IBUIHighlightedImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">b_PlayAgain_on.png</string>
+						</object>
+						<object class="NSCustomResource" key="IBUISelectedImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">b_Play_on.png</string>
+						</object>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">b_Options_off.png</string>
+							<string key="NSResourceName">b_PlayAgain_off.png</string>
 						</object>
 					</object>
 					<object class="IBUILabel" id="845693222">
@@ -1344,6 +1352,14 @@
 					</object>
 					<int key="connectionID">172</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">playAgainButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="603942376"/>
+					</object>
+					<int key="connectionID">173</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -1370,7 +1386,6 @@
 						<reference key="object" ref="774585933"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="603942376"/>
 							<reference ref="179567124"/>
 							<reference ref="945957248"/>
 							<reference ref="656463934"/>
@@ -1413,6 +1428,7 @@
 							<reference ref="20793126"/>
 							<reference ref="372367910"/>
 							<reference ref="571051724"/>
+							<reference ref="603942376"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1719,7 +1735,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{66, 536}, {480, 320}}</string>
+					<string>{{259, 489}, {480, 320}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -1752,7 +1768,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">172</int>
+			<int key="maxID">173</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1851,6 +1867,7 @@
 							<string>hint9View</string>
 							<string>moveLabel</string>
 							<string>moveLabel2</string>
+							<string>playAgainButton</string>
 							<string>selected10View</string>
 							<string>selected11View</string>
 							<string>selected12View</string>
@@ -1895,6 +1912,7 @@
 							<string>UIImageView</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
+							<string>UIButton</string>
 							<string>UIImageView</string>
 							<string>UIImageView</string>
 							<string>UIImageView</string>
@@ -2143,7 +2161,9 @@
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>1120a.png</string>
-				<string>b_Options_off.png</string>
+				<string>b_PlayAgain_off.png</string>
+				<string>b_PlayAgain_on.png</string>
+				<string>b_Play_on.png</string>
 				<string>bg_GamePlay.jpg</string>
 				<string>brain_1.png</string>
 				<string>checkHover.png</string>
@@ -2152,7 +2172,9 @@
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{105, 70}</string>
-				<string>{86, 33}</string>
+				<string>{123, 33}</string>
+				<string>{123, 33}</string>
+				<string>{203, 87}</string>
 				<string>{480, 320}</string>
 				<string>{62, 45}</string>
 				<string>{105, 70}</string>

@@ -18,7 +18,7 @@
 
 @implementation ZombieGameViewController
 @synthesize button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,button11,button12;
-
+@synthesize playAgainButton;
 @synthesize selected1View,selected2View,selected3View;
 @synthesize selected4View,selected5View,selected6View;
 @synthesize selected7View,selected8View,selected9View;
@@ -48,6 +48,8 @@ int timeSinceLastRightAnswer = 0;
 BOOL hintVisible = NO;
 NSTimer *gameTimer;
 
+double timeRemaining = 0;
+
 int brainPulseTimer = 0;
 
 -(void) pulseBrain
@@ -56,6 +58,10 @@ int brainPulseTimer = 0;
 }
 
 -(void) playSound:(int) pieceID:(int) expression {
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	if(!appDelegate.soundFX)
+		return;
+	
 	
 	NSString *filename = [[ZombieAudio getZombieAudioFile:pieceID:expression] retain];
 	//Get the filename of the sound file:
@@ -187,9 +193,11 @@ int brainPulseTimer = 0;
 {
 	
 	
+	self.brainView.hidden = NO;
 	self.moveLabel.hidden = NO;
 	self.finishedLabel.hidden = YES;
 	self.moveLabel2.hidden = NO;
+	self.playAgainButton.hidden = YES;
 	
 	for(int i=0;i<12; ++i)
 	{
@@ -229,6 +237,7 @@ int brainPulseTimer = 0;
 	}
 	
 	
+	
 	int twitchey = -1;
 	int brain_twitchey = -1;
 	if(randomTwitch == 0)
@@ -260,13 +269,16 @@ int brainPulseTimer = 0;
 	[moveLabel2 setText:message];
 	
 	
-	NSTimeInterval timeInterval = -1 * [setGame.startDate timeIntervalSinceNow];
-	setGame.currentTime = timeInterval;
+	//NSTimeInterval timeInterval = -1 * [setGame.startDate timeIntervalSinceNow];
+	//setGame.currentTime = timeInterval;
+	
+	
 	if(setGame.gameType == 2 )//countdown
 	{
 		if(![setGame isFinished])
 		{
-			message =[[NSString alloc] initWithFormat:@"Time: %0.0f", (setGame.gameTime - timeInterval)];
+			//message =[[NSString alloc] initWithFormat:@"Time: %0.0f", (setGame.gameTime - timeInterval)];
+			message =[[NSString alloc] initWithFormat:@"Time: %0.0lf", timeRemaining];
 			[timerLabel setText:message];
 			[message release];
 		}			
@@ -274,7 +286,8 @@ int brainPulseTimer = 0;
 		//	setGame.currentMove = setGame.totalMoves;
 	}
 	else {
-		message =[[NSString alloc] initWithFormat:@"Time: %0.0f", (timeInterval)];
+		//message =[[NSString alloc] initWithFormat:@"Time: %0.0lf", (timeInterval)];
+		message =[[NSString alloc] initWithFormat:@"Time: %0.0lf", timeRemaining];
 		[timerLabel setText:message];
 		[message release];
 	}		
@@ -356,6 +369,8 @@ int brainPulseTimer = 0;
 -(void) drawFinished
 {
 	
+	self.brainView.hidden = YES;
+	self.playAgainButton.hidden = NO;
 	if(setGame.gameType == 1)
 	{
 		NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
@@ -518,14 +533,39 @@ int brainPulseTimer = 0;
 				}
 				else if(setGame.gameType == 2)
 				{
-					/*if(timeSinceLastRightAnswer > 200)
-						timeSinceLastRightAnswer = 200;
-					double addTime = (1.0 - (timeSinceLastRightAnswer / 100.0)) * 50.0;
+					if(timeSinceLastRightAnswer < 10)
+					{
+						//timeSinceLastRightAnswer = 500;
+						timeRemaining += 8;
+					}
+					else if(timeSinceLastRightAnswer < 20)
+					{
+						timeRemaining += 6;
+					}
+					else if(timeSinceLastRightAnswer < 30)
+					{
+						timeRemaining += 5;
+					}
+					else if(timeSinceLastRightAnswer < 40)
+					{
+						timeRemaining += 4;
+					}
+					else if(timeSinceLastRightAnswer < 50)
+					{
+						timeRemaining += 3;
+					}
+					else {
+						timeRemaining += 2;
+					}
+
+						
+					//double addTime = (1.0 - (timeSinceLastRightAnswer / 500.0)) * 500.0;
 					
-					setGame.currentTime += addTime;
-					*/
-					if(setGame.currentTime > setGame.gameTime)
-						setGame.currentTime = setGame.gameTime;
+					
+					
+					
+					if(timeRemaining > setGame.gameTime)
+						timeRemaining = setGame.gameTime;
 					[setGame SwitchPieces];
 				}
 				timeSinceLastRightAnswer = 0;
@@ -768,7 +808,8 @@ int brainPulseTimer = 0;
 	if(!setGame.isActive)
 		return;
 	//[setGame GameLoop];
-	if([setGame isFinished])
+	//if([setGame isFinished])
+	if((setGame.gameType == 1 && [setGame isFinished])  || (setGame.gameType == 2 && timeRemaining <= 0))
 	{
 		[self drawFinished];
 		setGame.isActive = NO;
@@ -786,6 +827,10 @@ int brainPulseTimer = 0;
 	if(showWrong > 0)
 		showWrong --;
 	
+	if(setGame.gameType == 1)
+		timeRemaining +=0.1;
+	else
+		timeRemaining -=0.1;
 
 	randomTwitch  = randomTwitch ++;
 	brain_randomTwitch = brain_randomTwitch ++;
@@ -832,8 +877,28 @@ int brainPulseTimer = 0;
 	
 	twitchRate = 30;
 	setGame.isActive = YES;
+	
+	firstClick = NO;
+	showWrong = 0;
+	showRight = 0;
+	showPiece1 = 0;
+	showPiece2 = 0;
+	showPiece3 = 0;
+	
+	randomTwitch = 0;
+	twitchRate = 30;
+	brain_randomTwitch = 1;
+	brain_twitchRate = 30;
+	
+	if(setGame.gameType == 1)
+		timeRemaining = 0;
+	else {
+		timeRemaining= 60;
+	}
+
+	
+	
 	SetPiece *p= (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:0] intValue]];
-	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	//[appDelegate readScoresFromDatabase];
 	

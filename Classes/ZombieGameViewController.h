@@ -21,6 +21,7 @@
 	IBOutlet UIButton *button10;
 	IBOutlet UIButton *button11;
 	IBOutlet UIButton *button12;
+	IBOutlet UIButton *playAgainButton;
 	
 	IBOutlet UIImageView *selected1View;
 	IBOutlet UIImageView *selected2View;
@@ -111,6 +112,7 @@
 @property (nonatomic,retain) UIButton *button10;
 @property (nonatomic,retain) UIButton *button11;
 @property (nonatomic,retain) UIButton *button12;
+@property (nonatomic,retain) UIButton *playAgainButton;
 
 
 

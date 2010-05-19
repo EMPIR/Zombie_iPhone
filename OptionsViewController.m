@@ -22,6 +22,33 @@
 	[appDelegate deleteAllScores];
 }
 
+
+-(IBAction) onSwitchFX:(UISwitch *) sender{
+	if(sender != NULL)
+	{
+		ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+		if(sender.on)
+			appDelegate.soundFX = YES;
+		else {
+			appDelegate.soundFX = NO;
+			
+		}
+
+			
+	}
+}
+
+-(IBAction) onSlideVolume:(id) sender{
+	UISlider *slider = (UISlider *)sender;
+	if(slider != NULL)
+	{
+		ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+		//[slider value]
+		[appDelegate BackgroundVolume:[slider value]];
+	}
+
+}
+
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {

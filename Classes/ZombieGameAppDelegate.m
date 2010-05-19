@@ -7,6 +7,7 @@
 #import "ZombieGameAppDelegate.h"
 #import "GameMenu.h"
 #import "Scores.h"
+#import <AVFoundation/AVFoundation.h>
 
 
 @implementation ZombieGameAppDelegate
@@ -15,15 +16,25 @@
 @synthesize viewController;
 @synthesize scores;
 @synthesize databasePath, databaseName;
-
-
+@synthesize audioPlayer; // the player object
+@synthesize soundFX;
 
 
 - (void)dealloc {
 	[scores release];
     [viewController release];
     [window release];
-    [super dealloc];
+    [audioPlayer release];
+	[super dealloc];
+	
+}
+
+-(id) init{
+	if(self = [super init]){
+		soundFX = YES;
+		
+	}
+	return self;
 }
 
 -(void) deleteAllScores {
@@ -266,8 +277,19 @@
 	// Query the database for all animal records and construct the "scores" array
 	[self readScoresFromDatabase];
 	
+	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Audio_BG01.mp3", [[NSBundle mainBundle] resourcePath]]];
+	NSError *error;
+	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+	audioPlayer.numberOfLoops = -1;
+	audioPlayer.volume = 0.5;
 	
 	
+	
+	if (audioPlayer == nil)
+		NSLog(@"%",[error description]);				
+	else 
+		[audioPlayer play];
+
 
 	// Override point for customization after app launch    
     [window addSubview:viewController.view];
@@ -279,6 +301,15 @@
 	
 	return YES;
 }
+
+-(void) SoundFX:(BOOL)val{
+	soundFX = val;
+}
+-(void) BackgroundVolume:(double) val{
+	audioPlayer.volume = val;
+}
+
+
 
 
 @end
