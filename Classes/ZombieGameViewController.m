@@ -396,6 +396,20 @@ int brainPulseTimer = 0;
 		[self getButton:i].hidden = YES;
 		[self getHint:i].hidden = YES;
 	}	
+	firstClick = NO;
+	showWrong = 0;
+	showRight = 0;
+	showPiece1 = 0;
+	showPiece2 = 0;
+	showPiece3 = 0;
+	
+	randomTwitch = 0;
+	twitchRate = 30;
+	brain_randomTwitch = 1;
+	brain_twitchRate = 30;
+	
+	timeSinceLastRightAnswer = 0;
+	hintVisible = NO;
 	
 }
 
@@ -848,6 +862,7 @@ int brainPulseTimer = 0;
 		
 		NSTimeInterval timeInterval = -1 * [setGame.startDate timeIntervalSinceNow];
 		double timeLeft = ((setGame.gameTime - timeInterval) / (double) setGame.gameTime);
+		timeLeft = timeRemaining / 60.0;
 		
 		if(timeLeft < 0)
 			timeLeft = 0.001;
