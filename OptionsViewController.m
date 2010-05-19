@@ -6,10 +6,50 @@
 
 #import "OptionsViewController.h"
 #import "ZombieGameAppDelegate.h"
+#import "ZombieAudio.h"
+#import "GameLogic.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @implementation OptionsViewController
 
+NSTimer *gameTimer;
+int _randomTwitch = 0;
+int _twitchRate = 15;
 
+-(void) playSound:(int) pieceID:(int) expression {
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	if(!appDelegate.soundFX)
+		return;
+	
+	
+	NSString *filename = [[ZombieAudio getZombieAudioFile:pieceID:expression] retain];
+	//Get the filename of the sound file:
+	NSString *path;
+	
+	
+	path = [NSString stringWithFormat:@"%@%@",
+			[[NSBundle mainBundle] resourcePath],
+			filename];
+	
+	
+	
+	
+	NSLog(@"%",path);
+	
+	//declare a system sound id
+	SystemSoundID soundID;
+	
+	//Get a URL for the sound file
+	NSURL *filePath = [NSURL fileURLWithPath:path isDirectory:NO];
+	
+	//Use audio sevices to create the sound
+	AudioServicesCreateSystemSoundID((CFURLRef)filePath, &soundID);
+	
+	//Use audio services to play the sound
+	AudioServicesPlaySystemSound(soundID);
+	[filename release];
+	
+}
 
 -(IBAction) onFinished:(id) sender{
 	[[self parentViewController] dismissModalViewControllerAnimated:NO];
@@ -58,13 +98,24 @@
     return self;
 }
 */
+-(void) gameloop {
+	_randomTwitch  = _randomTwitch ++;
+	_randomTwitch  = _randomTwitch % _twitchRate;
+	if(_randomTwitch == 0)
+	{
+		
 
-/*
+		[self playSound:[GameLogic randomNumber:1,3]:[GameLogic randomNumber:1,2]];
+	}
+}
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	gameTimer = [[NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(gameloop) userInfo:nil repeats:YES] retain];
+
 }
-*/
+
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -81,6 +132,7 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+
 - (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -89,6 +141,7 @@
 
 
 - (void)dealloc {
+	[gameTimer dealloc];
     [super dealloc];
 }
 

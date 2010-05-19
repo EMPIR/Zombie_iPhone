@@ -265,7 +265,7 @@ int brainPulseTimer = 0;
 	[message release];
 	[match release];
 	
-	 message =[[NSString alloc] initWithFormat:@"Comboz %d", setGame.setsComplete];
+	 message =[[NSString alloc] initWithFormat:@"Comboz: %d", setGame.setsComplete];
 	[moveLabel2 setText:message];
 	
 	
@@ -860,9 +860,9 @@ int brainPulseTimer = 0;
 	}
 	else if (setGame.gameType == 2){
 		
-		NSTimeInterval timeInterval = -1 * [setGame.startDate timeIntervalSinceNow];
-		double timeLeft = ((setGame.gameTime - timeInterval) / (double) setGame.gameTime);
-		timeLeft = timeRemaining / 60.0;
+		//NSTimeInterval timeInterval = -1 * [setGame.startDate timeIntervalSinceNow];
+		//double timeLeft = ((setGame.gameTime - timeInterval) / (double) setGame.gameTime);
+		double timeLeft = timeRemaining / 60.0;
 		
 		if(timeLeft < 0)
 			timeLeft = 0.001;

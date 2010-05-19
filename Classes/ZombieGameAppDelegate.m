@@ -37,6 +37,8 @@
 	return self;
 }
 
+
+
 -(void) deleteAllScores {
 	// Setup the database object
 	sqlite3 *database;
