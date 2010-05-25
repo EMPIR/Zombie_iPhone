@@ -14,7 +14,7 @@
 //returns a randomNumber between [0.0-1.0]
 +(double) randomNumber;
 
-//returns a rundom number between the specidied bounds
+//returns a random number between the specidied bounds
 +(int) randomNumber:(int) floor, int ceiling;
 
 //@property (nonatomic,assign) BOOL seed;

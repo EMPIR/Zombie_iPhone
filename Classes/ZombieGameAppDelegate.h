@@ -24,10 +24,11 @@
 	
 	// Array to store the high scores objects
 	NSMutableArray *scores;
-	
 	AVAudioPlayer *audioPlayer;
 	
 	BOOL soundFX;
+	double volume;
+	BOOL showHint;
 	
 	
 	
@@ -37,6 +38,10 @@
 -(void) deleteAllScores;
 -(void) BackgroundVolume:(double) val;
 -(void) SoundFX:(BOOL)val;
+-(void) ShowHint:(BOOL) val;
+-(void) PlayNonGameTrack;
+-(void) PlayCrawlerTrack;
+-(void) PlayBerzerkTrack;
 
 
 -(NSMutableArray *) getCrawlerTopScores;
@@ -49,7 +54,8 @@
 @property (nonatomic, retain) NSString *databaseName;
 @property (nonatomic, retain) AVAudioPlayer *audioPlayer;
 @property (nonatomic, assign) BOOL soundFX;
-
+@property (nonatomic, assign) double volume;
+@property (nonatomic, assign) BOOL showHint;
 
 @end
 

@@ -10,9 +10,19 @@
 
 
 @interface HowToPlayViewController : UIViewController {
-
+	IBOutlet UIButton *button1;
+	IBOutlet UIButton *button2;
+	IBOutlet UIButton *button3;
+	
 }
+
+
+
+@property (nonatomic,retain) UIButton *button1;
+@property (nonatomic,retain) UIButton *button2;
+@property (nonatomic,retain) UIButton *button3;
 -(IBAction) backMainMenu:(id) sender;
+-(IBAction) generateMatch:(id) sender;
 
 
 @end

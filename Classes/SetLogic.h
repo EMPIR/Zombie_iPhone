@@ -48,6 +48,8 @@
 /// <returns></returns>
 +(NSMutableArray *) CreateSimplePieces:(int) total;
 
++(NSMutableArray *)CreateRandomSet;
+
 
 /// <summary>
 /// This routine determines if the set of pieces contains a Set Match.

@@ -106,6 +106,23 @@
 	return ret;
 }
 
+
+
++(NSMutableArray *)CreateRandomSet{
+	NSMutableArray *ret = [[[NSMutableArray alloc]init]autorelease];
+	
+	SetPiece *p1 = [self CreateSimplePiece];
+	
+	
+	[ret addObject:p1];
+	[ret addObject:p1];
+	[ret addObject:p1];
+	
+	
+	
+	return ret;
+}
+
 /// <summary>
 /// This routine determines if the set of pieces contains a Set Match.
 /// If there are less than 3 pieces in the list, then the routine automatically

@@ -82,6 +82,8 @@ static int TOTAL_EXPRESSIONS  = 5;
 			return [[NSString stringWithFormat:@"/wrong.wav"] autorelease];
 		if(expression ==2)
 			return [[NSString stringWithFormat:@"/correct.wav"] autorelease];
+		if(expression == 3)
+			return [[NSString stringWithFormat:@"/wilhelm.wav"] autorelease];
 		//number = [GameLogic randomNumber:1,TOTAL_EXPRESSIONS];
 	}
 	else {

@@ -18,6 +18,8 @@
 @synthesize databasePath, databaseName;
 @synthesize audioPlayer; // the player object
 @synthesize soundFX;
+@synthesize volume;
+@synthesize showHint;
 
 
 - (void)dealloc {
@@ -32,6 +34,7 @@
 -(id) init{
 	if(self = [super init]){
 		soundFX = YES;
+		volume = 0.5;
 		
 	}
 	return self;
@@ -97,7 +100,7 @@
 	// Copy the database from the package to the users filesystem
 	[fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
 	
-	[fileManager release];
+//	[fileManager release];
 }
 
 -(void) readScoresFromDatabase {
@@ -143,6 +146,74 @@
 }
 
 
+-(int) getCrawlerPlacement:(int) score
+{
+	sqlite3 *database;
+	
+	int ret = 1;
+	int i=1;
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+		// Setup the SQL Statement and compile it for faster access
+		const char *sqlStatement = "select * from highScores where gameType = 1 order by score asc";
+		sqlite3_stmt *compiledStatement;
+		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
+			// Loop through the results and add them to the feeds array
+			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+				// Read the data from the result row
+				int _score = sqlite3_column_int(compiledStatement,2);
+				
+				if(score < _score)
+				{
+					ret = i;
+					break;
+				}
+				i++;
+			}
+		}
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+		
+	}
+	sqlite3_close(database);
+	return ret;
+	
+}
+
+
+-(int) getBerzerkPlacement:(int) score
+{
+	sqlite3 *database;
+	
+	int ret = 1;
+	int i=1;
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+		// Setup the SQL Statement and compile it for faster access
+		const char *sqlStatement = "select * from highScores where gameType = 2 order by score asc";
+		sqlite3_stmt *compiledStatement;
+		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
+			// Loop through the results and add them to the feeds array
+			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+				// Read the data from the result row
+				int _score = sqlite3_column_int(compiledStatement,2);
+				
+				if(score < _score)
+				{
+					ret = i;
+					break;
+				}
+				i++;
+			}
+		}
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+		
+	}
+	sqlite3_close(database);
+	return ret;
+	
+}
 
 
 -(NSMutableArray *) getCrawlerTopScores
@@ -230,6 +301,8 @@
 	sqlite3_close(database);
 	return ret;
 }
+
+
 -(void) insertScore:(int) score:(int)gameType:(NSDate *) date{
 	// Setup the database object
 	sqlite3 *database;
@@ -261,7 +334,47 @@
 	
 }
 
+-(void) PlayNonGameTrack{
+	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Audio_BG02.mp3", [[NSBundle mainBundle] resourcePath]]];
+	NSError *error;
+	[audioPlayer release];
+	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+	audioPlayer.numberOfLoops = -1;
+	audioPlayer.volume = volume;
+	if (audioPlayer == nil)
+		NSLog(@"%",[error description]);				
+	else 
+		[audioPlayer play];
+	
+}
 
+-(void) PlayCrawlerTrack{
+	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Audio_BG01.mp3", [[NSBundle mainBundle] resourcePath]]];
+	NSError *error;
+	[audioPlayer release];
+	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+	audioPlayer.numberOfLoops = -1;
+	audioPlayer.volume = volume;
+	if (audioPlayer == nil)
+		NSLog(@"%",[error description]);				
+	else 
+		[audioPlayer play];
+	
+}
+
+-(void) PlayBerzerkTrack{
+	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Audio_BG03.mp3", [[NSBundle mainBundle] resourcePath]]];
+	NSError *error;
+	[audioPlayer release];
+	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+	audioPlayer.numberOfLoops = -1;
+	audioPlayer.volume = volume;
+	if (audioPlayer == nil)
+		NSLog(@"%",[error description]);				
+	else 
+		[audioPlayer play];
+	
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
 	
@@ -279,19 +392,19 @@
 	// Query the database for all animal records and construct the "scores" array
 	[self readScoresFromDatabase];
 	
-	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Audio_BG01.mp3", [[NSBundle mainBundle] resourcePath]]];
-	NSError *error;
-	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-	audioPlayer.numberOfLoops = -1;
-	audioPlayer.volume = 0.5;
+	//NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Audio_BG02.mp3", [[NSBundle mainBundle] resourcePath]]];
+	//NSError *error;
+	//audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+	//audioPlayer.numberOfLoops = -1;
 	
 	
 	
-	if (audioPlayer == nil)
-		NSLog(@"%",[error description]);				
-	else 
-		[audioPlayer play];
-
+	
+	//if (audioPlayer == nil)
+	//	NSLog(@"%",[error description]);				
+	//else 
+	//	[audioPlayer play];
+	[self PlayNonGameTrack];
 
 	// Override point for customization after app launch    
     [window addSubview:viewController.view];
@@ -303,12 +416,15 @@
 	
 	return YES;
 }
-
+-(void) ShowHint:(BOOL) val{
+	showHint = val;
+}
 -(void) SoundFX:(BOOL)val{
 	soundFX = val;
 }
 -(void) BackgroundVolume:(double) val{
-	audioPlayer.volume = val;
+	volume = val;
+	audioPlayer.volume = volume;
 }
 
 

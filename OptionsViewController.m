@@ -11,12 +11,11 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 @implementation OptionsViewController
+@synthesize gameTimer, randomTwitch, twitchRate, isHints, isFX;
 
-NSTimer *gameTimer;
-int _randomTwitch = 0;
-int _twitchRate = 15;
 
--(void) playSound:(int) pieceID:(int) expression {
+
+-(void) playSound2:(int) pieceID:(int) expression {
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	if(!appDelegate.soundFX)
 		return;
@@ -47,11 +46,15 @@ int _twitchRate = 15;
 	
 	//Use audio services to play the sound
 	AudioServicesPlaySystemSound(soundID);
-	[filename release];
+	
 	
 }
 
+
 -(IBAction) onFinished:(id) sender{
+	[gameTimer invalidate];
+	[gameTimer release];
+
 	[[self parentViewController] dismissModalViewControllerAnimated:NO];
 }
 
@@ -62,21 +65,44 @@ int _twitchRate = 15;
 	[appDelegate deleteAllScores];
 }
 
+-(IBAction) onSwitchFX:(UIButton *) sender
+{
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	isFX = !isFX;
+	UIImage *img;
+	if(isFX){
+		[appDelegate SoundFX:YES];
+		img  = [UIImage imageNamed:@"b_FX_on.png"];
+		 [sender setImage:img forState:UIControlStateNormal];
+	}
+	else {
+		[appDelegate SoundFX:NO];
+		img  = [UIImage imageNamed:@"b_FX_off.png"];
+		[sender setImage:img forState:UIControlStateNormal];
+		
+	}
 
--(IBAction) onSwitchFX:(UISwitch *) sender{
-	if(sender != NULL)
-	{
-		ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
-		if(sender.on)
-			appDelegate.soundFX = YES;
-		else {
-			appDelegate.soundFX = NO;
-			
-		}
-
-			
+	
+}
+-(IBAction) onSwitchHints:(UIButton *) sender
+{
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	isHints = !isHints;
+	UIImage *img;
+	if(isHints){
+		img  = [UIImage imageNamed:@"b_Hints_on.png"];
+		[sender setImage:img forState:UIControlStateNormal];
+		[appDelegate ShowHint:YES];
+		
+	}
+	else {
+		img  = [UIImage imageNamed:@"b_Hints_off.png"];
+		[sender setImage:img forState:UIControlStateNormal];
+		[appDelegate ShowHint:NO];
+		
 	}
 }
+
 
 -(IBAction) onSlideVolume:(id) sender{
 	UISlider *slider = (UISlider *)sender;
@@ -99,21 +125,32 @@ int _twitchRate = 15;
 }
 */
 -(void) gameloop {
-	_randomTwitch  = _randomTwitch ++;
-	_randomTwitch  = _randomTwitch % _twitchRate;
-	if(_randomTwitch == 0)
+	randomTwitch  = randomTwitch ++;
+	randomTwitch  = randomTwitch % twitchRate;
+	NSLog(@"%d", randomTwitch);
+	if(randomTwitch == 0)
 	{
 		
 
-		[self playSound:[GameLogic randomNumber:1,3]:[GameLogic randomNumber:1,2]];
+		[self playSound2:[GameLogic randomNumber:1,3]:[GameLogic randomNumber:1,2]];
 	}
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	gameTimer = [[NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(gameloop) userInfo:nil repeats:YES] retain];
+	
 
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+	randomTwitch = 0;
+	twitchRate = 15;
+	isHints = isFX = YES;
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
+	[appDelegate ShowHint:YES];
+	gameTimer = [[NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(gameloop) userInfo:nil repeats:YES] retain];
 }
 
 

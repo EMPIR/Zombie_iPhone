@@ -48,14 +48,11 @@ int timeSinceLastRightAnswer = 0;
 BOOL hintVisible = NO;
 NSTimer *gameTimer;
 
-double timeRemaining = 0;
+double timeRemaining = 0;	
 
 int brainPulseTimer = 0;
 
--(void) pulseBrain
-{		
-		
-}
+
 
 -(void) playSound:(int) pieceID:(int) expression {
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -88,7 +85,7 @@ int brainPulseTimer = 0;
 	
 	//Use audio services to play the sound
 	AudioServicesPlaySystemSound(soundID);
-	[filename release];
+	//[filename release];
 	
 }
 
@@ -189,10 +186,9 @@ int brainPulseTimer = 0;
 	return NULL;
 }
 
+
 -(void) drawPieces
 {
-	
-	
 	self.brainView.hidden = NO;
 	self.moveLabel.hidden = NO;
 	self.finishedLabel.hidden = YES;
@@ -223,9 +219,11 @@ int brainPulseTimer = 0;
 	int a = [aa intValue];
 	int b = [bb intValue];
 	int c = [cc intValue];
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	
-	if(setGame.showHint == YES && hintVisible == YES)
+	
+	if(appDelegate.showHint == YES && hintVisible == YES)
 	{
 		selView = [self getHint:a];
 		if(selView != NULL)
@@ -265,6 +263,7 @@ int brainPulseTimer = 0;
 	[message release];
 	[match release];
 	
+	
 	 message =[[NSString alloc] initWithFormat:@"Comboz: %d", setGame.setsComplete];
 	[moveLabel2 setText:message];
 	
@@ -292,7 +291,7 @@ int brainPulseTimer = 0;
 		[message release];
 	}		
 
-
+	
 	
 	int val = [[setGame.state objectAtIndex:0] intValue];
 	NSLog(@"Setting image for piece index %d", val);
@@ -531,7 +530,10 @@ int brainPulseTimer = 0;
 							NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
 							//NSLog(@"Game Over, here was your time in seconds: %@", message);
 							//[appDelegate readScoresFromDatabase];
+							//int place = [appDelegate getCrawlerPlacement:(int)-timeInterval];
 							[appDelegate insertScore:-timeInterval :setGame.gameType :setGame.finishedDate];
+							
+							
 							
 						}
 						else {
@@ -672,6 +674,10 @@ int brainPulseTimer = 0;
 	[gameTimer invalidate];
 	[gameTimer release];
 	setGame.isActive = NO;
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+		[appDelegate PlayNonGameTrack];
+	
+	
 	[[self parentViewController] dismissModalViewControllerAnimated:NO];
 }
 
@@ -806,8 +812,6 @@ int brainPulseTimer = 0;
 	showPiece1 = 0;
 	showPiece2 = 0;
 	showPiece3 = 0;
-	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
-	int scoreCount = appDelegate.scores.count;
 	
 	//PLAY START SOUND??
     [super viewDidLoad];
@@ -821,6 +825,12 @@ int brainPulseTimer = 0;
 -(void) gameloop {
 	if(!setGame.isActive)
 		return;
+	
+	
+	//ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
+	int score = 0;
+	
 	//[setGame GameLoop];
 	//if([setGame isFinished])
 	if((setGame.gameType == 1 && [setGame isFinished])  || (setGame.gameType == 2 && timeRemaining <= 0))
@@ -828,8 +838,12 @@ int brainPulseTimer = 0;
 		[self drawFinished];
 		setGame.isActive = NO;
 		ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
-		if(setGame.gameType == 2)
+		if(setGame.gameType == 2){
+			[self playSound:0:3];
+			
+			//int place = [appDelegate getBerzerkPlacement:setGame.setsComplete];
 			[appDelegate insertScore:setGame.setsComplete :setGame.gameType :setGame.finishedDate];
+		}
 	}
 	else
 	{
@@ -844,8 +858,13 @@ int brainPulseTimer = 0;
 	if(setGame.gameType == 1)
 		timeRemaining +=0.1;
 	else
-		timeRemaining -=0.1;
-
+	{
+		int level  = setGame.setsComplete / 10;
+		double levelPenalty = 0.002 * level;
+		
+		timeRemaining -= (0.1 + levelPenalty);
+								
+	}	
 	randomTwitch  = randomTwitch ++;
 	brain_randomTwitch = brain_randomTwitch ++;
 	timeSinceLastRightAnswer ++;
@@ -863,6 +882,7 @@ int brainPulseTimer = 0;
 		//NSTimeInterval timeInterval = -1 * [setGame.startDate timeIntervalSinceNow];
 		//double timeLeft = ((setGame.gameTime - timeInterval) / (double) setGame.gameTime);
 		double timeLeft = timeRemaining / 60.0;
+		
 		
 		if(timeLeft < 0)
 			timeLeft = 0.001;
@@ -910,6 +930,17 @@ int brainPulseTimer = 0;
 	else {
 		timeRemaining= 60;
 	}
+	
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	if(setGame.gameType == 2){
+		
+		[appDelegate PlayBerzerkTrack];
+	}
+	else {
+		[appDelegate PlayCrawlerTrack];
+	}
+
+	
 
 	
 	
@@ -919,6 +950,9 @@ int brainPulseTimer = 0;
 	
 	[self playSound:p.shape:6];
 	gameTimer = [[NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(gameloop) userInfo:nil repeats:YES] retain];
+	
+	
+	
 
 }
 
