@@ -1121,14 +1121,7 @@ UIImageView *m_brainView30;
 		[self.view addSubview:aview];
 		
 	} */
-	m_bGun = [[UIImageView alloc]init];
-	[self.view addSubview:m_bGun];
 	
-	UIImage *img = [UIImage imageNamed:@"EndGame_Gun.png"];
-	self.m_bGun.image = img;
-	m_bGun.frame = CGRectMake(360, 70, 129, 132);
-
-	m_bGun.hidden = YES;
 	
 	
 	
@@ -1197,6 +1190,15 @@ UIImageView *m_brainView30;
 	[self.view addSubview:m_brainView30];
 	
 	twitchRate = 30;
+	
+	m_bGun = [[UIImageView alloc]init];
+	[self.view addSubview:m_bGun];
+	
+	UIImage *img = [UIImage imageNamed:@"EndGame_Gun.png"];
+	self.m_bGun.image = img;
+	m_bGun.frame = CGRectMake(360, 70, 129, 132);
+	
+	m_bGun.hidden = YES;
 	
 }
 
