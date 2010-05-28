@@ -1,7 +1,7 @@
 TZombieGame
 v7
 r0
-t296450904.715738
+t296534686.517276
 cCheck dependencies
 cProcessInfoPlistFile /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/Info.plist ZombieGame-Info.plist
 cCompileXIB /Users/dguinnip/Build/ZombieGame/MainWindow.xib
@@ -139,6 +139,37 @@ cCpResource build/Debug-iphonesimulator/ZombieGame.app/b_Hints_on.png b_Hints_on
 cCpResource build/Debug-iphonesimulator/ZombieGame.app/b_FX_off.png b_FX_off.png
 cCpResource build/Debug-iphonesimulator/ZombieGame.app/b_FX_on.png b_FX_on.png
 cCpResource build/Debug-iphonesimulator/ZombieGame.app/bg_HowToPlay.jpg bg_HowToPlay.jpg
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_15.png Brains/brains_15.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_14.png Brains/brains_14.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_13.png Brains/brains_13.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_12.png Brains/brains_12.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_11.png Brains/brains_11.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_10.png Brains/brains_10.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_9.png Brains/brains_9.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_8.png Brains/brains_8.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_7.png Brains/brains_7.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_6.png Brains/brains_6.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_5.png Brains/brains_5.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_4.png Brains/brains_4.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_3.png Brains/brains_3.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_2.png Brains/brains_2.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_1.png Brains/brains_1.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brain_3.png brain_3.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_30.png Brains/brains_30.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_29.png Brains/brains_29.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_28.png Brains/brains_28.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_27.png Brains/brains_27.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_26.png Brains/brains_26.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_25.png Brains/brains_25.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_24.png Brains/brains_24.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_23.png Brains/brains_23.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_22.png Brains/brains_22.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_21.png Brains/brains_21.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_20.png Brains/brains_20.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_19.png Brains/brains_19.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_18.png Brains/brains_18.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_17.png Brains/brains_17.png
+cCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_16.png Brains/brains_16.png
 cProcessPCH /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-aetwcbvzmisroageuhdlhlrmgiop/ZombieGame_Prefix.pch.gch ZombieGame_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/main.o /Users/dguinnip/Build/ZombieGame/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGameAppDelegate.o /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
@@ -154,6 +185,8 @@ cCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-
 cCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieAudio.o /Users/dguinnip/Build/ZombieGame/Classes/ZombieAudio.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/OptionsViewController.o /Users/dguinnip/Build/ZombieGame/Classes/../OptionsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/HowToPlayViewController.o /Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/BrainPieces.o /Users/dguinnip/Build/ZombieGame/Classes/BrainPieces.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/BrainPiece.o /Users/dguinnip/Build/ZombieGame/Classes/BrainPiece.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cLd /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGame normal i386
 cGenerateDSYMFile /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app.dSYM /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGame
 cTouch /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app
@@ -187,6 +220,11 @@ N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1
 c000000004B2B4CC3000000000026EE30
 t1261128899
 s2551344
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.h
+c000000004B2B4CC300000000000004FE
+t1261128899
+s1278
 
 N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
 c000000004B2B4DC8000000000027E880
@@ -663,6 +701,156 @@ c000000004BF7F8EE0000000000046361
 t1274542318
 s287585
 
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_1.png
+c000000004BFC865E0000000000000D61
+t1274840670
+s3425
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_10.png
+c000000004BFC86E30000000000000870
+t1274840803
+s2160
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_11.png
+c000000004BFC86EE0000000000000E24
+t1274840814
+s3620
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_12.png
+c000000004BFC86FA0000000000000905
+t1274840826
+s2309
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_13.png
+c000000004BFC87050000000000000AF4
+t1274840837
+s2804
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_14.png
+c000000004BFC87100000000000000E3D
+t1274840848
+s3645
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_15.png
+c000000004BFC871E0000000000000C8A
+t1274840862
+s3210
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_16.png
+c000000004BFC8728000000000000084C
+t1274840872
+s2124
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_17.png
+c000000004BFC87340000000000000BC0
+t1274840884
+s3008
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_18.png
+c000000004BFC87410000000000000BD1
+t1274840897
+s3025
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_19.png
+c000000004BFC874F0000000000000D1C
+t1274840911
+s3356
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_2.png
+c000000004BFC866A0000000000000428
+t1274840682
+s1064
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_20.png
+c000000004BFC876500000000000007A5
+t1274840933
+s1957
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_21.png
+c000000004BFC87780000000000000881
+t1274840952
+s2177
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_22.png
+c000000004BFC8783000000000000052C
+t1274840963
+s1324
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_23.png
+c000000004BFC87920000000000001C41
+t1274840978
+s7233
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_24.png
+c000000004BFC87AB0000000000000EBB
+t1274841003
+s3771
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_25.png
+c000000004BFC87BA0000000000000219
+t1274841018
+s537
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_26.png
+c000000004BFC87C60000000000000E17
+t1274841030
+s3607
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_27.png
+c000000004BFC87EE000000000000155B
+t1274841070
+s5467
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_28.png
+c000000004BFC87FD0000000000000CB9
+t1274841085
+s3257
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_29.png
+c000000004BFC880D00000000000012EF
+t1274841101
+s4847
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_3.png
+c000000004BFC867B0000000000000CA1
+t1274840699
+s3233
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_30.png
+c000000004BFC883800000000000009C2
+t1274841144
+s2498
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_4.png
+c000000004BFC868900000000000009C9
+t1274840713
+s2505
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_5.png
+c000000004BFC869700000000000012E8
+t1274840727
+s4840
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_6.png
+c000000004BFC86A9000000000000064D
+t1274840745
+s1613
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_7.png
+c000000004BFC86B50000000000000CDB
+t1274840757
+s3291
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_8.png
+c000000004BFC86C1000000000000065A
+t1274840769
+s1626
+
+N/Users/dguinnip/Build/ZombieGame/Brains/brains_9.png
+c000000004BFC86CF0000000000002040
+t1274840783
+s8256
+
 N/Users/dguinnip/Build/ZombieGame/Classes/../GameMenu.h
 c000000004BF0BA550000000000000310
 t1274067541
@@ -687,6 +875,32 @@ i"ZombieGameAppDelegate.h"
 i"ZombieAudio.h"
 i"GameLogic.h"
 i<AudioToolbox/AudioToolbox.h>
+
+N/Users/dguinnip/Build/ZombieGame/Classes/BrainPiece.h
+c000000004BFC7D1D0000000000000271
+t1274838301
+s625
+i<Foundation/Foundation.h>
+
+N/Users/dguinnip/Build/ZombieGame/Classes/BrainPiece.m
+c000000004BFC7BF30000000000000204
+t1274838003
+s516
+i"BrainPiece.h"
+
+N/Users/dguinnip/Build/ZombieGame/Classes/BrainPieces.h
+c000000004BFC24B5000000000000012B
+t1274815669
+s299
+i<Foundation/Foundation.h>
+
+N/Users/dguinnip/Build/ZombieGame/Classes/BrainPieces.m
+c000000004BFC7D4200000000000003BB
+t1274838338
+s955
+i"BrainPieces.h"
+i"BrainPiece.h"
+i"GameLogic.h"
 
 N/Users/dguinnip/Build/ZombieGame/Classes/GameLogic.h
 c000000004BF4A2B40000000000000172
@@ -863,9 +1077,9 @@ i<UIKit/UIKit.h>
 i<sqlite3.h>
 
 N/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m
-c000000004BFB381A00000000000035DE
-t1274755098
-s13790
+c000000004BFC17000000000000003D90
+t1274812160
+s15760
 i"ZombieGameAppDelegate.h"
 i"GameMenu.h"
 i"Scores.h"
@@ -884,15 +1098,15 @@ s1605
 i"ZombieGameMenuViewController.h"
 
 N/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.h
-c000000004BF34377000000000000137D
-t1274233719
-s4989
+c000000004BFC33FF000000000000178D
+t1274819583
+s6029
 i<UIKit/UIKit.h>
 
 N/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m
-c000000004BFB3C8F000000000000537C
-t1274756239
-s21372
+c000000004BFC7B300000000000008402
+t1274837808
+s33794
 i"ZombieGameViewController.h"
 i"ZombieGameAppDelegate.h"
 i"GameLogic.h"
@@ -900,8 +1114,11 @@ i"SetPiece.h"
 i"SetLogic.h"
 i"SetGame.h"
 i"ZombieAudio.h"
+i"BrainPieces.h"
+i"BrainPiece.h"
 i<UIKit/UIKit.h>
 i<AudioToolbox/AudioToolbox.h>
+i<CoreGraphics/CoreGraphics.h>
 
 N/Users/dguinnip/Build/ZombieGame/Data.db
 c000000004BEA16560000000000000800
@@ -1646,9 +1863,9 @@ t1273025759
 s18020
 
 N/Users/dguinnip/Build/ZombieGame/ZombieGameViewController.xib
-c000000004BF7526C0000000000018413
-t1274499692
-s99347
+c000000004BFC346A000000000001BB7A
+t1274819690
+s113530
 
 N/Users/dguinnip/Build/ZombieGame/ZombieGame_Prefix.pch
 c000000004BD4E99100000000000000BD
@@ -1938,21 +2155,26 @@ t1274160928
 s124654
 
 N/Users/dguinnip/Build/ZombieGame/brain_1.png
-c000000004BF1F8C60000000000000838
-t1274149062
-s2104
+c000000004BFC85D5000000000000169C
+t1274840533
+s5788
 
 N/Users/dguinnip/Build/ZombieGame/brain_2.png
-c000000004BF1F91C00000000000009F5
-t1274149148
-s2549
+c000000004BFC85EC0000000000001C91
+t1274840556
+s7313
+
+N/Users/dguinnip/Build/ZombieGame/brain_3.png
+c000000004BFC860600000000000015AB
+t1274840582
+s5547
 
 N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app
-t1274758104
-s7582
+t1274841886
+s8636
 
 N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app.dSYM
-t1274756918
+t1274838338
 s102
 
 N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/11.wav
@@ -2640,16 +2862,16 @@ t1273893626
 s8
 
 N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGame
-t1274756917
-s137324
+t1274838338
+s162168
 
 N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGameMenuViewController.nib
 t1273026685
 s1926
 
 N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGameViewController.nib
-t1274501725
-s14354
+t1274819724
+s16665
 
 N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/allBad.png
 t1273556166
@@ -2804,12 +3026,136 @@ t1274162931
 s124654
 
 N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brain_1.png
-t1274162931
-s2104
+t1274841886
+s5788
 
 N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brain_2.png
-t1274162931
-s2549
+t1274841886
+s7313
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brain_3.png
+t1274841886
+s5547
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_1.png
+t1274841886
+s3425
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_10.png
+t1274841886
+s2160
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_11.png
+t1274841886
+s3620
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_12.png
+t1274841886
+s2309
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_13.png
+t1274841886
+s2804
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_14.png
+t1274841886
+s3645
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_15.png
+t1274841886
+s3210
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_16.png
+t1274841886
+s2124
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_17.png
+t1274841886
+s3008
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_18.png
+t1274841886
+s3025
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_19.png
+t1274841886
+s3356
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_2.png
+t1274841886
+s1064
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_20.png
+t1274841886
+s1957
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_21.png
+t1274841886
+s2177
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_22.png
+t1274841886
+s1324
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_23.png
+t1274841886
+s7233
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_24.png
+t1274841886
+s3771
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_25.png
+t1274841886
+s537
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_26.png
+t1274841886
+s3607
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_27.png
+t1274841886
+s5467
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_28.png
+t1274841886
+s3257
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_29.png
+t1274841886
+s4847
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_3.png
+t1274841886
+s3233
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_30.png
+t1274841886
+s2498
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_4.png
+t1274841886
+s2505
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_5.png
+t1274841886
+s4840
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_6.png
+t1274841886
+s1613
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_7.png
+t1274841886
+s3291
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_8.png
+t1274841886
+s1626
+
+N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/brains_9.png
+t1274841886
+s8256
 
 N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/checkHover.png
 t1273545161
@@ -2839,6 +3185,14 @@ N/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/wro
 t1274502623
 s158804
 
+N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/BrainPiece.o
+t1274838305
+s11760
+
+N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/BrainPieces.o
+t1274838338
+s9256
+
 N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/GameLogic.o
 t1274495991
 s7004
@@ -2860,8 +3214,8 @@ t1274755099
 s44532
 
 N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/MainMenuViewController.o
-t1274495991
-s38292
+t1274819724
+s38552
 
 N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/OptionsViewController.o
 t1274756917
@@ -2892,25 +3246,81 @@ t1274495992
 s8568
 
 N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGame.LinkFileList
-c000000004BF22EEF0000000000000738
-t1274162927
-s1848
+c000000004BFC25C90000000000000839
+t1274815945
+s2105
 
 N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGameAppDelegate.o
-t1274755099
-s63896
+t1274812160
+s65552
 
 N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGameMenuViewController.o
 t1273026686
 s31044
 
 N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGameViewController.o
-t1274756239
-s116832
+t1274838305
+s155448
 
 N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/main.o
 t1273026686
 s5936
+
+N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/GameLogic.plist
+t2
+s0
+
+N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/GameMenu.plist
+t1274813742
+s275
+
+N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/HighScoresViewController.plist
+t1274813742
+s275
+
+N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/HowToPlayViewController.plist
+t2
+s0
+
+N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/MainMenuViewController.plist
+t1274813742
+s275
+
+N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/OptionsViewController.plist
+t2
+s0
+
+N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/Scores.plist
+t1274813742
+s275
+
+N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/SetGame.plist
+t1274813742
+s275
+
+N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/SetLogic.plist
+t2
+s0
+
+N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/SetPiece.plist
+t1274813742
+s275
+
+N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/ZombieAudio.plist
+t2
+s0
+
+N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/ZombieGameAppDelegate.plist
+t1274813742
+s275
+
+N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/ZombieGameViewController.plist
+t2
+s0
+
+N/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/main.plist
+t1274813741
+s275
 
 N/Users/dguinnip/Build/ZombieGame/checkHover.png
 c000000004BE8B1AF00000000000007D7
@@ -2957,6 +3367,10 @@ N/var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/Shared
 t1273026686
 s13026768
 
+N/var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch.pth
+t1274813741
+s1729284
+
 N/var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-fsmsmdmrieixdigoctprxunpfgcx/ZombieGame_Prefix.pch.gch
 t1272505657
 s2515312
@@ -2966,9 +3380,284 @@ c000000004BEB71CF000000000000040E
 t1273721295
 s1038
 
+CAnalyze /Users/dguinnip/Build/ZombieGame/Classes/../GameMenu.m
+s296506542.321217
+e296506542.376300
+r1
+xAnalyze
+x/Users/dguinnip/Build/ZombieGame/Classes/../GameMenu.m
+lSLF07#2@62"Analyze /Users/dguinnip/Build/ZombieGame/Classes/../GameMenu.m296506542#296506542#0(0"0(0#0#54"/Users/dguinnip/Build/ZombieGame/Classes/../GameMenu.m4300911832#1943"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -fvisibility=hidden -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch --analyze /Users/dguinnip/Build/ZombieGame/Classes/../GameMenu.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/GameMenu.plist0#
+
+CAnalyze /Users/dguinnip/Build/ZombieGame/Classes/../OptionsViewController.m
+s296506542.403389
+e296506542.454229
+r1
+xAnalyze
+x/Users/dguinnip/Build/ZombieGame/Classes/../OptionsViewController.m
+o/Users/dguinnip/Build/ZombieGame/Classes/../OptionsViewController.m:36:10:{36:8-36:12}: warning: invalid conversion '%' [-Wformat]
+o         NSLog(@"%",path);
+o               ~~^~
+o/Users/dguinnip/Build/ZombieGame/Classes/../OptionsViewController.m:24:24: warning: Potential leak of an object allocated on line 24 and stored into 'filename'
+o         NSString *filename = [[ZombieAudio getZombieAudioFile:pieceID:expression] retain];
+o                               ^
+o/Users/dguinnip/Build/ZombieGame/Classes/../OptionsViewController.m:135:46:{135:46-135:47}: error: too many arguments to method call
+o                 [self playSound2:[GameLogic randomNumber:1,3]:[GameLogic randomNumber:1,2]];
+o                                                            ^
+o/Users/dguinnip/Build/ZombieGame/Classes/../OptionsViewController.m:135:75:{135:75-135:76}: error: too many arguments to method call
+o                 [self playSound2:[GameLogic randomNumber:1,3]:[GameLogic randomNumber:1,2]];
+o                                                                                         ^
+o4 diagnostics generated.
+lSLF07#2@75"Analyze /Users/dguinnip/Build/ZombieGame/Classes/../OptionsViewController.m296506542#296506542#0(1095"/Users/dguinnip/Build/ZombieGame/Classes/../OptionsViewController.m:36:10:{36:8-36:12}: warning: invalid conversion '%' [-Wformat]         NSLog(@"%",path);               ~~^~/Users/dguinnip/Build/ZombieGame/Classes/../OptionsViewController.m:24:24: warning: Potential leak of an object allocated on line 24 and stored into 'filename'         NSString *filename = [[ZombieAudio getZombieAudioFile:pieceID:expression] retain];                               ^/Users/dguinnip/Build/ZombieGame/Classes/../OptionsViewController.m:135:46:{135:46-135:47}: error: too many arguments to method call                 [self playSound2:[GameLogic randomNumber:1,3]:[GameLogic randomNumber:1,2]];                                                            ^/Users/dguinnip/Build/ZombieGame/Classes/../OptionsViewController.m:135:75:{135:75-135:76}: error: too many arguments to method call                 [self playSound2:[GameLogic randomNumber:1,3]:[GameLogic randomNumber:1,2]];                                                                                         ^4 diagnostics generated.0(0#0#67"/Users/dguinnip/Build/ZombieGame/Classes/../OptionsViewController.m4300911832#1969"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -fvisibility=hidden -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch --analyze /Users/dguinnip/Build/ZombieGame/Classes/../OptionsViewController.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/OptionsViewController.plist0#
+
+CAnalyze /Users/dguinnip/Build/ZombieGame/Classes/GameLogic.m
+s296506542.147876
+e296506542.189110
+r1
+xAnalyze
+x/Users/dguinnip/Build/ZombieGame/Classes/GameLogic.m
+o/Users/dguinnip/Build/ZombieGame/Classes/GameLogic.m:35:24: error: use of undeclared identifier 'ceiling'
+o         double dret = ((r  * (ceiling - floor)));
+o                               ^
+o1 diagnostic generated.
+lSLF07#2@60"Analyze /Users/dguinnip/Build/ZombieGame/Classes/GameLogic.m296506542#296506542#0(214"/Users/dguinnip/Build/ZombieGame/Classes/GameLogic.m:35:24: error: use of undeclared identifier 'ceiling'         double dret = ((r  * (ceiling - floor)));                               ^1 diagnostic generated.1(25@46"Analyzer skipped this file due to parse errors296506542#18446744073709551615#0#1(25@38"use of undeclared identifier 'ceiling'296506542#18446744073709551615#0#0(6@52"/Users/dguinnip/Build/ZombieGame/Classes/GameLogic.m295588768#35#0#35#0#0"0(6@52"/Users/dguinnip/Build/ZombieGame/Classes/GameLogic.m295588768#0#0#0#0#0"0(0#0#52"/Users/dguinnip/Build/ZombieGame/Classes/GameLogic.m4300911832#1942"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -fvisibility=hidden -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch --analyze /Users/dguinnip/Build/ZombieGame/Classes/GameLogic.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/GameLogic.plist0#
+
+CAnalyze /Users/dguinnip/Build/ZombieGame/Classes/HighScoresViewController.m
+s296506542.337862
+e296506542.429507
+r1
+xAnalyze
+x/Users/dguinnip/Build/ZombieGame/Classes/HighScoresViewController.m
+lSLF07#2@75"Analyze /Users/dguinnip/Build/ZombieGame/Classes/HighScoresViewController.m296506542#296506542#0(0"0(0#0#67"/Users/dguinnip/Build/ZombieGame/Classes/HighScoresViewController.m4300911832#1972"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -fvisibility=hidden -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch --analyze /Users/dguinnip/Build/ZombieGame/Classes/HighScoresViewController.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/HighScoresViewController.plist0#
+
+CAnalyze /Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m
+s296506542.429594
+e296506542.549678
+r1
+xAnalyze
+x/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m
+o/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:69:10:{69:8-69:12}: warning: invalid conversion '%' [-Wformat]
+o         NSLog(@"%",path);
+o               ~~^~
+o/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:57:24: warning: Potential leak of an object allocated on line 57 and stored into 'filename'
+o         NSString *filename = [[ZombieAudio getZombieAudioFile:pieceID:expression] retain];
+o                               ^
+o/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:90:36:{90:36-90:37}: error: too many arguments to method call
+o         int i = [GameLogic randomNumber:1,3];
+o                                           ^
+o/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:91:36:{91:36-91:37}: error: too many arguments to method call
+o         int j = [GameLogic randomNumber:1,3];
+o                                           ^
+o/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:92:36:{92:36-92:37}: error: too many arguments to method call
+o         int k = [GameLogic randomNumber:1,3];
+o                                           ^
+o/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:94:43:{94:43-94:45}: error: too many arguments to method call
+o         int allSame1 = [GameLogic randomNumber:0,11];
+o                                                  ^~
+o/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:95:43:{95:43-95:45}: error: too many arguments to method call
+o         int allSame2 = [GameLogic randomNumber:0,11];
+o                                                  ^~
+o/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:96:43:{96:43-96:45}: error: too many arguments to method call
+o         int allSame3 = [GameLogic randomNumber:0,11];
+o                                                  ^~
+o/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:151:38:{151:38-151:39}: error: too many arguments to method call
+o         int exp = [GameLogic randomNumber:2,5];
+o                                             ^
+o9 diagnostics generated.
+lSLF07#2@74"Analyze /Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m296506542#296506542#0(2088"/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:69:10:{69:8-69:12}: warning: invalid conversion '%' [-Wformat]         NSLog(@"%",path);               ~~^~/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:57:24: warning: Potential leak of an object allocated on line 57 and stored into 'filename'         NSString *filename = [[ZombieAudio getZombieAudioFile:pieceID:expression] retain];                               ^/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:90:36:{90:36-90:37}: error: too many arguments to method call         int i = [GameLogic randomNumber:1,3];                                           ^/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:91:36:{91:36-91:37}: error: too many arguments to method call         int j = [GameLogic randomNumber:1,3];                                           ^/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:92:36:{92:36-92:37}: error: too many arguments to method call         int k = [GameLogic randomNumber:1,3];                                           ^/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:94:43:{94:43-94:45}: error: too many arguments to method call         int allSame1 = [GameLogic randomNumber:0,11];                                                  ^~/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:95:43:{95:43-95:45}: error: too many arguments to method call         int allSame2 = [GameLogic randomNumber:0,11];                                                  ^~/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:96:43:{96:43-96:45}: error: too many arguments to method call         int allSame3 = [GameLogic randomNumber:0,11];                                                  ^~/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m:151:38:{151:38-151:39}: error: too many arguments to method call         int exp = [GameLogic randomNumber:2,5];                                             ^9 diagnostics generated.0(0#0#66"/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m4300911832#1970"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -fvisibility=hidden -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch --analyze /Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/HowToPlayViewController.plist0#
+
+CAnalyze /Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m
+s296506542.292523
+e296506542.321130
+r1
+xAnalyze
+x/Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m
+o/Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m:31:35:{31:35-31:54}: warning: incompatible pointer types sending 'HowToPlayViewController *', expected 'UIViewController *'
+o         [self presentModalViewController:howToPlayController animated:NO];
+o                                          ^~~~~~~~~~~~~~~~~~~
+o1 diagnostic generated.
+lSLF07#2@73"Analyze /Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m296506542#296506542#0(352"/Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m:31:35:{31:35-31:54}: warning: incompatible pointer types sending 'HowToPlayViewController *', expected 'UIViewController *'         [self presentModalViewController:howToPlayController animated:NO];                                          ^~~~~~~~~~~~~~~~~~~1 diagnostic generated.0(0#0#65"/Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m4300911832#1968"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -fvisibility=hidden -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch --analyze /Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/MainMenuViewController.plist0#
+
+CAnalyze /Users/dguinnip/Build/ZombieGame/Classes/Scores.m
+s296506542.312280
+e296506542.337559
+r1
+xAnalyze
+x/Users/dguinnip/Build/ZombieGame/Classes/Scores.m
+lSLF07#2@57"Analyze /Users/dguinnip/Build/ZombieGame/Classes/Scores.m296506542#296506542#0(0"0(0#0#49"/Users/dguinnip/Build/ZombieGame/Classes/Scores.m4300911832#1936"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -fvisibility=hidden -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch --analyze /Users/dguinnip/Build/ZombieGame/Classes/Scores.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/Scores.plist0#
+
+CAnalyze /Users/dguinnip/Build/ZombieGame/Classes/SetGame.m
+s296506542.276290
+e296506542.312192
+r1
+xAnalyze
+x/Users/dguinnip/Build/ZombieGame/Classes/SetGame.m
+lSLF07#2@58"Analyze /Users/dguinnip/Build/ZombieGame/Classes/SetGame.m296506542#296506542#0(0"0(0#0#50"/Users/dguinnip/Build/ZombieGame/Classes/SetGame.m4300911832#1938"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -fvisibility=hidden -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch --analyze /Users/dguinnip/Build/ZombieGame/Classes/SetGame.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/SetGame.plist0#
+
+CAnalyze /Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m
+s296506542.241445
+e296506542.292437
+r1
+xAnalyze
+x/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m
+o/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:16:39:{16:39-16:40}: error: too many arguments to method call
+o         p.color =  [GameLogic randomNumber:1,3];
+o                                              ^
+o/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:17:39:{17:39-17:40}: error: too many arguments to method call
+o         p.shape =  [GameLogic randomNumber:1,3];
+o                                              ^
+o/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:18:39:{18:39-18:40}: error: too many arguments to method call
+o         p.fill =   [GameLogic randomNumber:1,3];
+o                                              ^
+o/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:19:39:{19:39-19:40}: error: too many arguments to method call
+o         p.number = [GameLogic randomNumber:1,3];
+o                                              ^
+o/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:52:40:{52:40-52:41}: error: too many arguments to method call
+o                 p.color =  [GameLogic randomNumber:1,3];
+o                                                      ^
+o/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:53:40:{53:40-53:41}: error: too many arguments to method call
+o                 p.shape =  [GameLogic randomNumber:1,3];
+o                                                      ^
+o/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:54:40:{54:40-54:41}: error: too many arguments to method call
+o                 p.fill =   [GameLogic randomNumber:1,3];
+o                                                      ^
+o/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:55:40:{55:40-55:41}: error: too many arguments to method call
+o                 p.number = [GameLogic randomNumber:1,3];
+o                                                      ^
+o/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:66:39:{66:39-66:40}: error: too many arguments to method call
+o         p.color =  [GameLogic randomNumber:1,3];
+o                                              ^
+o/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:67:39:{67:39-67:40}: error: too many arguments to method call
+o         p.shape =  [GameLogic randomNumber:1,3];
+o                                              ^
+o/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:68:39:{68:39-68:40}: error: too many arguments to method call
+o         p.number = [GameLogic randomNumber:1,3];
+o                                              ^
+o/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:444:39:{444:39-444:54}: error: too many arguments to method call
+o                         int ra = [GameLogic randomNumber:0,(totalPieces-1)];
+o                                                            ^~~~~~~~~~~~~~~
+o/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:469:39:{469:39-469:54}: error: too many arguments to method call
+o                         int ra = [GameLogic randomNumber:0,(totalPieces-1)];
+o                                                            ^~~~~~~~~~~~~~~
+o/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:491:38:{491:38-491:53}: error: too many arguments to method call
+o                 int ra = [GameLogic randomNumber:0,(totalPieces-1)];
+o                                                    ^~~~~~~~~~~~~~~
+o/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:497:34:{497:34-497:49}: error: too many arguments to method call
+o                 ra = [GameLogic randomNumber:0,(totalPieces-1)];
+o                                                ^~~~~~~~~~~~~~~
+o/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:503:34:{503:34-503:49}: error: too many arguments to method call
+o                 ra = [GameLogic randomNumber:0,(totalPieces-1)];
+o                                                ^~~~~~~~~~~~~~~
+o16 diagnostics generated.
+lSLF07#2@59"Analyze /Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m296506542#296506542#0(3713"/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:16:39:{16:39-16:40}: error: too many arguments to method call         p.color =  [GameLogic randomNumber:1,3];                                              ^/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:17:39:{17:39-17:40}: error: too many arguments to method call         p.shape =  [GameLogic randomNumber:1,3];                                              ^/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:18:39:{18:39-18:40}: error: too many arguments to method call         p.fill =   [GameLogic randomNumber:1,3];                                              ^/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:19:39:{19:39-19:40}: error: too many arguments to method call         p.number = [GameLogic randomNumber:1,3];                                              ^/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:52:40:{52:40-52:41}: error: too many arguments to method call                 p.color =  [GameLogic randomNumber:1,3];                                                      ^/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:53:40:{53:40-53:41}: error: too many arguments to method call                 p.shape =  [GameLogic randomNumber:1,3];                                                      ^/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:54:40:{54:40-54:41}: error: too many arguments to method call                 p.fill =   [GameLogic randomNumber:1,3];                                                      ^/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:55:40:{55:40-55:41}: error: too many arguments to method call                 p.number = [GameLogic randomNumber:1,3];                                                      ^/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:66:39:{66:39-66:40}: error: too many arguments to method call         p.color =  [GameLogic randomNumber:1,3];                                              ^/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:67:39:{67:39-67:40}: error: too many arguments to method call         p.shape =  [GameLogic randomNumber:1,3];                                              ^/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:68:39:{68:39-68:40}: error: too many arguments to method call         p.number = [GameLogic randomNumber:1,3];                                              ^/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:444:39:{444:39-444:54}: error: too many arguments to method call                         int ra = [GameLogic randomNumber:0,(totalPieces-1)];                                                            ^~~~~~~~~~~~~~~/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:469:39:{469:39-469:54}: error: too many arguments to method call                         int ra = [GameLogic randomNumber:0,(totalPieces-1)];                                                            ^~~~~~~~~~~~~~~/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:491:38:{491:38-491:53}: error: too many arguments to method call                 int ra = [GameLogic randomNumber:0,(totalPieces-1)];                                                    ^~~~~~~~~~~~~~~/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:497:34:{497:34-497:49}: error: too many arguments to method call                 ra = [GameLogic randomNumber:0,(totalPieces-1)];                                                ^~~~~~~~~~~~~~~/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m:503:34:{503:34-503:49}: error: too many arguments to method call                 ra = [GameLogic randomNumber:0,(totalPieces-1)];                                                ^~~~~~~~~~~~~~~16 diagnostics generated.0(0#0#51"/Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m4300911832#1940"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -fvisibility=hidden -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch --analyze /Users/dguinnip/Build/ZombieGame/Classes/SetLogic.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/SetLogic.plist0#
+
+CAnalyze /Users/dguinnip/Build/ZombieGame/Classes/SetPiece.m
+s296506542.189249
+e296506542.241341
+r1
+xAnalyze
+x/Users/dguinnip/Build/ZombieGame/Classes/SetPiece.m
+lSLF07#2@59"Analyze /Users/dguinnip/Build/ZombieGame/Classes/SetPiece.m296506542#296506542#0(0"0(0#0#51"/Users/dguinnip/Build/ZombieGame/Classes/SetPiece.m4300911832#1940"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -fvisibility=hidden -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch --analyze /Users/dguinnip/Build/ZombieGame/Classes/SetPiece.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/SetPiece.plist0#
+
+CAnalyze /Users/dguinnip/Build/ZombieGame/Classes/ZombieAudio.m
+s296506542.376386
+e296506542.403309
+r1
+xAnalyze
+x/Users/dguinnip/Build/ZombieGame/Classes/ZombieAudio.m
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieAudio.m:77:41:{77:41-77:58}: error: too many arguments to method call
+o         int number = [GameLogic randomNumber:1,TOTAL_EXPRESSIONS];
+o                                                ^~~~~~~~~~~~~~~~~
+o1 diagnostic generated.
+lSLF07#2@62"Analyze /Users/dguinnip/Build/ZombieGame/Classes/ZombieAudio.m296506542#296506542#0(275"/Users/dguinnip/Build/ZombieGame/Classes/ZombieAudio.m:77:41:{77:41-77:58}: error: too many arguments to method call         int number = [GameLogic randomNumber:1,TOTAL_EXPRESSIONS];                                                ^~~~~~~~~~~~~~~~~1 diagnostic generated.0(0#0#54"/Users/dguinnip/Build/ZombieGame/Classes/ZombieAudio.m4300911832#1946"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -fvisibility=hidden -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch --analyze /Users/dguinnip/Build/ZombieGame/Classes/ZombieAudio.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/ZombieAudio.plist0#
+
+CAnalyze /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m
+s296506541.951962
+e296506542.079523
+r1
+xAnalyze
+x/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:428:11:{428:9-428:13}: warning: invalid conversion '%' [-Wformat]
+o                 NSLog(@"%",[error description]);                                
+o                       ~~^~
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:442:11:{442:9-442:13}: warning: invalid conversion '%' [-Wformat]
+o                 NSLog(@"%",[error description]);                                
+o                       ~~^~
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:456:11:{456:9-456:13}: warning: invalid conversion '%' [-Wformat]
+o                 NSLog(@"%",[error description]);                                
+o                       ~~^~
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:497:2:{497:2-497:80}: warning: method '-setOrientation:' not found (return type defaults to 'id')
+o         [[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeRight];
+o         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+o4 diagnostics generated.
+lSLF07#2@72"Analyze /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m296506541#296506542#0(1088"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:428:11:{428:9-428:13}: warning: invalid conversion '%' [-Wformat]                 NSLog(@"%",[error description]);                                                       ~~^~/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:442:11:{442:9-442:13}: warning: invalid conversion '%' [-Wformat]                 NSLog(@"%",[error description]);                                                       ~~^~/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:456:11:{456:9-456:13}: warning: invalid conversion '%' [-Wformat]                 NSLog(@"%",[error description]);                                                       ~~^~/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:497:2:{497:2-497:80}: warning: method '-setOrientation:' not found (return type defaults to 'id')         [[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeRight];         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~4 diagnostics generated.0(0#0#64"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m4300911832#1966"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -fvisibility=hidden -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch --analyze /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/ZombieGameAppDelegate.plist0#
+
+CAnalyze /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m
+s296506542.079612
+e296506542.147791
+r1
+xAnalyze
+x/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:77:10:{77:8-77:12}: warning: invalid conversion '%' [-Wformat]
+o         NSLog(@"%",path);
+o               ~~^~
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:65:24: warning: Potential leak of an object allocated on line 65 and stored into 'filename'
+o         NSString *filename = [[ZombieAudio getZombieAudioFile:pieceID:expression] retain];
+o                               ^
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:250:45:{250:45-250:47}: error: too many arguments to method call
+o                 twitchey = (int)[GameLogic randomNumber:0,11];
+o                                                           ^~
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:414:16:{414:16-414:54}: warning: method '-getCrawlerTopFiveAverage' not found (return type defaults to 'id')
+o         int top5Avg = [appDelegate getCrawlerTopFiveAverage];
+o                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:414:16:{414:16-414:54}: warning: incompatible pointer to integer conversion initializing 'id', expected 'int'
+o         int top5Avg = [appDelegate getCrawlerTopFiveAverage];
+o                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:677:30:{677:30-677:82}: warning: method '-getCrawlerPlacement:' not found (return type defaults to 'id')
+o                                                         gamePlacement = (int) [appDelegate getCrawlerPlacement:(int)-timeInterval];
+o                                                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:1010:27:{1010:27-1010:81}: warning: method '-getBerzerkPlacement:' not found (return type defaults to 'id')
+o                                 gamePlacement = (int) [appDelegate getBerzerkPlacement:setGame.setsComplete];
+o                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+o7 diagnostics generated.
+lSLF07#2@75"Analyze /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m296506542#296506542#0(2187"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:77:10:{77:8-77:12}: warning: invalid conversion '%' [-Wformat]         NSLog(@"%",path);               ~~^~/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:65:24: warning: Potential leak of an object allocated on line 65 and stored into 'filename'         NSString *filename = [[ZombieAudio getZombieAudioFile:pieceID:expression] retain];                               ^/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:250:45:{250:45-250:47}: error: too many arguments to method call                 twitchey = (int)[GameLogic randomNumber:0,11];                                                           ^~/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:414:16:{414:16-414:54}: warning: method '-getCrawlerTopFiveAverage' not found (return type defaults to 'id')         int top5Avg = [appDelegate getCrawlerTopFiveAverage];                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:414:16:{414:16-414:54}: warning: incompatible pointer to integer conversion initializing 'id', expected 'int'         int top5Avg = [appDelegate getCrawlerTopFiveAverage];                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:677:30:{677:30-677:82}: warning: method '-getCrawlerPlacement:' not found (return type defaults to 'id')                                                         gamePlacement = (int) [appDelegate getCrawlerPlacement:(int)-timeInterval];                                                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:1010:27:{1010:27-1010:81}: warning: method '-getBerzerkPlacement:' not found (return type defaults to 'id')                                 gamePlacement = (int) [appDelegate getBerzerkPlacement:setGame.setsComplete];                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~7 diagnostics generated.0(0#0#67"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m4300911832#1972"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -fvisibility=hidden -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch --analyze /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/ZombieGameViewController.plist0#
+
+CAnalyze /Users/dguinnip/Build/ZombieGame/main.m
+s296506541.886695
+e296506541.951864
+r1
+xAnalyze
+x/Users/dguinnip/Build/ZombieGame/main.m
+lSLF07#2@47"Analyze /Users/dguinnip/Build/ZombieGame/main.m296506541#296506541#0(0"0(0#0#39"/Users/dguinnip/Build/ZombieGame/main.m4300911832#1924"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -fvisibility=hidden -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch --analyze /Users/dguinnip/Build/ZombieGame/main.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/StaticAnalyzer/normal/i386/main.plist0#
+
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies296450904#296450904#0(0"0(0#1#0"4300911832#0"0#
+lSLF07#2@18"Check dependencies296534686#296534686#0(0"0(0#1#0"4300911832#0"0#
+
+CCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/BrainPiece.o /Users/dguinnip/Build/ZombieGame/Classes/BrainPiece.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296531105.337365
+e296531105.405924
+r1
+xCompileC
+xbuild/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/BrainPiece.o
+x/Users/dguinnip/Build/ZombieGame/Classes/BrainPiece.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/dguinnip/Build/ZombieGame/Classes/BrainPiece.m296531105#296531105#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Classes/BrainPiece.m4300911832#1935"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-aetwcbvzmisroageuhdlhlrmgiop/ZombieGame_Prefix.pch -c /Users/dguinnip/Build/ZombieGame/Classes/BrainPiece.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/BrainPiece.o0#
+
+CCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/BrainPieces.o /Users/dguinnip/Build/ZombieGame/Classes/BrainPieces.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s296531138.743556
+e296531138.818854
+r1
+xCompileC
+xbuild/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/BrainPieces.o
+x/Users/dguinnip/Build/ZombieGame/Classes/BrainPieces.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/dguinnip/Build/ZombieGame/Classes/BrainPieces.m296531138#296531138#0(0"0(0#0#54"/Users/dguinnip/Build/ZombieGame/Classes/BrainPieces.m4300911832#1937"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-aetwcbvzmisroageuhdlhlrmgiop/ZombieGame_Prefix.pch -c /Users/dguinnip/Build/ZombieGame/Classes/BrainPieces.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/BrainPieces.o0#
 
 CCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/GameLogic.o /Users/dguinnip/Build/ZombieGame/Classes/GameLogic.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s296188791.631303
@@ -3036,8 +3725,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@74"Compile /Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m296447899#296447899#0(0"0(0#0#66"/Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m4300911832#1961"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-aetwcbvzmisroageuhdlhlrmgiop/ZombieGame_Prefix.pch -c /Users/dguinnip/Build/ZombieGame/Classes/HowToPlayViewController.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/HowToPlayViewController.o0#
 
 CCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/MainMenuViewController.o /Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s296188791.810282
-e296188791.973718
+s296512524.611716
+e296512524.735685
 r1
 xCompileC
 xbuild/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/MainMenuViewController.o
@@ -3048,7 +3737,7 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 o/Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m: In function '-[MainMenuViewController howToPlay:]':
 o/Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m:31: warning: incompatible Objective-C types 'struct HowToPlayViewController *', expected 'struct UIViewController *' when passing argument 1 of 'presentModalViewController:animated:' from distinct Objective-C type
-lSLF07#2@73"Compile /Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m296188791#296188791#0(399"/Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m: In function '-[MainMenuViewController howToPlay:]':/Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m:31: warning: incompatible Objective-C types 'struct HowToPlayViewController *', expected 'struct UIViewController *' when passing argument 1 of 'presentModalViewController:animated:' from distinct Objective-C type1(22@200"Incompatible Objective-C types 'struct HowToPlayViewController *', expected 'struct UIViewController *' when passing argument 1 of 'presentModalViewController:animated:' from distinct Objective-C type296188791#119#280#0(6@65"/Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m296019612#31#0#31#0#0"0(0#0#65"/Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m4300911832#1959"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-aetwcbvzmisroageuhdlhlrmgiop/ZombieGame_Prefix.pch -c /Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/MainMenuViewController.o0#
+lSLF07#2@73"Compile /Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m296512524#296512524#0(399"/Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m: In function '-[MainMenuViewController howToPlay:]':/Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m:31: warning: incompatible Objective-C types 'struct HowToPlayViewController *', expected 'struct UIViewController *' when passing argument 1 of 'presentModalViewController:animated:' from distinct Objective-C type1(22@200"Incompatible Objective-C types 'struct HowToPlayViewController *', expected 'struct UIViewController *' when passing argument 1 of 'presentModalViewController:animated:' from distinct Objective-C type296512524#119#280#0(6@65"/Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m296019612#31#0#31#0#0"0(0#0#65"/Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m4300911832#1959"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-aetwcbvzmisroageuhdlhlrmgiop/ZombieGame_Prefix.pch -c /Users/dguinnip/Build/ZombieGame/Classes/MainMenuViewController.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/MainMenuViewController.o0#
 
 CCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/OptionsViewController.o /Users/dguinnip/Build/ZombieGame/Classes/../OptionsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s296449717.741797
@@ -3229,8 +3918,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@62"Compile /Users/dguinnip/Build/ZombieGame/Classes/ZombieAudio.m296188792#296188792#0(0"0(0#0#54"/Users/dguinnip/Build/ZombieGame/Classes/ZombieAudio.m4300911832#1937"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-aetwcbvzmisroageuhdlhlrmgiop/ZombieGame_Prefix.pch -c /Users/dguinnip/Build/ZombieGame/Classes/ZombieAudio.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieAudio.o0#
 
 CCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGameAppDelegate.o /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s296447899.062590
-e296447899.250767
+s296504960.410264
+e296504960.534437
 r1
 xCompileC
 xbuild/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGameAppDelegate.o
@@ -3240,11 +3929,11 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m: In function '-[ZombieGameAppDelegate application:didFinishLaunchingWithOptions:]':
-o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:414: warning: 'UIDevice' may not respond to '-setOrientation:'
-o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:414: warning: (Messages without a matching method signature
-o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:414: warning: will be assumed to return 'id' and accept
-o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:414: warning: '...' as arguments.)
-lSLF07#2@72"Compile /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m296447899#296447899#0(623"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m: In function '-[ZombieGameAppDelegate application:didFinishLaunchingWithOptions:]':/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:414: warning: 'UIDevice' may not respond to '-setOrientation:'/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:414: warning: (Messages without a matching method signature/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:414: warning: will be assumed to return 'id' and accept/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:414: warning: '...' as arguments.)2(22@48"'UIDevice' may not respond to '-setOrientation:'296447899#149#128#0(6@64"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m296447898#414#0#414#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)296447899#277#125#0(6@64"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m296447898#414#0#414#0#0"0(0#0#64"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m4300911832#1957"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-aetwcbvzmisroageuhdlhlrmgiop/ZombieGame_Prefix.pch -c /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGameAppDelegate.o0#
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:497: warning: 'UIDevice' may not respond to '-setOrientation:'
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:497: warning: (Messages without a matching method signature
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:497: warning: will be assumed to return 'id' and accept
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:497: warning: '...' as arguments.)
+lSLF07#2@72"Compile /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m296504960#296504960#0(623"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m: In function '-[ZombieGameAppDelegate application:didFinishLaunchingWithOptions:]':/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:497: warning: 'UIDevice' may not respond to '-setOrientation:'/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:497: warning: (Messages without a matching method signature/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:497: warning: will be assumed to return 'id' and accept/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m:497: warning: '...' as arguments.)2(22@48"'UIDevice' may not respond to '-setOrientation:'296504960#149#128#0(6@64"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m296504960#497#0#497#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)296504960#277#125#0(6@64"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m296504960#497#0#497#0#0"0(0#0#64"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m4300911832#1957"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-aetwcbvzmisroageuhdlhlrmgiop/ZombieGame_Prefix.pch -c /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameAppDelegate.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGameAppDelegate.o0#
 
 CCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGameMenuViewController.o /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameMenuViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s294719486.565674
@@ -3260,8 +3949,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@79"Compile /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameMenuViewController.m294719486#294719486#0(0"0(0#0#71"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameMenuViewController.m4300911832#1971"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-aetwcbvzmisroageuhdlhlrmgiop/ZombieGame_Prefix.pch -c /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameMenuViewController.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGameMenuViewController.o0#
 
 CCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGameViewController.o /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s296449039.233883
-e296449039.614941
+s296531105.267879
+e296531105.619849
 r1
 xCompileC
 xbuild/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGameViewController.o
@@ -3270,9 +3959,17 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m: In function '-[ZombieGameViewController drawCrawlerFinished]':
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:521: warning: 'ZombieGameAppDelegate' may not respond to '-getCrawlerTopFiveAverage'
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:521: warning: (Messages without a matching method signature
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:521: warning: will be assumed to return 'id' and accept
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:521: warning: '...' as arguments.)
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m: In function '-[ZombieGameViewController buttonDown::]':
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:809: warning: 'ZombieGameAppDelegate' may not respond to '-getCrawlerPlacement:'
 o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m: In function '-[ZombieGameViewController gameloop]':
-o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:832: warning: unused variable 'score'
-lSLF07#2@75"Compile /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m296449039#296449039#0(227"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m: In function '-[ZombieGameViewController gameloop]':/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:832: warning: unused variable 'score'1(22@23"Unused variable 'score'296449039#121#106#0(6@67"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m296449039#832#0#832#0#19"unused variable '*'0(0#0#67"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m4300911832#1963"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-aetwcbvzmisroageuhdlhlrmgiop/ZombieGame_Prefix.pch -c /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGameViewController.o0#
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:1212: warning: 'ZombieGameAppDelegate' may not respond to '-getBerzerkPlacement:'
+o/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:1215: warning: 'BrainPieces' may not respond to '+CreatePieces'
+lSLF07#2@75"Compile /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m296531105#296531105#0(1317"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m: In function '-[ZombieGameViewController drawCrawlerFinished]':/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:521: warning: 'ZombieGameAppDelegate' may not respond to '-getCrawlerTopFiveAverage'/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:521: warning: (Messages without a matching method signature/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:521: warning: will be assumed to return 'id' and accept/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:521: warning: '...' as arguments.)/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m: In function '-[ZombieGameViewController buttonDown::]':/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:809: warning: 'ZombieGameAppDelegate' may not respond to '-getCrawlerPlacement:'/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m: In function '-[ZombieGameViewController gameloop]':/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:1212: warning: 'ZombieGameAppDelegate' may not respond to '-getBerzerkPlacement:'/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m:1215: warning: 'BrainPieces' may not respond to '+CreatePieces'5(22@70"'ZombieGameAppDelegate' may not respond to '-getCrawlerTopFiveAverage'296531105#132#153#0(6@67"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m296530608#521#0#521#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)296531105#285#128#0(6@67"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m296530608#521#0#521#0#0"0(22@66"'ZombieGameAppDelegate' may not respond to '-getCrawlerPlacement:'296531105#765#149#0(6@67"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m296530608#809#0#809#0#26"'*' may not respond to '*'0(22@66"'ZombieGameAppDelegate' may not respond to '-getBerzerkPlacement:'296531105#1035#150#0(6@67"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m296530608#1212#0#1212#0#26"'*' may not respond to '*'0(22@48"'BrainPieces' may not respond to '+CreatePieces'296531105#1185#132#0(6@67"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m296530608#1215#0#1215#0#26"'*' may not respond to '*'0(0#0#67"/Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m4300911832#1963"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -include /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-aetwcbvzmisroageuhdlhlrmgiop/ZombieGame_Prefix.pch -c /Users/dguinnip/Build/ZombieGame/Classes/ZombieGameViewController.m -o /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGameViewController.o0#
 
 CCompileC build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/main.o /Users/dguinnip/Build/ZombieGame/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s294719486.278638
@@ -3344,12 +4041,12 @@ x/Users/dguinnip/Build/ZombieGame/ZombieGameMenuViewController.xib
 lSLF07#2@43"CompileXIB ZombieGameMenuViewController.xib294719485#294719485#0(0"0(0#0#65"/Users/dguinnip/Build/ZombieGame/ZombieGameMenuViewController.xib4300911832#565"    cd /Users/dguinnip/Build/ZombieGame    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGameMenuViewController.nib /Users/dguinnip/Build/ZombieGame/ZombieGameMenuViewController.xib0#
 
 CCompileXIB /Users/dguinnip/Build/ZombieGame/ZombieGameViewController.xib
-s296194524.018614
-e296194525.747433
+s296512522.541731
+e296512524.551583
 r1
 xCompileXIB
 x/Users/dguinnip/Build/ZombieGame/ZombieGameViewController.xib
-lSLF07#2@39"CompileXIB ZombieGameViewController.xib296194524#296194525#0(0"0(0#0#61"/Users/dguinnip/Build/ZombieGame/ZombieGameViewController.xib4300911832#557"    cd /Users/dguinnip/Build/ZombieGame    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGameViewController.nib /Users/dguinnip/Build/ZombieGame/ZombieGameViewController.xib0#
+lSLF07#2@39"CompileXIB ZombieGameViewController.xib296512522#296512524#0(0"0(0#0#61"/Users/dguinnip/Build/ZombieGame/ZombieGameViewController.xib4300911832#557"    cd /Users/dguinnip/Build/ZombieGame    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGameViewController.nib /Users/dguinnip/Build/ZombieGame/ZombieGameViewController.xib0#
 
 CCpResource build/Debug-iphonesimulator/ZombieGame.app/11.wav audio/11.wav
 s295591583.590180
@@ -5971,22 +6668,301 @@ xbrainPump.wav
 lSLF07#2@18"Copy brainPump.wav295855731#295855731#0(0"0(0#0#46"/Users/dguinnip/Build/ZombieGame/brainPump.wav4300911832#504"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/brainPump.wav /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
 
 CCpResource build/Debug-iphonesimulator/ZombieGame.app/brain_1.png brain_1.png
-s295855731.036620
-e295855731.041439
+s296534686.317767
+e296534686.400510
 r1
 xCpResource
 xbuild/Debug-iphonesimulator/ZombieGame.app/brain_1.png
 xbrain_1.png
-lSLF07#2@16"Copy brain_1.png295855731#295855731#0(0"0(0#0#44"/Users/dguinnip/Build/ZombieGame/brain_1.png4300911832#502"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/brain_1.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+lSLF07#2@16"Copy brain_1.png296534686#296534686#0(0"0(0#0#44"/Users/dguinnip/Build/ZombieGame/brain_1.png4300911832#502"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/brain_1.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
 
 CCpResource build/Debug-iphonesimulator/ZombieGame.app/brain_2.png brain_2.png
-s295855731.030655
-e295855731.040486
+s296534686.312897
+e296534686.400400
 r1
 xCpResource
 xbuild/Debug-iphonesimulator/ZombieGame.app/brain_2.png
 xbrain_2.png
-lSLF07#2@16"Copy brain_2.png295855731#295855731#0(0"0(0#0#44"/Users/dguinnip/Build/ZombieGame/brain_2.png4300911832#502"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/brain_2.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+lSLF07#2@16"Copy brain_2.png296534686#296534686#0(0"0(0#0#44"/Users/dguinnip/Build/ZombieGame/brain_2.png4300911832#502"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/brain_2.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brain_3.png brain_3.png
+s296534686.425027
+e296534686.448183
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brain_3.png
+xbrain_3.png
+lSLF07#2@16"Copy brain_3.png296534686#296534686#0(0"0(0#0#44"/Users/dguinnip/Build/ZombieGame/brain_3.png4300911832#502"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/brain_3.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_1.png Brains/brains_1.png
+s296534686.404250
+e296534686.448087
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_1.png
+xBrains/brains_1.png
+lSLF07#2@24"Copy Brains/brains_1.png296534686#296534686#0(0"0(0#0#52"/Users/dguinnip/Build/ZombieGame/Brains/brains_1.png4300911832#510"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_1.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_10.png Brains/brains_10.png
+s296534686.322291
+e296534686.366238
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_10.png
+xBrains/brains_10.png
+lSLF07#2@25"Copy Brains/brains_10.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_10.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_10.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_11.png Brains/brains_11.png
+s296534686.321768
+e296534686.401083
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_11.png
+xBrains/brains_11.png
+lSLF07#2@25"Copy Brains/brains_11.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_11.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_11.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_12.png Brains/brains_12.png
+s296534686.321263
+e296534686.400993
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_12.png
+xBrains/brains_12.png
+lSLF07#2@25"Copy Brains/brains_12.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_12.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_12.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_13.png Brains/brains_13.png
+s296534686.320745
+e296534686.400897
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_13.png
+xBrains/brains_13.png
+lSLF07#2@25"Copy Brains/brains_13.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_13.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_13.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_14.png Brains/brains_14.png
+s296534686.320242
+e296534686.366096
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_14.png
+xBrains/brains_14.png
+lSLF07#2@25"Copy Brains/brains_14.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_14.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_14.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_15.png Brains/brains_15.png
+s296534686.319686
+e296534686.365974
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_15.png
+xBrains/brains_15.png
+lSLF07#2@25"Copy Brains/brains_15.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_15.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_15.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_16.png Brains/brains_16.png
+s296534686.484107
+e296534686.488630
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_16.png
+xBrains/brains_16.png
+lSLF07#2@25"Copy Brains/brains_16.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_16.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_16.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_17.png Brains/brains_17.png
+s296534686.475610
+e296534686.484039
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_17.png
+xBrains/brains_17.png
+lSLF07#2@25"Copy Brains/brains_17.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_17.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_17.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_18.png Brains/brains_18.png
+s296534686.472214
+e296534686.483649
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_18.png
+xBrains/brains_18.png
+lSLF07#2@25"Copy Brains/brains_18.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_18.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_18.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_19.png Brains/brains_19.png
+s296534686.465729
+e296534686.483513
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_19.png
+xBrains/brains_19.png
+lSLF07#2@25"Copy Brains/brains_19.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_19.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_19.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_2.png Brains/brains_2.png
+s296534686.401330
+e296534686.447972
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_2.png
+xBrains/brains_2.png
+lSLF07#2@24"Copy Brains/brains_2.png296534686#296534686#0(0"0(0#0#52"/Users/dguinnip/Build/ZombieGame/Brains/brains_2.png4300911832#510"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_2.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_20.png Brains/brains_20.png
+s296534686.461864
+e296534686.481488
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_20.png
+xBrains/brains_20.png
+lSLF07#2@25"Copy Brains/brains_20.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_20.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_20.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_21.png Brains/brains_21.png
+s296534686.459910
+e296534686.481384
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_21.png
+xBrains/brains_21.png
+lSLF07#2@25"Copy Brains/brains_21.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_21.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_21.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_22.png Brains/brains_22.png
+s296534686.456030
+e296534686.481278
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_22.png
+xBrains/brains_22.png
+lSLF07#2@25"Copy Brains/brains_22.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_22.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_22.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_23.png Brains/brains_23.png
+s296534686.453341
+e296534686.481163
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_23.png
+xBrains/brains_23.png
+lSLF07#2@25"Copy Brains/brains_23.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_23.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_23.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_24.png Brains/brains_24.png
+s296534686.448780
+e296534686.481039
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_24.png
+xBrains/brains_24.png
+lSLF07#2@25"Copy Brains/brains_24.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_24.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_24.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_25.png Brains/brains_25.png
+s296534686.445869
+e296534686.483925
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_25.png
+xBrains/brains_25.png
+lSLF07#2@25"Copy Brains/brains_25.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_25.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_25.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_26.png Brains/brains_26.png
+s296534686.442634
+e296534686.483767
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_26.png
+xBrains/brains_26.png
+lSLF07#2@25"Copy Brains/brains_26.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_26.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_26.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_27.png Brains/brains_27.png
+s296534686.434256
+e296534686.448622
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_27.png
+xBrains/brains_27.png
+lSLF07#2@25"Copy Brains/brains_27.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_27.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_27.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_28.png Brains/brains_28.png
+s296534686.433558
+e296534686.448526
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_28.png
+xBrains/brains_28.png
+lSLF07#2@25"Copy Brains/brains_28.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_28.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_28.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_29.png Brains/brains_29.png
+s296534686.432697
+e296534686.448373
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_29.png
+xBrains/brains_29.png
+lSLF07#2@25"Copy Brains/brains_29.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_29.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_29.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_3.png Brains/brains_3.png
+s296534686.396823
+e296534686.448720
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_3.png
+xBrains/brains_3.png
+lSLF07#2@24"Copy Brains/brains_3.png296534686#296534686#0(0"0(0#0#52"/Users/dguinnip/Build/ZombieGame/Brains/brains_3.png4300911832#510"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_3.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_30.png Brains/brains_30.png
+s296534686.427226
+e296534686.448279
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_30.png
+xBrains/brains_30.png
+lSLF07#2@25"Copy Brains/brains_30.png296534686#296534686#0(0"0(0#0#53"/Users/dguinnip/Build/ZombieGame/Brains/brains_30.png4300911832#511"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_30.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_4.png Brains/brains_4.png
+s296534686.392960
+e296534686.401272
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_4.png
+xBrains/brains_4.png
+lSLF07#2@24"Copy Brains/brains_4.png296534686#296534686#0(0"0(0#0#52"/Users/dguinnip/Build/ZombieGame/Brains/brains_4.png4300911832#510"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_4.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_5.png Brains/brains_5.png
+s296534686.387989
+e296534686.401178
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_5.png
+xBrains/brains_5.png
+lSLF07#2@24"Copy Brains/brains_5.png296534686#296534686#0(0"0(0#0#52"/Users/dguinnip/Build/ZombieGame/Brains/brains_5.png4300911832#510"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_5.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_6.png Brains/brains_6.png
+s296534686.387048
+e296534686.400791
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_6.png
+xBrains/brains_6.png
+lSLF07#2@24"Copy Brains/brains_6.png296534686#296534686#0(0"0(0#0#52"/Users/dguinnip/Build/ZombieGame/Brains/brains_6.png4300911832#510"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_6.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_7.png Brains/brains_7.png
+s296534686.366541
+e296534686.400606
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_7.png
+xBrains/brains_7.png
+lSLF07#2@24"Copy Brains/brains_7.png296534686#296534686#0(0"0(0#0#52"/Users/dguinnip/Build/ZombieGame/Brains/brains_7.png4300911832#510"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_7.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_8.png Brains/brains_8.png
+s296534686.324004
+e296534686.366470
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_8.png
+xBrains/brains_8.png
+lSLF07#2@24"Copy Brains/brains_8.png296534686#296534686#0(0"0(0#0#52"/Users/dguinnip/Build/ZombieGame/Brains/brains_8.png4300911832#510"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_8.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+
+CCpResource build/Debug-iphonesimulator/ZombieGame.app/brains_9.png Brains/brains_9.png
+s296534686.322894
+e296534686.366356
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/ZombieGame.app/brains_9.png
+xBrains/brains_9.png
+lSLF07#2@24"Copy Brains/brains_9.png296534686#296534686#0(0"0(0#0#52"/Users/dguinnip/Build/ZombieGame/Brains/brains_9.png4300911832#510"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/Brains/brains_9.png /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
 
 CCpResource build/Debug-iphonesimulator/ZombieGame.app/checkHover.png checkHover.png
 s295237961.013294
@@ -6052,23 +7028,23 @@ xwrong.wav
 lSLF07#2@14"Copy wrong.wav296195423#296195423#0(0"0(0#0#42"/Users/dguinnip/Build/ZombieGame/wrong.wav4300911832#500"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/dguinnip/Build/ZombieGame/wrong.wav /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
 
 CGenerateDSYMFile /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app.dSYM /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGame
-s296449717.978327
-e296449718.013063
+s296531138.865980
+e296531138.907782
 r1
 xGenerateDSYMFile
 x/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app.dSYM
 x/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGame
-lSLF07#2@118"GenerateDSYMFile build/Debug-iphonesimulator/ZombieGame.app.dSYM build/Debug-iphonesimulator/ZombieGame.app/ZombieGame296449717#296449718#0(0"0(0#0#86"/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGame4300911832#436"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/dsymutil /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGame -o /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app.dSYM0#
+lSLF07#2@118"GenerateDSYMFile build/Debug-iphonesimulator/ZombieGame.app.dSYM build/Debug-iphonesimulator/ZombieGame.app/ZombieGame296531138#296531138#0(0"0(0#0#86"/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGame4300911832#436"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/dsymutil /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGame -o /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app.dSYM0#
 
 CLd /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGame normal i386
-s296449717.944212
-e296449717.978243
+s296531138.818934
+e296531138.865896
 r1
 xLd
 x/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGame
 xnormal
 xi386
-lSLF07#2@91"Link /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGame296449717#296449717#0(0"0(0#0#0"4300911832#969"    cd /Users/dguinnip/Build/ZombieGame    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -L/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -filelist /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGame.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -lsqlite3 -framework AudioToolbox -framework AVFoundation -o /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGame0#
+lSLF07#2@91"Link /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGame296531138#296531138#0(0"0(0#0#0"4300911832#969"    cd /Users/dguinnip/Build/ZombieGame    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -L/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -filelist /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/Objects-normal/i386/ZombieGame.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -lsqlite3 -framework AudioToolbox -framework AVFoundation -o /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/ZombieGame0#
 
 CProcessInfoPlistFile /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app/Info.plist ZombieGame-Info.plist
 s295586426.977483
@@ -6092,6 +7068,19 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@32"Precompile ZombieGame_Prefix.pch294719485#294719486#0(0"0(0#0#54"/Users/dguinnip/Build/ZombieGame/ZombieGame_Prefix.pch4300911832#1810"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -c /Users/dguinnip/Build/ZombieGame/ZombieGame_Prefix.pch -o /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-aetwcbvzmisroageuhdlhlrmgiop/ZombieGame_Prefix.pch.gch0#
 
+CProcessPCH /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch.pth ZombieGame_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.analyzer
+s296506540.952467
+e296506541.871067
+r1
+xProcessPCH
+x/var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch.pth
+xZombieGame_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.analyzer
+lSLF07#2@32"Precompile ZombieGame_Prefix.pch296506540#296506541#0(0"0(0#0#54"/Users/dguinnip/Build/ZombieGame/ZombieGame_Prefix.pch4300911832#1801"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -fvisibility=hidden -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -c /Users/dguinnip/Build/ZombieGame/ZombieGame_Prefix.pch -o /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-anfqalopawscxeeuhjzfjmnikdli/ZombieGame_Prefix.pch.pth0#
+
 CProcessPCH++ /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-fsmsmdmrieixdigoctprxunpfgcx/ZombieGame_Prefix.pch.gch ZombieGame_Prefix.pch normal i386 c++ com.apple.compilers.gcc.4_2
 s294198457.541437
 e294198457.686239
@@ -6106,10 +7095,10 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@32"Precompile ZombieGame_Prefix.pch294198457#294198457#0(0"0(0#0#54"/Users/dguinnip/Build/ZombieGame/ZombieGame_Prefix.pch4300911832#1821"    cd /Users/dguinnip/Build/ZombieGame    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-generated-files.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-own-target-headers.hmap -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-all-target-headers.hmap -iquote /Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/ZombieGame-project-headers.hmap -F/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator -I/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/include -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources/i386 -I/Users/dguinnip/Build/ZombieGame/build/ZombieGame.build/Debug-iphonesimulator/ZombieGame.build/DerivedSources -c /Users/dguinnip/Build/ZombieGame/ZombieGame_Prefix.pch -o /var/folders/z6/z6TukoyiFwWDTSqjXiaG0U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZombieGame_Prefix-fsmsmdmrieixdigoctprxunpfgcx/ZombieGame_Prefix.pch.gch0#
 
 CTouch /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app
-s296450904.713247
-e296450904.715682
+s296534686.490389
+e296534686.517173
 r1
 xTouch
 x/Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app
-lSLF07#2@81"Touch /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app296450904#296450904#0(0"0(0#0#0"4300911832#331"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /usr/bin/touch -c /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
+lSLF07#2@81"Touch /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app296534686#296534686#0(0"0(0#0#0"4300911832#331"    cd /Users/dguinnip/Build/ZombieGame    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /usr/bin/touch -c /Users/dguinnip/Build/ZombieGame/build/Debug-iphonesimulator/ZombieGame.app0#
 

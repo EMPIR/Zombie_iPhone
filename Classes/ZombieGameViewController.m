@@ -6,14 +6,18 @@
 
 
 #import "ZombieGameViewController.h"
+#import "ZombieGameHelpers.h"
 #import "ZombieGameAppDelegate.h"
 #import "GameLogic.h"
 #import "SetPiece.h"
 #import "SetLogic.h"
 #import "SetGame.h"
 #import "ZombieAudio.h"
+#import "BrainPieces.h"
+#import "BrainPiece.h"
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 
 @implementation ZombieGameViewController
@@ -22,16 +26,30 @@
 @synthesize selected1View,selected2View,selected3View;
 @synthesize selected4View,selected5View,selected6View;
 @synthesize selected7View,selected8View,selected9View;
-@synthesize selected10View,selected11View,selected12View, brainView;
+@synthesize selected10View,selected11View,selected12View, brainView, gameBG;
 
 @synthesize hint1View,hint2View,hint3View;
 @synthesize hint4View,hint5View,hint6View;
 @synthesize hint7View,hint8View,hint9View;
 @synthesize hint10View,hint11View,hint12View;
-@synthesize finishedLabel, moveLabel,moveLabel2,timerLabel;
-
+@synthesize finishedLabel, finishedLabel2, moveLabel,moveLabel2,timerLabel,optionsButton;
+@synthesize endGameRank1, endGameRank2, endGameRank3;
 @synthesize setGame;
+@synthesize firstClick, showWrong, showRight, showPiece1, showPiece2, showPiece3;
+@synthesize randomTwitch, twitchRate, brain_randomTwitch, brain_twitchRate;
+@synthesize timeSinceLastRightAnswer, hintVisible, gameTimer;
+@synthesize timeRemaining, brainPulseTimer, gamePlacement, berzerkEndTime;
+@synthesize brains;
+@synthesize m_brainView1, m_brainView2, m_brainView3,m_brainView4, m_brainView5;
+@synthesize m_brainView6, m_brainView7, m_brainView8,m_brainView9, m_brainView10;
 
+@synthesize m_brainView11, m_brainView12, m_brainView13,m_brainView14, m_brainView15;
+@synthesize m_brainView16, m_brainView17, m_brainView18,m_brainView19, m_brainView20;
+
+@synthesize m_brainView21, m_brainView22, m_brainView23,m_brainView24, m_brainView25;
+@synthesize m_brainView26, m_brainView27, m_brainView28,m_brainView29, m_brainView30;
+@synthesize m_bGun;
+/*
 BOOL firstClick = NO;
 int showWrong = 0;
 int showRight = 0;
@@ -51,43 +69,49 @@ NSTimer *gameTimer;
 double timeRemaining = 0;	
 
 int brainPulseTimer = 0;
+int gamePlacement = 0;
+int berzerkEndTime = 0;
 
 
+NSMutableArray *brains;
 
--(void) playSound:(int) pieceID:(int) expression {
-	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
-	if(!appDelegate.soundFX)
-		return;
-	
-	
-	NSString *filename = [[ZombieAudio getZombieAudioFile:pieceID:expression] retain];
-	//Get the filename of the sound file:
-	NSString *path;
-	
-	
-		path = [NSString stringWithFormat:@"%@%@",
-					  [[NSBundle mainBundle] resourcePath],
-					  filename];
-	
-	
+UIImageView *m_brainView1;
+UIImageView *m_brainView2;
+UIImageView *m_brainView3;
+UIImageView *m_brainView4;
+UIImageView *m_brainView5;
+UIImageView *m_brainView6;
+UIImageView *m_brainView7;
+UIImageView *m_brainView8;
+UIImageView *m_brainView9;
+UIImageView *m_brainView10;
 
-	
-	NSLog(@"%",path);
-	
-	//declare a system sound id
-	SystemSoundID soundID;
-	
-	//Get a URL for the sound file
-	NSURL *filePath = [NSURL fileURLWithPath:path isDirectory:NO];
-	
-	//Use audio sevices to create the sound
-	AudioServicesCreateSystemSoundID((CFURLRef)filePath, &soundID);
-	
-	//Use audio services to play the sound
-	AudioServicesPlaySystemSound(soundID);
-	//[filename release];
-	
-}
+
+UIImageView *m_brainView11;
+UIImageView *m_brainView12;
+UIImageView *m_brainView13;
+UIImageView *m_brainView14;
+UIImageView *m_brainView15;
+UIImageView *m_brainView16;
+UIImageView *m_brainView17;
+UIImageView *m_brainView18;
+UIImageView *m_brainView19;
+UIImageView *m_brainView20;
+
+
+UIImageView *m_brainView21;
+UIImageView *m_brainView22;
+UIImageView *m_brainView23;
+UIImageView *m_brainView24;
+UIImageView *m_brainView25;
+UIImageView *m_brainView26;
+UIImageView *m_brainView27;
+UIImageView *m_brainView28;
+UIImageView *m_brainView29;
+UIImageView *m_brainView30;
+*/
+
+
 
 
 -(BOOL) isButtonPressed:(int) index
@@ -126,6 +150,74 @@ int brainPulseTimer = 0;
 		return button12;
 	
 	return NULL;
+}
+-(UIImageView *) getBrains:(int) val
+{
+	if( val == 0)
+		return m_brainView1;
+	if(val == 1)
+		return m_brainView2;
+	if(val == 2)
+		return m_brainView3;
+	if(val == 3)
+		return m_brainView4;
+	if(val == 4)
+		return m_brainView5;
+	if(val == 5)
+		return m_brainView6;
+	if(val == 6)
+		return m_brainView7;
+	if(val == 7)
+		return m_brainView8;
+	if(val == 8)
+		return m_brainView9;
+	if(val == 9)
+		return m_brainView10;
+	
+	if( val == 10)
+		return m_brainView11;
+	if(val == 11)
+		return m_brainView12;
+	if(val == 12)
+		return m_brainView13;
+	if(val == 13)
+		return m_brainView14;
+	if(val == 14)
+		return m_brainView15;
+	if(val == 15)
+		return m_brainView16;
+	if(val == 16)
+		return m_brainView17;
+	if(val == 17)
+		return m_brainView18;
+	if(val == 18)
+		return m_brainView19;
+	if(val == 19)
+		return m_brainView20;
+	
+	if( val == 20)
+		return m_brainView21;
+	if(val == 21)
+		return m_brainView22;
+	if(val == 22)
+		return m_brainView23;
+	if(val == 23)
+		return m_brainView24;
+	if(val == 24)
+		return m_brainView25;
+	if(val == 25)
+		return m_brainView26;
+	if(val == 26)
+		return m_brainView27;
+	if(val == 27)
+		return m_brainView28;
+	if(val == 28)
+		return m_brainView29;
+	if(val == 29)
+		return m_brainView30;
+	
+	return NULL;
+	
 }
 
 -(UIImageView *) getView:(int) val
@@ -192,8 +284,13 @@ int brainPulseTimer = 0;
 	self.brainView.hidden = NO;
 	self.moveLabel.hidden = NO;
 	self.finishedLabel.hidden = YES;
+	self.finishedLabel2.hidden = YES;
 	self.moveLabel2.hidden = NO;
 	self.playAgainButton.hidden = YES;
+	self.optionsButton.hidden  = NO;
+	self.endGameRank1.hidden = YES;
+	self.endGameRank2.hidden = YES;
+	self.endGameRank3.hidden = YES;
 	
 	for(int i=0;i<12; ++i)
 	{
@@ -241,7 +338,6 @@ int brainPulseTimer = 0;
 	if(randomTwitch == 0)
 	{
 		twitchey = (int)[GameLogic randomNumber:0,11];
-		
 	}
 	
 	if(brain_randomTwitch == 0)
@@ -255,8 +351,13 @@ int brainPulseTimer = 0;
 		
 	
 	
-	NSString *message =[[NSString alloc] initWithFormat:@"Move %d of %d", setGame.currentMove + 1, setGame.totalMoves, a+1, b+1, c+1];
-	
+	NSString *message;
+	if(setGame.gameType == 1)
+		message =[[NSString alloc] initWithFormat:@"Move %d of %d", setGame.currentMove + 1, setGame.totalMoves, a+1, b+1, c+1];
+	else {
+		message =[[NSString alloc] initWithFormat:@"Level %d", (setGame.setsComplete / 10) + 1];
+	}
+
 	
 	[moveLabel setText:message];
 	
@@ -267,7 +368,7 @@ int brainPulseTimer = 0;
 	 message =[[NSString alloc] initWithFormat:@"Comboz: %d", setGame.setsComplete];
 	[moveLabel2 setText:message];
 	
-	
+	[message release];
 	//NSTimeInterval timeInterval = -1 * [setGame.startDate timeIntervalSinceNow];
 	//setGame.currentTime = timeInterval;
 	
@@ -307,13 +408,13 @@ int brainPulseTimer = 0;
 		if(showWrong > 0 && (showPiece1 == i || showPiece2 == i || showPiece3 == i))
 		{
 			img = [UIImage imageNamed:@"allBad.png"];
-			[self playSound:0:1]; //0 = synth, 1 = wrong
+			[ZombieGameHelpers playSound:0:1]; //0 = synth, 1 = wrong
 			
 		}
 		else if(showRight > 0 && (showPiece1 == i || showPiece2 == i || showPiece3 == i))
 		{
 			img = [UIImage imageNamed:@"allGood.png"];
-			[self playSound:0:2]; //0 = synth, 2 = correct
+			[ZombieGameHelpers  playSound:0:2]; //0 = synth, 2 = correct
 		}
 		else {
 			if(![self isButtonPressed:i] && twitchey != i)
@@ -324,9 +425,9 @@ int brainPulseTimer = 0;
 				//if(twitchey != -1)
 				//{
 					if(setGame.gameType == 2)
-						[self playSound:p.shape:2]; //p.shape =zombieID, 2 = HAPPY!
+						[ZombieGameHelpers  playSound:p.shape:2]; //p.shape =zombieID, 2 = HAPPY!
 					else
-						[self playSound:p.shape:1]; //p.shape =zombieID, 2 = HAPPY!
+						[ZombieGameHelpers  playSound:p.shape:1]; //p.shape =zombieID, 2 = HAPPY!
 				
 				//}
 				
@@ -335,6 +436,7 @@ int brainPulseTimer = 0;
 			
 		}
 		
+		
 		UIButton *btn = [self getButton:i];
 		[btn setImage:img forState:UIControlStateNormal];
 		[btn setShowsTouchWhenHighlighted:YES];
@@ -342,7 +444,7 @@ int brainPulseTimer = 0;
 	}
 	if(brain_twitchey != -1)
 	{
-		[self playSound:-1:-1];
+		[ZombieGameHelpers  playSound:-1:-1];
 		UIImage *img;
 		img = [UIImage imageNamed:@"brain_2.png"];
 		[brainView setImage:img];
@@ -365,17 +467,26 @@ int brainPulseTimer = 0;
 }
 
 
--(void) drawFinished
+-(void) drawCrawlerFinished
 {
 	
 	self.brainView.hidden = YES;
 	self.playAgainButton.hidden = NO;
+	self.optionsButton.hidden  = YES;
+	self.endGameRank1.hidden = YES;
+	self.endGameRank2.hidden = YES;
+	self.endGameRank3.hidden = YES;
+	
 	if(setGame.gameType == 1)
 	{
 		NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
 		NSString *message =[[NSString alloc] initWithFormat:@"Game Over, here was your time in seconds: %0.0f", -timeInterval];
 	//NSLog(@"Game Over, here was your time in seconds: %@", message);
 		[finishedLabel setText:message];
+		[message release];
+		
+		message =[[NSString alloc] initWithFormat:@"Your Placement: %0d", gamePlacement];
+		[finishedLabel2 setText:message];
 		[message release];
 	}
 	else {
@@ -384,17 +495,180 @@ int brainPulseTimer = 0;
 		//NSLog(@"Game Over, here was your time in seconds: %@", message);
 		[finishedLabel setText:message];
 		[message release];
+		
+		message =[[NSString alloc] initWithFormat:@"Your Placement: %0d", gamePlacement];
+		[finishedLabel2 setText:message];
+		[message release];
 	}
+	
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	int top5Avg = (int) [appDelegate getCrawlerTopFiveAverage];
+	
+	
+	
+	UIImage *img;
+	if(top5Avg <= 25)
+	{
+		img  = [UIImage imageNamed:@"bg_EndGameClassicC.jpg"];
+		[self.gameBG setImage:img];
+		self.endGameRank1.hidden = NO;
+		self.endGameRank2.hidden = NO;
+		self.endGameRank3.hidden = NO;
+
+	}
+	else if(top5Avg <=45)
+	{
+		img  = [UIImage imageNamed:@"bg_EndGameClassicB.jpg"];
+		[self.gameBG setImage:img];
+		self.endGameRank1.hidden = NO;
+		self.endGameRank2.hidden = NO;
+		
+	}
+	else if(top5Avg <= 105)
+	{
+		img  = [UIImage imageNamed:@"bg_EndGameClassicA.jpg"];
+		[self.gameBG setImage:img];
+		self.endGameRank1.hidden = NO;
+
+	}
+	else
+	{
+		img  = [UIImage imageNamed:@"bg_EndGameClassicA.jpg"];
+		[self.gameBG setImage:img];
+
+		
+	}
+	
+	
+	
 
 	self.moveLabel.hidden = YES;
 	self.moveLabel2.hidden = YES;
 	self.finishedLabel.hidden = NO;
+	self.finishedLabel2.hidden = NO;
 	for(int i=0;i<12; ++i)
 	{
 		[self getView:i].hidden = YES;
 		[self getButton:i].hidden = YES;
 		[self getHint:i].hidden = YES;
 	}	
+	firstClick = NO;
+	showWrong = 0;
+	showRight = 0;
+	showPiece1 = 0;
+	showPiece2 = 0;
+	showPiece3 = 0;
+	
+	randomTwitch = 0;
+	twitchRate = 30;
+	brain_randomTwitch = 1;
+	brain_twitchRate = 30;
+	
+	timeSinceLastRightAnswer = 0;
+	hintVisible = NO;
+	
+}
+
+
+-(void) drawBerzerkFinished
+{
+	
+	
+	
+	self.optionsButton.hidden  = YES;
+	self.endGameRank1.hidden = YES;
+	self.endGameRank2.hidden = YES;
+	self.endGameRank3.hidden = YES;
+	/*if(setGame.gameType == 1)
+	{
+		NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
+		NSString *message =[[NSString alloc] initWithFormat:@"Game Over, here was your time in seconds: %0.0f", -timeInterval];
+		//NSLog(@"Game Over, here was your time in seconds: %@", message);
+		[finishedLabel setText:message];
+		[message release];
+		
+		message =[[NSString alloc] initWithFormat:@"Your Placement: %0d", gamePlacement];
+		[finishedLabel2 setText:message];
+		[message release];
+	}
+	else {*/
+		//NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
+		NSString *message =[[NSString alloc] initWithFormat:@"%d Zombie Comboz!", setGame.setsComplete];
+		//NSLog(@"Game Over, here was your time in seconds: %@", message);
+		[finishedLabel setText:message];
+		[message release];
+		
+		message =[[NSString alloc] initWithFormat:@"Your Placement: %0d", gamePlacement];
+		[finishedLabel2 setText:message];
+		[message release];
+	//}
+	UIImage *img;
+	if(!setGame.isActive){ 
+		self.playAgainButton.hidden = NO;
+		self.m_bGun.hidden = YES;
+		if(1 || gamePlacement == 1)//You Win!
+		{
+		
+			
+			img  = [UIImage imageNamed:@"bg_EndGameB_win.jpg"];
+		}
+		else //You Lose!
+			img  = [UIImage imageNamed:@"bg_EndGameB_lose.jpg"];
+
+
+		[self.gameBG setImage:img];
+		
+		self.brainView.hidden = YES;
+		[brains release];
+		for(int i=0;i<30;++i){
+			UIImageView *aview = [self getBrains:i];
+			aview.hidden = YES;
+		}
+		self.moveLabel.hidden = YES;
+		self.moveLabel2.hidden = YES;
+		self.finishedLabel.hidden = NO;
+		self.finishedLabel2.hidden = NO;
+		for(int i=0;i<12; ++i)
+		{
+			[self getView:i].hidden = YES;
+			[self getButton:i].hidden = YES;
+			[self getHint:i].hidden = YES;
+		}	
+		
+	}
+	else if(berzerkEndTime < 10 && (1 || gamePlacement == 1))
+	{
+		
+		self.m_bGun.hidden = NO;
+		for(int i=0;i<30;++i){
+			UIImageView *aview = [self getBrains:i];
+			aview.hidden = YES;
+		}
+	}
+	else{ //Transition Period
+		
+		self.m_bGun.hidden = NO;
+		//Draw Brain Pieces
+		for(int i=0;i<30;++i){
+			BrainPiece *piece = (BrainPiece *)[brains objectAtIndex:i];
+			UIImageView *aview = [self getBrains:i];
+			UIImage *image = [UIImage imageNamed:piece.image];
+			
+			//aview = [ [ UIImageView alloc ] initWithFrame:CGRectMake(piece.x, piece.y, image.size.width, image.size.height)];
+			//aview.image = image;
+			//aview.transform = CGAffineTransformIdentity;
+			aview.transform = CGAffineTransformTranslate(aview.transform, 0.0, piece.speed);
+			aview.hidden = NO;
+			//[aview drawRect:CGRectMake(piece.x, piece.y, image.size.width, image.size.height)];
+			//[self.view addSubview:aview];
+			image = [UIImage imageNamed:@"brain_3.png"];
+			self.brainView.image = image;
+			
+		}
+	}
+	
+	
+	
 	firstClick = NO;
 	showWrong = 0;
 	showRight = 0;
@@ -530,7 +804,8 @@ int brainPulseTimer = 0;
 							NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
 							//NSLog(@"Game Over, here was your time in seconds: %@", message);
 							//[appDelegate readScoresFromDatabase];
-							//int place = [appDelegate getCrawlerPlacement:(int)-timeInterval];
+							gamePlacement = (int) [appDelegate getCrawlerPlacement:(int)-timeInterval];
+							
 							[appDelegate insertScore:-timeInterval :setGame.gameType :setGame.finishedDate];
 							
 							
@@ -671,14 +946,37 @@ int brainPulseTimer = 0;
 
 -(IBAction) finishedButtonDown:(id)sender{
 	
+	self.m_bGun.hidden = YES;
 	[gameTimer invalidate];
 	[gameTimer release];
 	setGame.isActive = NO;
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 		[appDelegate PlayNonGameTrack];
 	
+	[self dismissModalViewControllerAnimated:NO];
+	//[[self parentViewController] dismissModalViewControllerAnimated:NO];
+}
+
+-(IBAction) optionsButtonDown:(id) sender{
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
-	[[self parentViewController] dismissModalViewControllerAnimated:NO];
+	setGame.isActive = !setGame.isActive;
+	
+	UIImage *img;
+	if(setGame.isActive){
+		img  = [UIImage imageNamed:@"b_Pause_off.png"];
+		[sender setImage:img forState:UIControlStateNormal];
+		[appDelegate ShowHint:YES];
+		[appDelegate PauseSound:NO];
+		
+	}
+	else {
+		img  = [UIImage imageNamed:@"b_Pause_on.png"];
+		[sender setImage:img forState:UIControlStateNormal];
+		[appDelegate ShowHint:NO];
+		[appDelegate PauseSound:YES];
+		
+	}
 }
 
 -(IBAction) button12Down:(id)sender{
@@ -816,7 +1114,87 @@ int brainPulseTimer = 0;
 	//PLAY START SOUND??
     [super viewDidLoad];
 	
+/*	for(int i=0;i<1;++i)
+	{
+		UIImageView *aview = [self getBrains:i];
+		aview = [[UIImageView alloc]init];
+		[self.view addSubview:aview];
+		
+	} */
+	m_bGun = [[UIImageView alloc]init];
+	[self.view addSubview:m_bGun];
 	
+	UIImage *img = [UIImage imageNamed:@"EndGame_Gun.png"];
+	self.m_bGun.image = img;
+	m_bGun.frame = CGRectMake(360, 70, 129, 132);
+
+	m_bGun.hidden = YES;
+	
+	
+	
+	m_brainView1 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView1];
+	m_brainView2 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView2];
+	m_brainView3 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView3];
+	m_brainView4 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView4];
+	m_brainView5 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView5];
+	m_brainView6 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView6];
+	m_brainView7 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView7];
+	m_brainView8 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView8];
+	m_brainView9 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView9];
+	m_brainView10 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView10];
+
+	
+	m_brainView11 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView11];
+	m_brainView12 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView12];
+	m_brainView13 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView13];
+	m_brainView14 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView14];
+	m_brainView15 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView15];
+	m_brainView16 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView16];
+	m_brainView17 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView17];
+	m_brainView18 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView18];
+	m_brainView19 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView19];
+	m_brainView20 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView20];
+
+	m_brainView21 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView21];
+	m_brainView22 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView22];
+	m_brainView23 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView23];
+	m_brainView24 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView24];
+	m_brainView25 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView25];
+	m_brainView26 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView26];
+	m_brainView27 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView27];
+	m_brainView28 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView28];
+	m_brainView29 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView29];
+	m_brainView30 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView30];
 	
 	twitchRate = 30;
 	
@@ -829,21 +1207,54 @@ int brainPulseTimer = 0;
 	
 	//ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
-	int score = 0;
+	
 	
 	//[setGame GameLoop];
 	//if([setGame isFinished])
 	if((setGame.gameType == 1 && [setGame isFinished])  || (setGame.gameType == 2 && timeRemaining <= 0))
 	{
-		[self drawFinished];
-		setGame.isActive = NO;
+		
+		
 		ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 		if(setGame.gameType == 2){
-			[self playSound:0:3];
-			
-			//int place = [appDelegate getBerzerkPlacement:setGame.setsComplete];
-			[appDelegate insertScore:setGame.setsComplete :setGame.gameType :setGame.finishedDate];
+			if(berzerkEndTime ==0)
+			{
+				[ZombieGameHelpers  playSound:0:3];
+				gamePlacement = (int) [appDelegate getBerzerkPlacement:setGame.setsComplete];
+				[appDelegate insertScore:setGame.setsComplete :setGame.gameType :setGame.finishedDate];
+				
+				brains = [[BrainPieces CreatePieces] retain];
+				
+				for(int i=0;i<30;++i){
+					BrainPiece *piece = (BrainPiece *)[brains objectAtIndex:i];
+					UIImageView *aview = [self getBrains:i];
+					UIImage *image = [UIImage imageNamed:piece.image];
+					
+					//aview = [ [ UIImageView alloc ] initWithFrame:CGRectMake(piece.x, piece.y, image.size.width, image.size.height)];
+					aview.image = image;
+					aview.frame = CGRectMake(piece.x, piece.y, image.size.width, image.size.height);
+					aview.transform = CGAffineTransformIdentity;
+					aview.transform = CGAffineTransformTranslate(aview.transform, 0, piece.speed);
+					
+					
+					
+				}
+			}
+			[self drawBerzerkFinished];
+			berzerkEndTime ++;
+			if(berzerkEndTime >= 40)
+			{
+				setGame.isActive = NO;
+				[self drawBerzerkFinished];
+			}
+				
 		}
+		else
+		{
+			setGame.isActive = NO;
+			[self drawCrawlerFinished];
+		}
+		
 	}
 	else
 	{
@@ -924,11 +1335,17 @@ int brainPulseTimer = 0;
 	twitchRate = 30;
 	brain_randomTwitch = 1;
 	brain_twitchRate = 30;
+	gamePlacement = 0;
+	berzerkEndTime = 0;
+	self.endGameRank1.hidden = YES;
+	self.endGameRank2.hidden = YES;
+	self.endGameRank3.hidden = YES;
 	
 	if(setGame.gameType == 1)
 		timeRemaining = 0;
 	else {
-		timeRemaining= 60;
+		//timeRemaining= 60;
+		timeRemaining = 5;
 	}
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -941,14 +1358,18 @@ int brainPulseTimer = 0;
 	}
 
 	
-
+	UIImage *img;
+	
+	img  = [UIImage imageNamed:@"bg_GamePlay.jpg"];
+	[self.gameBG setImage:img];
+		
 	
 	
 	SetPiece *p= (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:0] intValue]];
 	
 	//[appDelegate readScoresFromDatabase];
 	
-	[self playSound:p.shape:6];
+	[ZombieGameHelpers  playSound:p.shape:6];
 	gameTimer = [[NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(gameloop) userInfo:nil repeats:YES] retain];
 	
 	
@@ -979,12 +1400,68 @@ int brainPulseTimer = 0;
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 	
+	UIImageView *aview;
+	for(int i=0;i<30;++i)
+	{
+		[aview release];
+		aview = nil;
+	}
+	
 }
 
 
 - (void)dealloc {
     [super dealloc];
-//	[theGame release];
+	[finishedLabel release];
+	[finishedLabel2 release];
+	[moveLabel release];
+	[moveLabel2 release];
+	[timerLabel release];
+	[brainView release];
+	[gameBG release];
+	[button1 release];
+	[button2 release];
+	[button3 release];
+	[button4 release];
+	[button5 release];
+	[button6 release];
+	[button7 release];
+	[button8 release];
+	[button9 release];
+	[button10 release];
+	[button11 release];
+	[button12 release];
+	[playAgainButton release];
+	[optionsButton release];
+	[selected1View release];
+	[selected2View release];
+	[selected3View release];
+	[selected4View release];
+	[selected5View release];
+	[selected6View release];
+	[selected7View release];
+	[selected8View release];
+	[selected9View release];
+	[selected10View release];
+	[selected11View release];
+	[selected12View release];
+	[hint1View release];
+	[hint2View release];
+	[hint3View release];
+	[hint4View release];
+	[hint5View release];
+	[hint6View release];
+	[hint7View release];
+	[hint8View release];
+	[hint9View release];
+	[hint10View release];
+	[hint11View release];
+	[hint12View release];
+	[endGameRank1 release];
+	[endGameRank2 release];
+	[endGameRank3 release];
+	
+	
 	[setGame release];
 }
 

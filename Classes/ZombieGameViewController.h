@@ -22,6 +22,7 @@
 	IBOutlet UIButton *button11;
 	IBOutlet UIButton *button12;
 	IBOutlet UIButton *playAgainButton;
+	IBOutlet UIButton *optionsButton;
 	
 	IBOutlet UIImageView *selected1View;
 	IBOutlet UIImageView *selected2View;
@@ -49,12 +50,87 @@
 	IBOutlet UIImageView *hint11View;
 	IBOutlet UIImageView *hint12View;
 	
+	IBOutlet UIImageView *endGameRank1;
+	IBOutlet UIImageView *endGameRank2;
+	IBOutlet UIImageView *endGameRank3;
+	
+	IBOutlet UIImageView *brainView1;
+	IBOutlet UIImageView *brainView2;
+	IBOutlet UIImageView *brainView3;
+	IBOutlet UIImageView *brainView4;
+	IBOutlet UIImageView *brainView5;
+	
+	
+	IBOutlet UIImageView *gameBG;
+	
 	IBOutlet UILabel *finishedLabel;
+	IBOutlet UILabel *finishedLabel2;
 	IBOutlet UILabel *moveLabel;
 	IBOutlet UILabel *timerLabel;
 	IBOutlet UILabel *moveLabel2;
 	IBOutlet UIImageView *brainView;
 	SetGame *setGame;
+	
+	BOOL firstClick;
+	int showWrong;
+	int showRight;
+	int showPiece1;
+	int showPiece2;
+	int showPiece3;
+	
+	int randomTwitch;
+	int twitchRate;
+	int brain_randomTwitch;
+	int brain_twitchRate;
+	
+	int timeSinceLastRightAnswer;
+	BOOL hintVisible;
+	NSTimer *gameTimer;
+	
+	double timeRemaining;	
+	
+	int brainPulseTimer;
+	int gamePlacement;
+	int berzerkEndTime;
+	
+	
+	NSMutableArray *brains;
+	
+	UIImageView *m_brainView1;
+	UIImageView *m_brainView2;
+	UIImageView *m_brainView3;
+	UIImageView *m_brainView4;
+	UIImageView *m_brainView5;
+	UIImageView *m_brainView6;
+	UIImageView *m_brainView7;
+	UIImageView *m_brainView8;
+	UIImageView *m_brainView9;
+	UIImageView *m_brainView10;
+	
+	
+	UIImageView *m_brainView11;
+	UIImageView *m_brainView12;
+	UIImageView *m_brainView13;
+	UIImageView *m_brainView14;
+	UIImageView *m_brainView15;
+	UIImageView *m_brainView16;
+	UIImageView *m_brainView17;
+	UIImageView *m_brainView18;
+	UIImageView *m_brainView19;
+	UIImageView *m_brainView20;
+	
+	
+	UIImageView *m_brainView21;
+	UIImageView *m_brainView22;
+	UIImageView *m_brainView23;
+	UIImageView *m_brainView24;
+	UIImageView *m_brainView25;
+	UIImageView *m_brainView26;
+	UIImageView *m_brainView27;
+	UIImageView *m_brainView28;
+	UIImageView *m_brainView29;
+	UIImageView *m_brainView30;
+	UIImageView *m_bGun;
 }
 
 //@property (nonatomic) BOOL flipper;
@@ -91,14 +167,20 @@
 -(IBAction) button12Up:(id)sender;
 
 -(IBAction) finishedButtonDown:(id)sender;
+-(IBAction) optionsButtonDown:(id)sender;
+
 -(BOOL) isButtonPressed:(int) index;
 
 
 @property (nonatomic, retain) UILabel *finishedLabel;
+
+@property (nonatomic, retain) UILabel *finishedLabel2;
 @property (nonatomic, retain) UILabel *moveLabel;
 @property (nonatomic, retain) UILabel *moveLabel2;
 @property (nonatomic, retain) UILabel *timerLabel;
 @property (nonatomic,retain) UIImageView *brainView;
+
+@property (nonatomic,retain) UIImageView *gameBG;
 
 @property (nonatomic,retain) UIButton *button1;
 @property (nonatomic,retain) UIButton *button2;
@@ -113,6 +195,7 @@
 @property (nonatomic,retain) UIButton *button11;
 @property (nonatomic,retain) UIButton *button12;
 @property (nonatomic,retain) UIButton *playAgainButton;
+@property (nonatomic,retain) UIButton *optionsButton;
 
 
 
@@ -144,6 +227,74 @@
 @property (nonatomic,retain) UIImageView *hint11View;
 @property (nonatomic,retain) UIImageView *hint12View;
 
+
+@property (nonatomic,retain) UIImageView *endGameRank1;
+@property (nonatomic,retain) UIImageView *endGameRank2;
+@property (nonatomic,retain) UIImageView *endGameRank3;
+
+
+
+@property (nonatomic,assign) BOOL firstClick;
+@property (nonatomic,assign) int showWrong;
+@property (nonatomic,assign) int showRight;
+@property (nonatomic,assign) int showPiece1;
+@property (nonatomic,assign) int showPiece2;
+@property (nonatomic,assign) int showPiece3;
+
+@property (nonatomic,assign) int randomTwitch;
+@property (nonatomic,assign) int twitchRate;
+@property (nonatomic,assign) int brain_randomTwitch;
+@property (nonatomic,assign) int brain_twitchRate;
+
+@property (nonatomic,assign) int timeSinceLastRightAnswer;
+@property (nonatomic,assign) BOOL hintVisible;
+@property (nonatomic,retain) NSTimer *gameTimer;
+
+@property (nonatomic,assign) double timeRemaining;	
+
+@property (nonatomic,assign) int brainPulseTimer;
+@property (nonatomic,assign) int gamePlacement;
+@property (nonatomic,assign) int berzerkEndTime;
+
+
+@property (nonatomic,retain) NSMutableArray *brains;
+
+@property (nonatomic,retain) UIImageView *m_brainView1;
+@property (nonatomic,retain) UIImageView *m_brainView2;
+@property (nonatomic,retain) UIImageView *m_brainView3;
+@property (nonatomic,retain) UIImageView *m_brainView4;
+@property (nonatomic,retain) UIImageView *m_brainView5;
+@property (nonatomic,retain) UIImageView *m_brainView6;
+@property (nonatomic,retain) UIImageView *m_brainView7;
+@property (nonatomic,retain) UIImageView *m_brainView8;
+@property (nonatomic,retain) UIImageView *m_brainView9;
+@property (nonatomic,retain) UIImageView *m_brainView10;
+
+
+@property (nonatomic,retain) UIImageView *m_brainView11;
+@property (nonatomic,retain) UIImageView *m_brainView12;
+@property (nonatomic,retain) UIImageView *m_brainView13;
+@property (nonatomic,retain) UIImageView *m_brainView14;
+@property (nonatomic,retain) UIImageView *m_brainView15;
+@property (nonatomic,retain) UIImageView *m_brainView16;
+@property (nonatomic,retain) UIImageView *m_brainView17;
+@property (nonatomic,retain) UIImageView *m_brainView18;
+@property (nonatomic,retain) UIImageView *m_brainView19;
+@property (nonatomic,retain) UIImageView *m_brainView20;
+
+
+@property (nonatomic,retain) UIImageView *m_brainView21;
+@property (nonatomic,retain) UIImageView *m_brainView22;
+@property (nonatomic,retain) UIImageView *m_brainView23;
+@property (nonatomic,retain) UIImageView *m_brainView24;
+@property (nonatomic,retain) UIImageView *m_brainView25;
+@property (nonatomic,retain) UIImageView *m_brainView26;
+@property (nonatomic,retain) UIImageView *m_brainView27;
+@property (nonatomic,retain) UIImageView *m_brainView28;
+@property (nonatomic,retain) UIImageView *m_brainView29;
+@property (nonatomic,retain) UIImageView *m_brainView30;
+
+@property (nonatomic,retain) UIImageView *m_bGun;
 
 @end
 

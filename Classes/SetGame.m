@@ -90,6 +90,7 @@ typedef enum GameType
 	selection_a = selection_b = selection_c = -1;
 	totalPieces = 27;
 	[SetLogic CreateState:pieces:state:totalPieces];
+	[startDate release];
 	startDate = [[NSDate date] retain];
 	count = 0;
 	totalMoves = 10;

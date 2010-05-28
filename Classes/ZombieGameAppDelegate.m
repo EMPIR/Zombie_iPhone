@@ -169,6 +169,7 @@
 					break;
 				}
 				i++;
+				ret = i;
 			}
 		}
 		// Release the compiled statement from memory
@@ -176,6 +177,86 @@
 		
 	}
 	sqlite3_close(database);
+	return ret;
+	
+}
+
+
+-(int) getCrawlerAverage:(int) score
+{
+	sqlite3 *database;
+	
+	
+	int ret = 0;
+	int i=0;
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+		// Setup the SQL Statement and compile it for faster access
+		const char *sqlStatement = "select * from highScores where gameType = 1 order by score asc";
+		sqlite3_stmt *compiledStatement;
+		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
+			// Loop through the results and add them to the feeds array
+			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+				// Read the data from the result row
+				int _score = sqlite3_column_int(compiledStatement,2);
+				
+				if(score < _score)
+				{
+					ret = i;
+					break;
+				}
+				ret += _score;
+				i++;
+			}
+		}
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+		
+	}
+	sqlite3_close(database);
+	
+	if(i > 0)
+		return ret / i;
+	
+	return ret;
+	
+}
+
+
+-(int) getCrawlerTopFiveAverage
+{
+	sqlite3 *database;
+	
+	
+	int ret = 0;
+	int i=0;
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+		// Setup the SQL Statement and compile it for faster access
+		const char *sqlStatement = "select * from highScores where gameType = 1 order by score asc";
+		sqlite3_stmt *compiledStatement;
+		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
+			// Loop through the results and add them to the feeds array
+			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+				// Read the data from the result row
+				int _score = sqlite3_column_int(compiledStatement,2);
+				
+				
+				ret += _score;
+				i++;
+				if(i == 4)
+					break;
+			}
+		}
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+		
+	}
+	sqlite3_close(database);
+	
+	if(i > 0)
+		return ret / i;
+	
 	return ret;
 	
 }
@@ -190,7 +271,7 @@
 	// Open the database from the users filessytem
 	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
 		// Setup the SQL Statement and compile it for faster access
-		const char *sqlStatement = "select * from highScores where gameType = 2 order by score asc";
+		const char *sqlStatement = "select * from highScores where gameType = 2 order by score desc";
 		sqlite3_stmt *compiledStatement;
 		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
 			// Loop through the results and add them to the feeds array
@@ -198,12 +279,14 @@
 				// Read the data from the result row
 				int _score = sqlite3_column_int(compiledStatement,2);
 				
-				if(score < _score)
+				if(score > _score)
 				{
 					ret = i;
 					break;
 				}
+				
 				i++;
+				ret = i;
 			}
 		}
 		// Release the compiled statement from memory
@@ -345,7 +428,6 @@
 		NSLog(@"%",[error description]);				
 	else 
 		[audioPlayer play];
-	
 }
 
 -(void) PlayCrawlerTrack{
@@ -427,7 +509,15 @@
 	audioPlayer.volume = volume;
 }
 
+-(void) PauseSound:(BOOL) val {
+	if(val == YES)
+		[audioPlayer pause];
+	else {
+		[audioPlayer play];
+	}
 
+
+}
 
 
 @end

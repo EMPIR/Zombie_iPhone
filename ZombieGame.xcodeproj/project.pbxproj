@@ -11,6 +11,11 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		270D046C11AF619000CF8DE8 /* ZombieGameHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D046B11AF619000CF8DE8 /* ZombieGameHelpers.m */; };
+		270D04CB11AF6AD700CF8DE8 /* bg_EndGameB_win.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 270D04CA11AF6AD700CF8DE8 /* bg_EndGameB_win.jpg */; };
+		270D04CD11AF6B0100CF8DE8 /* EndGame_Gun.png in Resources */ = {isa = PBXBuildFile; fileRef = 270D04CC11AF6B0100CF8DE8 /* EndGame_Gun.png */; };
+		270D052A11AFEF7000CF8DE8 /* b_Pause_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 270D052811AFEF7000CF8DE8 /* b_Pause_off.png */; };
+		270D052B11AFEF7000CF8DE8 /* b_Pause_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 270D052911AFEF7000CF8DE8 /* b_Pause_on.png */; };
 		2741D1661186723D001BD582 /* GameLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2741D1651186723D001BD582 /* GameLogic.m */; };
 		276069F6118921C2008E1327 /* SetPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 276069F5118921C2008E1327 /* SetPiece.m */; };
 		27606A83118BC498008E1327 /* SetLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 27606A82118BC498008E1327 /* SetLogic.m */; };
@@ -156,6 +161,41 @@
 		27E7A1AD11AB66CB006E622E /* b_FX_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A1A511AB66CB006E622E /* b_FX_off.png */; };
 		27E7A1AE11AB66CB006E622E /* b_FX_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A1A611AB66CB006E622E /* b_FX_on.png */; };
 		27E7A1AF11AB66CB006E622E /* bg_HowToPlay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A1A711AB66CB006E622E /* bg_HowToPlay.jpg */; };
+		27E7A3DD11AC581C006E622E /* BrainPieces.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7A3DC11AC581C006E622E /* BrainPieces.m */; };
+		27E7A3E011AC5850006E622E /* BrainPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E7A3DF11AC5850006E622E /* BrainPiece.m */; };
+		27E7A3F011AC5AE9006E622E /* brains_15.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A3E111AC5AE9006E622E /* brains_15.png */; };
+		27E7A3F111AC5AE9006E622E /* brains_14.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A3E211AC5AE9006E622E /* brains_14.png */; };
+		27E7A3F211AC5AE9006E622E /* brains_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A3E311AC5AE9006E622E /* brains_13.png */; };
+		27E7A3F311AC5AE9006E622E /* brains_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A3E411AC5AE9006E622E /* brains_12.png */; };
+		27E7A3F411AC5AE9006E622E /* brains_11.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A3E511AC5AE9006E622E /* brains_11.png */; };
+		27E7A3F511AC5AE9006E622E /* brains_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A3E611AC5AE9006E622E /* brains_10.png */; };
+		27E7A3F611AC5AE9006E622E /* brains_9.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A3E711AC5AE9006E622E /* brains_9.png */; };
+		27E7A3F711AC5AE9006E622E /* brains_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A3E811AC5AE9006E622E /* brains_8.png */; };
+		27E7A3F811AC5AE9006E622E /* brains_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A3E911AC5AE9006E622E /* brains_7.png */; };
+		27E7A3F911AC5AE9006E622E /* brains_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A3EA11AC5AE9006E622E /* brains_6.png */; };
+		27E7A3FA11AC5AE9006E622E /* brains_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A3EB11AC5AE9006E622E /* brains_5.png */; };
+		27E7A3FB11AC5AE9006E622E /* brains_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A3EC11AC5AE9006E622E /* brains_4.png */; };
+		27E7A3FC11AC5AE9006E622E /* brains_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A3ED11AC5AE9006E622E /* brains_3.png */; };
+		27E7A3FD11AC5AE9006E622E /* brains_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A3EE11AC5AE9006E622E /* brains_2.png */; };
+		27E7A3FE11AC5AE9006E622E /* brains_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A3EF11AC5AE9006E622E /* brains_1.png */; };
+		27E7A50811AC72AF006E622E /* brain_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A50711AC72AF006E622E /* brain_3.png */; };
+		27E7A53211ACAF14006E622E /* brains_30.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A52311ACAF14006E622E /* brains_30.png */; };
+		27E7A53311ACAF14006E622E /* brains_29.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A52411ACAF14006E622E /* brains_29.png */; };
+		27E7A53411ACAF14006E622E /* brains_28.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A52511ACAF14006E622E /* brains_28.png */; };
+		27E7A53511ACAF14006E622E /* brains_27.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A52611ACAF14006E622E /* brains_27.png */; };
+		27E7A53611ACAF14006E622E /* brains_26.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A52711ACAF14006E622E /* brains_26.png */; };
+		27E7A53711ACAF14006E622E /* brains_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A52811ACAF14006E622E /* brains_25.png */; };
+		27E7A53811ACAF14006E622E /* brains_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A52911ACAF14006E622E /* brains_24.png */; };
+		27E7A53911ACAF14006E622E /* brains_23.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A52A11ACAF14006E622E /* brains_23.png */; };
+		27E7A53A11ACAF14006E622E /* brains_22.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A52B11ACAF14006E622E /* brains_22.png */; };
+		27E7A53B11ACAF14006E622E /* brains_21.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A52C11ACAF14006E622E /* brains_21.png */; };
+		27E7A53C11ACAF14006E622E /* brains_20.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A52D11ACAF14006E622E /* brains_20.png */; };
+		27E7A53D11ACAF14006E622E /* brains_19.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A52E11ACAF14006E622E /* brains_19.png */; };
+		27E7A53E11ACAF14006E622E /* brains_18.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A52F11ACAF14006E622E /* brains_18.png */; };
+		27E7A53F11ACAF14006E622E /* brains_17.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A53011ACAF14006E622E /* brains_17.png */; };
+		27E7A54011ACAF14006E622E /* brains_16.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A53111ACAF14006E622E /* brains_16.png */; };
+		27E7A58A11ACDCF2006E622E /* preview_EndGameB_lose.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A58911ACDCF2006E622E /* preview_EndGameB_lose.jpg */; };
+		27E7A58C11ACDD8F006E622E /* bg_EndGameB_lose.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27E7A58B11ACDD8F006E622E /* bg_EndGameB_lose.jpg */; };
 		27F6E0F21185256E007705A9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F6E0F11185256E007705A9 /* Default.png */; };
 		27F6E17B1185328F007705A9 /* selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F6E17A1185328F007705A9 /* selected.png */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
@@ -170,6 +210,12 @@
 		1D3623250D0F684500981E51 /* ZombieGameAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZombieGameAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* ZombieGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZombieGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		270D046A11AF619000CF8DE8 /* ZombieGameHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZombieGameHelpers.h; sourceTree = "<group>"; };
+		270D046B11AF619000CF8DE8 /* ZombieGameHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZombieGameHelpers.m; sourceTree = "<group>"; };
+		270D04CA11AF6AD700CF8DE8 /* bg_EndGameB_win.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_EndGameB_win.jpg; sourceTree = "<group>"; };
+		270D04CC11AF6B0100CF8DE8 /* EndGame_Gun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EndGame_Gun.png; sourceTree = "<group>"; };
+		270D052811AFEF7000CF8DE8 /* b_Pause_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_Pause_off.png; sourceTree = "<group>"; };
+		270D052911AFEF7000CF8DE8 /* b_Pause_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_Pause_on.png; sourceTree = "<group>"; };
 		2741D1641186723D001BD582 /* GameLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLogic.h; sourceTree = "<group>"; };
 		2741D1651186723D001BD582 /* GameLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLogic.m; sourceTree = "<group>"; };
 		276069F4118921C2008E1327 /* SetPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPiece.h; sourceTree = "<group>"; };
@@ -326,6 +372,43 @@
 		27E7A1A511AB66CB006E622E /* b_FX_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_FX_off.png; sourceTree = "<group>"; };
 		27E7A1A611AB66CB006E622E /* b_FX_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_FX_on.png; sourceTree = "<group>"; };
 		27E7A1A711AB66CB006E622E /* bg_HowToPlay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_HowToPlay.jpg; sourceTree = "<group>"; };
+		27E7A3DB11AC581C006E622E /* BrainPieces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrainPieces.h; sourceTree = "<group>"; };
+		27E7A3DC11AC581C006E622E /* BrainPieces.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrainPieces.m; sourceTree = "<group>"; };
+		27E7A3DE11AC5850006E622E /* BrainPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrainPiece.h; sourceTree = "<group>"; };
+		27E7A3DF11AC5850006E622E /* BrainPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrainPiece.m; sourceTree = "<group>"; };
+		27E7A3E111AC5AE9006E622E /* brains_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_15.png; path = Brains/brains_15.png; sourceTree = "<group>"; };
+		27E7A3E211AC5AE9006E622E /* brains_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_14.png; path = Brains/brains_14.png; sourceTree = "<group>"; };
+		27E7A3E311AC5AE9006E622E /* brains_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_13.png; path = Brains/brains_13.png; sourceTree = "<group>"; };
+		27E7A3E411AC5AE9006E622E /* brains_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_12.png; path = Brains/brains_12.png; sourceTree = "<group>"; };
+		27E7A3E511AC5AE9006E622E /* brains_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_11.png; path = Brains/brains_11.png; sourceTree = "<group>"; };
+		27E7A3E611AC5AE9006E622E /* brains_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_10.png; path = Brains/brains_10.png; sourceTree = "<group>"; };
+		27E7A3E711AC5AE9006E622E /* brains_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_9.png; path = Brains/brains_9.png; sourceTree = "<group>"; };
+		27E7A3E811AC5AE9006E622E /* brains_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_8.png; path = Brains/brains_8.png; sourceTree = "<group>"; };
+		27E7A3E911AC5AE9006E622E /* brains_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_7.png; path = Brains/brains_7.png; sourceTree = "<group>"; };
+		27E7A3EA11AC5AE9006E622E /* brains_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_6.png; path = Brains/brains_6.png; sourceTree = "<group>"; };
+		27E7A3EB11AC5AE9006E622E /* brains_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_5.png; path = Brains/brains_5.png; sourceTree = "<group>"; };
+		27E7A3EC11AC5AE9006E622E /* brains_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_4.png; path = Brains/brains_4.png; sourceTree = "<group>"; };
+		27E7A3ED11AC5AE9006E622E /* brains_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_3.png; path = Brains/brains_3.png; sourceTree = "<group>"; };
+		27E7A3EE11AC5AE9006E622E /* brains_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_2.png; path = Brains/brains_2.png; sourceTree = "<group>"; };
+		27E7A3EF11AC5AE9006E622E /* brains_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_1.png; path = Brains/brains_1.png; sourceTree = "<group>"; };
+		27E7A50711AC72AF006E622E /* brain_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brain_3.png; sourceTree = "<group>"; };
+		27E7A52311ACAF14006E622E /* brains_30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_30.png; path = Brains/brains_30.png; sourceTree = "<group>"; };
+		27E7A52411ACAF14006E622E /* brains_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_29.png; path = Brains/brains_29.png; sourceTree = "<group>"; };
+		27E7A52511ACAF14006E622E /* brains_28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_28.png; path = Brains/brains_28.png; sourceTree = "<group>"; };
+		27E7A52611ACAF14006E622E /* brains_27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_27.png; path = Brains/brains_27.png; sourceTree = "<group>"; };
+		27E7A52711ACAF14006E622E /* brains_26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_26.png; path = Brains/brains_26.png; sourceTree = "<group>"; };
+		27E7A52811ACAF14006E622E /* brains_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_25.png; path = Brains/brains_25.png; sourceTree = "<group>"; };
+		27E7A52911ACAF14006E622E /* brains_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_24.png; path = Brains/brains_24.png; sourceTree = "<group>"; };
+		27E7A52A11ACAF14006E622E /* brains_23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_23.png; path = Brains/brains_23.png; sourceTree = "<group>"; };
+		27E7A52B11ACAF14006E622E /* brains_22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_22.png; path = Brains/brains_22.png; sourceTree = "<group>"; };
+		27E7A52C11ACAF14006E622E /* brains_21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_21.png; path = Brains/brains_21.png; sourceTree = "<group>"; };
+		27E7A52D11ACAF14006E622E /* brains_20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_20.png; path = Brains/brains_20.png; sourceTree = "<group>"; };
+		27E7A52E11ACAF14006E622E /* brains_19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_19.png; path = Brains/brains_19.png; sourceTree = "<group>"; };
+		27E7A52F11ACAF14006E622E /* brains_18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_18.png; path = Brains/brains_18.png; sourceTree = "<group>"; };
+		27E7A53011ACAF14006E622E /* brains_17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_17.png; path = Brains/brains_17.png; sourceTree = "<group>"; };
+		27E7A53111ACAF14006E622E /* brains_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brains_16.png; path = Brains/brains_16.png; sourceTree = "<group>"; };
+		27E7A58911ACDCF2006E622E /* preview_EndGameB_lose.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = preview_EndGameB_lose.jpg; sourceTree = "<group>"; };
+		27E7A58B11ACDD8F006E622E /* bg_EndGameB_lose.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_EndGameB_lose.jpg; sourceTree = "<group>"; };
 		27F6E0F11185256E007705A9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		27F6E17A1185328F007705A9 /* selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected.png; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -364,6 +447,8 @@
 				277B5863119CE4E6006137F5 /* GameMenu.m */,
 				1D3623240D0F684500981E51 /* ZombieGameAppDelegate.h */,
 				1D3623250D0F684500981E51 /* ZombieGameAppDelegate.m */,
+				270D046A11AF619000CF8DE8 /* ZombieGameHelpers.h */,
+				270D046B11AF619000CF8DE8 /* ZombieGameHelpers.m */,
 				28D7ACF60DDB3853001CB0EB /* ZombieGameViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */,
 				2741D1641186723D001BD582 /* GameLogic.h */,
@@ -384,6 +469,10 @@
 				27768C1B119E2F830027AE23 /* ZombieAudio.m */,
 				2776922B11A2420D0027AE23 /* HowToPlayViewController.h */,
 				2776922C11A2420D0027AE23 /* HowToPlayViewController.m */,
+				27E7A3DB11AC581C006E622E /* BrainPieces.h */,
+				27E7A3DC11AC581C006E622E /* BrainPieces.m */,
+				27E7A3DE11AC5850006E622E /* BrainPiece.h */,
+				27E7A3DF11AC5850006E622E /* BrainPiece.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -486,17 +575,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				27E7A1A011AB66CB006E622E /* bg_Options.jpg */,
-				27E7A1A111AB66CB006E622E /* b_Delete_on.png */,
-				27E7A1A211AB66CB006E622E /* b_Delete_off.png */,
-				27E7A1A311AB66CB006E622E /* b_Hints_off.png */,
-				27E7A1A411AB66CB006E622E /* b_Hints_on.png */,
-				27E7A1A511AB66CB006E622E /* b_FX_off.png */,
-				27E7A1A611AB66CB006E622E /* b_FX_on.png */,
-				27E7A1A711AB66CB006E622E /* bg_HowToPlay.jpg */,
-				27C8813D11A7955700DE0DFB /* wrong.wav */,
-				27C8813E11A7955700DE0DFB /* correct.wav */,
-				2776907411A0FCDA0027AE23 /* bg_GamePlay.jpg */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -518,6 +596,54 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				270D052811AFEF7000CF8DE8 /* b_Pause_off.png */,
+				270D052911AFEF7000CF8DE8 /* b_Pause_on.png */,
+				270D04CC11AF6B0100CF8DE8 /* EndGame_Gun.png */,
+				270D04CA11AF6AD700CF8DE8 /* bg_EndGameB_win.jpg */,
+				27E7A58B11ACDD8F006E622E /* bg_EndGameB_lose.jpg */,
+				27E7A58911ACDCF2006E622E /* preview_EndGameB_lose.jpg */,
+				27E7A52311ACAF14006E622E /* brains_30.png */,
+				27E7A52411ACAF14006E622E /* brains_29.png */,
+				27E7A52511ACAF14006E622E /* brains_28.png */,
+				27E7A52611ACAF14006E622E /* brains_27.png */,
+				27E7A52711ACAF14006E622E /* brains_26.png */,
+				27E7A52811ACAF14006E622E /* brains_25.png */,
+				27E7A52911ACAF14006E622E /* brains_24.png */,
+				27E7A52A11ACAF14006E622E /* brains_23.png */,
+				27E7A52B11ACAF14006E622E /* brains_22.png */,
+				27E7A52C11ACAF14006E622E /* brains_21.png */,
+				27E7A52D11ACAF14006E622E /* brains_20.png */,
+				27E7A52E11ACAF14006E622E /* brains_19.png */,
+				27E7A52F11ACAF14006E622E /* brains_18.png */,
+				27E7A53011ACAF14006E622E /* brains_17.png */,
+				27E7A53111ACAF14006E622E /* brains_16.png */,
+				27E7A50711AC72AF006E622E /* brain_3.png */,
+				27E7A3E111AC5AE9006E622E /* brains_15.png */,
+				27E7A3E211AC5AE9006E622E /* brains_14.png */,
+				27E7A3E311AC5AE9006E622E /* brains_13.png */,
+				27E7A3E411AC5AE9006E622E /* brains_12.png */,
+				27E7A3E511AC5AE9006E622E /* brains_11.png */,
+				27E7A3E611AC5AE9006E622E /* brains_10.png */,
+				27E7A3E711AC5AE9006E622E /* brains_9.png */,
+				27E7A3E811AC5AE9006E622E /* brains_8.png */,
+				27E7A3E911AC5AE9006E622E /* brains_7.png */,
+				27E7A3EA11AC5AE9006E622E /* brains_6.png */,
+				27E7A3EB11AC5AE9006E622E /* brains_5.png */,
+				27E7A3EC11AC5AE9006E622E /* brains_4.png */,
+				27E7A3ED11AC5AE9006E622E /* brains_3.png */,
+				27E7A3EE11AC5AE9006E622E /* brains_2.png */,
+				27E7A3EF11AC5AE9006E622E /* brains_1.png */,
+				27E7A1A011AB66CB006E622E /* bg_Options.jpg */,
+				27E7A1A111AB66CB006E622E /* b_Delete_on.png */,
+				27E7A1A211AB66CB006E622E /* b_Delete_off.png */,
+				27E7A1A311AB66CB006E622E /* b_Hints_off.png */,
+				27E7A1A411AB66CB006E622E /* b_Hints_on.png */,
+				27E7A1A511AB66CB006E622E /* b_FX_off.png */,
+				27E7A1A611AB66CB006E622E /* b_FX_on.png */,
+				27E7A1A711AB66CB006E622E /* bg_HowToPlay.jpg */,
+				27C8813D11A7955700DE0DFB /* wrong.wav */,
+				27C8813E11A7955700DE0DFB /* correct.wav */,
+				2776907411A0FCDA0027AE23 /* bg_GamePlay.jpg */,
 				27C8815511A796A400DE0DFB /* Audio_BG03.mp3 */,
 				278FA95211A63BB000F20538 /* EndGameClassic03.jpg */,
 				278FA95311A63BB000F20538 /* EndGameClassic02.jpg */,
@@ -766,6 +892,43 @@
 				27E7A1AD11AB66CB006E622E /* b_FX_off.png in Resources */,
 				27E7A1AE11AB66CB006E622E /* b_FX_on.png in Resources */,
 				27E7A1AF11AB66CB006E622E /* bg_HowToPlay.jpg in Resources */,
+				27E7A3F011AC5AE9006E622E /* brains_15.png in Resources */,
+				27E7A3F111AC5AE9006E622E /* brains_14.png in Resources */,
+				27E7A3F211AC5AE9006E622E /* brains_13.png in Resources */,
+				27E7A3F311AC5AE9006E622E /* brains_12.png in Resources */,
+				27E7A3F411AC5AE9006E622E /* brains_11.png in Resources */,
+				27E7A3F511AC5AE9006E622E /* brains_10.png in Resources */,
+				27E7A3F611AC5AE9006E622E /* brains_9.png in Resources */,
+				27E7A3F711AC5AE9006E622E /* brains_8.png in Resources */,
+				27E7A3F811AC5AE9006E622E /* brains_7.png in Resources */,
+				27E7A3F911AC5AE9006E622E /* brains_6.png in Resources */,
+				27E7A3FA11AC5AE9006E622E /* brains_5.png in Resources */,
+				27E7A3FB11AC5AE9006E622E /* brains_4.png in Resources */,
+				27E7A3FC11AC5AE9006E622E /* brains_3.png in Resources */,
+				27E7A3FD11AC5AE9006E622E /* brains_2.png in Resources */,
+				27E7A3FE11AC5AE9006E622E /* brains_1.png in Resources */,
+				27E7A50811AC72AF006E622E /* brain_3.png in Resources */,
+				27E7A53211ACAF14006E622E /* brains_30.png in Resources */,
+				27E7A53311ACAF14006E622E /* brains_29.png in Resources */,
+				27E7A53411ACAF14006E622E /* brains_28.png in Resources */,
+				27E7A53511ACAF14006E622E /* brains_27.png in Resources */,
+				27E7A53611ACAF14006E622E /* brains_26.png in Resources */,
+				27E7A53711ACAF14006E622E /* brains_25.png in Resources */,
+				27E7A53811ACAF14006E622E /* brains_24.png in Resources */,
+				27E7A53911ACAF14006E622E /* brains_23.png in Resources */,
+				27E7A53A11ACAF14006E622E /* brains_22.png in Resources */,
+				27E7A53B11ACAF14006E622E /* brains_21.png in Resources */,
+				27E7A53C11ACAF14006E622E /* brains_20.png in Resources */,
+				27E7A53D11ACAF14006E622E /* brains_19.png in Resources */,
+				27E7A53E11ACAF14006E622E /* brains_18.png in Resources */,
+				27E7A53F11ACAF14006E622E /* brains_17.png in Resources */,
+				27E7A54011ACAF14006E622E /* brains_16.png in Resources */,
+				27E7A58A11ACDCF2006E622E /* preview_EndGameB_lose.jpg in Resources */,
+				27E7A58C11ACDD8F006E622E /* bg_EndGameB_lose.jpg in Resources */,
+				270D04CB11AF6AD700CF8DE8 /* bg_EndGameB_win.jpg in Resources */,
+				270D04CD11AF6B0100CF8DE8 /* EndGame_Gun.png in Resources */,
+				270D052A11AFEF7000CF8DE8 /* b_Pause_off.png in Resources */,
+				270D052B11AFEF7000CF8DE8 /* b_Pause_on.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +953,9 @@
 				27768C1C119E2F830027AE23 /* ZombieAudio.m in Sources */,
 				27768FFB11A0DC640027AE23 /* OptionsViewController.m in Sources */,
 				2776922E11A2420D0027AE23 /* HowToPlayViewController.m in Sources */,
+				27E7A3DD11AC581C006E622E /* BrainPieces.m in Sources */,
+				27E7A3E011AC5850006E622E /* BrainPiece.m in Sources */,
+				270D046C11AF619000CF8DE8 /* ZombieGameHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
