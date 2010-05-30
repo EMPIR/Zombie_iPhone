@@ -35,6 +35,7 @@
 	if(self = [super init]){
 		soundFX = YES;
 		volume = 0.5;
+		showHint = YES;
 		
 	}
 	return self;

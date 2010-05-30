@@ -499,7 +499,7 @@ UIImageView *m_brainView30;
 	}
 	else {
 		//NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
-		NSString *message =[[NSString alloc] initWithFormat:@"Game Over, You Completed %d Zombie Comboz!", setGame.setsComplete];
+		NSString *message =[[NSString alloc] initWithFormat:@"Your time: %d seconds!", setGame.setsComplete];
 		//NSLog(@"Game Over, here was your time in seconds: %@", message);
 		[finishedLabel setText:message];
 		[message release];
@@ -621,15 +621,18 @@ UIImageView *m_brainView30;
 	UIImage *img;
 	if(!setGame.isActive){ 
 		self.playAgainButton.hidden = NO;
-		self.m_bGun.hidden = NO;
-		if(1 || gamePlacement == 1)//You Win!
-		{
 		
+		if(gamePlacement == 1)//You Win!
+		{
 			
+			self.m_bGun.hidden = NO;
 			img  = [UIImage imageNamed:@"bg_EndGameB_win.jpg"];
 		}
 		else //You Lose!
+		{
+			self.m_bGun.hidden = YES;
 			img  = [UIImage imageNamed:@"bg_EndGameB_lose.jpg"];
+		}
 
 
 		[self.gameBG setImage:img];
@@ -652,11 +655,18 @@ UIImageView *m_brainView30;
 		}	
 		
 	}
-	else if(berzerkEndTime < 10 && (1 || gamePlacement == 1))
+	else if(berzerkEndTime < 10 && gamePlacement == 1)
 	{
 		if(berzerkEndTime == 0)
 			[ZombieGameHelpers playSound:0:4];
-		self.m_bGun.hidden = NO;
+		if(gamePlacement == 1)//You Win!
+		{
+			self.m_bGun.hidden = NO;
+		}
+		else {
+			self.m_bGun.hidden = YES;
+		}
+
 		for(int i=0;i<30;++i){
 			UIImageView *aview = [self getBrains:i];
 			aview.hidden = YES;
@@ -665,7 +675,14 @@ UIImageView *m_brainView30;
 	else{ //Transition Period
 		
 
-		self.m_bGun.hidden = NO;
+		if(gamePlacement == 1)//You Win!
+		{
+			self.m_bGun.hidden = NO;
+		}
+		else {
+			self.m_bGun.hidden = YES;
+		}
+		
 		//Draw Brain Pieces
 		for(int i=0;i<30;++i){
 			BrainPiece *piece = (BrainPiece *)[brains objectAtIndex:i];
@@ -1367,8 +1384,8 @@ UIImageView *m_brainView30;
 	if(setGame.gameType == 1)
 		timeRemaining = 0;
 	else {
-		//timeRemaining= 60;
-		timeRemaining = 5;
+		timeRemaining= 60;
+		//timeRemaining = 5;
 	}
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];

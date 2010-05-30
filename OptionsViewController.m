@@ -61,9 +61,22 @@
 
 -(IBAction) onDeletedButton:(id) sender{
 	
-	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
-	[appDelegate deleteAllScores];
+	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Delete all scores?" message:@"Do you really want to delete your scores?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil] autorelease];
+    // optional - add more buttons:
+    [alert addButtonWithTitle:@"Yes"];
+    [alert show];
+	
 }
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        // do stuff
+		ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+		[appDelegate deleteAllScores];
+		
+    }
+}
+
 
 -(IBAction) onSwitchFX:(UIButton *) sender
 {
