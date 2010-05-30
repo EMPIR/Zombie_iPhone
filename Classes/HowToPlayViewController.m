@@ -16,7 +16,7 @@
 #import "ZombieAudio.h"
 
 @implementation HowToPlayViewController
-@synthesize button1, button2, button3;
+@synthesize button1, button2, button3, scrollView;
 
 
 -(IBAction) backMainMenu:(id) sender

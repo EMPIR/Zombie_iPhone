@@ -16,6 +16,8 @@
 		270D04CD11AF6B0100CF8DE8 /* EndGame_Gun.png in Resources */ = {isa = PBXBuildFile; fileRef = 270D04CC11AF6B0100CF8DE8 /* EndGame_Gun.png */; };
 		270D052A11AFEF7000CF8DE8 /* b_Pause_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 270D052811AFEF7000CF8DE8 /* b_Pause_off.png */; };
 		270D052B11AFEF7000CF8DE8 /* b_Pause_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 270D052911AFEF7000CF8DE8 /* b_Pause_on.png */; };
+		270D056C11B096BF00CF8DE8 /* ShotGun_pumps.wav in Resources */ = {isa = PBXBuildFile; fileRef = 270D056B11B096BF00CF8DE8 /* ShotGun_pumps.wav */; };
+		270D060F11B1F0D900CF8DE8 /* slider_eyeball.png in Resources */ = {isa = PBXBuildFile; fileRef = 270D060E11B1F0D900CF8DE8 /* slider_eyeball.png */; };
 		2741D1661186723D001BD582 /* GameLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2741D1651186723D001BD582 /* GameLogic.m */; };
 		276069F6118921C2008E1327 /* SetPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 276069F5118921C2008E1327 /* SetPiece.m */; };
 		27606A83118BC498008E1327 /* SetLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 27606A82118BC498008E1327 /* SetLogic.m */; };
@@ -216,6 +218,8 @@
 		270D04CC11AF6B0100CF8DE8 /* EndGame_Gun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EndGame_Gun.png; sourceTree = "<group>"; };
 		270D052811AFEF7000CF8DE8 /* b_Pause_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_Pause_off.png; sourceTree = "<group>"; };
 		270D052911AFEF7000CF8DE8 /* b_Pause_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_Pause_on.png; sourceTree = "<group>"; };
+		270D056B11B096BF00CF8DE8 /* ShotGun_pumps.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ShotGun_pumps.wav; sourceTree = "<group>"; };
+		270D060E11B1F0D900CF8DE8 /* slider_eyeball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider_eyeball.png; sourceTree = "<group>"; };
 		2741D1641186723D001BD582 /* GameLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLogic.h; sourceTree = "<group>"; };
 		2741D1651186723D001BD582 /* GameLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLogic.m; sourceTree = "<group>"; };
 		276069F4118921C2008E1327 /* SetPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPiece.h; sourceTree = "<group>"; };
@@ -596,6 +600,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				270D060E11B1F0D900CF8DE8 /* slider_eyeball.png */,
 				270D052811AFEF7000CF8DE8 /* b_Pause_off.png */,
 				270D052911AFEF7000CF8DE8 /* b_Pause_on.png */,
 				270D04CC11AF6B0100CF8DE8 /* EndGame_Gun.png */,
@@ -653,6 +658,7 @@
 				278FA95711A63BB000F20538 /* bg_EndGameClassicB.jpg */,
 				278FA7A011A4E46400F20538 /* wilhelm.wav */,
 				278FA79511A4DFC500F20538 /* Audio_BG02.mp3 */,
+				270D056B11B096BF00CF8DE8 /* ShotGun_pumps.wav */,
 				278FA51211A3847E00F20538 /* Audio_BG01.mp3 */,
 				277692BA11A25F150027AE23 /* brainPump.wav */,
 				277691E311A230F10027AE23 /* brain_2.png */,
@@ -929,6 +935,8 @@
 				270D04CD11AF6B0100CF8DE8 /* EndGame_Gun.png in Resources */,
 				270D052A11AFEF7000CF8DE8 /* b_Pause_off.png in Resources */,
 				270D052B11AFEF7000CF8DE8 /* b_Pause_on.png in Resources */,
+				270D056C11B096BF00CF8DE8 /* ShotGun_pumps.wav in Resources */,
+				270D060F11B1F0D900CF8DE8 /* slider_eyeball.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

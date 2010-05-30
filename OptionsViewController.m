@@ -11,7 +11,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 @implementation OptionsViewController
-@synthesize gameTimer, randomTwitch, twitchRate, isHints, isFX;
+@synthesize gameTimer, randomTwitch, twitchRate, isHints, isFX, volumeSlider;
 
 
 
@@ -130,7 +130,6 @@
 	NSLog(@"%d", randomTwitch);
 	if(randomTwitch == 0)
 	{
-		
 
 		[self playSound2:[GameLogic randomNumber:1,3]:[GameLogic randomNumber:1,2]];
 	}
@@ -139,8 +138,9 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-
+	UIImage *img;
+	img = [UIImage imageNamed:@"slider_eyeball.png"];
+	[volumeSlider setThumbImage:img forState:UIControlStateNormal];
 }
 
 -(void) viewWillAppear:(BOOL)animated{

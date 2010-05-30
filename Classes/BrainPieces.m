@@ -19,18 +19,18 @@
 /// </summary>
 +(NSMutableArray *) CreatePieces{
 	NSMutableArray *ret = [[[NSMutableArray alloc]init]autorelease];
-	for (int i = 1; i <= 30; ++i)
+	for (int i = 1; i <= 150; ++i)
 	{
 		NSString *imagestr = [[[NSString alloc]init]autorelease]; 
-		imagestr = [NSString stringWithFormat:@"brains_%d.png", i];
-		int speed = [GameLogic randomNumber:1,5];
-		int x = [GameLogic randomNumber:1,469];
-		int y = [GameLogic randomNumber:1,309];
+		imagestr = [NSString stringWithFormat:@"brains_%d.png", i % 30];
+		int speed = [GameLogic randomNumber:1,50];
+		int x = [GameLogic randomNumber:1,459];
+		int y = [GameLogic randomNumber:1,300];
 		int width = [GameLogic randomNumber:10,50];
 		int height = width * 0.66666667;
 		
 		BrainPiece *p = [[BrainPiece alloc] initPiece:speed:x:y:width:height:imagestr];
-		
+		[p randomize];
 		
 		[ret addObject:(BrainPiece *)p];
 		[p release];

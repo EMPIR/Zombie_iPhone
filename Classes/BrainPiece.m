@@ -7,7 +7,7 @@
 //
 
 #import "BrainPiece.h"
-
+#import "GameLogic.h"
 
 @implementation BrainPiece
 @synthesize speed, image, x, y, height, width;
@@ -22,5 +22,13 @@
 		self.width = _width;
 	}
 	return self;
+}
+
+-(void) randomize{
+	self.speed = [GameLogic randomNumber:1,5];
+	self.x = [GameLogic randomNumber:1,459];
+	self.y = [GameLogic randomNumber:1,300];
+	self.width = [GameLogic randomNumber:10,50];
+	self.height = width * 0.66666667;
 }
 @end

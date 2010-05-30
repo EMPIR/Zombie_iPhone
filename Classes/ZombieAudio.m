@@ -29,6 +29,7 @@ Input:
  OUTPUT:
  expressionID 0-1				"wrong.wav"
  expressionID 0-2				"correct.wav"
+ expressionID 0-3				"ShotGun_pumps.wav"
  # [1] ~zombieID
  expressionID 1-5			    "[1]1.wav" - "[1]5.wav"
  expressionID Happy/BRAINS!		"[1]6.wav"
@@ -48,6 +49,8 @@ Input:
 		if(expression ==1)
 			return NSString *ret = [[NSString stringWithFormat:@"/audio/wrong.wav"] autorelease];
 		if(expression ==2)
+			return NSString *ret = [[NSString stringWithFormat:@"/audio/wrong.wav"] autorelease];
+		if(expression ==3)
 			return NSString *ret = [[NSString stringWithFormat:@"/audio/wrong.wav"] autorelease];
 		//number = [GameLogic randomNumber:1,TOTAL_EXPRESSIONS];
 	}
@@ -84,6 +87,8 @@ static int TOTAL_EXPRESSIONS  = 5;
 			return [[NSString stringWithFormat:@"/correct.wav"] autorelease];
 		if(expression == 3)
 			return [[NSString stringWithFormat:@"/wilhelm.wav"] autorelease];
+		if(expression == 4)
+			return [[NSString stringWithFormat:@"/ShotGun_pumps.wav"] autorelease];
 		//number = [GameLogic randomNumber:1,TOTAL_EXPRESSIONS];
 	}
 	else {

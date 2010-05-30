@@ -32,6 +32,7 @@
 
 -(IBAction) onSlideVolume:(id) sender;
 
+@property (nonatomic, assign) UISlider *volumeSlider;
 @property (nonatomic, retain) NSTimer *gameTimer;
 @property (nonatomic, assign) int randomTwitch;
 @property (nonatomic, assign) int twitchRate;
