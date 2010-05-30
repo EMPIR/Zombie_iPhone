@@ -1439,7 +1439,6 @@ UIImageView *m_brainView30;
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 	
-	UIImageView *aview;
 	for(int i=0;i<30;++i)
 	{
 		UIImageView *aview = [self getBrains:i];

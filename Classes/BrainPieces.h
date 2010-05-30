@@ -15,6 +15,6 @@
 }
 
 @property (assign, nonatomic) NSMutableArray *pieces;
-
++(NSMutableArray *) CreatePieces;
 
 @end

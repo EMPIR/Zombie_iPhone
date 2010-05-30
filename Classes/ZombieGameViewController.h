@@ -171,6 +171,10 @@
 
 -(BOOL) isButtonPressed:(int) index;
 
+-(void) HideCards;
+-(void) ShowCards;
+
+
 
 @property (nonatomic, retain) UILabel *finishedLabel;
 

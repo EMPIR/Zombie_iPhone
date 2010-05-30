@@ -39,9 +39,16 @@
 -(void) BackgroundVolume:(double) val;
 -(void) SoundFX:(BOOL)val;
 -(void) ShowHint:(BOOL) val;
+-(void) PauseSound:(BOOL) val;
 -(void) PlayNonGameTrack;
 -(void) PlayCrawlerTrack;
 -(void) PlayBerzerkTrack;
+-(int) getCrawlerPlacement:(int) score;
+-(int) getCrawlerAverage:(int) score;
+-(int) getCrawlerTopFiveAverage;
+-(int) getBerzerkPlacement:(int) score;
+-(NSMutableArray *) getCrawlerTopScores;
+-(NSMutableArray *) getBerserkTopScores;
 
 
 -(NSMutableArray *) getCrawlerTopScores;
