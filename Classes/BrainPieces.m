@@ -23,14 +23,15 @@
 	{
 		NSString *imagestr = [[[NSString alloc]init]autorelease]; 
 		imagestr = [NSString stringWithFormat:@"brains_%d.png", i % 30];
-		int speed = [GameLogic randomNumber:1,50];
-		int x = [GameLogic randomNumber:1,459];
-		int y = [GameLogic randomNumber:1,300];
+		int speed = [GameLogic randomNumber:1,5];
 		int width = [GameLogic randomNumber:10,50];
 		int height = width * 0.66666667;
-		
+		int x = [GameLogic randomNumber:1,480 - width]; //480
+		int y = [GameLogic randomNumber:1,320 - height]; //320
+		//y = 1;
+		//speed = 0;
 		BrainPiece *p = [[BrainPiece alloc] initPiece:speed:x:y:width:height:imagestr];
-		[p randomize];
+		
 		
 		[ret addObject:(BrainPiece *)p];
 		[p release];

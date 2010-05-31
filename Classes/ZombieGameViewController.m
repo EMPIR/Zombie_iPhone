@@ -42,13 +42,23 @@
 @synthesize brains;
 @synthesize m_brainView1, m_brainView2, m_brainView3,m_brainView4, m_brainView5;
 @synthesize m_brainView6, m_brainView7, m_brainView8,m_brainView9, m_brainView10;
-
 @synthesize m_brainView11, m_brainView12, m_brainView13,m_brainView14, m_brainView15;
 @synthesize m_brainView16, m_brainView17, m_brainView18,m_brainView19, m_brainView20;
-
 @synthesize m_brainView21, m_brainView22, m_brainView23,m_brainView24, m_brainView25;
 @synthesize m_brainView26, m_brainView27, m_brainView28,m_brainView29, m_brainView30;
+
+@synthesize m_brainView31, m_brainView32, m_brainView33,m_brainView34, m_brainView35;
+@synthesize m_brainView36, m_brainView37, m_brainView38,m_brainView39, m_brainView40;
+@synthesize m_brainView41, m_brainView42, m_brainView43,m_brainView44, m_brainView45;
+@synthesize m_brainView46, m_brainView47, m_brainView48,m_brainView49, m_brainView50;
+@synthesize m_brainView51, m_brainView52, m_brainView53,m_brainView54, m_brainView55;
+@synthesize m_brainView56, m_brainView57, m_brainView58,m_brainView59, m_brainView60;
+
+
 @synthesize m_bGun;
+
+int TOTAL_BRAINS = 60;
+
 /*
 BOOL firstClick = NO;
 int showWrong = 0;
@@ -153,6 +163,7 @@ UIImageView *m_brainView30;
 }
 -(UIImageView *) getBrains:(int) val
 {
+	
 	if( val == 0)
 		return m_brainView1;
 	if(val == 1)
@@ -215,6 +226,72 @@ UIImageView *m_brainView30;
 		return m_brainView29;
 	if(val == 29)
 		return m_brainView30;
+	
+	
+	
+	
+	if( val == 30)
+		return m_brainView31;
+	if(val == 31)
+		return m_brainView32;
+	if(val == 32)
+		return m_brainView33;
+	if(val == 33)
+		return m_brainView34;
+	if(val == 34)
+		return m_brainView35;
+	if(val == 35)
+		return m_brainView36;
+	if(val == 36)
+		return m_brainView37;
+	if(val == 37)
+		return m_brainView38;
+	if(val == 38)
+		return m_brainView39;
+	if(val == 39)
+		return m_brainView40;
+	
+	if( val == 40)
+		return m_brainView41;
+	if(val == 41)
+		return m_brainView42;
+	if(val == 42)
+		return m_brainView43;
+	if(val == 43)
+		return m_brainView44;
+	if(val == 44)
+		return m_brainView45;
+	if(val == 45)
+		return m_brainView46;
+	if(val == 46)
+		return m_brainView47;
+	if(val == 47)
+		return m_brainView48;
+	if(val == 48)
+		return m_brainView49;
+	if(val == 49)
+		return m_brainView50;
+	
+	if( val == 50)
+		return m_brainView51;
+	if(val == 51)
+		return m_brainView52;
+	if(val == 52)
+		return m_brainView53;
+	if(val == 53)
+		return m_brainView54;
+	if(val == 54)
+		return m_brainView55;
+	if(val == 55)
+		return m_brainView56;
+	if(val == 56)
+		return m_brainView57;
+	if(val == 57)
+		return m_brainView58;
+	if(val == 58)
+		return m_brainView59;
+	if(val == 59)
+		return m_brainView60;
 	
 	return NULL;
 	
@@ -488,7 +565,7 @@ UIImageView *m_brainView30;
 	if(setGame.gameType == 1)
 	{
 		NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
-		NSString *message =[[NSString alloc] initWithFormat:@"Game Over, here was your time in seconds: %0.0f", -timeInterval];
+		NSString *message =[[NSString alloc] initWithFormat:@"Your Time: %0.0f", -timeInterval];
 	//NSLog(@"Game Over, here was your time in seconds: %@", message);
 		[finishedLabel setText:message];
 		[message release];
@@ -639,7 +716,7 @@ UIImageView *m_brainView30;
 		
 		self.brainView.hidden = YES;
 		[brains release];
-		for(int i=0;i<30;++i){
+		for(int i=0;i<TOTAL_BRAINS;++i){
 			UIImageView *aview = [self getBrains:i];
 			aview.hidden = YES;
 		}
@@ -667,7 +744,7 @@ UIImageView *m_brainView30;
 			self.m_bGun.hidden = YES;
 		}
 
-		for(int i=0;i<30;++i){
+		for(int i=0;i<TOTAL_BRAINS;++i){
 			UIImageView *aview = [self getBrains:i];
 			aview.hidden = YES;
 		}
@@ -684,7 +761,11 @@ UIImageView *m_brainView30;
 		}
 		
 		//Draw Brain Pieces
-		for(int i=0;i<30;++i){
+		for(int i=0;i< TOTAL_BRAINS;++i){
+			if(i == 31)
+			{
+				int debug = 0;
+			}
 			BrainPiece *piece = (BrainPiece *)[brains objectAtIndex:i];
 			UIImageView *aview = [self getBrains:i];
 			UIImage *image = [UIImage imageNamed:piece.image];
@@ -1227,6 +1308,73 @@ UIImageView *m_brainView30;
 	m_brainView30 = [[UIImageView alloc]init];
 	[self.view addSubview:m_brainView30];
 	
+	
+	
+	
+	m_brainView31 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView31];
+	m_brainView32 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView32];
+	m_brainView33 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView33];
+	m_brainView34 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView34];
+	m_brainView35 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView35];
+	m_brainView36 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView36];
+	m_brainView37 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView37];
+	m_brainView38 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView38];
+	m_brainView39 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView39];
+	m_brainView40 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView40];
+	
+	
+	m_brainView41 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView41];
+	m_brainView42 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView42];
+	m_brainView43 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView43];
+	m_brainView44 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView44];
+	m_brainView45 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView45];
+	m_brainView46 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView46];
+	m_brainView47 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView47];
+	m_brainView48 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView48];
+	m_brainView49 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView49];
+	m_brainView50 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView50];
+	
+	m_brainView51 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView51];
+	m_brainView52 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView52];
+	m_brainView53 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView53];
+	m_brainView54 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView54];
+	m_brainView55 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView55];
+	m_brainView56 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView56];
+	m_brainView57 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView57];
+	m_brainView58 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView58];
+	m_brainView59 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView59];
+	m_brainView60 = [[UIImageView alloc]init];
+	[self.view addSubview:m_brainView60];
+	
 	twitchRate = 30;
 	
 	m_bGun = [[UIImageView alloc]init];
@@ -1265,7 +1413,7 @@ UIImageView *m_brainView30;
 				
 				brains = [[BrainPieces CreatePieces] retain];
 				
-				for(int i=0;i<30;++i){
+				for(int i=0;i<TOTAL_BRAINS;++i){
 					BrainPiece *piece = (BrainPiece *)[brains objectAtIndex:i];
 					UIImageView *aview = [self getBrains:i];
 					UIImage *image = [UIImage imageNamed:piece.image];
@@ -1275,7 +1423,7 @@ UIImageView *m_brainView30;
 					aview.frame = CGRectMake(piece.x, piece.y, image.size.width, image.size.height);
 					aview.transform = CGAffineTransformIdentity;
 					aview.transform = CGAffineTransformTranslate(aview.transform, 0, piece.speed);
-					
+					NSLog(@"Piece %d x %d y %d", i, piece.x, piece.y);
 					
 					
 				}
@@ -1384,8 +1532,8 @@ UIImageView *m_brainView30;
 	if(setGame.gameType == 1)
 		timeRemaining = 0;
 	else {
-		timeRemaining= 60;
-		//timeRemaining = 5;
+		//timeRemaining= 60;
+		timeRemaining = 5;
 	}
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -1439,7 +1587,7 @@ UIImageView *m_brainView30;
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 	
-	for(int i=0;i<30;++i)
+	for(int i=0;i<TOTAL_BRAINS;++i)
 	{
 		UIImageView *aview = [self getBrains:i];
 		[aview release];

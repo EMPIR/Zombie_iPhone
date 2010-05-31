@@ -130,6 +130,42 @@
 	UIImageView *m_brainView28;
 	UIImageView *m_brainView29;
 	UIImageView *m_brainView30;
+	
+	
+	UIImageView *m_brainView31;
+	UIImageView *m_brainView32;
+	UIImageView *m_brainView33;
+	UIImageView *m_brainView34;
+	UIImageView *m_brainView35;
+	UIImageView *m_brainView36;
+	UIImageView *m_brainView37;
+	UIImageView *m_brainView38;
+	UIImageView *m_brainView39;
+	UIImageView *m_brainView40;
+	
+	
+	UIImageView *m_brainView41;
+	UIImageView *m_brainView42;
+	UIImageView *m_brainView43;
+	UIImageView *m_brainView44;
+	UIImageView *m_brainView45;
+	UIImageView *m_brainView46;
+	UIImageView *m_brainView47;
+	UIImageView *m_brainView48;
+	UIImageView *m_brainView49;
+	UIImageView *m_brainView50;
+	
+	
+	UIImageView *m_brainView51;
+	UIImageView *m_brainView52;
+	UIImageView *m_brainView53;
+	UIImageView *m_brainView54;
+	UIImageView *m_brainView55;
+	UIImageView *m_brainView56;
+	UIImageView *m_brainView57;
+	UIImageView *m_brainView58;
+	UIImageView *m_brainView59;
+	UIImageView *m_brainView60;
 	UIImageView *m_bGun;
 }
 
@@ -297,6 +333,43 @@
 @property (nonatomic,retain) UIImageView *m_brainView28;
 @property (nonatomic,retain) UIImageView *m_brainView29;
 @property (nonatomic,retain) UIImageView *m_brainView30;
+
+
+
+@property (nonatomic,retain) UIImageView *m_brainView31;
+@property (nonatomic,retain) UIImageView *m_brainView32;
+@property (nonatomic,retain) UIImageView *m_brainView33;
+@property (nonatomic,retain) UIImageView *m_brainView34;
+@property (nonatomic,retain) UIImageView *m_brainView35;
+@property (nonatomic,retain) UIImageView *m_brainView36;
+@property (nonatomic,retain) UIImageView *m_brainView37;
+@property (nonatomic,retain) UIImageView *m_brainView38;
+@property (nonatomic,retain) UIImageView *m_brainView39;
+@property (nonatomic,retain) UIImageView *m_brainView40;
+
+
+@property (nonatomic,retain) UIImageView *m_brainView41;
+@property (nonatomic,retain) UIImageView *m_brainView42;
+@property (nonatomic,retain) UIImageView *m_brainView43;
+@property (nonatomic,retain) UIImageView *m_brainView44;
+@property (nonatomic,retain) UIImageView *m_brainView45;
+@property (nonatomic,retain) UIImageView *m_brainView46;
+@property (nonatomic,retain) UIImageView *m_brainView47;
+@property (nonatomic,retain) UIImageView *m_brainView48;
+@property (nonatomic,retain) UIImageView *m_brainView49;
+@property (nonatomic,retain) UIImageView *m_brainView50;
+
+
+@property (nonatomic,retain) UIImageView *m_brainView51;
+@property (nonatomic,retain) UIImageView *m_brainView52;
+@property (nonatomic,retain) UIImageView *m_brainView53;
+@property (nonatomic,retain) UIImageView *m_brainView54;
+@property (nonatomic,retain) UIImageView *m_brainView55;
+@property (nonatomic,retain) UIImageView *m_brainView56;
+@property (nonatomic,retain) UIImageView *m_brainView57;
+@property (nonatomic,retain) UIImageView *m_brainView58;
+@property (nonatomic,retain) UIImageView *m_brainView59;
+@property (nonatomic,retain) UIImageView *m_brainView60;
 
 @property (nonatomic,retain) UIImageView *m_bGun;
 
