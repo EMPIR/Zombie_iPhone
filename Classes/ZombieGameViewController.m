@@ -562,30 +562,20 @@ UIImageView *m_brainView30;
 	self.endGameRank2.hidden = YES;
 	self.endGameRank3.hidden = YES;
 	
-	if(setGame.gameType == 1)
-	{
-		NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
-		NSString *message =[[NSString alloc] initWithFormat:@"Your Time: %0.0f", -timeInterval];
+	NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
+	NSString *message =[[NSString alloc] initWithFormat:@"Your Time: %0.0f", -timeInterval];
 	//NSLog(@"Game Over, here was your time in seconds: %@", message);
-		[finishedLabel setText:message];
-		[message release];
+	[finishedLabel setText:message];
+	[message release];
 		
-		message =[[NSString alloc] initWithFormat:@"Your Placement: %0d", gamePlacement];
-		[finishedLabel2 setText:message];
-		[message release];
-	}
+	if(gamePlacement != 1)
+		message = [[NSString alloc] initWithFormat:@"Your Placement: %d", gamePlacement];
 	else {
-		//NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
-		NSString *message =[[NSString alloc] initWithFormat:@"Your time: %d seconds!", setGame.setsComplete];
-		//NSLog(@"Game Over, here was your time in seconds: %@", message);
-		[finishedLabel setText:message];
-		[message release];
-		
-		message =[[NSString alloc] initWithFormat:@"Your Placement: %0d", gamePlacement];
-		[finishedLabel2 setText:message];
-		[message release];
+		message = [[NSString alloc] initWithFormat:@"New High Score!"];
 	}
-	
+	[finishedLabel2 setText:message];
+	[message release];
+		
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	int top5Avg = (int) [appDelegate getCrawlerTopFiveAverage];
 	
@@ -690,8 +680,13 @@ UIImageView *m_brainView30;
 	NSString *message =[[NSString alloc] initWithFormat:@"%d Zombie Comboz!", setGame.setsComplete];
 	[finishedLabel setText:message];
 	[message release];
-		
-	message =[[NSString alloc] initWithFormat:@"Your Placement: %0d", gamePlacement];
+	
+	if(gamePlacement != 1)
+		message = [[NSString alloc] initWithFormat:@"Your Placement: %d", gamePlacement];
+	else {
+		message = [[NSString alloc] initWithFormat:@"New High Score!"];
+	}
+
 	[finishedLabel2 setText:message];
 	[message release];
 	
@@ -805,7 +800,9 @@ UIImageView *m_brainView30;
 
 -(BOOL) buttonDown:(int) index:(id)sender
 {
-	
+	//added this check to prevent state changes after game finishes
+	if([self isGameFinished])
+		return NO;
 	UIButton *btn = sender;
 	[self setButtonPressed:index-1:1];	
 	if([setGame onPress:index])
@@ -1387,6 +1384,11 @@ UIImageView *m_brainView30;
 	m_bGun.hidden = YES;
 	
 }
+-(BOOL) isGameFinished{
+	if((setGame.gameType == 1 && [setGame isFinished])  || (setGame.gameType == 2 && timeRemaining <= 0))
+		return YES;
+	return NO;
+}
 
 -(void) gameloop {
 	if(!setGame.isActive)
@@ -1399,7 +1401,8 @@ UIImageView *m_brainView30;
 	
 	//[setGame GameLoop];
 	//if([setGame isFinished])
-	if((setGame.gameType == 1 && [setGame isFinished])  || (setGame.gameType == 2 && timeRemaining <= 0))
+	//if((setGame.gameType == 1 && [setGame isFinished])  || (setGame.gameType == 2 && timeRemaining <= 0))
+	if([self isGameFinished])
 	{
 		
 		
@@ -1504,7 +1507,7 @@ UIImageView *m_brainView30;
 -(void) viewWillAppear:(BOOL)animated{
 	timeSinceLastRightAnswer = 0;
 	hintVisible = NO;
-	[self drawPieces];
+	//[self drawPieces];
 	showPiece1 = 0;
 	showPiece2 = 0;
 	showPiece3 = 0;
@@ -1519,7 +1522,7 @@ UIImageView *m_brainView30;
 	showPiece2 = 0;
 	showPiece3 = 0;
 	
-	randomTwitch = 0;
+	randomTwitch = 1;
 	twitchRate = 30;
 	brain_randomTwitch = 1;
 	brain_twitchRate = 30;
@@ -1532,8 +1535,8 @@ UIImageView *m_brainView30;
 	if(setGame.gameType == 1)
 		timeRemaining = 0;
 	else {
-		//timeRemaining= 60;
-		timeRemaining = 5;
+		timeRemaining= 60;
+		//timeRemaining = 5;
 	}
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -1551,14 +1554,14 @@ UIImageView *m_brainView30;
 	img  = [UIImage imageNamed:@"bg_GamePlay.jpg"];
 	[self.gameBG setImage:img];
 		
-
-	SetPiece *p= (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:0] intValue]];
+	
+	//SetPiece *p= (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:0] intValue]];
 	
 	//[appDelegate readScoresFromDatabase];
 	
-	[ZombieGameHelpers  playSound:p.shape:6];
+	[ZombieGameHelpers  playSound:0:5];
 	gameTimer = [[NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(gameloop) userInfo:nil repeats:YES] retain];
-	
+	[self drawPieces];
 	
 	
 

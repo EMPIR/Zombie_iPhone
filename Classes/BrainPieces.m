@@ -19,7 +19,7 @@
 /// </summary>
 +(NSMutableArray *) CreatePieces{
 	NSMutableArray *ret = [[[NSMutableArray alloc]init]autorelease];
-	for (int i = 1; i <= 150; ++i)
+	for (int i = 1; i <= 60; ++i)
 	{
 		NSString *imagestr = [[[NSString alloc]init]autorelease]; 
 		imagestr = [NSString stringWithFormat:@"brains_%d.png", i % 30];

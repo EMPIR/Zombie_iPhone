@@ -210,7 +210,7 @@
 -(void) HideCards;
 -(void) ShowCards;
 
-
+-(BOOL) isGameFinished;
 
 @property (nonatomic, retain) UILabel *finishedLabel;
 
