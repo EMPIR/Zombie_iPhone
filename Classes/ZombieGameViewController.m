@@ -690,6 +690,13 @@ UIImageView *m_brainView30;
 	[finishedLabel2 setText:message];
 	[message release];
 	
+	int firstMark = 10;
+	int secondMark = 12;
+	if(gamePlacement != 1)
+	{
+		firstMark -= 10;
+		secondMark -=10;
+	}
 	UIImage *img;
 	if(!setGame.isActive){ 
 		self.playAgainButton.hidden = NO;
@@ -727,7 +734,7 @@ UIImageView *m_brainView30;
 		}	
 		
 	}
-	else if(berzerkEndTime < 10 && gamePlacement == 1)
+	else if(berzerkEndTime < firstMark && gamePlacement == 1)
 	{
 		if(berzerkEndTime == 0)
 			[ZombieGameHelpers playSound:0:4];
@@ -744,12 +751,12 @@ UIImageView *m_brainView30;
 			aview.hidden = YES;
 		}
 	}
-	else{ //Transition Period
-		
-
+	else if(berzerkEndTime > secondMark)
+	{
 		if(gamePlacement == 1)//You Win!
 		{
 			self.m_bGun.hidden = NO;
+			
 		}
 		else {
 			self.m_bGun.hidden = YES;
@@ -757,26 +764,34 @@ UIImageView *m_brainView30;
 		
 		//Draw Brain Pieces
 		for(int i=0;i< TOTAL_BRAINS;++i){
-			if(i == 31)
-			{
-				int debug = 0;
-			}
 			BrainPiece *piece = (BrainPiece *)[brains objectAtIndex:i];
 			UIImageView *aview = [self getBrains:i];
 			UIImage *image = [UIImage imageNamed:piece.image];
-			
-			//aview = [ [ UIImageView alloc ] initWithFrame:CGRectMake(piece.x, piece.y, image.size.width, image.size.height)];
-			//aview.image = image;
-			//aview.transform = CGAffineTransformIdentity;
 			aview.transform = CGAffineTransformTranslate(aview.transform, 0.0, piece.speed);
 			aview.hidden = NO;
-			//[aview drawRect:CGRectMake(piece.x, piece.y, image.size.width, image.size.height)];
-			//[self.view addSubview:aview];
 			image = [UIImage imageNamed:@"brain_3.png"];
 			self.brainView.image = image;
 			
 		}
 	}
+	else if(berzerkEndTime >= firstMark){ //Transition Period
+		
+		
+		if(gamePlacement == 1)//You Win!
+		{
+			self.m_bGun.hidden = NO;
+			
+		}
+		else {
+			self.m_bGun.hidden = YES;
+		}
+		
+		if(berzerkEndTime == firstMark)
+			[ZombieGameHelpers playSound:0:6];
+		UIImage *image = [UIImage imageNamed:@"brain_3.png"];
+		self.brainView.image = image;
+	}
+	
 	
 	
 	
@@ -1426,6 +1441,7 @@ UIImageView *m_brainView30;
 					aview.frame = CGRectMake(piece.x, piece.y, image.size.width, image.size.height);
 					aview.transform = CGAffineTransformIdentity;
 					aview.transform = CGAffineTransformTranslate(aview.transform, 0, piece.speed);
+					aview.hidden = YES;
 					NSLog(@"Piece %d x %d y %d", i, piece.x, piece.y);
 					
 					
@@ -1535,8 +1551,8 @@ UIImageView *m_brainView30;
 	if(setGame.gameType == 1)
 		timeRemaining = 0;
 	else {
-		timeRemaining= 60;
-		//timeRemaining = 5;
+		//timeRemaining= 60;
+		timeRemaining = 5;
 	}
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];

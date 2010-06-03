@@ -32,6 +32,7 @@ Input:
  expressionID 0-3				"wilhelm.wav"
  expressionID 0-4				"ShotGun_pumps.wav"
 expressionID 0-5				"Game_Start.wav"
+ expressionID 0-6				"brainExplode.wav"
  # [1] ~zombieID
  expressionID 1-5			    "[1]1.wav" - "[1]5.wav"
  expressionID Happy/BRAINS!		"[1]6.wav"
@@ -93,6 +94,8 @@ static int TOTAL_EXPRESSIONS  = 5;
 			return [[NSString stringWithFormat:@"/ShotGun_pumps.wav"] autorelease];
 		if(expression == 5)
 			return [[NSString stringWithFormat:@"/Game_Start.wav"] autorelease];
+		if(expression == 6)
+			return [[NSString stringWithFormat:@"/brainExplode.wav"] autorelease];
 		//number = [GameLogic randomNumber:1,TOTAL_EXPRESSIONS];
 	}
 	else {
