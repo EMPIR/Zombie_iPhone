@@ -1551,8 +1551,8 @@ UIImageView *m_brainView30;
 	if(setGame.gameType == 1)
 		timeRemaining = 0;
 	else {
-		//timeRemaining= 60;
-		timeRemaining = 5;
+		timeRemaining= 60;
+		//timeRemaining = 5;
 	}
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];

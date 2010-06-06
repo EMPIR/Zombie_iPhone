@@ -93,7 +93,7 @@ static int TOTAL_EXPRESSIONS  = 5;
 		if(expression == 4)
 			return [[NSString stringWithFormat:@"/ShotGun_pumps.wav"] autorelease];
 		if(expression == 5)
-			return [[NSString stringWithFormat:@"/Game_Start.wav"] autorelease];
+			return [[NSString stringWithFormat:@"/Game_Start_faster.wav"] autorelease];
 		if(expression == 6)
 			return [[NSString stringWithFormat:@"/brainExplode.wav"] autorelease];
 		//number = [GameLogic randomNumber:1,TOTAL_EXPRESSIONS];
