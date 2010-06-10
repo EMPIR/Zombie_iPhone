@@ -1571,11 +1571,14 @@ UIImageView *m_brainView30;
 	[self.gameBG setImage:img];
 		
 	
-	//SetPiece *p= (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:0] intValue]];
+	SetPiece *p= (SetPiece *)[setGame.pieces objectAtIndex:[[setGame.state objectAtIndex:0] intValue]];
 	
 	//[appDelegate readScoresFromDatabase];
 	
-	[ZombieGameHelpers  playSound:0:5];
+	
+	
+	[ZombieGameHelpers  playSound:p.color:6];
+	
 	gameTimer = [[NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(gameloop) userInfo:nil repeats:YES] retain];
 	[self drawPieces];
 	

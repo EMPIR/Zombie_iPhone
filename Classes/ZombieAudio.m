@@ -109,6 +109,12 @@ static int TOTAL_EXPRESSIONS  = 5;
 			return  [[NSString stringWithFormat:@"/%d8.wav", zombieID] autorelease];
 		else if(expression == 5)
 			return  [[NSString stringWithFormat:@"/%d9.wav", zombieID] autorelease];
+		else if(expression == 6)
+		{//start game
+			int number = [GameLogic randomNumber:10,14];
+			return  [[NSString stringWithFormat:@"/%d%d.wav", zombieID,number] autorelease];
+		}
+		
 
 
 	}
