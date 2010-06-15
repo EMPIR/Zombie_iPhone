@@ -40,7 +40,7 @@ expressionID 0-5				"Game_Start.wav"
  expressionID Wrong!			"[1]8.wav"
  expressionID You are Good!		"[1]9.wav"
  expressionID Let's Go!			"[1]10.wav"
- expressionID Goodbye!			"[1]11.wav"
+ expressionID Goodbye!			"[1]11.wav"	
  */
 /*static int TOTAL_EXPRESSIONS  = 2;
 

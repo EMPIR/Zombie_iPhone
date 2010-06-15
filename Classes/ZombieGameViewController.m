@@ -1080,6 +1080,7 @@ UIImageView *m_brainView30;
 	setGame.isActive = NO;
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 		[appDelegate PlayNonGameTrack];
+	[appDelegate StopEatingTrack];
 	
 	[self dismissModalViewControllerAnimated:NO];
 	//[[self parentViewController] dismissModalViewControllerAnimated:NO];
@@ -1451,6 +1452,7 @@ UIImageView *m_brainView30;
 			berzerkEndTime ++;
 			if(berzerkEndTime >= 40)
 			{
+				[appDelegate PlayEatingTrack];
 				setGame.isActive = NO;
 				[self drawBerzerkFinished];
 			}
@@ -1551,8 +1553,8 @@ UIImageView *m_brainView30;
 	if(setGame.gameType == 1)
 		timeRemaining = 0;
 	else {
-		timeRemaining= 60;
-		//timeRemaining = 5;
+		//timeRemaining= 60;
+		timeRemaining = 5;
 	}
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];

@@ -25,6 +25,7 @@
 	// Array to store the high scores objects
 	NSMutableArray *scores;
 	AVAudioPlayer *audioPlayer;
+	AVAudioPlayer *eatingSoundPlayer;
 	
 	BOOL soundFX;
 	double volume;
@@ -43,6 +44,8 @@
 -(void) PlayNonGameTrack;
 -(void) PlayCrawlerTrack;
 -(void) PlayBerzerkTrack;
+-(void) PlayEatingTrack;
+-(void) StopEatingTrack;
 -(int) getCrawlerPlacement:(int) score;
 -(int) getCrawlerAverage:(int) score;
 -(int) getCrawlerTopFiveAverage;
@@ -60,6 +63,8 @@
 @property (nonatomic, retain) NSString *databasePath;
 @property (nonatomic, retain) NSString *databaseName;
 @property (nonatomic, retain) AVAudioPlayer *audioPlayer;
+@property (nonatomic, retain) AVAudioPlayer *eatingSoundPlayer;
+
 @property (nonatomic, assign) BOOL soundFX;
 @property (nonatomic, assign) double volume;
 @property (nonatomic, assign) BOOL showHint;

@@ -20,6 +20,7 @@
 @synthesize soundFX;
 @synthesize volume;
 @synthesize showHint;
+@synthesize eatingSoundPlayer;
 
 
 - (void)dealloc {
@@ -27,6 +28,7 @@
     [viewController release];
     [window release];
     [audioPlayer release];
+	[eatingSoundPlayer release];
 	[super dealloc];
 	
 }
@@ -416,6 +418,24 @@
 	}
 	sqlite3_close(database);
 	
+}
+
+-(void) PlayEatingTrack{
+	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/zombiesEating.mp3", [[NSBundle mainBundle] resourcePath]]];
+	NSError *error;
+	[eatingSoundPlayer release];
+	eatingSoundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+	eatingSoundPlayer.numberOfLoops = -1;
+	eatingSoundPlayer.volume = volume;
+	if (eatingSoundPlayer == nil)
+		NSLog(@"%",[error description]);				
+	else 
+		[eatingSoundPlayer play];
+}
+
+-(void) StopEatingTrack{
+	if (eatingSoundPlayer != nil)
+		[eatingSoundPlayer stop];
 }
 
 -(void) PlayNonGameTrack{
