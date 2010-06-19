@@ -9,6 +9,7 @@
 #import "BrainPieces.h"
 #import "BrainPiece.h"
 #import "GameLogic.h"
+#import "StringConst.h"
 @implementation BrainPieces
 @synthesize pieces;
 
@@ -22,7 +23,7 @@
 	for (int i = 1; i <= 60; ++i)
 	{
 		NSString *imagestr = [[[NSString alloc]init]autorelease]; 
-		imagestr = [NSString stringWithFormat:@"brains_%d.png", i % 30];
+		imagestr = [NSString stringWithFormat:[StringConst GetImgConst:IMG_BRAINS], i % 30];
 		int speed = [GameLogic randomNumber:1,5];
 		int width = [GameLogic randomNumber:10,50];
 		int height = width * 0.66666667;

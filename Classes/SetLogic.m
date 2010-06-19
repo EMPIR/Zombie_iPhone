@@ -8,6 +8,7 @@
 #import "SetLogic.h"
 #import "SetPiece.h"
 #import "GameLogic.h"
+#import "StringConst.h"
 
 @implementation SetLogic
 
@@ -370,9 +371,9 @@
 				for (int l = 1; l <= 3; ++l)
 				{
 					NSString *imagestr = [[[NSString alloc]init]autorelease]; 
-					imagestr = [NSString stringWithFormat:@"%d%d%d%da.png", i,j,k,l];
+					imagestr = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_A], i,j,k,l];
 					NSString *imagestr2 = [[[NSString alloc]init]autorelease]; 
-					imagestr2 = [NSString stringWithFormat:@"%d%d%d%db.png", i,j,k,l];
+					imagestr2 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_B], i,j,k,l];
 					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr :imagestr2];
 					[ret addObject:(SetPiece *)p];
 					
@@ -397,9 +398,10 @@
 				for (int l = 0; l <= 0; ++l)
 				{
 					NSString *imagestr = [[[NSString alloc]init]autorelease]; 
-					imagestr = [NSString stringWithFormat:@"%d%d%d%da.png", i,j,k,l];
+					imagestr = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_A], i,j,k,l];
+					
 					NSString *imagestr2 = [[[NSString alloc]init]autorelease]; 
-					imagestr2 = [NSString stringWithFormat:@"%d%d%d%db.png", i,j,k,l];
+					imagestr2 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_B], i,j,k,l];
 					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr :imagestr2];
 					[ret addObject:(SetPiece *)p];
 					
@@ -424,9 +426,9 @@
 				for (int l = 1; l <= 1; ++l)
 				{
 					NSString *imagestr = [[[NSString alloc]init]autorelease]; 
-					imagestr = [NSString stringWithFormat:@"%d%d%d%da.png", i,j,k,l];
+					imagestr = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_A], i,j,k,l];
 					NSString *imagestr2 = [[[NSString alloc]init]autorelease]; 
-					imagestr2 = [NSString stringWithFormat:@"%d%d%d%db.png", i,j,k,l];
+					imagestr2 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_B], i,j,k,l];
 					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr :imagestr2];
 					[ret addObject:(SetPiece *)p];					
 				}

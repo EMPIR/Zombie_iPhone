@@ -8,6 +8,7 @@
 #import "ZombieGameAppDelegate.h"
 #import "ZombieAudio.h"
 #import "GameLogic.h"
+#import "StringConst.h"
 #import <AudioToolbox/AudioToolbox.h>
 
 @implementation OptionsViewController
@@ -85,12 +86,12 @@
 	UIImage *img;
 	if(isFX){
 		[appDelegate SoundFX:YES];
-		img  = [UIImage imageNamed:@"b_FX_on.png"];
+		img  = [UIImage imageNamed:[StringConst GetImgConst:IMG_FX_ON]];
 		 [sender setImage:img forState:UIControlStateNormal];
 	}
 	else {
 		[appDelegate SoundFX:NO];
-		img  = [UIImage imageNamed:@"b_FX_off.png"];
+		img  = [UIImage imageNamed:[StringConst GetImgConst:IMG_FX_OFF]];
 		[sender setImage:img forState:UIControlStateNormal];
 		
 	}
@@ -103,13 +104,13 @@
 	isHints = !isHints;
 	UIImage *img;
 	if(isHints){
-		img  = [UIImage imageNamed:@"b_Hints_on.png"];
+		img = [UIImage imageNamed:[StringConst GetImgConst:IMG_HINTS_ON]];
 		[sender setImage:img forState:UIControlStateNormal];
 		[appDelegate ShowHint:YES];
 		
 	}
 	else {
-		img  = [UIImage imageNamed:@"b_Hints_off.png"];
+		img = [UIImage imageNamed:[StringConst GetImgConst:IMG_HINTS_OFF]];
 		[sender setImage:img forState:UIControlStateNormal];
 		[appDelegate ShowHint:NO];
 		
@@ -152,7 +153,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	UIImage *img;
-	img = [UIImage imageNamed:@"slider_eyeball.png"];
+	img = [UIImage imageNamed:[StringConst GetImgConst:IMG_SLIDER_BALL]];
 	[volumeSlider setThumbImage:img forState:UIControlStateNormal];
 }
 

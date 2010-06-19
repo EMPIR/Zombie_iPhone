@@ -22,6 +22,7 @@
 		2741D1661186723D001BD582 /* GameLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2741D1651186723D001BD582 /* GameLogic.m */; };
 		276069F6118921C2008E1327 /* SetPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 276069F5118921C2008E1327 /* SetPiece.m */; };
 		27606A83118BC498008E1327 /* SetLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 27606A82118BC498008E1327 /* SetLogic.m */; };
+		2772D1F511C9AB48009C23BD /* StringConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 2772D1F411C9AB48009C23BD /* StringConst.m */; };
 		27768C1C119E2F830027AE23 /* ZombieAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 27768C1B119E2F830027AE23 /* ZombieAudio.m */; };
 		27768D09119E5E980027AE23 /* 15.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768CF7119E5E980027AE23 /* 15.wav */; };
 		27768D0A119E5E980027AE23 /* 14.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27768CF8119E5E980027AE23 /* 14.wav */; };
@@ -560,6 +561,8 @@
 		276069F5118921C2008E1327 /* SetPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPiece.m; sourceTree = "<group>"; };
 		27606A81118BC498008E1327 /* SetLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetLogic.h; sourceTree = "<group>"; };
 		27606A82118BC498008E1327 /* SetLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetLogic.m; sourceTree = "<group>"; };
+		2772D1F311C9AB48009C23BD /* StringConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringConst.h; sourceTree = "<group>"; };
+		2772D1F411C9AB48009C23BD /* StringConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringConst.m; sourceTree = "<group>"; };
 		27768C1A119E2F830027AE23 /* ZombieAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZombieAudio.h; sourceTree = "<group>"; };
 		27768C1B119E2F830027AE23 /* ZombieAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZombieAudio.m; sourceTree = "<group>"; };
 		27768CF7119E5E980027AE23 /* 15.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 15.wav; path = audio/15.wav; sourceTree = "<group>"; };
@@ -948,6 +951,8 @@
 				27E7A3DC11AC581C006E622E /* BrainPieces.m */,
 				27E7A3DE11AC5850006E622E /* BrainPiece.h */,
 				27E7A3DF11AC5850006E622E /* BrainPiece.m */,
+				2772D1F311C9AB48009C23BD /* StringConst.h */,
+				2772D1F411C9AB48009C23BD /* StringConst.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1922,6 +1927,7 @@
 				27E7A3DD11AC581C006E622E /* BrainPieces.m in Sources */,
 				27E7A3E011AC5850006E622E /* BrainPiece.m in Sources */,
 				270D046C11AF619000CF8DE8 /* ZombieGameHelpers.m in Sources */,
+				2772D1F511C9AB48009C23BD /* StringConst.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

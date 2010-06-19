@@ -15,6 +15,7 @@
 #import "ZombieAudio.h"
 #import "BrainPieces.h"
 #import "BrainPiece.h"
+#import "StringConst.h"
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <CoreGraphics/CoreGraphics.h>
@@ -58,68 +59,6 @@
 @synthesize m_bGun;
 
 int TOTAL_BRAINS = 60;
-
-/*
-BOOL firstClick = NO;
-int showWrong = 0;
-int showRight = 0;
-int showPiece1 = 0;
-int showPiece2 = 0;
-int showPiece3 = 0;
-
-int randomTwitch = 0;
-int twitchRate = 30;
-int brain_randomTwitch = 1;
-int brain_twitchRate = 30;
-
-int timeSinceLastRightAnswer = 0;
-BOOL hintVisible = NO;
-NSTimer *gameTimer;
-
-double timeRemaining = 0;	
-
-int brainPulseTimer = 0;
-int gamePlacement = 0;
-int berzerkEndTime = 0;
-
-
-NSMutableArray *brains;
-
-UIImageView *m_brainView1;
-UIImageView *m_brainView2;
-UIImageView *m_brainView3;
-UIImageView *m_brainView4;
-UIImageView *m_brainView5;
-UIImageView *m_brainView6;
-UIImageView *m_brainView7;
-UIImageView *m_brainView8;
-UIImageView *m_brainView9;
-UIImageView *m_brainView10;
-
-
-UIImageView *m_brainView11;
-UIImageView *m_brainView12;
-UIImageView *m_brainView13;
-UIImageView *m_brainView14;
-UIImageView *m_brainView15;
-UIImageView *m_brainView16;
-UIImageView *m_brainView17;
-UIImageView *m_brainView18;
-UIImageView *m_brainView19;
-UIImageView *m_brainView20;
-
-
-UIImageView *m_brainView21;
-UIImageView *m_brainView22;
-UIImageView *m_brainView23;
-UIImageView *m_brainView24;
-UIImageView *m_brainView25;
-UIImageView *m_brainView26;
-UIImageView *m_brainView27;
-UIImageView *m_brainView28;
-UIImageView *m_brainView29;
-UIImageView *m_brainView30;
-*/
 
 
 
@@ -456,16 +395,13 @@ UIImageView *m_brainView30;
 	{
 		if(![setGame isFinished])
 		{
-			//message =[[NSString alloc] initWithFormat:@"Time: %0.0f", (setGame.gameTime - timeInterval)];
 			message =[[NSString alloc] initWithFormat:@"Time: %0.0lf", timeRemaining];
 			[timerLabel setText:message];
 			[message release];
 		}			
-		//else
-		//	setGame.currentMove = setGame.totalMoves;
+		
 	}
 	else {
-		//message =[[NSString alloc] initWithFormat:@"Time: %0.0lf", (timeInterval)];
 		message =[[NSString alloc] initWithFormat:@"Time: %0.0lf", timeRemaining];
 		[timerLabel setText:message];
 		[message release];
@@ -486,13 +422,14 @@ UIImageView *m_brainView30;
 	
 		if(showWrong > 0 && (showPiece1 == i || showPiece2 == i || showPiece3 == i))
 		{
-			img = [UIImage imageNamed:@"allBad.png"];
+			NSString *str = [StringConst GetImgConst: IMG_ALLBAD];
+			img = [UIImage imageNamed:str];
 			[ZombieGameHelpers playSound:0:1]; //0 = synth, 1 = wrong
 			
 		}
 		else if(showRight > 0 && (showPiece1 == i || showPiece2 == i || showPiece3 == i))
 		{
-			img = [UIImage imageNamed:@"allGood.png"];
+			img = [UIImage imageNamed:[StringConst GetImgConst: IMG_ALLGOOD]];
 			[ZombieGameHelpers  playSound:0:2]; //0 = synth, 2 = correct
 		}
 		else {
@@ -525,13 +462,13 @@ UIImageView *m_brainView30;
 	{
 		[ZombieGameHelpers  playSound:-1:-1];
 		UIImage *img;
-		img = [UIImage imageNamed:@"brain_2.png"];
+		img = [UIImage imageNamed:[StringConst GetImgConst: IMG_BRAIN2]];
 		[brainView setImage:img];
 		
 	}
 	else{
 		UIImage *img;
-		img = [UIImage imageNamed:@"brain_1.png"];
+		img = [UIImage imageNamed:[StringConst GetImgConst: IMG_BRAIN1]];
 		[brainView setImage:img];
 		
 	}
@@ -584,7 +521,7 @@ UIImageView *m_brainView30;
 	UIImage *img;
 	if(top5Avg <= 25)
 	{
-		img  = [UIImage imageNamed:@"bg_EndGameClassicC.jpg"];
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICC]];
 		[self.gameBG setImage:img];
 		self.endGameRank1.hidden = NO;
 		self.endGameRank2.hidden = NO;
@@ -593,7 +530,7 @@ UIImageView *m_brainView30;
 	}
 	else if(top5Avg <=45)
 	{
-		img  = [UIImage imageNamed:@"bg_EndGameClassicB.jpg"];
+		img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICB]];
 		[self.gameBG setImage:img];
 		self.endGameRank1.hidden = NO;
 		self.endGameRank2.hidden = NO;
@@ -601,14 +538,15 @@ UIImageView *m_brainView30;
 	}
 	else if(top5Avg <= 105)
 	{
-		img  = [UIImage imageNamed:@"bg_EndGameClassicA.jpg"];
+		//IMG_BG_CLASSICA
+		img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICA]];
 		[self.gameBG setImage:img];
 		self.endGameRank1.hidden = NO;
 
 	}
 	else
 	{
-		img  = [UIImage imageNamed:@"bg_EndGameClassicA.jpg"];
+		img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICA]];
 		[self.gameBG setImage:img];
 
 		
@@ -705,12 +643,13 @@ UIImageView *m_brainView30;
 		{
 			
 			self.m_bGun.hidden = NO;
-			img  = [UIImage imageNamed:@"bg_EndGameB_win.jpg"];
+			//IMG_BG_ENDGAMEB_WIN
+			img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_ENDGAMEB_WIN]];
 		}
 		else //You Lose!
 		{
 			self.m_bGun.hidden = YES;
-			img  = [UIImage imageNamed:@"bg_EndGameB_lose.jpg"];
+			img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_ENDGAMEB_LOSE]];
 		}
 
 
@@ -769,7 +708,7 @@ UIImageView *m_brainView30;
 			UIImage *image = [UIImage imageNamed:piece.image];
 			aview.transform = CGAffineTransformTranslate(aview.transform, 0.0, piece.speed);
 			aview.hidden = NO;
-			image = [UIImage imageNamed:@"brain_3.png"];
+			image = [UIImage imageNamed:[StringConst GetImgConst: IMG_BRAIN3]];
 			self.brainView.image = image;
 			
 		}
@@ -788,7 +727,7 @@ UIImageView *m_brainView30;
 		
 		if(berzerkEndTime == firstMark)
 			[ZombieGameHelpers playSound:0:6];
-		UIImage *image = [UIImage imageNamed:@"brain_3.png"];
+		UIImage *image = [UIImage imageNamed:[StringConst GetImgConst: IMG_BRAIN3]];
 		self.brainView.image = image;
 	}
 	
@@ -1066,10 +1005,7 @@ UIImageView *m_brainView30;
 			self.selected12View.hidden = YES;
 		}
 	}
-	
 	return NO;
-
-	
 }
 
 -(IBAction) finishedButtonDown:(id)sender{
@@ -1093,16 +1029,14 @@ UIImageView *m_brainView30;
 	
 	UIImage *img;
 	if(setGame.isActive){
-		img  = [UIImage imageNamed:@"b_Pause_off.png"];
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_PAUSE_OFF]];
 		[sender setImage:img forState:UIControlStateNormal];
 		[appDelegate ShowHint:YES];
 		[appDelegate PauseSound:NO];
 		
-		
-		
 	}
 	else {
-		img  = [UIImage imageNamed:@"b_Pause_on.png"];
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_PAUSE_ON]];
 		[sender setImage:img forState:UIControlStateNormal];
 		[appDelegate ShowHint:NO];
 		[appDelegate PauseSound:YES];
@@ -1393,7 +1327,7 @@ UIImageView *m_brainView30;
 	m_bGun = [[UIImageView alloc]init];
 	[self.view addSubview:m_bGun];
 	
-	UIImage *img = [UIImage imageNamed:@"EndGame_Gun.png"];
+	UIImage *img = [UIImage imageNamed:[StringConst GetImgConst: IMG_ENDGAME_GUN]];
 	self.m_bGun.image = img;
 	m_bGun.frame = CGRectMake(360, 70, 129, 132);
 	
@@ -1553,8 +1487,8 @@ UIImageView *m_brainView30;
 	if(setGame.gameType == 1)
 		timeRemaining = 0;
 	else {
-		//timeRemaining= 60;
-		timeRemaining = 5;
+		timeRemaining= 60;
+		//timeRemaining = 5;
 	}
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -1569,7 +1503,9 @@ UIImageView *m_brainView30;
 	
 	UIImage *img;
 	
-	img  = [UIImage imageNamed:@"bg_GamePlay.jpg"];
+	//
+	
+	img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_GAMEPLAY]]; 
 	[self.gameBG setImage:img];
 		
 	

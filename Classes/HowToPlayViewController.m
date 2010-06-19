@@ -9,11 +9,15 @@
 #import "HowToPlayViewController.h"
 #import "SetLogic.h"
 #import "SetPiece.h"
+#import "StringConst.h"
 #import "GameLogic.h"
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import "ZombieGameAppDelegate.h"
 #import "ZombieAudio.h"
+#import "StringConst.h"
+#import "ZombieGameHelpers.h"
+
 
 @implementation HowToPlayViewController
 @synthesize button1, button2, button3, scrollView;
@@ -48,6 +52,7 @@
 	
 }
 
+/*
 -(void) playSound:(int) pieceID:(int) expression {
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	if(!appDelegate.soundFX)
@@ -81,7 +86,7 @@
 	AudioServicesPlaySystemSound(soundID);
 	//[filename release];
 	
-}
+}*/
 
 -(IBAction) generateMatch:(id) sender{
 	
@@ -129,9 +134,9 @@
 	NSString *imagestr1 = [[[NSString alloc]init]autorelease];
 	NSString *imagestr2 = [[[NSString alloc]init]autorelease];
 	NSString *imagestr3 = [[[NSString alloc]init]autorelease];
-	imagestr1 = [NSString stringWithFormat:@"%d%d%d0a.png", i,j,k];
-	imagestr2 = [NSString stringWithFormat:@"%d%d%d0a.png", i2,j2,k2];
-	imagestr3 = [NSString stringWithFormat:@"%d%d%d0a.png", i3,j3,k3];
+	imagestr1 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_A], i,j,k];
+	imagestr2 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_A], i2,j2,k2];
+	imagestr3 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_A], i3,j3,k3];
 	
 	
 	
@@ -148,8 +153,8 @@
 	[button3 setImage:img forState:UIControlStateNormal];
 	[button3 setShowsTouchWhenHighlighted:YES];
 	
-	int exp = [GameLogic randomNumber:2,5];
-	[self playSound:i:exp];
+	int exp = [GameLogic randomNumber:1,2];
+	[ZombieGameHelpers playSound:i:exp];
 	//[imagestr1 release];
 	//[imagestr2 release];
 	//[imagestr3 release];

@@ -7,6 +7,7 @@
 
 #import "ZombieAudio.h"
 #import "GameLogic.h"
+#import "StringConst.h"
 
 @implementation ZombieAudio
 
@@ -77,42 +78,40 @@ static int TOTAL_EXPRESSIONS  = 5;
 
 +(NSString *) getZombieAudioFile:(int) zombieID: (int) expression
 {
-	//return [NSString stringWithFormat:@"/clip_crept.mp3"];
-	//return [NSString stringWithFormat:@"/15.wav"];
 	
 	int number = [GameLogic randomNumber:1,TOTAL_EXPRESSIONS];
 	if(zombieID == -1)
-	   return [[NSString stringWithFormat:@"/brainPump.wav"] autorelease];
+		return [[NSString stringWithFormat:[StringConst GetImgConst:SND_BRAIN_PUMP]] autorelease];
 	else if(zombieID == 0){
 		if(expression ==1)
-			return [[NSString stringWithFormat:@"/wrong.wav"] autorelease];
+			return [[NSString stringWithFormat:[StringConst GetImgConst:SND_WRONG]] autorelease];
 		if(expression ==2)
-			return [[NSString stringWithFormat:@"/correct.wav"] autorelease];
+			return [[NSString stringWithFormat:[StringConst GetImgConst:SND_CORRECT]] autorelease];
 		if(expression == 3)
-			return [[NSString stringWithFormat:@"/wilhelm.wav"] autorelease];
+			return [[NSString stringWithFormat:[StringConst GetImgConst:SND_SCREAM]] autorelease];
 		if(expression == 4)
-			return [[NSString stringWithFormat:@"/ShotGun_pumps.wav"] autorelease];
+			return [[NSString stringWithFormat:[StringConst GetImgConst:SND_SHOTGUN]] autorelease];
 		if(expression == 5)
-			return [[NSString stringWithFormat:@"/Game_Start_faster.wav"] autorelease];
+			return [[NSString stringWithFormat:[StringConst GetImgConst:SND_GAME_START]] autorelease];
 		if(expression == 6)
-			return [[NSString stringWithFormat:@"/brainExplode.wav"] autorelease];
+			return [[NSString stringWithFormat:[StringConst GetImgConst:SND_BRAIN_EXPLODE]] autorelease];
 		//number = [GameLogic randomNumber:1,TOTAL_EXPRESSIONS];
 	}
 	else {
 		if(expression == 1)
-			return  [[NSString stringWithFormat:@"/%d%d.wav", zombieID,number] autorelease];
+			return  [[NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_1], zombieID,number] autorelease];
 		else if(expression == 2)
-			return  [[NSString stringWithFormat:@"/%d6.wav", zombieID] autorelease];
+			return  [[NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_2], zombieID] autorelease];
 		else if(expression == 3)
-			return  [[NSString stringWithFormat:@"/%d7.wav", zombieID] autorelease];
+			return  [[NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_3], zombieID] autorelease];
 		else if(expression == 4)
-			return  [[NSString stringWithFormat:@"/%d8.wav", zombieID] autorelease];
+			return  [[NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_4], zombieID] autorelease];
 		else if(expression == 5)
-			return  [[NSString stringWithFormat:@"/%d9.wav", zombieID] autorelease];
+			return  [[NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_5], zombieID] autorelease];
 		else if(expression == 6)
 		{//start game
 			int number = [GameLogic randomNumber:10,14];
-			return  [[NSString stringWithFormat:@"/%d%d.wav", zombieID,number] autorelease];
+			return  [[NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_1], zombieID,number] autorelease];
 		}
 		
 
