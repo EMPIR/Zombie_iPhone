@@ -10,6 +10,30 @@
 #ifndef STRINGCONST
 #define STRINGCONST
 
+#ifdef IPAD
+static const char	IMG_ALLBAD []			= "ipad_allBad.png";
+static const char	IMG_ALLGOOD []			= "ipad_allGood.png";
+static const char	IMG_BG_CLASSICA []		= "ipad_bg_EndGameClassicA.jpg";
+static const char	IMG_BG_CLASSICB []		= "ipad_bg_EndGameClassicB.jpg";
+static const char	IMG_BG_CLASSICC []		= "ipad_bg_EndGameClassicC.jpg";
+static const char	IMG_BG_ENDGAMEB_WIN []	= "ipad_bg_EndGameB_win.jpg";
+static const char	IMG_BG_ENDGAMEB_LOSE []	= "ipad_bg_EndGameB_lose.jpg";
+static const char	IMG_BG_GAMEPLAY []      = "ipad_bg_GamePlay.jpg";
+static const char	IMG_BRAIN1 []			= "ipad_brain_1.png";
+static const char	IMG_BRAIN2 []			= "ipad_brain_2.png";
+static const char	IMG_BRAIN3 []			= "ipad_brain_3.png";
+static const char	IMG_ENDGAME_GUN[]		= "ipad_EndGame_Gun.png";
+static const char	IMG_PAUSE_OFF []		= "ipad_b_Pause_off.png";
+static const char	IMG_PAUSE_ON []			= "ipad_b_Pause_on.png";
+static const char	IMG_FX_ON []			= "ipad_b_FX_on.png";
+static const char	IMG_FX_OFF []			= "ipad_b_FX_off.png";
+static const char	IMG_HINTS_ON []			= "ipad_b_Hints_on.png";
+static const char	IMG_HINTS_OFF []		= "ipad_b_Hints_off.png";
+static const char	IMG_SLIDER_BALL []		= "ipad_slider_eyeball.png";
+static const char   IMG_PIECE_A		[]		= "ipad_%d%d%d0a.png";
+static const char   IMG_PIECE_B		[]		= "ipad_%d%d%d0b.png";
+static const char	IMG_BRAINS		[]		= "ipad_brains_%d.png";
+#else
 static const char	IMG_ALLBAD []			= "allBad.png";
 static const char	IMG_ALLGOOD []			= "allGood.png";
 static const char	IMG_BG_CLASSICA []		= "bg_EndGameClassicA.jpg";
@@ -32,6 +56,8 @@ static const char	IMG_SLIDER_BALL []		= "slider_eyeball.png";
 static const char   IMG_PIECE_A		[]		= "%d%d%d0a.png";
 static const char   IMG_PIECE_B		[]		= "%d%d%d0b.png";
 static const char	IMG_BRAINS		[]		= "brains_%d.png";
+#endif 
+
 static const char	SND_BRAIN_PUMP	[]		= "/brainPump.wav";
 static const char	SND_WRONG	[]		= "/wrong.wav";
 static const char	SND_CORRECT	[]		= "/correct.wav";
@@ -44,6 +70,10 @@ static const char	SND_ZOMBIE_EXP_2	[]		= "/%d6.wav";
 static const char	SND_ZOMBIE_EXP_3	[]		= "/%d7.wav";
 static const char	SND_ZOMBIE_EXP_4	[]		= "/%d8.wav";
 static const char	SND_ZOMBIE_EXP_5	[]		= "/%d9.wav";
+static const char	SND_EATING			[]		= "%@/zombiesEating.mp3";
+static const char	SND_NONGAME_TRACK	[]		= "%@/Audio_BG02.mp3";
+static const char	SND_CRAWLER_TRACK	[]		= "%@/Audio_BG01.mp3";
+static const char	SND_BERZERK_TRACK	[]		= "%@/Audio_BG03.mp3";
 #endif
 
 @interface StringConst : NSObject {

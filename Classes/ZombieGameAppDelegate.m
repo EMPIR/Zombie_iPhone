@@ -8,6 +8,7 @@
 #import "GameMenu.h"
 #import "Scores.h"
 #import <AVFoundation/AVFoundation.h>
+#import "StringConst.h"
 
 
 @implementation ZombieGameAppDelegate
@@ -421,7 +422,8 @@
 }
 
 -(void) PlayEatingTrack{
-	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/zombiesEating.mp3", [[NSBundle mainBundle] resourcePath]]];
+	//NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/zombiesEating.mp3", [[NSBundle mainBundle] resourcePath]]];
+	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:[StringConst GetImgConst:SND_EATING], [[NSBundle mainBundle] resourcePath]]];
 	NSError *error;
 	[eatingSoundPlayer release];
 	eatingSoundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
@@ -439,7 +441,7 @@
 }
 
 -(void) PlayNonGameTrack{
-	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Audio_BG02.mp3", [[NSBundle mainBundle] resourcePath]]];
+	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:[StringConst GetImgConst:SND_NONGAME_TRACK], [[NSBundle mainBundle] resourcePath]]];
 	NSError *error;
 	[audioPlayer release];
 	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
@@ -452,7 +454,7 @@
 }
 
 -(void) PlayCrawlerTrack{
-	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Audio_BG01.mp3", [[NSBundle mainBundle] resourcePath]]];
+	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:[StringConst GetImgConst:SND_CRAWLER_TRACK], [[NSBundle mainBundle] resourcePath]]];
 	NSError *error;
 	[audioPlayer release];
 	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
@@ -466,7 +468,7 @@
 }
 
 -(void) PlayBerzerkTrack{
-	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Audio_BG03.mp3", [[NSBundle mainBundle] resourcePath]]];
+	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:[StringConst GetImgConst:SND_BERZERK_TRACK], [[NSBundle mainBundle] resourcePath]]];
 	NSError *error;
 	[audioPlayer release];
 	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];

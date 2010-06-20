@@ -12,6 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="1"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -37,14 +38,14 @@
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
 			<object class="IBUIView" id="191373211">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="IBUIImageView" id="877596763">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{272, 224}, {480, 320}}</string>
+						<string key="NSFrameSize">{1024, 768}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -56,7 +57,7 @@
 					<object class="IBUIButton" id="652067613">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{292, 499}, {120, 33}}</string>
+						<string key="NSFrame">{{20, 658}, {256, 70}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -80,20 +81,20 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="NSCustomResource" key="IBUIHighlightedImage" id="129835371">
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="331034950">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">b_MainMenu_on.png</string>
+							<string key="NSResourceName">ipad_b_MainMenu_on.png</string>
 						</object>
-						<reference key="IBUISelectedImage" ref="129835371"/>
+						<reference key="IBUISelectedImage" ref="331034950"/>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">b_MainMenu_off.png</string>
+							<string key="NSResourceName">ipad_b_MainMenu_off.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="444957879">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{660, 458}, {85, 49}}</string>
+						<string key="NSFrame">{{835, 573}, {169, 89}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -107,20 +108,20 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="686265888"/>
-						<object class="NSCustomResource" key="IBUIHighlightedImage" id="552778598">
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="687610909">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">b_Delete_on.png</string>
+							<string key="NSResourceName">ipad_b_Delete_on.png</string>
 						</object>
-						<reference key="IBUISelectedImage" ref="552778598"/>
+						<reference key="IBUISelectedImage" ref="687610909"/>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">b_Delete_off.png</string>
+							<string key="NSResourceName">ipad_b_Delete_off.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="674866276">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{660, 401}, {78, 49}}</string>
+						<string key="NSFrame">{{835, 425}, {130, 83}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -134,17 +135,17 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="686265888"/>
-						<object class="NSCustomResource" key="IBUIHighlightedImage" id="759967719">
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="793629110">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">b_Hints_on.png</string>
+							<string key="NSResourceName">ipad_b_Hints_on.png</string>
 						</object>
-						<reference key="IBUISelectedImage" ref="759967719"/>
-						<reference key="IBUINormalImage" ref="759967719"/>
+						<reference key="IBUISelectedImage" ref="793629110"/>
+						<reference key="IBUINormalImage" ref="793629110"/>
 					</object>
 					<object class="IBUIButton" id="11816459">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{660, 346}, {78, 49}}</string>
+						<string key="NSFrame">{{835, 303}, {130, 83}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -158,17 +159,17 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="686265888"/>
-						<object class="NSCustomResource" key="IBUIHighlightedImage" id="674544985">
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="785140867">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">b_FX_on.png</string>
+							<string key="NSResourceName">ipad_b_FX_on.png</string>
 						</object>
-						<reference key="IBUISelectedImage" ref="674544985"/>
-						<reference key="IBUINormalImage" ref="674544985"/>
+						<reference key="IBUISelectedImage" ref="785140867"/>
+						<reference key="IBUINormalImage" ref="785140867"/>
 					</object>
 					<object class="IBUISlider" id="1061948466">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{524, 314}, {205, 23}}</string>
+						<string key="NSFrame">{{571, 235}, {389, 23}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -178,15 +179,13 @@
 					</object>
 				</object>
 				<string key="NSFrameSize">{1024, 748}</string>
+				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
 					<object class="NSColorSpace" key="NSCustomColorSpace">
 						<int key="NSID">2</int>
 					</object>
-				</object>
-				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics">
-					<int key="IBUIStatusBarStyle">2</int>
 				</object>
 				<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 					<int key="interfaceOrientation">3</int>
@@ -274,11 +273,11 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="877596763"/>
-							<reference ref="652067613"/>
 							<reference ref="1061948466"/>
+							<reference ref="652067613"/>
 							<reference ref="444957879"/>
-							<reference ref="674866276"/>
 							<reference ref="11816459"/>
+							<reference ref="674866276"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -345,7 +344,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>OptionsViewController</string>
 					<string>UIResponder</string>
-					<string>{{552, 492}, {480, 320}}</string>
+					<string>{{91, 108}, {1024, 748}}</string>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">IBCocoaTouchFramework</string>
 						<integer value="0" key="NS.object.0"/>
@@ -636,34 +635,38 @@
 		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
+		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.iPhoneOS</string>
+			<integer value="800" key="NS.object.0"/>
+		</object>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.InterfaceBuilder3</string>
 			<integer value="3000" key="NS.object.0"/>
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
-		<string key="IBDocument.LastKnownRelativeProjectPath">ZombieGame.xcodeproj</string>
+		<string key="IBDocument.LastKnownRelativeProjectPath">../ZombieGame.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>b_Delete_off.png</string>
-				<string>b_Delete_on.png</string>
-				<string>b_FX_on.png</string>
-				<string>b_Hints_on.png</string>
-				<string>b_MainMenu_off.png</string>
-				<string>b_MainMenu_on.png</string>
 				<string>bg_Options.jpg</string>
+				<string>ipad_b_Delete_off.png</string>
+				<string>ipad_b_Delete_on.png</string>
+				<string>ipad_b_FX_on.png</string>
+				<string>ipad_b_Hints_on.png</string>
+				<string>ipad_b_MainMenu_off.png</string>
+				<string>ipad_b_MainMenu_on.png</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>{84, 49}</string>
-				<string>{84, 49}</string>
-				<string>{78, 49}</string>
-				<string>{78, 49}</string>
-				<string>{120, 33}</string>
-				<string>{120, 33}</string>
 				<string>{480, 320}</string>
+				<string>{169, 89}</string>
+				<string>{169, 89}</string>
+				<string>{137, 89}</string>
+				<string>{130, 82}</string>
+				<string>{256, 70}</string>
+				<string>{256, 70}</string>
 			</object>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">87</string>
