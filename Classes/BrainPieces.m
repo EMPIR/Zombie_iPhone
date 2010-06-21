@@ -25,10 +25,19 @@
 		NSString *imagestr = [[[NSString alloc]init]autorelease]; 
 		imagestr = [NSString stringWithFormat:[StringConst GetImgConst:IMG_BRAINS], i % 30];
 		int speed = [GameLogic randomNumber:1,5];
+		UIImage *image = [UIImage imageNamed:imagestr];
+#ifdef IPAD	
+		int width = [GameLogic randomNumber:20,80];
+		int height = width * (image.size.height / image.size.width);
+		int x = [GameLogic randomNumber:1,1024 - width]; //480
+		int y = [GameLogic randomNumber:1,768 - height]; //320
+#else
 		int width = [GameLogic randomNumber:10,50];
-		int height = width * 0.66666667;
+		int height = width * (image.size.height / image.size.width);
+		
 		int x = [GameLogic randomNumber:1,480 - width]; //480
 		int y = [GameLogic randomNumber:1,320 - height]; //320
+#endif		
 		//y = 1;
 		//speed = 0;
 		BrainPiece *p = [[BrainPiece alloc] initPiece:speed:x:y:width:height:imagestr];

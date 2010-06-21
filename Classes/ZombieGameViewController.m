@@ -1373,7 +1373,9 @@ int TOTAL_BRAINS = 60;
 					
 					//aview = [ [ UIImageView alloc ] initWithFrame:CGRectMake(piece.x, piece.y, image.size.width, image.size.height)];
 					aview.image = image;
-					aview.frame = CGRectMake(piece.x, piece.y, image.size.width, image.size.height);
+					//aview.frame = CGRectMake(piece.x, piece.y, image.size.width, image.size.height);
+					aview.frame = CGRectMake(piece.x, piece.y, piece.width, piece.height);
+
 					aview.transform = CGAffineTransformIdentity;
 					aview.transform = CGAffineTransformTranslate(aview.transform, 0, piece.speed);
 					aview.hidden = YES;
@@ -1487,8 +1489,11 @@ int TOTAL_BRAINS = 60;
 	if(setGame.gameType == 1)
 		timeRemaining = 0;
 	else {
-		timeRemaining= 60;
-		//timeRemaining = 5;
+#ifndef	NDEBUG
+		timeRemaining= 5;
+#else		
+		timeRemaining = 60;
+#endif		
 	}
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
