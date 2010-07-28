@@ -107,12 +107,14 @@
 		img = [UIImage imageNamed:[StringConst GetImgConst:IMG_HINTS_ON]];
 		[sender setImage:img forState:UIControlStateNormal];
 		[appDelegate ShowHint:YES];
+		[appDelegate setCrawlerDiff:0];
 		
 	}
 	else {
 		img = [UIImage imageNamed:[StringConst GetImgConst:IMG_HINTS_OFF]];
 		[sender setImage:img forState:UIControlStateNormal];
 		[appDelegate ShowHint:NO];
+		[appDelegate setCrawlerDiff:1];
 		
 	}
 }

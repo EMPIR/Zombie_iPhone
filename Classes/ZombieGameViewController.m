@@ -1329,8 +1329,12 @@ int TOTAL_BRAINS = 60;
 	
 	UIImage *img = [UIImage imageNamed:[StringConst GetImgConst: IMG_ENDGAME_GUN]];
 	self.m_bGun.image = img;
-	m_bGun.frame = CGRectMake(360, 70, 129, 132);
+#ifdef IPAD	
 	
+	m_bGun.frame = CGRectMake(753,300,271,272);
+#else
+	m_bGun.frame = CGRectMake(360, 70, 129, 132);
+#endif	
 	m_bGun.hidden = YES;
 	
 }
@@ -1415,7 +1419,7 @@ int TOTAL_BRAINS = 60;
 		timeRemaining +=0.1;
 	else
 	{
-		int level  = setGame.setsComplete / 10;
+		int level  = pow((setGame.setsComplete / 10),3);
 		double levelPenalty = 0.002 * level;
 		
 		timeRemaining -= (0.1 + levelPenalty);
@@ -1489,7 +1493,7 @@ int TOTAL_BRAINS = 60;
 	if(setGame.gameType == 1)
 		timeRemaining = 0;
 	else {
-#ifndef	NDEBUG
+#ifdef DEBUG
 		timeRemaining= 5;
 #else		
 		timeRemaining = 60;

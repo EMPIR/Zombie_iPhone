@@ -1,0 +1,26 @@
+1 - Im hungry						HAPPY
+2 - Lets go							START
+3 - Who wants some					START
+4 - Who wants a little				START
+5 - Zombie eat						HAPPY
+6 - Zombie go						HAPPY
+7 - My House						HAPPY
+8 - Zombie want some brains			START
+9 - Zombie brains want				START
+10 - Zombie want brains				START
+11 - Zombie need brain				START
+12 - Cerebral Cortex				HAPPY
+13 - Hungry Zombies					HAPPY
+14 - Lets play						START
+15 - Leave Zombies if you dare		END
+
+
+
+HAPPY:
+1- [6, 9]    eg 16.wav, 17.wav, .., 19.wav
+
+START
+1- [10,14]   eg 110.wav, 111.wav, 112.wav, .., 114.wav
+
+END:
+1 - [15]	eg 115.wav

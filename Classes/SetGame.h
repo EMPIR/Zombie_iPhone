@@ -65,7 +65,7 @@
 
 -(BOOL) makeMove;
 -(NSMutableArray *) getMatch;
--(void) newGame:(int)gameType;
+-(void) newGame:(int)gameType : (int) gameDifficulty;
 //this should be called when a button is pressed.
 //It returns true if the button pressed resulted
 //in a new selection.  If false, the button was already

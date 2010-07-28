@@ -7,6 +7,7 @@
 
 #import "MainMenuViewController.h"
 #import "ZombieGameViewController.h"
+#import "ZombieGameAppDelegate.h"
 #import "SetGame.h"
 
 @implementation MainMenuViewController
@@ -14,13 +15,15 @@
 @synthesize setGame;
 
 -(IBAction) play:(id) sender{
-	[setGame newGame:1];
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	[setGame newGame:1:[appDelegate getCrawlerDifficulty]];
 	self.viewController.setGame = self.setGame;
 	NSLog(@"Play Clicked, not load Game View!");
 	[self presentModalViewController:viewController animated:NO];
 }
 -(IBAction) playRamero:(id) sender{
-	[setGame newGame:2];
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	[setGame newGame:2:[appDelegate getBerzerkDifficulty]];
 	self.viewController.setGame = self.setGame;
 	NSLog(@"Play Clicked, not load Game View!");
 	[self presentModalViewController:viewController animated:NO];

@@ -30,6 +30,8 @@
 	BOOL soundFX;
 	double volume;
 	BOOL showHint;
+	int crawlerDiff;
+	int berzerkDiff;
 	
 	
 	
@@ -56,6 +58,10 @@
 
 -(NSMutableArray *) getCrawlerTopScores;
 -(NSMutableArray *) getBerserkTopScores;
+-(int) getCrawlerDifficulty;
+-(int) getBerzerkDifficulty;
+-(void) setCrawlerDifficulty:(int) val;
+-(void) setBerzerkDifficulty:(int) val;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet GameMenu *viewController;
@@ -69,5 +75,7 @@
 @property (nonatomic, assign) double volume;
 @property (nonatomic, assign) BOOL showHint;
 
-@end
+@property (nonatomic, assign) int crawlerDiff;
+@property (nonatomic, assign) int berzerkDiff;
 
+@end

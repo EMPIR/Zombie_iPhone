@@ -22,6 +22,10 @@
 @synthesize volume;
 @synthesize showHint;
 @synthesize eatingSoundPlayer;
+@synthesize crawlerDiff;
+@synthesize berzerkDiff;
+
+
 
 
 - (void)dealloc {
@@ -419,6 +423,24 @@
 	}
 	sqlite3_close(database);
 	
+}
+
+
+-(int) getCrawlerDifficulty{
+	return crawlerDiff;
+}
+-(int) getBerzerkDifficulty{
+	return berzerkDiff;
+}
+
+-(void) setCrawlerDifficulty:(int) val
+{
+	crawlerDiff = val;
+}
+
+-(void) setBerzerkDifficulty:(int) val
+{
+	berzerkDiff = val;
 }
 
 -(void) PlayEatingTrack{
