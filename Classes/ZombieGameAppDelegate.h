@@ -52,12 +52,14 @@
 -(int) getCrawlerAverage:(int) score;
 -(int) getCrawlerTopFiveAverage;
 -(int) getBerzerkPlacement:(int) score;
+
 -(NSMutableArray *) getCrawlerTopScores;
 -(NSMutableArray *) getBerserkTopScores;
 
 
 -(NSMutableArray *) getCrawlerTopScores;
 -(NSMutableArray *) getBerserkTopScores;
+-(int) getCachedCrawlerDifficulty;
 -(int) getCrawlerDifficulty;
 -(int) getBerzerkDifficulty;
 -(void) setCrawlerDifficulty:(int) val;

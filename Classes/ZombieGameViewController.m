@@ -371,7 +371,7 @@ int TOTAL_BRAINS = 60;
 	
 	NSString *message;
 	if(setGame.gameType == 1)
-		message =[[NSString alloc] initWithFormat:@"Move %d of %d", setGame.currentMove + 1, setGame.totalMoves, a+1, b+1, c+1];
+		message =[[NSString alloc] initWithFormat:@"Move %d of %d, Level %d", setGame.currentMove + 1, setGame.totalMoves, [appDelegate getCachedCrawlerDifficulty] + 1];
 	else {
 		message =[[NSString alloc] initWithFormat:@"Level %d", (setGame.setsComplete / 10) + 1];
 	}
@@ -504,39 +504,44 @@ int TOTAL_BRAINS = 60;
 	//NSLog(@"Game Over, here was your time in seconds: %@", message);
 	[finishedLabel setText:message];
 	[message release];
-		
-	if(gamePlacement != 1)
-		message = [[NSString alloc] initWithFormat:@"Your Placement: %d", gamePlacement];
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
+	if(-timeInterval > 45)
+	{
+		//message = [[NSString alloc] initWithFormat:@"Your Placement: %d", gamePlacement];
+		message = [[NSString alloc] initWithFormat:@"Keep Reaching for the Next Level!"];
+	}
 	else {
-		message = [[NSString alloc] initWithFormat:@"New High Score!"];
+		message = [[NSString alloc] initWithFormat:@"You Reached Level %d!", [appDelegate getCrawlerDifficulty] + 2];
 	}
 	[finishedLabel2 setText:message];
 	[message release];
 		
-	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
-	int top5Avg = (int) [appDelegate getCrawlerTopFiveAverage];
-	
+	//int top5Avg = (int) [appDelegate getCrawlerTopFiveAverage];
+	int currentTime = -timeInterval;
 	
 	
 	UIImage *img;
-	if(top5Avg <= 25)
+	if(currentTime <= 25)
 	{
 		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICC]];
 		[self.gameBG setImage:img];
 		self.endGameRank1.hidden = NO;
 		self.endGameRank2.hidden = NO;
 		self.endGameRank3.hidden = NO;
+		[appDelegate setCrawlerDifficulty: [appDelegate getCrawlerDifficulty] + 1];
 
 	}
-	else if(top5Avg <=45)
+	else if(currentTime <=45)
 	{
 		img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICB]];
 		[self.gameBG setImage:img];
 		self.endGameRank1.hidden = NO;
 		self.endGameRank2.hidden = NO;
+		[appDelegate setCrawlerDifficulty: [appDelegate getCrawlerDifficulty] + 1];
 		
 	}
-	else if(top5Avg <= 105)
+	else if(currentTime <= 105)
 	{
 		//IMG_BG_CLASSICA
 		img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICA]];
@@ -1501,6 +1506,7 @@ int TOTAL_BRAINS = 60;
 	}
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	[appDelegate getCrawlerDifficulty];
 	if(setGame.gameType == 2){
 		
 		[appDelegate PlayBerzerkTrack];

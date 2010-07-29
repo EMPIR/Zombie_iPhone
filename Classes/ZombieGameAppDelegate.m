@@ -43,6 +43,7 @@
 		soundFX = YES;
 		volume = 0.5;
 		showHint = YES;
+		crawlerDiff = 12;
 		
 	}
 	return self;
@@ -55,7 +56,7 @@
 	sqlite3 *database;
 	
 	// Init the animals Array
-	scores = [[NSMutableArray alloc] init];
+	//scores = [[NSMutableArray alloc] init];
 	
 	// Open the database from the users filessytem
 	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
@@ -350,6 +351,104 @@
 	return ret;
 }
 
+
+
+
+-(void) deleteCrawlerDifficulty {
+	// Setup the database object
+	sqlite3 *database;
+	
+	// Init the animals Array
+	//scores = [[NSMutableArray alloc] init];
+	
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+		// Setup the SQL Statement and compile it for faster access
+		const char *sqlStatement = "delete from highScores where gameType=10";
+		sqlite3_stmt *compiledStatement;
+		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
+			
+		}
+		if(SQLITE_DONE != sqlite3_step(compiledStatement)){
+			NSAssert1(0, @"Error while deleting data. '%s'", sqlite3_errmsg(database));
+		}
+		else{
+			//SQLite provides a method to get the last primary key inserted by using sqlite3_last_insert_rowid
+			//int ID = sqlite3_last_insert_rowid(database);
+		}
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+		
+	}
+	sqlite3_close(database);
+	
+}
+
+
+-(int) getCrawlerDifficulty
+{
+	sqlite3 *database;
+	int ret = 0;
+	// Init the animals Array
+	
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+		// Setup the SQL Statement and compile it for faster access
+		const char *sqlStatement = "select * from highScores where gameType = 10";
+		sqlite3_stmt *compiledStatement;
+		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
+			// Loop through the results and add them to the feeds array
+			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+				// Read the data from the result row
+				//int _id = sqlite3_column_int(compiledStatement,0);
+				//int _gameType = sqlite3_column_int(compiledStatement,1);
+				int _score = sqlite3_column_int(compiledStatement,2);
+				ret = _score;
+			}
+		}
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+		
+	}
+	sqlite3_close(database);
+	crawlerDiff = ret;
+	return ret;
+}
+
+
+-(void) insertCrawlerDifficulty:(int) score{
+	[self deleteCrawlerDifficulty];
+	// Setup the database object
+	sqlite3 *database;
+	
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+		const char *sql = "insert into highScores(score, gameType) Values(?, ?)";
+		sqlite3_stmt *compiledStatement;
+		
+		if(sqlite3_prepare_v2(database, sql, -1, &compiledStatement, NULL) != SQLITE_OK)
+			NSAssert1(0, @"Error while creating add statement. '%s'", sqlite3_errmsg(database));
+		
+		sqlite3_bind_int(compiledStatement, 1, score);
+		sqlite3_bind_int(compiledStatement,2,10);
+		
+		
+		
+		if(SQLITE_DONE != sqlite3_step(compiledStatement)){
+			NSAssert1(0, @"Error while inserting data. '%s'", sqlite3_errmsg(database));
+		}
+		else{
+			//SQLite provides a method to get the last primary key inserted by using sqlite3_last_insert_rowid
+			//int ID = sqlite3_last_insert_rowid(database);
+		}
+		//Reset the add statement.
+		sqlite3_reset(compiledStatement);		
+	}
+	sqlite3_close(database);
+	
+}
+
+
 -(NSMutableArray *) getBerserkTopScores
 {
 	sqlite3 *database;
@@ -379,7 +478,7 @@
 				Scores *score = [[Scores alloc] initWithData:_id:_gameType:_score:_date];
 				// Add the animal object to the animals Array
 				
-					[ret addObject:score];
+				[ret addObject:score];
 				
 				[score release];
 				
@@ -397,7 +496,7 @@
 -(void) insertScore:(int) score:(int)gameType:(NSDate *) date{
 	// Setup the database object
 	sqlite3 *database;
-
+	
 	// Open the database from the users filessytem
 	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
 		const char *sql = "insert into highScores(score, gameType,date) Values(?, ?, ?)";
@@ -419,16 +518,17 @@
 			//int ID = sqlite3_last_insert_rowid(database);
 		}
 		//Reset the add statement.
-		sqlite3_reset(compiledStatement);		
+		sqlite3_reset(compiledStatement);
 	}
 	sqlite3_close(database);
 	
 }
 
 
--(int) getCrawlerDifficulty{
+-(int) getCachedCrawlerDifficulty{
 	return crawlerDiff;
 }
+
 -(int) getBerzerkDifficulty{
 	return berzerkDiff;
 }
@@ -436,6 +536,8 @@
 -(void) setCrawlerDifficulty:(int) val
 {
 	crawlerDiff = val;
+	
+	[self insertCrawlerDifficulty:val];
 }
 
 -(void) setBerzerkDifficulty:(int) val

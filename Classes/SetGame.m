@@ -84,31 +84,20 @@ typedef enum GameType
 	
 }
 
-//variables: gt = gameType,  gd = game difficulty
--(void) newGame:(int) gt: (int) gd{
+//variables: gt = gameType,  gl = game level
+-(void) newGame:(int) gt: (int) gl{
 	
 	
 	[pieces release];
 	[state release];
-	if(gd == 0)
-	{
-		totalPieces = 9;
-		//pieces = [[SetLogic CreateMediumPieces] retain];
-		pieces =[[SetLogic CreateEasyPieces] retain];
-	}
-	else if(gd == 1)
-	{
-		totalPieces = 27;
-		pieces = [[SetLogic CreateMediumPieces] retain];
-		
-	}
+	totalPieces = [SetLogic GetLevelTotal:gl];
+	pieces =[[SetLogic CreateLevelPieces:gl] retain];
 	state = [[SetLogic CreateState:pieces:totalPieces] retain];
 	
 	
 	gameType = gt;
 	selection_a = selection_b = selection_c = -1;
 	
-	[SetLogic CreateState:pieces:state:totalPieces];
 	[startDate release];
 	startDate = [[NSDate date] retain];
 	count = 0;

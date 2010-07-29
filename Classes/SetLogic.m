@@ -12,6 +12,104 @@
 
 @implementation SetLogic
 
+int totalLevels = 45;
+int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
+						1,1, 1,3, 2,2, //level 2  - 1 head, 3 color, 1 shade = 3
+						1,1, 1,3, 3,3, //level 3  - 1 head, 3 color, 1 shade = 3
+						
+						1,1, 1,3, 1,2, //level 4  - 1 head, 3 color, 2 shade = 6
+						1,1, 1,3, 2,3, //level 5  - 1 head, 3 color, 2 shade = 6
+						1,2, 1,3, 1,1, //level 6  - 2 head, 3 color, 1 shade = 6
+						1,2, 1,3, 2,2, //level 7  - 2 head, 3 color, 1 shade = 6
+						1,2, 1,3, 3,3, //level 8  - 2 head, 3 color, 1 shade = 6
+						1,2, 1,3, 3,3, //level 9  - 2 head, 3 color, 1 shade = 6
+						
+						1,2, 1,2, 1,2, //level 10 - 2 head, 2 color, 2 shade = 8
+						1,2, 2,3, 1,2, //level 11 - 2 head, 2 color, 2 shade = 8
+						1,2, 1,2, 2,3, //level 12 - 2 head, 2 color, 2 shade = 8
+						1,2, 2,3, 2,3, //level 13 - 2 head, 2 color, 2 shade = 8
+						2,3, 1,2, 1,2, //level 14 - 2 head, 2 color, 2 shade = 8
+						2,3, 2,3, 1,2, //level 15 - 2 head, 2 color, 2 shade = 8
+						2,3, 1,2, 2,3, //level 16 - 2 head, 2 color, 2 shade = 8
+						2,3, 2,3, 2,3, //level 17 - 2 head, 2 color, 2 shade = 8	
+						
+						1,1, 1,3, 1,3, //level 18 - 1 head, 3 color, 3 shade = 9
+						2,2, 1,3, 1,3, //level 19 - 1 head, 3 color, 3 shade = 9
+						3,3, 1,3, 1,3, //level 20 - 1 head, 3 color, 3 shade = 9
+						1,3, 1,1, 1,3, //level 21 - 3 head, 1 color, 3 shade = 9
+						1,3, 2,2, 1,3, //level 22 - 3 head, 1 color, 3 shade = 9
+						1,3, 3,3, 1,3, //level 23 - 3 head, 1 color, 3 shade = 9
+						1,3, 1,3, 1,1, //level 24 - 3 head, 3 color, 1 shade = 9
+						1,3, 1,3, 2,2, //level 25 - 3 head, 3 color, 1 shade = 9
+						1,3, 1,3, 3,3, //level 26 - 3 head, 3 color, 1 shade = 9
+	
+						1,3, 1,2, 1,2, //level 27 - 3 head, 2 color, 2 shade = 12
+						1,3, 2,3, 1,2, //level 28 - 3 head, 2 color, 2 shade = 12
+						1,3, 1,2, 2,3, //level 29 - 3 head, 2 color, 2 shade = 12
+						1,3, 2,3, 2,3, //level 30 - 3 head, 2 color, 2 shade = 12
+						1,2, 1,3, 1,2, //level 31 - 2 head, 3 color, 2 shade = 12
+						1,2, 1,3, 2,3, //level 32 - 2 head, 3 color, 2 shade = 12
+						2,3, 1,3, 1,2, //level 33 - 2 head, 3 color, 2 shade = 12
+						2,3, 1,3, 2,3, //level 34 - 2 head, 3 color, 2 shade = 12
+						1,2, 1,2, 1,3, //level 35 - 2 head, 2 color, 3 shade = 12
+						2,3, 1,2, 1,3, //level 36 - 2 head, 2 color, 3 shade = 12
+						1,2, 2,3, 1,3, //level 37 - 2 head, 2 color, 3 shade = 12
+						2,3, 2,3, 1,3, //level 38 - 2 head, 2 color, 3 shade = 12
+	
+						1,3, 1,3, 1,2, //level 39 - 3 head, 3 color, 2 shade = 18
+						1,3, 1,3, 2,3, //level 40 - 3 head, 3 color, 2 shade = 18
+						1,3, 1,2, 1,3, //level 41 - 3 head, 2 color, 3 shade = 18
+						1,3, 2,3, 1,3, //level 42 - 3 head, 2 color, 3 shade = 18
+						1,2, 1,3, 1,3, //level 43 - 2 head, 3 color, 3 shade = 18
+						2,3, 1,3, 1,3, //level 44 - 2 head, 3 color, 3 shade = 18
+	
+						1,3, 1,3, 1,3, //level 45 - 3 head, 3 color, 3 shade = 27
+	
+					   };
+
++(int) GetTotalLevels{
+	return totalLevels;
+}
++(int) GetLevelStart:(int) level{
+	return level * 6;
+}
+
++(int) GetLevelTotal:(int) level{
+	int s = [self GetLevelStart:level];
+	int headTotal = (levelstartstop[s+1] - levelstartstop[s]) + 1;
+	int colorTotal = (levelstartstop[s+3] - levelstartstop[s+2]) + 1;
+	int shadeTotal = (levelstartstop[s+5] - levelstartstop[s+4]) + 1;
+	return headTotal * colorTotal * shadeTotal;
+}
+
+/// <summary>
+/// Creates the set of total pieces into an array
+//[shape][color][fill][number]
+/// </summary>
++(NSMutableArray *) CreateLevelPieces:(int) level{
+	NSMutableArray *ret = [[[NSMutableArray alloc]init]autorelease];
+	int s = [self GetLevelStart:level];
+	for (int i = levelstartstop[s]; i <= levelstartstop[s+1]; ++i)
+	{
+		for (int j = levelstartstop[s+2]; j <= levelstartstop[s+3]; ++j)
+		{
+			for (int k = levelstartstop[s+4]; k <= levelstartstop[s+5]; ++k)
+			{
+				for (int l = 1; l <= 1; ++l)
+				{
+					NSString *imagestr = [[[NSString alloc]init]autorelease]; 
+					imagestr = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_A], i,j,k,l];
+					NSString *imagestr2 = [[[NSString alloc]init]autorelease]; 
+					imagestr2 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_B], i,j,k,l];
+					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr :imagestr2];
+					[ret addObject:(SetPiece *)p];					
+				}
+			}
+		}
+	}
+	return ret;
+}
+
 +(SetPiece *) CreatePiece{
 	SetPiece *p = [[[SetPiece alloc] init] autorelease];
 	p.color =  [GameLogic randomNumber:1,3];

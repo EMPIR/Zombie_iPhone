@@ -107,6 +107,33 @@
 +(NSMutableArray *) CreateMediumPieces;
 +(NSMutableArray *) CreateHardPieces;
 
+/*+(NSMutableArray *) CreateLevel1Pieces;
++(NSMutableArray *) CreateLevel2Pieces;
++(NSMutableArray *) CreateLevel3Pieces;
++(NSMutableArray *) CreateLevel4Pieces;
++(NSMutableArray *) CreateLevel5Pieces;
++(NSMutableArray *) CreateLevel6Pieces;
++(NSMutableArray *) CreateLevel7Pieces;
++(NSMutableArray *) CreateLevel8Pieces;
++(NSMutableArray *) CreateLevel9Pieces;
++(NSMutableArray *) CreateLevel10Pieces;
++(NSMutableArray *) CreateLevel11Pieces;
++(NSMutableArray *) CreateLevel12Pieces;
++(NSMutableArray *) CreateLevel13Pieces;
++(NSMutableArray *) CreateLevel14Pieces;
++(NSMutableArray *) CreateLevel15Pieces;
++(NSMutableArray *) CreateLevel16Pieces;
++(NSMutableArray *) CreateLevel17Pieces;
++(NSMutableArray *) CreateLevel18Pieces;
++(NSMutableArray *) CreateLevel19Pieces;
++(NSMutableArray *) CreateLevel20Pieces;
++(NSMutableArray *) CreateLevel21Pieces;
++(NSMutableArray *) CreateLevel22Pieces;*/
+
++(int) GetLevelTotal:(int) level;
++(NSMutableArray *) CreateLevelPieces:(int) level;
++(int) GetLevelStart:(int) level;
+
 +(void) CreateState:(NSMutableArray *)pieces:(NSMutableArray *)state:(int)totalPieces;
 +(void) GetNewPieces:(int)a:(int)b:(int)c: (NSMutableArray *)ret: (NSMutableArray *)pieces:(int) totalPieces;
 +(NSMutableArray *) CreateState:(NSMutableArray *)pieces:(int)totalPieces;
