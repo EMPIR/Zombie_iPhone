@@ -529,7 +529,7 @@ int TOTAL_BRAINS = 60;
 		self.endGameRank1.hidden = NO;
 		self.endGameRank2.hidden = NO;
 		self.endGameRank3.hidden = NO;
-		[appDelegate setCrawlerDifficulty: [appDelegate getCrawlerDifficulty] + 1];
+		[appDelegate setCrawlerDifficulty: [appDelegate getCrawlerDifficulty] + 1 : currentTime];
 
 	}
 	else if(currentTime <=45)
@@ -538,7 +538,7 @@ int TOTAL_BRAINS = 60;
 		[self.gameBG setImage:img];
 		self.endGameRank1.hidden = NO;
 		self.endGameRank2.hidden = NO;
-		[appDelegate setCrawlerDifficulty: [appDelegate getCrawlerDifficulty] + 1];
+		[appDelegate setCrawlerDifficulty: [appDelegate getCrawlerDifficulty] + 1 : currentTime];
 		
 	}
 	else if(currentTime <= 105)
@@ -1506,7 +1506,13 @@ int TOTAL_BRAINS = 60;
 	}
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
-	[appDelegate getCrawlerDifficulty];
+	
+	///test adding, getting and deleting from the levels database
+	//[appDelegate setCrawlerDifficulty:1 : 30];
+	//[appDelegate getCrawlerDifficulty];
+	//[appDelegate deleteCrawlerDifficulty];
+	
+	
 	if(setGame.gameType == 2){
 		
 		[appDelegate PlayBerzerkTrack];

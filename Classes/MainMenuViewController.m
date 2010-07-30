@@ -54,6 +54,8 @@
     [super viewDidLoad];
 	setGame = [[SetGame alloc] init];
 	
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
 }
 
 

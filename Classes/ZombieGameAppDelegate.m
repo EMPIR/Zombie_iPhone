@@ -48,8 +48,127 @@
 	}
 	return self;
 }
+-(BOOL) tableHighScoresExists
+{
+	sqlite3 *database;
+	
+	BOOL ret = FALSE;
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+		// Setup the SQL Statement and compile it for faster access
+		const char *sqlStatement = "SELECT * FROM sqlite_master WHERE type='table' AND name='highScores'";
+		sqlite3_stmt *compiledStatement;
+		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
+			// Loop through the results and add them to the feeds array
+			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+				ret =  TRUE;
+			}
+		}
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+		
+	}
+	sqlite3_close(database);
+	
+		
+	return ret;
+	
+	
+}
 
 
+-(BOOL) tableLevelsExists
+{
+	sqlite3 *database;
+	
+	BOOL ret = FALSE;
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+		// Setup the SQL Statement and compile it for faster access
+		const char *sqlStatement = "SELECT * FROM sqlite_master WHERE type='table' AND name='levels'";
+		sqlite3_stmt *compiledStatement;
+		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
+			// Loop through the results and add them to the feeds array
+			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+				ret =  TRUE;
+			}
+		}
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+		
+	}
+	sqlite3_close(database);
+	
+	
+	return ret;
+	
+	
+	
+	
+}
+
+
+
+
+
+-(void) createTables {
+	if(![self tableHighScoresExists])
+	{
+		sqlite3 *database;
+		
+		BOOL ret = FALSE;
+		// Open the database from the users filessytem
+		if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+			// Setup the SQL Statement and compile it for faster access
+			const char *sqlStatement = "CREATE TABLE highScores (id integer primary key, gameType integer, score integer, date double)";
+			sqlite3_stmt *compiledStatement;
+			if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
+				// Loop through the results and add them to the feeds array
+				if(SQLITE_DONE != sqlite3_step(compiledStatement)){
+					NSAssert1(0, @"Error while deleting data. '%s'", sqlite3_errmsg(database));
+				}
+				else{
+					ret = TRUE;
+					//SQLite provides a method to get the last primary key inserted by using sqlite3_last_insert_rowid
+					//int ID = sqlite3_last_insert_rowid(database);
+				}
+				
+			}
+			// Release the compiled statement from memory
+			sqlite3_finalize(compiledStatement);
+			
+		}
+		sqlite3_close(database);
+	}
+	if(![self tableLevelsExists])
+	{
+		sqlite3 *database;
+		
+		BOOL ret = FALSE;
+		// Open the database from the users filessytem
+		if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+			// Setup the SQL Statement and compile it for faster access
+			const char *sqlStatement = "CREATE TABLE levels (level integer primary key, votes integer)";
+			sqlite3_stmt *compiledStatement;
+			if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
+				// Loop through the results and add them to the feeds array
+				if(SQLITE_DONE != sqlite3_step(compiledStatement)){
+					NSAssert1(0, @"Error while deleting data. '%s'", sqlite3_errmsg(database));
+				}
+				else{
+					ret = TRUE;
+					//SQLite provides a method to get the last primary key inserted by using sqlite3_last_insert_rowid
+					//int ID = sqlite3_last_insert_rowid(database);
+				}
+				
+			}
+			// Release the compiled statement from memory
+			sqlite3_finalize(compiledStatement);
+			
+		}
+		sqlite3_close(database);
+	}
+}
 
 -(void) deleteAllScores {
 	// Setup the database object
@@ -105,7 +224,7 @@
 	
 	// Get the path to the database in the application package
 	NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:databaseName];
-	
+	NSLog(@"Database path: %@", databasePathFromApp);
 	// Copy the database from the package to the users filesystem
 	[fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
 	
@@ -364,7 +483,7 @@
 	// Open the database from the users filessytem
 	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
 		// Setup the SQL Statement and compile it for faster access
-		const char *sqlStatement = "delete from highScores where gameType=10";
+		const char *sqlStatement = "delete from levels";
 		sqlite3_stmt *compiledStatement;
 		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
 			
@@ -385,6 +504,7 @@
 }
 
 
+
 -(int) getCrawlerDifficulty
 {
 	sqlite3 *database;
@@ -394,15 +514,46 @@
 	// Open the database from the users filessytem
 	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
 		// Setup the SQL Statement and compile it for faster access
-		const char *sqlStatement = "select * from highScores where gameType = 10";
+		const char *sqlStatement = "select * from levels order by level desc";
 		sqlite3_stmt *compiledStatement;
 		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
 			// Loop through the results and add them to the feeds array
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
 				// Read the data from the result row
-				//int _id = sqlite3_column_int(compiledStatement,0);
-				//int _gameType = sqlite3_column_int(compiledStatement,1);
-				int _score = sqlite3_column_int(compiledStatement,2);
+				int _level = sqlite3_column_int(compiledStatement,0);
+				int _score = sqlite3_column_int(compiledStatement,1);
+				ret = _level;
+				break;
+			}
+		}
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+		
+	}
+	sqlite3_close(database);
+	crawlerDiff = ret;
+	return ret;
+}
+
+-(int) getCrawlerLevelVotes:(int) level
+{
+	sqlite3 *database;
+	int ret = 0;
+	// Init the animals Array
+	
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+		// Setup the SQL Statement and compile it for faster access
+		const char *sqlStatement = "select * from levels where level = ?";
+		sqlite3_stmt *compiledStatement;
+		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
+			sqlite3_bind_int(compiledStatement, 1, level);
+			
+			// Loop through the results and add them to the feeds array
+			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+				// Read the data from the result row
+				int _level = sqlite3_column_int(compiledStatement,0);
+				int _score = sqlite3_column_int(compiledStatement,1);
 				ret = _score;
 			}
 		}
@@ -416,37 +567,8 @@
 }
 
 
--(void) insertCrawlerDifficulty:(int) score{
-	[self deleteCrawlerDifficulty];
-	// Setup the database object
-	sqlite3 *database;
-	
-	// Open the database from the users filessytem
-	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
-		const char *sql = "insert into highScores(score, gameType) Values(?, ?)";
-		sqlite3_stmt *compiledStatement;
-		
-		if(sqlite3_prepare_v2(database, sql, -1, &compiledStatement, NULL) != SQLITE_OK)
-			NSAssert1(0, @"Error while creating add statement. '%s'", sqlite3_errmsg(database));
-		
-		sqlite3_bind_int(compiledStatement, 1, score);
-		sqlite3_bind_int(compiledStatement,2,10);
-		
-		
-		
-		if(SQLITE_DONE != sqlite3_step(compiledStatement)){
-			NSAssert1(0, @"Error while inserting data. '%s'", sqlite3_errmsg(database));
-		}
-		else{
-			//SQLite provides a method to get the last primary key inserted by using sqlite3_last_insert_rowid
-			//int ID = sqlite3_last_insert_rowid(database);
-		}
-		//Reset the add statement.
-		sqlite3_reset(compiledStatement);		
-	}
-	sqlite3_close(database);
-	
-}
+
+
 
 
 -(NSMutableArray *) getBerserkTopScores
@@ -492,6 +614,39 @@
 	return ret;
 }
 
+-(void) insertCrawlerDifficulty:(int) level: (int) score{
+	
+	// Setup the database object
+	sqlite3 *database;
+	
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+		const char *sql = "insert into levels(level, votes) Values(?, ?)";
+			
+		sqlite3_stmt *compiledStatement;
+		
+		if(sqlite3_prepare_v2(database, sql, -1, &compiledStatement, NULL) != SQLITE_OK)
+			NSAssert1(0, @"Error while creating add statement. '%s'", sqlite3_errmsg(database));
+		
+		sqlite3_bind_int(compiledStatement, 1, level);
+		sqlite3_bind_int(compiledStatement,2,score);
+		
+		
+		
+		if(SQLITE_DONE != sqlite3_step(compiledStatement)){
+			NSAssert1(0, @"Error while inserting data. '%s'", sqlite3_errmsg(database));
+		}
+		else{
+			//SQLite provides a method to get the last primary key inserted by using sqlite3_last_insert_rowid
+			//int ID = sqlite3_last_insert_rowid(database);
+		}
+		//Reset the add statement.
+		sqlite3_reset(compiledStatement);		
+	}
+	sqlite3_close(database);
+	
+}
+
 
 -(void) insertScore:(int) score:(int)gameType:(NSDate *) date{
 	// Setup the database object
@@ -533,11 +688,11 @@
 	return berzerkDiff;
 }
 
--(void) setCrawlerDifficulty:(int) val
+-(void) setCrawlerDifficulty:(int) level:(int)score
 {
-	crawlerDiff = val;
+	crawlerDiff = level;
 	
-	[self insertCrawlerDifficulty:val];
+	[self insertCrawlerDifficulty:level:score];
 }
 
 -(void) setBerzerkDifficulty:(int) val
@@ -620,6 +775,8 @@
 	
 	// Query the database for all animal records and construct the "scores" array
 	[self readScoresFromDatabase];
+	
+	[self createTables];
 	
 	//NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Audio_BG02.mp3", [[NSBundle mainBundle] resourcePath]]];
 	//NSError *error;
