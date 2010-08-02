@@ -198,6 +198,8 @@
 	}
 	sqlite3_close(database);
 	
+	[self deleteCrawlerDifficulty];
+	
 }
 
 

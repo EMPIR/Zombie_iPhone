@@ -84,20 +84,9 @@ typedef enum GameType
 	
 }
 
-//variables: gt = gameType,  gl = game level
--(void) newGame:(int) gt: (int) gl{
+-(void) reset{
 	
-	
-	[pieces release];
-	[state release];
-	totalPieces = [SetLogic GetLevelTotal:gl];
-	pieces =[[SetLogic CreateLevelPieces:gl] retain];
-	state = [[SetLogic CreateState:pieces:totalPieces] retain];
-	
-	
-	gameType = gt;
 	selection_a = selection_b = selection_c = -1;
-	
 	[startDate release];
 	startDate = [[NSDate date] retain];
 	count = 0;
@@ -113,6 +102,41 @@ typedef enum GameType
 	isActive = NO;
 	showHint = YES;
 	isPaused = NO;
+	
+	
+}
+
+//variables: gt = gameType,  gl = game level
+-(void) newGame:(int) gt: (int) gl{
+	
+	
+	[pieces release];
+	[state release];
+	totalPieces = [SetLogic GetLevelTotal:gl];
+	pieces =[[SetLogic CreateLevelPieces:gl] retain];
+	state = [[SetLogic CreateState:pieces:totalPieces] retain];
+	
+	
+	gameType = gt;
+	
+	[self reset];
+	/*selection_a = selection_b = selection_c = -1;
+	
+	[startDate release];
+	startDate = [[NSDate date] retain];
+	count = 0;
+	totalMoves = 10;
+	currentMove = 0;
+	selection_a = -1;
+	selection_b = -1;
+	selection_c = -1;
+	setsComplete = 0;
+	gameTime = 60; //seconds
+	currentTime = 0;
+	
+	isActive = NO;
+	showHint = YES;
+	isPaused = NO;*/
 }
 
 -(BOOL) move:(int) a:(int) b: (int) c{

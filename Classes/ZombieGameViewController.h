@@ -23,6 +23,7 @@
 	IBOutlet UIButton *button12;
 	IBOutlet UIButton *playAgainButton;
 	IBOutlet UIButton *optionsButton;
+	IBOutlet UIButton *goBackButton;
 	
 	IBOutlet UIImageView *selected1View;
 	IBOutlet UIImageView *selected2View;
@@ -203,6 +204,7 @@
 -(IBAction) button12Up:(id)sender;
 
 -(IBAction) finishedButtonDown:(id)sender;
+-(IBAction) replayButtonDown:(id)sender;
 -(IBAction) optionsButtonDown:(id)sender;
 
 -(BOOL) isButtonPressed:(int) index;
@@ -236,6 +238,8 @@
 @property (nonatomic,retain) UIButton *button12;
 @property (nonatomic,retain) UIButton *playAgainButton;
 @property (nonatomic,retain) UIButton *optionsButton;
+@property (nonatomic,retain) UIButton *goBackButton;
+
 
 
 

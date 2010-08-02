@@ -74,5 +74,6 @@
 -(BOOL) isFinished;
 -(void) SwitchPieces;
 -(void) GameLoop;
+-(void) reset;
 
 @end

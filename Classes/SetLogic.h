@@ -130,9 +130,10 @@
 +(NSMutableArray *) CreateLevel21Pieces;
 +(NSMutableArray *) CreateLevel22Pieces;*/
 
-+(int) GetLevelTotal:(int) level;
++(int) GetTotalLevels;
 +(NSMutableArray *) CreateLevelPieces:(int) level;
 +(int) GetLevelStart:(int) level;
++(int) GetLevelTotal:(int) level;
 
 +(void) CreateState:(NSMutableArray *)pieces:(NSMutableArray *)state:(int)totalPieces;
 +(void) GetNewPieces:(int)a:(int)b:(int)c: (NSMutableArray *)ret: (NSMutableArray *)pieces:(int) totalPieces;

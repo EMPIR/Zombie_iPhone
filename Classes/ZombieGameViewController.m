@@ -23,7 +23,7 @@
 
 @implementation ZombieGameViewController
 @synthesize button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,button11,button12;
-@synthesize playAgainButton;
+@synthesize playAgainButton,goBackButton;
 @synthesize selected1View,selected2View,selected3View;
 @synthesize selected4View,selected5View,selected6View;
 @synthesize selected7View,selected8View,selected9View;
@@ -304,6 +304,7 @@ int TOTAL_BRAINS = 60;
 	self.finishedLabel2.hidden = YES;
 	self.moveLabel2.hidden = NO;
 	self.playAgainButton.hidden = YES;
+	self.goBackButton.hidden = YES;
 	self.optionsButton.hidden  = NO;
 	self.endGameRank1.hidden = YES;
 	self.endGameRank2.hidden = YES;
@@ -330,10 +331,10 @@ int TOTAL_BRAINS = 60;
 	NSMutableArray *match = [[setGame getMatch]retain];
 	NSNumber *aa = (NSNumber *) [match objectAtIndex:0];
 	NSNumber *bb = (NSNumber *) [match objectAtIndex:1];
-	NSNumber *cc = (NSNumber *) [match objectAtIndex:2];
+	//NSNumber *cc = (NSNumber *) [match objectAtIndex:2];
 	int a = [aa intValue];
 	int b = [bb intValue];
-	int c = [cc intValue];
+	//int c = [cc intValue];
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	
@@ -476,6 +477,7 @@ int TOTAL_BRAINS = 60;
 	if(!setGame.isActive)
 	{
 		[self HideCards];
+		goBackButton.hidden = NO;
 	}
 	
 
@@ -487,6 +489,18 @@ int TOTAL_BRAINS = 60;
 	[setGame.pressed_state replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:value]];
 }
 
+-(void) incrementCrawlerDifficulty:(int) level:(int) score{
+	
+	
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	if(level+ 1 < [SetLogic GetTotalLevels])
+	{
+		[appDelegate setCrawlerDifficulty:level+1 :score];
+	}
+	
+	
+	
+}
 
 -(void) drawCrawlerFinished
 {
@@ -494,6 +508,7 @@ int TOTAL_BRAINS = 60;
 	self.timerLabel.hidden = YES;
 	self.brainView.hidden = YES;
 	self.playAgainButton.hidden = NO;
+	self.goBackButton.hidden = NO;
 	self.optionsButton.hidden  = YES;
 	self.endGameRank1.hidden = YES;
 	self.endGameRank2.hidden = YES;
@@ -529,7 +544,8 @@ int TOTAL_BRAINS = 60;
 		self.endGameRank1.hidden = NO;
 		self.endGameRank2.hidden = NO;
 		self.endGameRank3.hidden = NO;
-		[appDelegate setCrawlerDifficulty: [appDelegate getCrawlerDifficulty] + 1 : currentTime];
+		[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
+		
 
 	}
 	else if(currentTime <=45)
@@ -538,7 +554,7 @@ int TOTAL_BRAINS = 60;
 		[self.gameBG setImage:img];
 		self.endGameRank1.hidden = NO;
 		self.endGameRank2.hidden = NO;
-		[appDelegate setCrawlerDifficulty: [appDelegate getCrawlerDifficulty] + 1 : currentTime];
+		[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
 		
 	}
 	else if(currentTime <= 105)
@@ -643,7 +659,7 @@ int TOTAL_BRAINS = 60;
 	UIImage *img;
 	if(!setGame.isActive){ 
 		self.playAgainButton.hidden = NO;
-		
+		self.goBackButton.hidden = NO;
 		if(gamePlacement == 1)//You Win!
 		{
 			
@@ -1013,6 +1029,21 @@ int TOTAL_BRAINS = 60;
 	return NO;
 }
 
+-(IBAction) replayButtonDown:(id)sender{
+	self.m_bGun.hidden = YES;
+	[gameTimer invalidate];
+	[gameTimer release];
+	setGame.isActive = NO;
+	//ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	//[appDelegate PlayNonGameTrack];
+	//[appDelegate StopEatingTrack];
+	//[self dismissModalViewControllerAnimated:NO];
+	
+	[self viewWillAppear:false];
+	
+}
+
+
 -(IBAction) finishedButtonDown:(id)sender{
 	
 	self.m_bGun.hidden = YES;
@@ -1039,12 +1070,14 @@ int TOTAL_BRAINS = 60;
 		[appDelegate ShowHint:YES];
 		[appDelegate PauseSound:NO];
 		
+		
 	}
 	else {
 		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_PAUSE_ON]];
 		[sender setImage:img forState:UIControlStateNormal];
 		[appDelegate ShowHint:NO];
 		[appDelegate PauseSound:YES];
+		
 		[self drawPieces];
 		
 	}
@@ -1475,6 +1508,8 @@ int TOTAL_BRAINS = 60;
 	showPiece2 = 0;
 	showPiece3 = 0;
 	
+
+	[setGame reset];
 	twitchRate = 30;
 	setGame.isActive = YES;
 	
@@ -1505,8 +1540,16 @@ int TOTAL_BRAINS = 60;
 #endif		
 	}
 	
-	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	UIImage *img;
 	
+	img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_PAUSE_OFF]];
+	
+		
+	
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	[optionsButton setImage:img forState:UIControlStateNormal];
+	[appDelegate ShowHint:YES];
+	[appDelegate PauseSound:NO];
 	///test adding, getting and deleting from the levels database
 	//[appDelegate setCrawlerDifficulty:1 : 30];
 	//[appDelegate getCrawlerDifficulty];
@@ -1522,7 +1565,6 @@ int TOTAL_BRAINS = 60;
 	}
 
 	
-	UIImage *img;
 	
 	//
 	
@@ -1600,6 +1642,7 @@ int TOTAL_BRAINS = 60;
 	[button11 release];
 	[button12 release];
 	[playAgainButton release];
+	[goBackButton release];
 	[optionsButton release];
 	[selected1View release];
 	[selected2View release];

@@ -645,6 +645,33 @@
 							<string key="NSResourceName">b_PlayAgain_off.png</string>
 						</object>
 					</object>
+					<object class="IBUIButton" id="261944383">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">-2147483356</int>
+						<string key="NSFrame">{{274.5, 275}, {60, 33}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIFont" ref="1061433150"/>
+						<string key="IBUINormalTitle">Main Menu</string>
+						<reference key="IBUIHighlightedTitleColor" ref="22053288"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="709534607"/>
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="134760673">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">b_Back_on.png</string>
+						</object>
+						<reference key="IBUISelectedImage" ref="134760673"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">b_Back_off.png</string>
+						</object>
+					</object>
 					<object class="IBUIButton" id="673242110">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">-2147483356</int>
@@ -1540,15 +1567,6 @@
 					<int key="connectionID">189</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">finishedButtonDown:</string>
-						<reference key="source" ref="603942376"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">190</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">optionsButton</string>
 						<reference key="source" ref="372490531"/>
@@ -1596,6 +1614,32 @@
 						<reference key="destination" ref="873200380"/>
 					</object>
 					<int key="connectionID">201</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">finishedButtonDown:</string>
+						<reference key="source" ref="261944383"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">213</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">replayButtonDown:</string>
+						<reference key="source" ref="603942376"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">215</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">goBackButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="261944383"/>
+					</object>
+					<int key="connectionID">217</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1671,6 +1715,7 @@
 							<reference ref="425338597"/>
 							<reference ref="473984963"/>
 							<reference ref="673242110"/>
+							<reference ref="261944383"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1914,6 +1959,11 @@
 						<reference key="object" ref="873200380"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">212</int>
+						<reference key="object" ref="261944383"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -1950,6 +2000,7 @@
 					<string>197.IBPluginDependency</string>
 					<string>198.IBPluginDependency</string>
 					<string>21.IBPluginDependency</string>
+					<string>212.IBPluginDependency</string>
 					<string>22.IBPluginDependency</string>
 					<string>49.IBPluginDependency</string>
 					<string>53.IBPluginDependency</string>
@@ -2012,7 +2063,8 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{312, 481}, {480, 320}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>{{637, 448}, {480, 320}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -2045,7 +2097,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">211</int>
+			<int key="maxID">217</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2083,9 +2135,11 @@
 							<string>button9Up:</string>
 							<string>finishedButtonDown:</string>
 							<string>optionsButtonDown:</string>
+							<string>replayButtonDown:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -2144,6 +2198,7 @@
 							<string>button9Up:</string>
 							<string>finishedButtonDown:</string>
 							<string>optionsButtonDown:</string>
+							<string>replayButtonDown:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -2251,6 +2306,10 @@
 								<string key="name">optionsButtonDown:</string>
 								<string key="candidateClassName">id</string>
 							</object>
+							<object class="IBActionInfo">
+								<string key="name">replayButtonDown:</string>
+								<string key="candidateClassName">id</string>
+							</object>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
@@ -2281,6 +2340,7 @@
 							<string>finishedLabel</string>
 							<string>finishedLabel2</string>
 							<string>gameBG</string>
+							<string>goBackButton</string>
 							<string>hint10View</string>
 							<string>hint11View</string>
 							<string>hint12View</string>
@@ -2337,6 +2397,7 @@
 							<string>UILabel</string>
 							<string>UILabel</string>
 							<string>UIImageView</string>
+							<string>UIButton</string>
 							<string>UIImageView</string>
 							<string>UIImageView</string>
 							<string>UIImageView</string>
@@ -2396,6 +2457,7 @@
 							<string>finishedLabel</string>
 							<string>finishedLabel2</string>
 							<string>gameBG</string>
+							<string>goBackButton</string>
 							<string>hint10View</string>
 							<string>hint11View</string>
 							<string>hint12View</string>
@@ -2523,6 +2585,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">gameBG</string>
 								<string key="candidateClassName">UIImageView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">goBackButton</string>
+								<string key="candidateClassName">UIButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">hint10View</string>
@@ -2896,6 +2962,8 @@
 				<string>EndGameClassic01.jpg</string>
 				<string>EndGameClassic02.jpg</string>
 				<string>EndGameClassic03.jpg</string>
+				<string>b_Back_off.png</string>
+				<string>b_Back_on.png</string>
 				<string>b_Pause_off.png</string>
 				<string>b_PlayAgain_off.png</string>
 				<string>b_PlayAgain_on.png</string>
@@ -2910,6 +2978,8 @@
 				<string>{78, 95}</string>
 				<string>{78, 95}</string>
 				<string>{78, 95}</string>
+				<string>{61, 33}</string>
+				<string>{61, 33}</string>
 				<string>{70, 33}</string>
 				<string>{123, 33}</string>
 				<string>{123, 33}</string>
