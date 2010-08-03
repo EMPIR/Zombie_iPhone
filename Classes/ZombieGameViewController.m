@@ -890,12 +890,12 @@ int TOTAL_BRAINS = 60;
 						
 						if(setGame.gameType == 1)
 						{
-							NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
+							//NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
 							//NSLog(@"Game Over, here was your time in seconds: %@", message);
 							//[appDelegate readScoresFromDatabase];
-							gamePlacement = (int) [appDelegate getCrawlerPlacement:(int)-timeInterval];
+							gamePlacement = (int) [appDelegate getCrawlerPlacement:(int)timeRemaining];
 							
-							[appDelegate insertScore:-timeInterval :setGame.gameType :setGame.finishedDate];
+							[appDelegate insertScore:timeRemaining :setGame.gameType :setGame.finishedDate];
 							
 							
 							
