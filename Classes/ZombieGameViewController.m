@@ -514,14 +514,15 @@ int TOTAL_BRAINS = 60;
 	self.endGameRank2.hidden = YES;
 	self.endGameRank3.hidden = YES;
 	
-	NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
-	NSString *message =[[NSString alloc] initWithFormat:@"Your Time: %0.0f", -timeInterval];
+	//NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
+	
+	NSString *message =[[NSString alloc] initWithFormat:@"Your Time: %0.0f", timeRemaining];
 	//NSLog(@"Game Over, here was your time in seconds: %@", message);
 	[finishedLabel setText:message];
 	[message release];
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
-	if(-timeInterval > 45)
+	if(timeRemaining > 45)
 	{
 		//message = [[NSString alloc] initWithFormat:@"Your Placement: %d", gamePlacement];
 		message = [[NSString alloc] initWithFormat:@"Keep Reaching for the Next Level!"];
@@ -533,7 +534,7 @@ int TOTAL_BRAINS = 60;
 	[message release];
 		
 	//int top5Avg = (int) [appDelegate getCrawlerTopFiveAverage];
-	int currentTime = -timeInterval;
+	int currentTime =  timeRemaining;
 	
 	
 	UIImage *img;
@@ -1034,11 +1035,17 @@ int TOTAL_BRAINS = 60;
 	[gameTimer invalidate];
 	[gameTimer release];
 	setGame.isActive = NO;
-	//ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	//[appDelegate PlayNonGameTrack];
 	//[appDelegate StopEatingTrack];
 	//[self dismissModalViewControllerAnimated:NO];
-	
+	if(setGame.gameType == 1){
+		[setGame newGame:1:[appDelegate getCrawlerDifficulty]];
+	}
+	else {
+		[setGame newGame:2:[appDelegate getBerzerkDifficulty]];
+	}
+
 	[self viewWillAppear:false];
 	
 }
@@ -1474,6 +1481,7 @@ int TOTAL_BRAINS = 60;
 	if(setGame.gameType == 1){
 		randomTwitch  = randomTwitch % twitchRate;
 		brain_randomTwitch = brain_randomTwitch % brain_twitchRate;
+		setGame.gameTime +=0.01;
 	}
 	else if (setGame.gameType == 2){
 		
@@ -1501,6 +1509,7 @@ int TOTAL_BRAINS = 60;
 }
 
 -(void) viewWillAppear:(BOOL)animated{
+	
 	timeSinceLastRightAnswer = 0;
 	hintVisible = NO;
 	//[self drawPieces];

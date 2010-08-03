@@ -9,18 +9,20 @@
 
 @class ZombieGameViewController;
 @class HowToPlayViewController;
+@class CrawlerLevelsViewController;
 @class SetGame;
 
 
 @interface MainMenuViewController : UIViewController {
 	ZombieGameViewController *viewController;
+	CrawlerLevelsViewController *crawlerLevelsController;
 	HowToPlayViewController *howToPlayController;
 	SetGame *setGame;
 }
 @property (nonatomic, retain) SetGame *setGame;
 @property (nonatomic, retain) IBOutlet ZombieGameViewController *viewController;
 @property (nonatomic, retain) IBOutlet HowToPlayViewController *howToPlayController;
-
+@property (nonatomic, retain) IBOutlet CrawlerLevelsViewController *crawlerLevelsController;
 
 -(IBAction) play:(id) sender;
 

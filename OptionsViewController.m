@@ -36,6 +36,8 @@
 	
 	NSLog(@"%",path);
 	
+	
+	
 	//declare a system sound id
 	SystemSoundID soundID;
 	
@@ -47,7 +49,7 @@
 	
 	//Use audio services to play the sound
 	AudioServicesPlaySystemSound(soundID);
-	
+	[path release];
 	
 }
 

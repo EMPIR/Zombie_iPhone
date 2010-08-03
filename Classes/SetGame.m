@@ -68,6 +68,7 @@ typedef enum GameType
 		selection_b = -1;
 		selection_c = -1;
 		setsComplete = 0;
+		totalTime = 0;
 		gameTime = 60; //seconds
 		currentTime = 0;
 		
@@ -89,6 +90,7 @@ typedef enum GameType
 	selection_a = selection_b = selection_c = -1;
 	[startDate release];
 	startDate = [[NSDate date] retain];
+	totalTime = 0;
 	count = 0;
 	totalMoves = 10;
 	currentMove = 0;

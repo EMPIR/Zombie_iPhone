@@ -32,6 +32,7 @@
 	
 	NSDate *startDate;
 	NSDate *finishedDate;
+	double totalTime;
 	
 }
 

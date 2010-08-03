@@ -450,7 +450,7 @@
 					<object class="IBUIImageView" id="345296639">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">-2147483356</int>
-						<string key="NSFrame">{{133, 124}, {105, 70}}</string>
+						<string key="NSFrame">{{129.5, 124}, {105, 70}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -645,7 +645,7 @@
 							<string key="NSResourceName">b_PlayAgain_off.png</string>
 						</object>
 					</object>
-					<object class="IBUIButton" id="261944383">
+					<object class="IBUIButton" id="819858459">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">-2147483356</int>
 						<string key="NSFrame">{{274.5, 275}, {60, 33}}</string>
@@ -662,11 +662,11 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="709534607"/>
-						<object class="NSCustomResource" key="IBUIHighlightedImage" id="134760673">
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="199138788">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">b_Back_on.png</string>
 						</object>
-						<reference key="IBUISelectedImage" ref="134760673"/>
+						<reference key="IBUISelectedImage" ref="199138788"/>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">b_Back_off.png</string>
@@ -1618,7 +1618,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">finishedButtonDown:</string>
-						<reference key="source" ref="261944383"/>
+						<reference key="source" ref="819858459"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -1637,7 +1637,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">goBackButton</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="261944383"/>
+						<reference key="destination" ref="819858459"/>
 					</object>
 					<int key="connectionID">217</int>
 				</object>
@@ -1715,7 +1715,7 @@
 							<reference ref="425338597"/>
 							<reference ref="473984963"/>
 							<reference ref="673242110"/>
-							<reference ref="261944383"/>
+							<reference ref="819858459"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1961,7 +1961,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">212</int>
-						<reference key="object" ref="261944383"/>
+						<reference key="object" ref="819858459"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 				</object>

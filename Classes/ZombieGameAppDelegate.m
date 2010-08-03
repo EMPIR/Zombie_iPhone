@@ -44,6 +44,7 @@
 		volume = 0.5;
 		showHint = YES;
 		crawlerDiff = 12;
+		berzerkDiff = 44;
 		
 	}
 	return self;

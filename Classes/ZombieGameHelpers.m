@@ -48,6 +48,8 @@
 	AudioServicesPlaySystemSound(soundID);
 	//[filename release];
 	
+	[path release];
+	
 }
 
 
