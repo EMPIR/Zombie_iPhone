@@ -14,10 +14,12 @@
 		270D046C11AF619000CF8DE8 /* ZombieGameHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D046B11AF619000CF8DE8 /* ZombieGameHelpers.m */; };
 		271F9A3D11FD2D2A00DAADDE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 271F9A3C11FD2D2A00DAADDE /* Icon.png */; };
 		2741D1661186723D001BD582 /* GameLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2741D1651186723D001BD582 /* GameLogic.m */; };
+		2754AFEE121CCC8000CFC130 /* b_MainMenuL_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 2754AFEA121CCC8000CFC130 /* b_MainMenuL_on.png */; };
+		2754AFEF121CCC8000CFC130 /* b_MainMenuL_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2754AFEB121CCC8000CFC130 /* b_MainMenuL_off.png */; };
+		2754AFF0121CCC8000CFC130 /* b_ReturnGame_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 2754AFEC121CCC8000CFC130 /* b_ReturnGame_on.png */; };
+		2754AFF1121CCC8000CFC130 /* b_ReturnGame_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2754AFED121CCC8000CFC130 /* b_ReturnGame_off.png */; };
 		276069F6118921C2008E1327 /* SetPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 276069F5118921C2008E1327 /* SetPiece.m */; };
 		27606A83118BC498008E1327 /* SetLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 27606A82118BC498008E1327 /* SetLogic.m */; };
-		276E3DFD1207ABAC000E1AD1 /* CrawlerLevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E3DFB1207ABAC000E1AD1 /* CrawlerLevelsViewController.m */; };
-		276E3DFE1207ABAC000E1AD1 /* CrawlerLevelsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276E3DFC1207ABAC000E1AD1 /* CrawlerLevelsViewController.xib */; };
 		2772D1F511C9AB48009C23BD /* StringConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 2772D1F411C9AB48009C23BD /* StringConst.m */; };
 		27768C1C119E2F830027AE23 /* ZombieAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 27768C1B119E2F830027AE23 /* ZombieAudio.m */; };
 		27768FFB11A0DC640027AE23 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27768FF911A0DC640027AE23 /* OptionsViewController.m */; };
@@ -695,13 +697,14 @@
 		271F9A3C11FD2D2A00DAADDE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = iPad/Icon.png; sourceTree = "<group>"; };
 		2741D1641186723D001BD582 /* GameLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLogic.h; sourceTree = "<group>"; };
 		2741D1651186723D001BD582 /* GameLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLogic.m; sourceTree = "<group>"; };
+		2754AFEA121CCC8000CFC130 /* b_MainMenuL_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_MainMenuL_on.png; sourceTree = "<group>"; };
+		2754AFEB121CCC8000CFC130 /* b_MainMenuL_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_MainMenuL_off.png; sourceTree = "<group>"; };
+		2754AFEC121CCC8000CFC130 /* b_ReturnGame_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_ReturnGame_on.png; sourceTree = "<group>"; };
+		2754AFED121CCC8000CFC130 /* b_ReturnGame_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_ReturnGame_off.png; sourceTree = "<group>"; };
 		276069F4118921C2008E1327 /* SetPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPiece.h; sourceTree = "<group>"; };
 		276069F5118921C2008E1327 /* SetPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPiece.m; sourceTree = "<group>"; };
 		27606A81118BC498008E1327 /* SetLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetLogic.h; sourceTree = "<group>"; };
 		27606A82118BC498008E1327 /* SetLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetLogic.m; sourceTree = "<group>"; };
-		276E3DFA1207ABAC000E1AD1 /* CrawlerLevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrawlerLevelsViewController.h; sourceTree = "<group>"; };
-		276E3DFB1207ABAC000E1AD1 /* CrawlerLevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrawlerLevelsViewController.m; sourceTree = "<group>"; };
-		276E3DFC1207ABAC000E1AD1 /* CrawlerLevelsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CrawlerLevelsViewController.xib; path = Classes/CrawlerLevelsViewController.xib; sourceTree = "<group>"; };
 		2772D1F311C9AB48009C23BD /* StringConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringConst.h; sourceTree = "<group>"; };
 		2772D1F411C9AB48009C23BD /* StringConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringConst.m; sourceTree = "<group>"; };
 		27768C1A119E2F830027AE23 /* ZombieAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZombieAudio.h; sourceTree = "<group>"; };
@@ -1426,8 +1429,6 @@
 				27E7A3DF11AC5850006E622E /* BrainPiece.m */,
 				2772D1F311C9AB48009C23BD /* StringConst.h */,
 				2772D1F411C9AB48009C23BD /* StringConst.m */,
-				276E3DFA1207ABAC000E1AD1 /* CrawlerLevelsViewController.h */,
-				276E3DFB1207ABAC000E1AD1 /* CrawlerLevelsViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1444,6 +1445,10 @@
 		277C1E9311CD735000FC01C0 /* MEDIA_Zombie_iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				2754AFEA121CCC8000CFC130 /* b_MainMenuL_on.png */,
+				2754AFEB121CCC8000CFC130 /* b_MainMenuL_off.png */,
+				2754AFEC121CCC8000CFC130 /* b_ReturnGame_on.png */,
+				2754AFED121CCC8000CFC130 /* b_ReturnGame_off.png */,
 				277C1E9411CD735000FC01C0 /* 21.wav */,
 				277C1E9511CD735000FC01C0 /* 22.wav */,
 				277C1E9611CD735000FC01C0 /* 23.wav */,
@@ -2189,7 +2194,6 @@
 				27C2AEC5119A369D0049EFEB /* Data.db */,
 				2899E5210DE3E06400AC0155 /* ZombieGameViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				276E3DFC1207ABAC000E1AD1 /* CrawlerLevelsViewController.xib */,
 				27CFFB4D119CF423002FD064 /* HighScoresViewController.xib */,
 				2776922D11A2420D0027AE23 /* HowToPlayViewController.xib */,
 				27768FFA11A0DC640027AE23 /* OptionsViewController.xib */,
@@ -2653,6 +2657,10 @@
 				277C217911CD735000FC01C0 /* wilhelm.wav in Resources */,
 				277C217A11CD735000FC01C0 /* wrong.wav in Resources */,
 				277C217B11CD735000FC01C0 /* zombiesEating.mp3 in Resources */,
+				2754AFEE121CCC8000CFC130 /* b_MainMenuL_on.png in Resources */,
+				2754AFEF121CCC8000CFC130 /* b_MainMenuL_off.png in Resources */,
+				2754AFF0121CCC8000CFC130 /* b_ReturnGame_on.png in Resources */,
+				2754AFF1121CCC8000CFC130 /* b_ReturnGame_off.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2908,7 +2916,6 @@
 				277C23A111D195DB00FC01C0 /* ipad_brainPump.wav in Resources */,
 				277C23A211D195DB00FC01C0 /* ipad_brainExplode.wav in Resources */,
 				271F9A3D11FD2D2A00DAADDE /* Icon.png in Resources */,
-				276E3DFE1207ABAC000E1AD1 /* CrawlerLevelsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2962,7 +2969,6 @@
 				27E645B411C1799700D91ADF /* BrainPiece.m in Sources */,
 				27E645B511C1799700D91ADF /* ZombieGameHelpers.m in Sources */,
 				277C219511CD759500FC01C0 /* StringConst.m in Sources */,
-				276E3DFD1207ABAC000E1AD1 /* CrawlerLevelsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
