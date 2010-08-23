@@ -27,11 +27,11 @@
 	NSString *path;
 	
 	
-	path = [NSString stringWithFormat:@"%@%@",
+	path = [[NSString stringWithFormat:@"%@%@",
 			[[NSBundle mainBundle] resourcePath],
-			filename];
+			filename] retain];
 	
-	
+	[filename release];
 	
 	
 	NSLog(@"%",path);

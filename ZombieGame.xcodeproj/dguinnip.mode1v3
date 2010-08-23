@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>2754AFE5121CC77500CFC130</string>
+						<string>2754B1291222208F00CFC130</string>
 						<key>history</key>
 						<array>
 							<string>2720D6E8121B1A9B005AAFBA</string>
@@ -307,19 +307,21 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
-								<string>19C28FACFE9D520D11CA2CBB</string>
+								<string>27E645C211C1799700D91ADF</string>
+								<string>27808BF811C7150400306D7B</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FAAC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>37</integer>
+									<integer>10</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {293, 685}}</string>
+							<string>{{0, 50}, {293, 685}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -356,7 +358,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>MainMenuViewController.m</string>
+								<string>ZombieGameViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -364,11 +366,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>MainMenuViewController.m</string>
+										<string>ZombieGameViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2754AFE4121CC77500CFC130</string>
+										<string>2754B1281222208F00CFC130</string>
 										<key>history</key>
 										<array>
 											<string>276069871189182A008E1327</string>
@@ -396,7 +398,6 @@
 											<string>271F9A5811FFCFEC00DAADDE</string>
 											<string>271F9B1D12010B3D00DAADDE</string>
 											<string>271F9BDA1201323600DAADDE</string>
-											<string>271F9C0B12013E3900DAADDE</string>
 											<string>271F9DE712026E5A00DAADDE</string>
 											<string>276E3D5A12065A31000E1AD1</string>
 											<string>276E3D5C12065A31000E1AD1</string>
@@ -407,12 +408,13 @@
 											<string>276E3E5E1207B584000E1AD1</string>
 											<string>276E3E941207BD05000E1AD1</string>
 											<string>276E3EEF1207C75B000E1AD1</string>
-											<string>276E3F041207CC61000E1AD1</string>
 											<string>276E3F101207CCC4000E1AD1</string>
-											<string>2720D6E0121B1A9A005AAFBA</string>
-											<string>2754AFB5121CC51C00CFC130</string>
 											<string>2754AFC3121CC5BC00CFC130</string>
-											<string>2754AFCB121CC5F200CFC130</string>
+											<string>2754B019122205D000CFC130</string>
+											<string>2754B0E012221E4B00CFC130</string>
+											<string>2754B0F812221F4600CFC130</string>
+											<string>2754B11712221FFB00CFC130</string>
+											<string>2754B11812221FFB00CFC130</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -616,8 +618,8 @@
 		<string>2754AF99121CC28E00CFC130</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>27F6E11B11852B5A007705A9</string>
 		<string>2795840D11E55A5600AF6167</string>
+		<string>27F6E11B11852B5A007705A9</string>
 		<string>/Users/dguinnip/Build/ZombieGame/ZombieGame.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -637,12 +639,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>ZombieGameViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -711,7 +715,7 @@
 			<key>WindowToolGUID</key>
 			<string>27F6E11B11852B5A007705A9</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

@@ -22,8 +22,12 @@
 	IBOutlet UIButton *button11;
 	IBOutlet UIButton *button12;
 	IBOutlet UIButton *playAgainButton;
-	IBOutlet UIButton *optionsButton;
+	//IBOutlet UIButton *optionsButton;
 	IBOutlet UIButton *goBackButton;
+	IBOutlet UIButton *mainMenuPlank;
+	IBOutlet UIButton *returnGamePlank;
+	IBOutlet UIButton *pauseButton;
+	
 	
 	IBOutlet UIImageView *selected1View;
 	IBOutlet UIImageView *selected2View;
@@ -237,8 +241,12 @@
 @property (nonatomic,retain) UIButton *button11;
 @property (nonatomic,retain) UIButton *button12;
 @property (nonatomic,retain) UIButton *playAgainButton;
-@property (nonatomic,retain) UIButton *optionsButton;
+//@property (nonatomic,retain) UIButton *optionsButton;
 @property (nonatomic,retain) UIButton *goBackButton;
+@property (nonatomic,retain) UIButton *mainMenuPlank;
+@property (nonatomic,retain) UIButton *returnGamePlank;
+@property (nonatomic,retain) UIButton *pauseButton;
+
 
 
 

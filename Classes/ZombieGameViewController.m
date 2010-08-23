@@ -23,7 +23,7 @@
 
 @implementation ZombieGameViewController
 @synthesize button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,button11,button12;
-@synthesize playAgainButton,goBackButton;
+@synthesize playAgainButton,goBackButton, mainMenuPlank, returnGamePlank, pauseButton;
 @synthesize selected1View,selected2View,selected3View;
 @synthesize selected4View,selected5View,selected6View;
 @synthesize selected7View,selected8View,selected9View;
@@ -33,7 +33,7 @@
 @synthesize hint4View,hint5View,hint6View;
 @synthesize hint7View,hint8View,hint9View;
 @synthesize hint10View,hint11View,hint12View;
-@synthesize finishedLabel, finishedLabel2, moveLabel,moveLabel2,timerLabel,optionsButton;
+@synthesize finishedLabel, finishedLabel2, moveLabel,moveLabel2,timerLabel;
 @synthesize endGameRank1, endGameRank2, endGameRank3;
 @synthesize setGame;
 @synthesize firstClick, showWrong, showRight, showPiece1, showPiece2, showPiece3;
@@ -305,7 +305,9 @@ int TOTAL_BRAINS = 60;
 	self.moveLabel2.hidden = NO;
 	self.playAgainButton.hidden = YES;
 	self.goBackButton.hidden = YES;
-	self.optionsButton.hidden  = NO;
+	self.mainMenuPlank.hidden = YES;
+	self.returnGamePlank.hidden = YES;
+	self.pauseButton.hidden = NO;
 	self.endGameRank1.hidden = YES;
 	self.endGameRank2.hidden = YES;
 	self.endGameRank3.hidden = YES;
@@ -477,7 +479,10 @@ int TOTAL_BRAINS = 60;
 	if(!setGame.isActive)
 	{
 		[self HideCards];
-		goBackButton.hidden = NO;
+		goBackButton.hidden = YES;
+		self.mainMenuPlank.hidden = NO;
+		self.returnGamePlank.hidden = NO;
+		pauseButton.hidden = YES;
 	}
 	
 
@@ -488,6 +493,7 @@ int TOTAL_BRAINS = 60;
 {
 	[setGame.pressed_state replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:value]];
 }
+
 
 -(void) incrementCrawlerDifficulty:(int) level:(int) score{
 	
@@ -509,7 +515,9 @@ int TOTAL_BRAINS = 60;
 	self.brainView.hidden = YES;
 	self.playAgainButton.hidden = NO;
 	self.goBackButton.hidden = NO;
-	self.optionsButton.hidden  = YES;
+	self.mainMenuPlank.hidden = YES;
+	self.returnGamePlank.hidden = YES;
+	self.pauseButton.hidden = YES;
 	self.endGameRank1.hidden = YES;
 	self.endGameRank2.hidden = YES;
 	self.endGameRank3.hidden = YES;
@@ -632,7 +640,7 @@ int TOTAL_BRAINS = 60;
 	
 	
 	self.timerLabel.hidden = YES;
-	self.optionsButton.hidden  = YES;
+	self.pauseButton.hidden = YES;
 	self.endGameRank1.hidden = YES;
 	self.endGameRank2.hidden = YES;
 	self.endGameRank3.hidden = YES;
@@ -661,6 +669,8 @@ int TOTAL_BRAINS = 60;
 	if(!setGame.isActive){ 
 		self.playAgainButton.hidden = NO;
 		self.goBackButton.hidden = NO;
+		self.mainMenuPlank.hidden = YES;
+		self.returnGamePlank.hidden = YES;
 		if(gamePlacement == 1)//You Win!
 		{
 			
@@ -1070,20 +1080,23 @@ int TOTAL_BRAINS = 60;
 	
 	setGame.isActive = !setGame.isActive;
 	
-	UIImage *img;
+	//UIImage *img;
 	if(setGame.isActive){
-		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_PAUSE_OFF]];
-		[sender setImage:img forState:UIControlStateNormal];
+		//img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_PAUSE_OFF]];
+		//[sender setImage:img forState:UIControlStateNormal];
 		[appDelegate ShowHint:YES];
 		[appDelegate PauseSound:NO];
+		pauseButton.hidden = NO;
 		
 		
 	}
 	else {
-		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_PAUSE_ON]];
-		[sender setImage:img forState:UIControlStateNormal];
+		//img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_PAUSE_ON]];
+		//[sender setImage:img forState:UIControlStateNormal];
 		[appDelegate ShowHint:NO];
 		[appDelegate PauseSound:YES];
+		pauseButton.hidden = YES;
+		
 		
 		[self drawPieces];
 		
@@ -1556,7 +1569,7 @@ int TOTAL_BRAINS = 60;
 		
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
-	[optionsButton setImage:img forState:UIControlStateNormal];
+	
 	[appDelegate ShowHint:YES];
 	[appDelegate PauseSound:NO];
 	///test adding, getting and deleting from the levels database
@@ -1652,7 +1665,9 @@ int TOTAL_BRAINS = 60;
 	[button12 release];
 	[playAgainButton release];
 	[goBackButton release];
-	[optionsButton release];
+	[mainMenuPlank release];
+	[returnGamePlank release];
+	[pauseButton release];
 	[selected1View release];
 	[selected2View release];
 	[selected3View release];
