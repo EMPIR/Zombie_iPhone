@@ -645,6 +645,33 @@
 							<string key="NSResourceName">b_PlayAgain_off.png</string>
 						</object>
 					</object>
+					<object class="IBUIButton" id="131048735">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">-2147483356</int>
+						<string key="NSFrame">{{137, 100}, {206, 64}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIFont" ref="1061433150"/>
+						<string key="IBUINormalTitle">Main Menu</string>
+						<reference key="IBUIHighlightedTitleColor" ref="22053288"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="709534607"/>
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="191471227">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">b_ReturnGame_on.png</string>
+						</object>
+						<reference key="IBUISelectedImage" ref="191471227"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">b_ReturnGame_off.png</string>
+						</object>
+					</object>
 					<object class="IBUIButton" id="819858459">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">-2147483356</int>
@@ -670,6 +697,33 @@
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">b_Back_off.png</string>
+						</object>
+					</object>
+					<object class="IBUIButton" id="331711665">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">-2147483356</int>
+						<string key="NSFrame">{{160, 188}, {160, 60}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIFont" ref="1061433150"/>
+						<string key="IBUINormalTitle">Main Menu</string>
+						<reference key="IBUIHighlightedTitleColor" ref="22053288"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="709534607"/>
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="785739396">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">b_MainMenuL_on.png</string>
+						</object>
+						<reference key="IBUISelectedImage" ref="785739396"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">b_MainMenuL_off.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="673242110">
@@ -737,7 +791,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">EndGameClassic01.jpg</string>
+							<string key="NSResourceName">EndGameClassic01.png</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="1044150128">
@@ -749,7 +803,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">EndGameClassic02.jpg</string>
+							<string key="NSResourceName">EndGameClassic02.png</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="873200380">
@@ -761,7 +815,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">EndGameClassic03.jpg</string>
+							<string key="NSResourceName">EndGameClassic03.png</string>
 						</object>
 					</object>
 				</object>
@@ -1567,14 +1621,6 @@
 					<int key="connectionID">189</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">optionsButton</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="673242110"/>
-					</object>
-					<int key="connectionID">193</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">optionsButtonDown:</string>
 						<reference key="source" ref="673242110"/>
@@ -1640,6 +1686,39 @@
 						<reference key="destination" ref="819858459"/>
 					</object>
 					<int key="connectionID">217</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">finishedButtonDown:</string>
+						<reference key="source" ref="331711665"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">221</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">mainMenuPlank</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="331711665"/>
+					</object>
+					<int key="connectionID">222</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">returnGamePlank</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="131048735"/>
+					</object>
+					<int key="connectionID">223</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">pauseButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="673242110"/>
+					</object>
+					<int key="connectionID">224</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1716,6 +1795,8 @@
 							<reference ref="473984963"/>
 							<reference ref="673242110"/>
 							<reference ref="819858459"/>
+							<reference ref="131048735"/>
+							<reference ref="331711665"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1964,6 +2045,16 @@
 						<reference key="object" ref="819858459"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">218</int>
+						<reference key="object" ref="131048735"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">220</int>
+						<reference key="object" ref="331711665"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -2001,7 +2092,9 @@
 					<string>198.IBPluginDependency</string>
 					<string>21.IBPluginDependency</string>
 					<string>212.IBPluginDependency</string>
+					<string>218.IBPluginDependency</string>
 					<string>22.IBPluginDependency</string>
+					<string>220.IBPluginDependency</string>
 					<string>49.IBPluginDependency</string>
 					<string>53.IBPluginDependency</string>
 					<string>55.IBPluginDependency</string>
@@ -2064,7 +2157,9 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{637, 448}, {480, 320}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>{{534, 413}, {480, 320}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -2097,7 +2192,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">217</int>
+			<int key="maxID">224</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2353,10 +2448,12 @@
 							<string>hint7View</string>
 							<string>hint8View</string>
 							<string>hint9View</string>
+							<string>mainMenuPlank</string>
 							<string>moveLabel</string>
 							<string>moveLabel2</string>
-							<string>optionsButton</string>
+							<string>pauseButton</string>
 							<string>playAgainButton</string>
+							<string>returnGamePlank</string>
 							<string>selected10View</string>
 							<string>selected11View</string>
 							<string>selected12View</string>
@@ -2410,8 +2507,10 @@
 							<string>UIImageView</string>
 							<string>UIImageView</string>
 							<string>UIImageView</string>
+							<string>UIButton</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
+							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIImageView</string>
@@ -2470,10 +2569,12 @@
 							<string>hint7View</string>
 							<string>hint8View</string>
 							<string>hint9View</string>
+							<string>mainMenuPlank</string>
 							<string>moveLabel</string>
 							<string>moveLabel2</string>
-							<string>optionsButton</string>
+							<string>pauseButton</string>
 							<string>playAgainButton</string>
+							<string>returnGamePlank</string>
 							<string>selected10View</string>
 							<string>selected11View</string>
 							<string>selected12View</string>
@@ -2639,6 +2740,10 @@
 								<string key="candidateClassName">UIImageView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
+								<string key="name">mainMenuPlank</string>
+								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">moveLabel</string>
 								<string key="candidateClassName">UILabel</string>
 							</object>
@@ -2647,11 +2752,15 @@
 								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
-								<string key="name">optionsButton</string>
+								<string key="name">pauseButton</string>
 								<string key="candidateClassName">UIButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">playAgainButton</string>
+								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">returnGamePlank</string>
 								<string key="candidateClassName">UIButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">
@@ -2959,14 +3068,18 @@
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>1120a.png</string>
-				<string>EndGameClassic01.jpg</string>
-				<string>EndGameClassic02.jpg</string>
-				<string>EndGameClassic03.jpg</string>
+				<string>EndGameClassic01.png</string>
+				<string>EndGameClassic02.png</string>
+				<string>EndGameClassic03.png</string>
 				<string>b_Back_off.png</string>
 				<string>b_Back_on.png</string>
+				<string>b_MainMenuL_off.png</string>
+				<string>b_MainMenuL_on.png</string>
 				<string>b_Pause_off.png</string>
 				<string>b_PlayAgain_off.png</string>
 				<string>b_PlayAgain_on.png</string>
+				<string>b_ReturnGame_off.png</string>
+				<string>b_ReturnGame_on.png</string>
 				<string>bg_GamePlay.jpg</string>
 				<string>brain_1.png</string>
 				<string>checkHover.png</string>
@@ -2975,14 +3088,18 @@
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{105, 70}</string>
-				<string>{78, 95}</string>
-				<string>{78, 95}</string>
-				<string>{78, 95}</string>
+				<string>{80, 85}</string>
+				<string>{80, 84}</string>
+				<string>{80, 84}</string>
 				<string>{61, 33}</string>
 				<string>{61, 33}</string>
+				<string>{160, 60}</string>
+				<string>{160, 60}</string>
 				<string>{70, 33}</string>
 				<string>{123, 33}</string>
 				<string>{123, 33}</string>
+				<string>{206, 64}</string>
+				<string>{206, 64}</string>
 				<string>{480, 320}</string>
 				<string>{62, 45}</string>
 				<string>{105, 70}</string>

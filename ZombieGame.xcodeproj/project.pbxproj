@@ -211,9 +211,6 @@
 		277C20BE11CD735000FC01C0 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 277C1F4A11CD735000FC01C0 /* correct.wav */; };
 		277C20BF11CD735000FC01C0 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 277C1F4B11CD735000FC01C0 /* default.png */; };
 		277C20C011CD735000FC01C0 /* EndGame_Gun.png in Resources */ = {isa = PBXBuildFile; fileRef = 277C1F4C11CD735000FC01C0 /* EndGame_Gun.png */; };
-		277C20C111CD735000FC01C0 /* EndGameClassic01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 277C1F4D11CD735000FC01C0 /* EndGameClassic01.jpg */; };
-		277C20C211CD735000FC01C0 /* EndGameClassic02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 277C1F4E11CD735000FC01C0 /* EndGameClassic02.jpg */; };
-		277C20C311CD735000FC01C0 /* EndGameClassic03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 277C1F4F11CD735000FC01C0 /* EndGameClassic03.jpg */; };
 		277C20C411CD735000FC01C0 /* Game_Start.wav in Resources */ = {isa = PBXBuildFile; fileRef = 277C1F5011CD735000FC01C0 /* Game_Start.wav */; };
 		277C20C511CD735000FC01C0 /* Game_Start_faster.wav in Resources */ = {isa = PBXBuildFile; fileRef = 277C1F5111CD735000FC01C0 /* Game_Start_faster.wav */; };
 		277C20C611CD735000FC01C0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 277C1F5211CD735000FC01C0 /* Icon.png */; };
@@ -751,6 +748,9 @@
 		27D690011224A52200EBB0FC /* EndGameClassic02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27D68FFE1224A52200EBB0FC /* EndGameClassic02@2x.png */; };
 		27D690021224A52200EBB0FC /* EndGameClassic01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27D68FFF1224A52200EBB0FC /* EndGameClassic01@2x.png */; };
 		27D691771224C46500EBB0FC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27D691761224C46500EBB0FC /* Icon@2x.png */; };
+		27D691C612253C2A00EBB0FC /* EndGameClassic03.png in Resources */ = {isa = PBXBuildFile; fileRef = 27D691C312253C2A00EBB0FC /* EndGameClassic03.png */; };
+		27D691C712253C2A00EBB0FC /* EndGameClassic02.png in Resources */ = {isa = PBXBuildFile; fileRef = 27D691C412253C2A00EBB0FC /* EndGameClassic02.png */; };
+		27D691C812253C2A00EBB0FC /* EndGameClassic01.png in Resources */ = {isa = PBXBuildFile; fileRef = 27D691C512253C2A00EBB0FC /* EndGameClassic01.png */; };
 		27E6452311C1799700D91ADF /* Data.db in Resources */ = {isa = PBXBuildFile; fileRef = 27C2AEC5119A369D0049EFEB /* Data.db */; };
 		27E645A511C1799700D91ADF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		27E645A611C1799700D91ADF /* ZombieGameAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* ZombieGameAppDelegate.m */; };
@@ -998,9 +998,6 @@
 		277C1F4A11CD735000FC01C0 /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
 		277C1F4B11CD735000FC01C0 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 		277C1F4C11CD735000FC01C0 /* EndGame_Gun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EndGame_Gun.png; sourceTree = "<group>"; };
-		277C1F4D11CD735000FC01C0 /* EndGameClassic01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EndGameClassic01.jpg; sourceTree = "<group>"; };
-		277C1F4E11CD735000FC01C0 /* EndGameClassic02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EndGameClassic02.jpg; sourceTree = "<group>"; };
-		277C1F4F11CD735000FC01C0 /* EndGameClassic03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EndGameClassic03.jpg; sourceTree = "<group>"; };
 		277C1F5011CD735000FC01C0 /* Game_Start.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Game_Start.wav; sourceTree = "<group>"; };
 		277C1F5111CD735000FC01C0 /* Game_Start_faster.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Game_Start_faster.wav; sourceTree = "<group>"; };
 		277C1F5211CD735000FC01C0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -1541,6 +1538,9 @@
 		27D68FFE1224A52200EBB0FC /* EndGameClassic02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EndGameClassic02@2x.png"; sourceTree = "<group>"; };
 		27D68FFF1224A52200EBB0FC /* EndGameClassic01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EndGameClassic01@2x.png"; sourceTree = "<group>"; };
 		27D691761224C46500EBB0FC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		27D691C312253C2A00EBB0FC /* EndGameClassic03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EndGameClassic03.png; sourceTree = "<group>"; };
+		27D691C412253C2A00EBB0FC /* EndGameClassic02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EndGameClassic02.png; sourceTree = "<group>"; };
+		27D691C512253C2A00EBB0FC /* EndGameClassic01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EndGameClassic01.png; sourceTree = "<group>"; };
 		27E645C011C1799700D91ADF /* ZombieGame-iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZombieGame-iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E7A3DB11AC581C006E622E /* BrainPieces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrainPieces.h; sourceTree = "<group>"; };
 		27E7A3DC11AC581C006E622E /* BrainPieces.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrainPieces.m; sourceTree = "<group>"; };
@@ -1754,11 +1754,11 @@
 				27D68F2D1224A4F900EBB0FC /* default@2x.png */,
 				277C1F4C11CD735000FC01C0 /* EndGame_Gun.png */,
 				27D68F2C1224A4F900EBB0FC /* EndGame_Gun@2x.png */,
-				277C1F4D11CD735000FC01C0 /* EndGameClassic01.jpg */,
+				27D691C512253C2A00EBB0FC /* EndGameClassic01.png */,
 				27D68FFF1224A52200EBB0FC /* EndGameClassic01@2x.png */,
-				277C1F4E11CD735000FC01C0 /* EndGameClassic02.jpg */,
+				27D691C412253C2A00EBB0FC /* EndGameClassic02.png */,
 				27D68FFE1224A52200EBB0FC /* EndGameClassic02@2x.png */,
-				277C1F4F11CD735000FC01C0 /* EndGameClassic03.jpg */,
+				27D691C312253C2A00EBB0FC /* EndGameClassic03.png */,
 				27D68FFD1224A52200EBB0FC /* EndGameClassic03@2x.png */,
 				277C1F5011CD735000FC01C0 /* Game_Start.wav */,
 				277C1F5111CD735000FC01C0 /* Game_Start_faster.wav */,
@@ -2757,9 +2757,6 @@
 				277C20BE11CD735000FC01C0 /* correct.wav in Resources */,
 				277C20BF11CD735000FC01C0 /* default.png in Resources */,
 				277C20C011CD735000FC01C0 /* EndGame_Gun.png in Resources */,
-				277C20C111CD735000FC01C0 /* EndGameClassic01.jpg in Resources */,
-				277C20C211CD735000FC01C0 /* EndGameClassic02.jpg in Resources */,
-				277C20C311CD735000FC01C0 /* EndGameClassic03.jpg in Resources */,
 				277C20C411CD735000FC01C0 /* Game_Start.wav in Resources */,
 				277C20C511CD735000FC01C0 /* Game_Start_faster.wav in Resources */,
 				277C20C611CD735000FC01C0 /* Icon.png in Resources */,
@@ -3045,6 +3042,9 @@
 				27D690011224A52200EBB0FC /* EndGameClassic02@2x.png in Resources */,
 				27D690021224A52200EBB0FC /* EndGameClassic01@2x.png in Resources */,
 				27D691771224C46500EBB0FC /* Icon@2x.png in Resources */,
+				27D691C612253C2A00EBB0FC /* EndGameClassic03.png in Resources */,
+				27D691C712253C2A00EBB0FC /* EndGameClassic02.png in Resources */,
+				27D691C812253C2A00EBB0FC /* EndGameClassic01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
