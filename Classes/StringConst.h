@@ -53,9 +53,9 @@ static const char	SND_EATING			[]		= "%@/ipad_zombiesEating.mp3";
 #else
 static const char	IMG_ALLBAD []			= "allBad.png";
 static const char	IMG_ALLGOOD []			= "allGood.png";
-static const char	IMG_BG_CLASSICA []		= "bg_EndGameClassicA.jpg";
-static const char	IMG_BG_CLASSICB []		= "bg_EndGameClassicB.jpg";
-static const char	IMG_BG_CLASSICC []		= "bg_EndGameClassicC.jpg";
+static const char	IMG_BG_CLASSICA []		= "bg_EndGameClassicA.png";
+static const char	IMG_BG_CLASSICB []		= "bg_EndGameClassicB.png";
+static const char	IMG_BG_CLASSICC []		= "bg_EndGameClassicC.png";
 static const char	IMG_BG_ENDGAMEB_WIN []	= "bg_EndGameB_win.jpg";
 static const char	IMG_BG_ENDGAMEB_LOSE []	= "bg_EndGameB_lose.jpg";
 static const char	IMG_BG_GAMEPLAY []      = "bg_GamePlay.jpg";
