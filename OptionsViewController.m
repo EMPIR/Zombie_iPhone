@@ -27,16 +27,14 @@
 	NSString *path;
 	
 	
-	path = [[NSString stringWithFormat:@"%@%@",
+	path = [NSString stringWithFormat:@"%@%@",
 			[[NSBundle mainBundle] resourcePath],
-			filename] retain];
+			filename];
 	
-	[filename release];
+	
 	
 	
 	NSLog(@"%",path);
-	
-	
 	
 	//declare a system sound id
 	SystemSoundID soundID;
@@ -49,6 +47,8 @@
 	
 	//Use audio services to play the sound
 	AudioServicesPlaySystemSound(soundID);
+	//[filename release];
+	
 	[path release];
 	
 }
