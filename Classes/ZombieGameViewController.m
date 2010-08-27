@@ -530,13 +530,13 @@ int TOTAL_BRAINS = 60;
 	[message release];
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
-	if(timeRemaining > 45)
+	if(timeRemaining > 50)
 	{
 		//message = [[NSString alloc] initWithFormat:@"Your Placement: %d", gamePlacement];
-		message = [[NSString alloc] initWithFormat:@"Keep Reaching for the Next Level!"];
+		message = [[NSString alloc] initWithFormat:@"Too Slow! Try Level %d Again!", [appDelegate getCrawlerDifficulty] + 1];
 	}
 	else {
-		message = [[NSString alloc] initWithFormat:@"You Reached Level %d!", [appDelegate getCrawlerDifficulty] + 2];
+		message = [[NSString alloc] initWithFormat:@"Level %d Complete!", [appDelegate getCrawlerDifficulty] + 1];
 	}
 	[finishedLabel2 setText:message];
 	[message release];
@@ -546,32 +546,32 @@ int TOTAL_BRAINS = 60;
 	
 	
 	UIImage *img;
-	if(currentTime <= 25)
+	if(currentTime <= 20)
 	{
 		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICC]];
 		[self.gameBG setImage:img];
 		self.endGameRank1.hidden = NO;
-		self.endGameRank2.hidden = NO;
-		self.endGameRank3.hidden = NO;
+		//self.endGameRank2.hidden = NO;
+		//self.endGameRank3.hidden = NO;
 		[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
 		
 
 	}
-	else if(currentTime <=45)
+	else if(currentTime <=40)
 	{
 		img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICB]];
 		[self.gameBG setImage:img];
-		self.endGameRank1.hidden = NO;
+		//self.endGameRank1.hidden = NO;
 		self.endGameRank2.hidden = NO;
 		[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
 		
 	}
-	else if(currentTime <= 105)
+	else if(currentTime <= 50)
 	{
 		//IMG_BG_CLASSICA
 		img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICA]];
 		[self.gameBG setImage:img];
-		self.endGameRank1.hidden = NO;
+		self.endGameRank3.hidden = NO;
 
 	}
 	else

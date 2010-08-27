@@ -447,7 +447,7 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 	if (ret && ![self Match:a.shape: b.shape: c.shape])
 		ret = NO;
 	if (ret && ![self Match:a.fill: b.fill: c.fill])
-		ret = false;
+		ret = NO;
 	
 	return ret;
 }
