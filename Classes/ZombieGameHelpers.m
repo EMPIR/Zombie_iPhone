@@ -46,9 +46,9 @@
 	
 	//Use audio services to play the sound
 	AudioServicesPlaySystemSound(soundID);
-	//[filename release];
+	[filename release];
 	
-	[path release];
+	//[path release];
 	
 }
 

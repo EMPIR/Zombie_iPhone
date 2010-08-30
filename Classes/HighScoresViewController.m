@@ -120,14 +120,21 @@
 }
 
 
-// Override to allow orientations other than the default portrait orientation.
+
+ // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     //return (interfaceOrientation == UIInterfaceOrientationPortrait);
-	return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+	//return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
 	
+ // Return YES for supported orientations
+ //return (interfaceOrientation == UIInterfaceOrientationPortrait);	
+ #ifdef IPAD	
+ return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
+ #else
+ return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+ #endif 
 }
-
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

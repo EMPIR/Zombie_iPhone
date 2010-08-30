@@ -64,7 +64,7 @@
 -(int) getBerzerkDifficulty;
 -(void) setCrawlerDifficulty:(int) level:(int) score;
 -(void) setBerzerkDifficulty:(int) val;
--(BOOL) createHSTable;
+//-(BOOL) createHSTable;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet GameMenu *viewController;

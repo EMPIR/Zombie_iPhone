@@ -22,7 +22,7 @@
 	NSMutableArray *ret = [[[NSMutableArray alloc]init]autorelease];
 	for (int i = 1; i <= 60; ++i)
 	{
-		NSString *imagestr = [[[NSString alloc]init]autorelease]; 
+		NSString *imagestr;// = [[[NSString alloc]init]autorelease]; 
 		imagestr = [NSString stringWithFormat:[StringConst GetImgConst:IMG_BRAINS], i % 30];
 		int speed = [GameLogic randomNumber:1,5];
 		UIImage *image = [UIImage imageNamed:imagestr];

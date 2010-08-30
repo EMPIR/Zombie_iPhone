@@ -44,14 +44,22 @@
 }
 */
 
+
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     //return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	//return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+	// Return YES for supported orientations
+    //return (interfaceOrientation == UIInterfaceOrientationPortrait);	
+#ifdef IPAD	
+	return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
+#else
 	return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
-	
+#endif	
 }
-
+ 
+ 
 /*
 -(void) playSound:(int) pieceID:(int) expression {
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -131,9 +139,9 @@
 	}
 	
 	
-	NSString *imagestr1 = [[[NSString alloc]init]autorelease];
-	NSString *imagestr2 = [[[NSString alloc]init]autorelease];
-	NSString *imagestr3 = [[[NSString alloc]init]autorelease];
+	NSString *imagestr1;// = [[[NSString alloc]init]autorelease];
+	NSString *imagestr2;// = [[[NSString alloc]init]autorelease];
+	NSString *imagestr3;// = [[[NSString alloc]init]autorelease];
 	imagestr1 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_A], i,j,k];
 	imagestr2 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_A], i2,j2,k2];
 	imagestr3 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_A], i3,j3,k3];

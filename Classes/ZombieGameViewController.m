@@ -339,9 +339,9 @@ int TOTAL_BRAINS = 60;
 	//int c = [cc intValue];
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
+	NSLog(@"appDelegate.showHint %B", appDelegate.showHint);
 	
-	
-	if(appDelegate.showHint == YES && hintVisible == YES)
+	if(appDelegate.showHint == YES)// && hintVisible != YES)
 	{
 		selView = [self getHint:a];
 		if(selView != NULL)
@@ -351,6 +351,7 @@ int TOTAL_BRAINS = 60;
 			selView.hidden = NO;
 		
 	}
+	
 	
 	
 	
@@ -737,7 +738,7 @@ int TOTAL_BRAINS = 60;
 		for(int i=0;i< TOTAL_BRAINS;++i){
 			BrainPiece *piece = (BrainPiece *)[brains objectAtIndex:i];
 			UIImageView *aview = [self getBrains:i];
-			UIImage *image = [UIImage imageNamed:piece.image];
+			UIImage *image;// = [UIImage imageNamed:piece.image];
 			aview.transform = CGAffineTransformTranslate(aview.transform, 0.0, piece.speed);
 			aview.hidden = NO;
 			image = [UIImage imageNamed:[StringConst GetImgConst: IMG_BRAIN3]];
@@ -1564,13 +1565,13 @@ int TOTAL_BRAINS = 60;
 	
 	UIImage *img;
 	
-	img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_PAUSE_OFF]];
+	//img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_PAUSE_OFF]];
 	
 		
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
-	[appDelegate ShowHint:YES];
+	//[appDelegate ShowHint:YES];
 	[appDelegate PauseSound:NO];
 	///test adding, getting and deleting from the levels database
 	//[appDelegate setCrawlerDifficulty:1 : 30];
@@ -1612,12 +1613,19 @@ int TOTAL_BRAINS = 60;
 
 
 
-
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     //return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	//return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+	// Return YES for supported orientations
+    //return (interfaceOrientation == UIInterfaceOrientationPortrait);	
+#ifdef IPAD	
+	return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
+#else
 	return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+#endif
+	
 }
 
 
@@ -1632,12 +1640,13 @@ int TOTAL_BRAINS = 60;
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 	
-	for(int i=0;i<TOTAL_BRAINS;++i)
+	/*8/29/2010 Taking this out because analyzer had message "Incorrect Decrement of the reference count of an object that is not owned at this point by the caller
+	 for(int i=0;i<TOTAL_BRAINS;++i)
 	{
 		UIImageView *aview = [self getBrains:i];
 		[aview release];
 		aview = nil;
-	}
+	}*/
 	
 }
 

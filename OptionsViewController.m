@@ -43,13 +43,22 @@
 	NSURL *filePath = [NSURL fileURLWithPath:path isDirectory:NO];
 	
 	//Use audio sevices to create the sound
-	AudioServicesCreateSystemSoundID((CFURLRef)filePath, &soundID);
+	//AudioServicesCreateSystemSoundID((CFURLRef)filePath, &soundID);
+	//AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), filename, CFSTR("wav"), NULL), &soundID);
+	OSStatus error = AudioServicesCreateSystemSoundID((CFURLRef)filePath, &soundID);
+	
+	if (error != kAudioServicesNoError) { // success
+		
+		NSLog(@"Error %d loading sound at path: %@", error, path);
+
+	}
+	
 	
 	//Use audio services to play the sound
 	AudioServicesPlaySystemSound(soundID);
-	//[filename release];
+	[filename release];
 	
-	[path release];
+	//[path release];
 	
 }
 
@@ -173,12 +182,16 @@
 
 
 // Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    //return (interfaceOrientation == UIInterfaceOrientationPortrait);
+
+ - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+#ifdef IPAD	
+	return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
+#else
 	return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+#endif
 	
 }
+
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

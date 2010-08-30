@@ -117,7 +117,7 @@
 	{
 		sqlite3 *database;
 		
-		BOOL ret = FALSE;
+		//BOOL ret = FALSE;
 		// Open the database from the users filessytem
 		if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
 			// Setup the SQL Statement and compile it for faster access
@@ -129,7 +129,7 @@
 					NSAssert1(0, @"Error while deleting data. '%s'", sqlite3_errmsg(database));
 				}
 				else{
-					ret = TRUE;
+					//ret = TRUE;
 					//SQLite provides a method to get the last primary key inserted by using sqlite3_last_insert_rowid
 					//int ID = sqlite3_last_insert_rowid(database);
 				}
@@ -145,7 +145,7 @@
 	{
 		sqlite3 *database;
 		
-		BOOL ret = FALSE;
+		//BOOL ret = FALSE;
 		// Open the database from the users filessytem
 		if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
 			// Setup the SQL Statement and compile it for faster access
@@ -157,7 +157,7 @@
 					NSAssert1(0, @"Error while deleting data. '%s'", sqlite3_errmsg(database));
 				}
 				else{
-					ret = TRUE;
+					//ret = TRUE;
 					//SQLite provides a method to get the last primary key inserted by using sqlite3_last_insert_rowid
 					//int ID = sqlite3_last_insert_rowid(database);
 				}
@@ -524,7 +524,7 @@
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
 				// Read the data from the result row
 				int _level = sqlite3_column_int(compiledStatement,0);
-				int _score = sqlite3_column_int(compiledStatement,1);
+				//int _score = sqlite3_column_int(compiledStatement,1);
 				ret = _level;
 				break;
 			}
@@ -555,7 +555,7 @@
 			// Loop through the results and add them to the feeds array
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
 				// Read the data from the result row
-				int _level = sqlite3_column_int(compiledStatement,0);
+				//int _level = sqlite3_column_int(compiledStatement,0);
 				int _score = sqlite3_column_int(compiledStatement,1);
 				ret = _score;
 			}

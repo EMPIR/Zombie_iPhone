@@ -81,37 +81,37 @@ static int TOTAL_EXPRESSIONS  = 5;
 	
 	int number = [GameLogic randomNumber:1,TOTAL_EXPRESSIONS];
 	if(zombieID == -1)
-		return [[NSString stringWithFormat:[StringConst GetImgConst:SND_BRAIN_PUMP]] autorelease];
+		return [NSString stringWithFormat:[StringConst GetImgConst:SND_BRAIN_PUMP]];
 	else if(zombieID == 0){
 		if(expression ==1)
-			return [[NSString stringWithFormat:[StringConst GetImgConst:SND_WRONG]] autorelease];
+			return [NSString stringWithFormat:[StringConst GetImgConst:SND_WRONG]];
 		if(expression ==2)
-			return [[NSString stringWithFormat:[StringConst GetImgConst:SND_CORRECT]] autorelease];
+			return [NSString stringWithFormat:[StringConst GetImgConst:SND_CORRECT]];
 		if(expression == 3)
-			return [[NSString stringWithFormat:[StringConst GetImgConst:SND_SCREAM]] autorelease];
+			return [NSString stringWithFormat:[StringConst GetImgConst:SND_SCREAM]];
 		if(expression == 4)
-			return [[NSString stringWithFormat:[StringConst GetImgConst:SND_SHOTGUN]] autorelease];
+			return [NSString stringWithFormat:[StringConst GetImgConst:SND_SHOTGUN]];
 		if(expression == 5)
-			return [[NSString stringWithFormat:[StringConst GetImgConst:SND_GAME_START]] autorelease];
+			return [NSString stringWithFormat:[StringConst GetImgConst:SND_GAME_START]];
 		if(expression == 6)
-			return [[NSString stringWithFormat:[StringConst GetImgConst:SND_BRAIN_EXPLODE]] autorelease];
+			return [NSString stringWithFormat:[StringConst GetImgConst:SND_BRAIN_EXPLODE]];
 		//number = [GameLogic randomNumber:1,TOTAL_EXPRESSIONS];
 	}
 	else {
 		if(expression == 1)
-			return  [[NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_1], zombieID,number] autorelease];
+			return  [NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_1], zombieID,number];
 		else if(expression == 2)
-			return  [[NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_2], zombieID] autorelease];
+			return  [NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_2], zombieID];
 		else if(expression == 3)
-			return  [[NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_3], zombieID] autorelease];
+			return  [NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_3], zombieID];
 		else if(expression == 4)
-			return  [[NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_4], zombieID] autorelease];
+			return  [NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_4], zombieID];
 		else if(expression == 5)
-			return  [[NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_5], zombieID] autorelease];
+			return  [NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_5], zombieID];
 		else if(expression == 6)
 		{//start game
 			int number = [GameLogic randomNumber:10,14];
-			return  [[NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_1], zombieID,number] autorelease];
+			return  [NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_1], zombieID,number];
 		}
 		
 

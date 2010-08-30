@@ -97,9 +97,10 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 			{
 				for (int l = 1; l <= 1; ++l)
 				{
-					NSString *imagestr = [[[NSString alloc]init]autorelease]; 
+					
+					NSString *imagestr;// = [[[NSString alloc]init]autorelease]; 8/29/2010 value stored to 'imagestr' during its initialization is never read
 					imagestr = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_A], i,j,k,l];
-					NSString *imagestr2 = [[[NSString alloc]init]autorelease]; 
+					NSString *imagestr2;// = [[[NSString alloc]init]autorelease];8/29/2010 value stored to 'imagestr' during its initialization is never read 
 					imagestr2 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_B], i,j,k,l];
 					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr :imagestr2];
 					[ret addObject:(SetPiece *)p];					
@@ -468,9 +469,9 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 			{
 				for (int l = 1; l <= 3; ++l)
 				{
-					NSString *imagestr = [[[NSString alloc]init]autorelease]; 
+					NSString *imagestr;// = [[[NSString alloc]init]autorelease]; 
 					imagestr = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_A], i,j,k,l];
-					NSString *imagestr2 = [[[NSString alloc]init]autorelease]; 
+					NSString *imagestr2;// = [[[NSString alloc]init]autorelease]; 
 					imagestr2 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_B], i,j,k,l];
 					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr :imagestr2];
 					[ret addObject:(SetPiece *)p];
@@ -495,10 +496,10 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 			{
 				for (int l = 0; l <= 0; ++l)
 				{
-					NSString *imagestr = [[[NSString alloc]init]autorelease]; 
+					NSString *imagestr;// = [[[NSString alloc]init]autorelease]; 8/29/2010 value stored to 'imagestr' during its initialization is never read
 					imagestr = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_A], i,j,k,l];
 					
-					NSString *imagestr2 = [[[NSString alloc]init]autorelease]; 
+					NSString *imagestr2;// = [[[NSString alloc]init]autorelease]; 8/29/2010 value stored to 'imagestr' during its initialization is never read
 					imagestr2 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_B], i,j,k,l];
 					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr :imagestr2];
 					[ret addObject:(SetPiece *)p];
@@ -523,9 +524,9 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 			{
 				for (int l = 1; l <= 1; ++l)
 				{
-					NSString *imagestr = [[[NSString alloc]init]autorelease]; 
+					NSString *imagestr;// = [[[NSString alloc]init]autorelease]; 
 					imagestr = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_A], i,j,k,l];
-					NSString *imagestr2 = [[[NSString alloc]init]autorelease]; 
+					NSString *imagestr2;// = [[[NSString alloc]init]autorelease]; 
 					imagestr2 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_B], i,j,k,l];
 					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr :imagestr2];
 					[ret addObject:(SetPiece *)p];					
@@ -535,6 +536,7 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 	}
 	return ret;
 }
+
 
 +(NSMutableArray *) CreateState:(NSMutableArray *)pieces:(int)totalPieces{
 	NSMutableArray *ret = [[[NSMutableArray alloc]init]autorelease];
@@ -596,13 +598,13 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 		
 		ra = [GameLogic randomNumber:0,(totalPieces-1)];
 		ns = [NSNumber numberWithInt:ra];
-		r = b;
+		//r = b;
 		//[ret replaceObjectAtIndex:r: withObject:ns];
 		[ret replaceObjectAtIndex:b withObject:ns];
 		
 		ra = [GameLogic randomNumber:0,(totalPieces-1)];
 		ns = [NSNumber numberWithInt:ra];
-		r = c;
+		//r = c;
 		//[ret replaceObjectAtIndex:r: withObject:ns];
 		[ret replaceObjectAtIndex:c withObject:ns];
 	
