@@ -333,10 +333,10 @@ int TOTAL_BRAINS = 60;
 	NSMutableArray *match = [[setGame getMatch]retain];
 	NSNumber *aa = (NSNumber *) [match objectAtIndex:0];
 	NSNumber *bb = (NSNumber *) [match objectAtIndex:1];
-	//NSNumber *cc = (NSNumber *) [match objectAtIndex:2];
+	NSNumber *cc = (NSNumber *) [match objectAtIndex:2];
 	int a = [aa intValue];
 	int b = [bb intValue];
-	//int c = [cc intValue];
+	int c = [cc intValue];
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	NSLog(@"appDelegate.showHint %B", appDelegate.showHint);
@@ -347,6 +347,9 @@ int TOTAL_BRAINS = 60;
 		if(selView != NULL)
 			selView.hidden = NO;
 		selView = [self getHint:b];
+		if(selView != NULL)
+			selView.hidden = NO;
+		selView = [self getHint:c];
 		if(selView != NULL)
 			selView.hidden = NO;
 		

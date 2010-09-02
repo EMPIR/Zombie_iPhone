@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="7.10">
 	<data>
-		<int key="IBDocument.SystemTarget">1024</int>
+		<int key="IBDocument.SystemTarget">800</int>
 		<string key="IBDocument.SystemVersion">10F569</string>
 		<string key="IBDocument.InterfaceBuilderVersion">788</string>
 		<string key="IBDocument.AppKitVersion">1038.29</string>
@@ -476,7 +476,7 @@
 					<object class="IBUIImageView" id="853822119">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">-2147483356</int>
-						<string key="NSFrame">{{20, 303}, {230, 155}}</string>
+						<string key="NSFrame">{{770, 303}, {230, 155}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -1776,7 +1776,6 @@
 							<reference ref="223457740"/>
 							<reference ref="31995127"/>
 							<reference ref="333797270"/>
-							<reference ref="853822119"/>
 							<reference ref="184912145"/>
 							<reference ref="556082627"/>
 							<reference ref="492292022"/>
@@ -1810,6 +1809,7 @@
 							<reference ref="350865737"/>
 							<reference ref="836301969"/>
 							<reference ref="733416916"/>
+							<reference ref="853822119"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -3072,7 +3072,7 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.iPhoneOS</string>
-			<integer value="1024" key="NS.object.0"/>
+			<integer value="800" key="NS.object.0"/>
 		</object>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.InterfaceBuilder3</string>

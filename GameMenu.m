@@ -61,7 +61,12 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     //return (interfaceOrientation == UIInterfaceOrientationPortrait);
+#ifdef IPAD	
 	return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
+#else
+	return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+#endif
+	
 	
 }
 - (void)didReceiveMemoryWarning {

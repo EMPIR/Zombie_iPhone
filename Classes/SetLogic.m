@@ -440,17 +440,16 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 /// <param name="c"></param>
 /// <returns></returns>
 +(BOOL) ContainsMatch:(SetPiece *)a: (SetPiece *)b: (SetPiece *)c{
-	BOOL ret = YES;
 	if (![self Match:a.number: b.number: c.number])
-		ret = NO;
-	if (ret && ![self Match:a.color: b.color: c.color])
-		ret = NO;
-	if (ret && ![self Match:a.shape: b.shape: c.shape])
-		ret = NO;
-	if (ret && ![self Match:a.fill: b.fill: c.fill])
-		ret = NO;
+		return NO;
+	if (![self Match:a.color: b.color: c.color])
+		return NO;
+	if (![self Match:a.shape: b.shape: c.shape])
+		return NO;
+	if (![self Match:a.fill: b.fill: c.fill])
+		return NO;
 	
-	return ret;
+	return YES;
 }
 
 
@@ -592,7 +591,7 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 	while(again){
 		int ra = [GameLogic randomNumber:0,(totalPieces-1)];
 		NSNumber *ns = [NSNumber numberWithInt:ra];
-		NSUInteger r = a;
+		//NSUInteger r = a;
 		//[ret replaceObjectAtIndex:r: withObject:ns];
 		[ret replaceObjectAtIndex:a withObject:ns];
 		
