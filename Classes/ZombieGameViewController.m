@@ -341,7 +341,7 @@ int TOTAL_BRAINS = 60;
 	
 	NSLog(@"appDelegate.showHint %B", appDelegate.showHint);
 	
-	if(appDelegate.showHint == YES && hintVisible != YES)
+	if(setGame.isActive && appDelegate.showHint == YES && hintVisible == YES)
 	{
 		selView = [self getHint:a];
 		if(selView != NULL)
@@ -1088,8 +1088,10 @@ int TOTAL_BRAINS = 60;
 	if(setGame.isActive){
 		//img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_PAUSE_OFF]];
 		//[sender setImage:img forState:UIControlStateNormal];
-		[appDelegate ShowHint:YES];
+		
+		//[appDelegate ShowHint:YES];
 		[appDelegate PauseSound:NO];
+		
 		pauseButton.hidden = NO;
 		
 		
@@ -1097,8 +1099,11 @@ int TOTAL_BRAINS = 60;
 	else {
 		//img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_PAUSE_ON]];
 		//[sender setImage:img forState:UIControlStateNormal];
-		[appDelegate ShowHint:NO];
+		
+		
+		//[appDelegate ShowHint:NO];
 		[appDelegate PauseSound:YES];
+		
 		pauseButton.hidden = YES;
 		
 		
