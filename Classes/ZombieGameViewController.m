@@ -341,7 +341,7 @@ int TOTAL_BRAINS = 60;
 	
 	NSLog(@"appDelegate.showHint %B", appDelegate.showHint);
 	
-	if(appDelegate.showHint == YES)// && hintVisible != YES)
+	if(appDelegate.showHint == YES && hintVisible != YES)
 	{
 		selView = [self getHint:a];
 		if(selView != NULL)
