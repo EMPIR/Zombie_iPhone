@@ -349,9 +349,9 @@ int TOTAL_BRAINS = 60;
 		selView = [self getHint:b];
 		if(selView != NULL)
 			selView.hidden = NO;
-		selView = [self getHint:c];
-		if(selView != NULL)
-			selView.hidden = NO;
+		//selView = [self getHint:c];
+		//if(selView != NULL)
+		//	selView.hidden = NO;
 		
 	}
 	

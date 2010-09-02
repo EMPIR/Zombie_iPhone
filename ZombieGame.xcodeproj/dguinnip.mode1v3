@@ -202,24 +202,24 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>274934DD122F3E8000CDDCEA</string>
+				<string>27493501122F47CC00CDDCEA</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>MainMenuViewController.m</string>
+				<string>ZombieGameViewController.m</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>274934DE122F3E8000CDDCEA</string>
+						<string>27493502122F47CC00CDDCEA</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>MainMenuViewController.m</string>
+						<string>ZombieGameViewController.m</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>274934E0122F3E8000CDDCEA</string>
+						<string>27493503122F47CC00CDDCEA</string>
 						<key>history</key>
 						<array>
-							<string>274934DF122F3E8000CDDCEA</string>
+							<string>274934F6122F476800CDDCEA</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -235,7 +235,47 @@
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>15 175 1384 698 0 0 1440 878 </string>
+				<string>56 163 1384 698 0 0 1440 878 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>27493504122F47CC00CDDCEA</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>GameMenu.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>27493505122F47CC00CDDCEA</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>GameMenu.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>27493506122F47CC00CDDCEA</string>
+						<key>history</key>
+						<array>
+							<string>274934E2122F3F1A00CDDCEA</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {1384, 657}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>205 157 1384 698 0 0 1440 878 </string>
 			</dict>
 		</dict>
 	</array>
@@ -316,7 +356,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>21</integer>
+									<integer>11</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -357,7 +397,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ZombieGameAppDelegate.m</string>
+								<string>SetGame.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -365,11 +405,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ZombieGameAppDelegate.m</string>
+										<string>SetGame.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>274934DC122F3E8000CDDCEA</string>
+										<string>27493500122F47CC00CDDCEA</string>
 										<key>history</key>
 										<array>
 											<string>276069871189182A008E1327</string>
@@ -652,15 +692,15 @@
 											<string>27493436122B594100CDDCEA</string>
 											<string>27493437122B594100CDDCEA</string>
 											<string>27493439122B594100CDDCEA</string>
-											<string>2749343A122B594100CDDCEA</string>
 											<string>2749343B122B594100CDDCEA</string>
 											<string>2749343D122B594100CDDCEA</string>
 											<string>2749343E122B594100CDDCEA</string>
-											<string>2749346E122F301600CDDCEA</string>
-											<string>274934A9122F366600CDDCEA</string>
 											<string>274934AA122F366600CDDCEA</string>
-											<string>274934DA122F3E8000CDDCEA</string>
-											<string>274934DB122F3E8000CDDCEA</string>
+											<string>274934FB122F47CC00CDDCEA</string>
+											<string>274934FC122F47CC00CDDCEA</string>
+											<string>274934FD122F47CC00CDDCEA</string>
+											<string>274934FE122F47CC00CDDCEA</string>
+											<string>274934FF122F47CC00CDDCEA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -858,7 +898,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>274934E1122F3E8000CDDCEA</string>
 		<string>27493499122F33C100CDDCEA</string>
 		<string>2749348A122F322800CDDCEA</string>
 		<string>2749347E122F301600CDDCEA</string>
@@ -866,8 +905,9 @@
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>27F6E11B11852B5A007705A9</string>
+		<string>27493504122F47CC00CDDCEA</string>
 		<string>/Users/dguinnip/Build/ZombieGame/ZombieGame.xcodeproj</string>
-		<string>274934DD122F3E8000CDDCEA</string>
+		<string>27493501122F47CC00CDDCEA</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 134 1440 744 0 0 1440 878 </string>
