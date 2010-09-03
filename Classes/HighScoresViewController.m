@@ -129,11 +129,12 @@
 	
  // Return YES for supported orientations
  //return (interfaceOrientation == UIInterfaceOrientationPortrait);	
- #ifdef IPAD	
- return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
- #else
- return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
- #endif 
+#ifdef IPAD	
+	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+	
+#else
+	return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+#endif
 }
 
 - (void)didReceiveMemoryWarning {
