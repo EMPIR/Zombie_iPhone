@@ -106,6 +106,7 @@
 +(NSMutableArray *) CreateEasyPieces;
 +(NSMutableArray *) CreateMediumPieces;
 +(NSMutableArray *) CreateHardPieces;
++(void) DeletePieces:(NSMutableArray *)array;
 
 /*+(NSMutableArray *) CreateLevel1Pieces;
 +(NSMutableArray *) CreateLevel2Pieces;

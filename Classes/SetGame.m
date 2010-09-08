@@ -55,6 +55,7 @@ typedef enum GameType
 		{
 			NSNumber *ns = [NSNumber numberWithInt:0];
 			[pressed_state addObject: ns];
+			//[ns release];
 			
 			
 		}
@@ -111,11 +112,15 @@ typedef enum GameType
 //variables: gt = gameType,  gl = game level
 -(void) newGame:(int) gt: (int) gl{
 	
-	
+	//[SetLogic DeletePieces:pieces];
 	[pieces release];
 	[state release];
 	totalPieces = [SetLogic GetLevelTotal:gl];
+	
+	
 	pieces =[[SetLogic CreateLevelPieces:gl] retain];
+	
+	
 	state = [[SetLogic CreateState:pieces:totalPieces] retain];
 	
 	

@@ -103,7 +103,8 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 					NSString *imagestr2;// = [[[NSString alloc]init]autorelease];8/29/2010 value stored to 'imagestr' during its initialization is never read 
 					imagestr2 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_B], i,j,k,l];
 					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr :imagestr2];
-					[ret addObject:(SetPiece *)p];					
+					[ret addObject:(SetPiece *)p];
+					[p release];
 				}
 			}
 		}
@@ -184,6 +185,7 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 	{
 		SetPiece *p = [self CreatePiece];
 		[ret addObject:p];
+		[p release];
 	}
 	
 	return ret;
@@ -201,13 +203,14 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 	{
 		SetPiece *p = [self CreateSimplePiece];
 		[ret addObject:p];
+		[p release];
 	}
 	
 	return ret;
 }
 
 
-
+/*
 +(NSMutableArray *)CreateRandomSet{
 	NSMutableArray *ret = [[[NSMutableArray alloc]init]autorelease];
 	
@@ -222,6 +225,7 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 	
 	return ret;
 }
+*/
 
 /// <summary>
 /// This routine determines if the set of pieces contains a Set Match.
@@ -399,6 +403,9 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 					[ret addObject:aa];
 					[ret addObject:bb];
 					[ret addObject:cc];
+					//[aa release];
+					//[bb release];
+					//[cc release];
 					
 					return ret;
 				}
@@ -452,6 +459,21 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 	return YES;
 }
 
++(void) DeletePieces:(NSMutableArray *)array{
+	for(int i=0;i<array.count; ++i)
+	{
+		SetPiece *p = (SetPiece *)[array objectAtIndex:i];
+		[p release];
+	}
+}
+
++(void) DeleteState:(NSMutableArray *)array{
+	for(int i=0;i<array.count; ++i)
+	{
+		SetPiece *p = (SetPiece *)[array objectAtIndex:i];
+		[p release];
+	}
+}
 
 
 
@@ -474,7 +496,7 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 					imagestr2 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_B], i,j,k,l];
 					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr :imagestr2];
 					[ret addObject:(SetPiece *)p];
-					
+					[p release];
 				}
 			}
 		}
@@ -502,7 +524,7 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 					imagestr2 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_B], i,j,k,l];
 					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr :imagestr2];
 					[ret addObject:(SetPiece *)p];
-					
+					[p release];
 				}
 			}
 		}
@@ -528,7 +550,8 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 					NSString *imagestr2;// = [[[NSString alloc]init]autorelease]; 
 					imagestr2 = [NSString stringWithFormat:[StringConst GetImgConst:IMG_PIECE_B], i,j,k,l];
 					SetPiece *p = [[SetPiece alloc] initPiece:i :j:k :l :imagestr :imagestr2];
-					[ret addObject:(SetPiece *)p];					
+					[ret addObject:(SetPiece *)p];			
+					[p release];
 				}
 			}
 		}
@@ -537,8 +560,9 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 }
 
 
+
 +(NSMutableArray *) CreateState:(NSMutableArray *)pieces:(int)totalPieces{
-	NSMutableArray *ret = [[[NSMutableArray alloc]init]autorelease];
+	NSMutableArray *ret = [[[NSMutableArray alloc]init] autorelease];
 	BOOL again = YES;
 	while(again){
 		for(int i=0;i<12;++i){
@@ -546,6 +570,7 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 			NSNumber *ns = [NSNumber numberWithInt:ra];
 			NSLog(@"Creating State: %d %d", i, ra);
 			[ret addObject: ns];
+			
 		}
 	
 		if([self ContainsMatch:pieces:ret])
@@ -556,7 +581,7 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 		}
 		else {
 			[ret release];
-			ret = [[[NSMutableArray alloc]init]autorelease];
+			ret = [[[NSMutableArray alloc]init] autorelease];
 		}
 
 	}
