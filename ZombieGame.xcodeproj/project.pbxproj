@@ -13,8 +13,6 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		270D046C11AF619000CF8DE8 /* ZombieGameHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D046B11AF619000CF8DE8 /* ZombieGameHelpers.m */; };
 		271F9A3D11FD2D2A00DAADDE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 271F9A3C11FD2D2A00DAADDE /* Icon.png */; };
-		2732BCD01231DBDA0061C4A6 /* Default-LandscapeLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 2732BCCF1231DBDA0061C4A6 /* Default-LandscapeLeft.png */; };
-		2732BCD81231DCAF0061C4A6 /* Default-LandscapeRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 2732BCD71231DCAF0061C4A6 /* Default-LandscapeRight.png */; };
 		2741D1661186723D001BD582 /* GameLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2741D1651186723D001BD582 /* GameLogic.m */; };
 		2754AFEE121CCC8000CFC130 /* b_MainMenuL_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 2754AFEA121CCC8000CFC130 /* b_MainMenuL_on.png */; };
 		2754AFEF121CCC8000CFC130 /* b_MainMenuL_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2754AFEB121CCC8000CFC130 /* b_MainMenuL_off.png */; };
@@ -631,6 +629,8 @@
 		27808CC911C7150400306D7B /* ipad_3330a.png in Resources */ = {isa = PBXBuildFile; fileRef = 27808C6011C7150400306D7B /* ipad_3330a.png */; };
 		27808CCA11C7150400306D7B /* ipad_3330b.png in Resources */ = {isa = PBXBuildFile; fileRef = 27808C6111C7150400306D7B /* ipad_3330b.png */; };
 		27808CCB11C7150400306D7B /* rename.pl in Resources */ = {isa = PBXBuildFile; fileRef = 27808C6211C7150400306D7B /* rename.pl */; };
+		278F7EE112372DA30051D5B5 /* Default-LandscapeLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 278F7EE012372DA30051D5B5 /* Default-LandscapeLeft.png */; };
+		278F7F0A12372EAB0051D5B5 /* Default-LandscapeRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 278F7F0912372EAB0051D5B5 /* Default-LandscapeRight.png */; };
 		278FA46211A36A9300F20538 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 278FA46111A36A9300F20538 /* AVFoundation.framework */; };
 		27C29F4E119044D40049EFEB /* SetGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C29F4D119044D40049EFEB /* SetGame.m */; };
 		27C2A4AF11910D880049EFEB /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C2A4AD11910D880049EFEB /* MainMenuViewController.m */; };
@@ -793,8 +793,6 @@
 		270D046A11AF619000CF8DE8 /* ZombieGameHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZombieGameHelpers.h; sourceTree = "<group>"; };
 		270D046B11AF619000CF8DE8 /* ZombieGameHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZombieGameHelpers.m; sourceTree = "<group>"; };
 		271F9A3C11FD2D2A00DAADDE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = iPad/Icon.png; sourceTree = "<group>"; };
-		2732BCCF1231DBDA0061C4A6 /* Default-LandscapeLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-LandscapeLeft.png"; path = "iPad/Default-LandscapeLeft.png"; sourceTree = "<group>"; };
-		2732BCD71231DCAF0061C4A6 /* Default-LandscapeRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-LandscapeRight.png"; path = "iPad/Default-LandscapeRight.png"; sourceTree = "<group>"; };
 		2741D1641186723D001BD582 /* GameLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLogic.h; sourceTree = "<group>"; };
 		2741D1651186723D001BD582 /* GameLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLogic.m; sourceTree = "<group>"; };
 		2754AFEA121CCC8000CFC130 /* b_MainMenuL_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_MainMenuL_on.png; sourceTree = "<group>"; };
@@ -1418,6 +1416,8 @@
 		27808C6011C7150400306D7B /* ipad_3330a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad_3330a.png; sourceTree = "<group>"; };
 		27808C6111C7150400306D7B /* ipad_3330b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad_3330b.png; sourceTree = "<group>"; };
 		27808C6211C7150400306D7B /* rename.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = rename.pl; sourceTree = "<group>"; };
+		278F7EE012372DA30051D5B5 /* Default-LandscapeLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-LandscapeLeft.png"; sourceTree = "<group>"; };
+		278F7F0912372EAB0051D5B5 /* Default-LandscapeRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-LandscapeRight.png"; sourceTree = "<group>"; };
 		278FA46111A36A9300F20538 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		27C29F4C119044D40049EFEB /* SetGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetGame.h; sourceTree = "<group>"; };
 		27C29F4D119044D40049EFEB /* SetGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetGame.m; sourceTree = "<group>"; };
@@ -2304,6 +2304,8 @@
 		27808BF811C7150400306D7B /* iPad */ = {
 			isa = PBXGroup;
 			children = (
+				278F7F0912372EAB0051D5B5 /* Default-LandscapeRight.png */,
+				278F7EE012372DA30051D5B5 /* Default-LandscapeLeft.png */,
 				2754B0881222104E00CFC130 /* ipad_b_MainMenuL_on.png */,
 				2754B0891222104E00CFC130 /* ipad_b_MainMenuL_off.png */,
 				2754B08A1222104E00CFC130 /* ipad_b_ReturnGame_on.png */,
@@ -2430,8 +2432,6 @@
 		27E645C211C1799700D91ADF /* Resources-iPad */ = {
 			isa = PBXGroup;
 			children = (
-				2732BCD71231DCAF0061C4A6 /* Default-LandscapeRight.png */,
-				2732BCCF1231DBDA0061C4A6 /* Default-LandscapeLeft.png */,
 				271F9A3C11FD2D2A00DAADDE /* Icon.png */,
 				277C22DB11D195DB00FC01C0 /* audio */,
 				277C233711D195DB00FC01C0 /* ipad_zombiesEating.mp3 */,
@@ -3306,8 +3306,8 @@
 				2754B08D1222104E00CFC130 /* ipad_b_MainMenuL_off.png in Resources */,
 				2754B08E1222104E00CFC130 /* ipad_b_ReturnGame_on.png in Resources */,
 				2754B08F1222104E00CFC130 /* ipad_b_ReturnGame_off.png in Resources */,
-				2732BCD01231DBDA0061C4A6 /* Default-LandscapeLeft.png in Resources */,
-				2732BCD81231DCAF0061C4A6 /* Default-LandscapeRight.png in Resources */,
+				278F7EE112372DA30051D5B5 /* Default-LandscapeLeft.png in Resources */,
+				278F7F0A12372EAB0051D5B5 /* Default-LandscapeRight.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3433,6 +3433,7 @@
 				APPLICATION_BUNDLE_IDENTIFIER = zombiehousehd;
 				"ARCHS[sdk=iphoneos*]" = armv7;
 				"ARCHS[sdk=iphonesimulator*]" = i386;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David Guinnip (JL86K9UXJ3)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ZombieGame_Prefix.pch;
