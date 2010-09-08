@@ -13,8 +13,8 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		270D046C11AF619000CF8DE8 /* ZombieGameHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D046B11AF619000CF8DE8 /* ZombieGameHelpers.m */; };
 		271F9A3D11FD2D2A00DAADDE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 271F9A3C11FD2D2A00DAADDE /* Icon.png */; };
-		2732BC13123093A70061C4A6 /* Default-LandscapeLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 2732BC12123093A70061C4A6 /* Default-LandscapeLeft.png */; };
-		2732BC1B123094A80061C4A6 /* Default-LandscapeRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 2732BC1A123094A80061C4A6 /* Default-LandscapeRight.png */; };
+		2732BCD01231DBDA0061C4A6 /* Default-LandscapeLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 2732BCCF1231DBDA0061C4A6 /* Default-LandscapeLeft.png */; };
+		2732BCD81231DCAF0061C4A6 /* Default-LandscapeRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 2732BCD71231DCAF0061C4A6 /* Default-LandscapeRight.png */; };
 		2741D1661186723D001BD582 /* GameLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2741D1651186723D001BD582 /* GameLogic.m */; };
 		2754AFEE121CCC8000CFC130 /* b_MainMenuL_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 2754AFEA121CCC8000CFC130 /* b_MainMenuL_on.png */; };
 		2754AFEF121CCC8000CFC130 /* b_MainMenuL_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2754AFEB121CCC8000CFC130 /* b_MainMenuL_off.png */; };
@@ -793,8 +793,8 @@
 		270D046A11AF619000CF8DE8 /* ZombieGameHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZombieGameHelpers.h; sourceTree = "<group>"; };
 		270D046B11AF619000CF8DE8 /* ZombieGameHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZombieGameHelpers.m; sourceTree = "<group>"; };
 		271F9A3C11FD2D2A00DAADDE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = iPad/Icon.png; sourceTree = "<group>"; };
-		2732BC12123093A70061C4A6 /* Default-LandscapeLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-LandscapeLeft.png"; path = "iPad/Default-LandscapeLeft.png"; sourceTree = "<group>"; };
-		2732BC1A123094A80061C4A6 /* Default-LandscapeRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-LandscapeRight.png"; path = "iPad/Default-LandscapeRight.png"; sourceTree = "<group>"; };
+		2732BCCF1231DBDA0061C4A6 /* Default-LandscapeLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-LandscapeLeft.png"; path = "iPad/Default-LandscapeLeft.png"; sourceTree = "<group>"; };
+		2732BCD71231DCAF0061C4A6 /* Default-LandscapeRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-LandscapeRight.png"; path = "iPad/Default-LandscapeRight.png"; sourceTree = "<group>"; };
 		2741D1641186723D001BD582 /* GameLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLogic.h; sourceTree = "<group>"; };
 		2741D1651186723D001BD582 /* GameLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLogic.m; sourceTree = "<group>"; };
 		2754AFEA121CCC8000CFC130 /* b_MainMenuL_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_MainMenuL_on.png; sourceTree = "<group>"; };
@@ -2430,8 +2430,8 @@
 		27E645C211C1799700D91ADF /* Resources-iPad */ = {
 			isa = PBXGroup;
 			children = (
-				2732BC1A123094A80061C4A6 /* Default-LandscapeRight.png */,
-				2732BC12123093A70061C4A6 /* Default-LandscapeLeft.png */,
+				2732BCD71231DCAF0061C4A6 /* Default-LandscapeRight.png */,
+				2732BCCF1231DBDA0061C4A6 /* Default-LandscapeLeft.png */,
 				271F9A3C11FD2D2A00DAADDE /* Icon.png */,
 				277C22DB11D195DB00FC01C0 /* audio */,
 				277C233711D195DB00FC01C0 /* ipad_zombiesEating.mp3 */,
@@ -3306,8 +3306,8 @@
 				2754B08D1222104E00CFC130 /* ipad_b_MainMenuL_off.png in Resources */,
 				2754B08E1222104E00CFC130 /* ipad_b_ReturnGame_on.png in Resources */,
 				2754B08F1222104E00CFC130 /* ipad_b_ReturnGame_off.png in Resources */,
-				2732BC13123093A70061C4A6 /* Default-LandscapeLeft.png in Resources */,
-				2732BC1B123094A80061C4A6 /* Default-LandscapeRight.png in Resources */,
+				2732BCD01231DBDA0061C4A6 /* Default-LandscapeLeft.png in Resources */,
+				2732BCD81231DCAF0061C4A6 /* Default-LandscapeRight.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3461,13 +3461,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Guinnip";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				SDKROOT = iphonesimulator3.2;
+				SDKROOT = iphoneos3.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
