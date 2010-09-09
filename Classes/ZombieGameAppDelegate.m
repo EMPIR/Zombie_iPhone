@@ -34,6 +34,8 @@
     [window release];
     [audioPlayer release];
 	[eatingSoundPlayer release];
+	[databaseName release];
+	[databasePath release];
 	[super dealloc];
 	
 }
