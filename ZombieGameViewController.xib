@@ -699,6 +699,27 @@
 							<string key="NSResourceName">b_Back_off.png</string>
 						</object>
 					</object>
+					<object class="IBUIButton" id="528089198">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">-2147483356</int>
+						<string key="NSFrame">{{137, 256}, {139, 33}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIFont" ref="1061433150"/>
+						<int key="IBUIButtonType">1</int>
+						<string key="IBUINormalTitle">Post to Facebook</string>
+						<reference key="IBUIHighlightedTitleColor" ref="22053288"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="709534607"/>
+						<reference key="IBUIHighlightedImage" ref="199138788"/>
+						<reference key="IBUISelectedImage" ref="199138788"/>
+					</object>
 					<object class="IBUIButton" id="331711665">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">-2147483356</int>
@@ -1729,6 +1750,23 @@
 					</object>
 					<int key="connectionID">225</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">facebookButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="528089198"/>
+					</object>
+					<int key="connectionID">228</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">facebookButtonDown:</string>
+						<reference key="source" ref="528089198"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">229</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -1806,6 +1844,7 @@
 							<reference ref="819858459"/>
 							<reference ref="131048735"/>
 							<reference ref="331711665"/>
+							<reference ref="528089198"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -2064,6 +2103,11 @@
 						<reference key="object" ref="331711665"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">226</int>
+						<reference key="object" ref="528089198"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -2104,6 +2148,7 @@
 					<string>218.IBPluginDependency</string>
 					<string>22.IBPluginDependency</string>
 					<string>220.IBPluginDependency</string>
+					<string>226.IBPluginDependency</string>
 					<string>49.IBPluginDependency</string>
 					<string>53.IBPluginDependency</string>
 					<string>55.IBPluginDependency</string>
@@ -2168,7 +2213,8 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{325, 364}, {480, 320}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>{{67, 369}, {480, 320}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -2201,11 +2247,25 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">225</int>
+			<int key="maxID">229</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">../facebook/facebook-ios-sdk/src/JSON/NSObject+SBJSON.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">../facebook/facebook-ios-sdk/src/JSON/SBJsonWriter.h</string>
+					</object>
+				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">ZombieGameViewController</string>
 					<string key="superclassName">UIViewController</string>
@@ -2237,12 +2297,14 @@
 							<string>button8Up:</string>
 							<string>button9Down:</string>
 							<string>button9Up:</string>
+							<string>facebookButtonDown:</string>
 							<string>finishedButtonDown:</string>
 							<string>optionsButtonDown:</string>
 							<string>replayButtonDown:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -2300,6 +2362,7 @@
 							<string>button8Up:</string>
 							<string>button9Down:</string>
 							<string>button9Up:</string>
+							<string>facebookButtonDown:</string>
 							<string>finishedButtonDown:</string>
 							<string>optionsButtonDown:</string>
 							<string>replayButtonDown:</string>
@@ -2403,6 +2466,10 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
+								<string key="name">facebookButtonDown:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
 								<string key="name">finishedButtonDown:</string>
 								<string key="candidateClassName">id</string>
 							</object>
@@ -2441,6 +2508,7 @@
 							<string>endGameRank1</string>
 							<string>endGameRank2</string>
 							<string>endGameRank3</string>
+							<string>facebookButton</string>
 							<string>finishedLabel</string>
 							<string>finishedLabel2</string>
 							<string>gameBG</string>
@@ -2500,6 +2568,7 @@
 							<string>UIImageView</string>
 							<string>UIImageView</string>
 							<string>UIImageView</string>
+							<string>UIButton</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
 							<string>UIImageView</string>
@@ -2562,6 +2631,7 @@
 							<string>endGameRank1</string>
 							<string>endGameRank2</string>
 							<string>endGameRank3</string>
+							<string>facebookButton</string>
 							<string>finishedLabel</string>
 							<string>finishedLabel2</string>
 							<string>gameBG</string>
@@ -2683,6 +2753,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">endGameRank3</string>
 								<string key="candidateClassName">UIImageView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">facebookButton</string>
+								<string key="candidateClassName">UIButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">finishedLabel</string>

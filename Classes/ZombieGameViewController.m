@@ -19,11 +19,12 @@
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <CoreGraphics/CoreGraphics.h>
+#import "FBConnect.h"
 
 
 @implementation ZombieGameViewController
 @synthesize button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,button11,button12;
-@synthesize playAgainButton,goBackButton, mainMenuPlank, returnGamePlank, pauseButton;
+@synthesize playAgainButton,goBackButton, mainMenuPlank, returnGamePlank, pauseButton,facebookButton;
 @synthesize selected1View,selected2View,selected3View;
 @synthesize selected4View,selected5View,selected6View;
 @synthesize selected7View,selected8View,selected9View;
@@ -57,8 +58,16 @@
 
 
 @synthesize m_bGun;
+@synthesize facebook;
 
 int TOTAL_BRAINS = 60;
+
+BOOL crawlerSelection = YES;
+int crawlerCurrentLevel = 0;
+
+//http://www.facebook.com/developers/#!/developers/apps.php?app_id=146670792037872
+static NSString* kFacebookAppId = @"146670792037872";
+
 
 
 
@@ -295,8 +304,15 @@ int TOTAL_BRAINS = 60;
 }
 
 
+
+
 -(void) drawPieces
 {
+	if(setGame.gameType == 1 && crawlerSelection == YES)
+	{
+		[self drawCrawlerFinished];
+		return;
+	}
 	self.brainView.hidden = NO;
 	self.moveLabel.hidden = NO;
 	self.timerLabel.hidden = NO;
@@ -336,7 +352,7 @@ int TOTAL_BRAINS = 60;
 	NSNumber *cc = (NSNumber *) [match objectAtIndex:2];
 	int a = [aa intValue];
 	int b = [bb intValue];
-	int c = [cc intValue];
+	//int c = [cc intValue];
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	NSLog(@"appDelegate.showHint %B", appDelegate.showHint);
@@ -493,6 +509,14 @@ int TOTAL_BRAINS = 60;
 	
 }
 
+-(IBAction) prevLevelButtonDown:(id)sender
+{
+}
+-(IBAction) nextLevelButtonDown:(id)sender
+{
+}
+
+
 -(void) setButtonPressed:(int) index:(int) value
 {
 	[setGame.pressed_state replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:value]];
@@ -512,6 +536,26 @@ int TOTAL_BRAINS = 60;
 	
 }
 
+-(void) updateCrawlerLevel
+{
+	int currentTime =  timeRemaining;
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
+	
+	if(currentTime <= 20)
+	{
+		[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
+	}
+	else if(currentTime <=40)
+	{
+		[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
+		
+	}
+	crawlerCurrentLevel = [appDelegate getCrawlerDifficulty]; 
+	
+	[self drawCrawlerFinished];
+}
+
 -(void) drawCrawlerFinished
 {
 	
@@ -528,36 +572,32 @@ int TOTAL_BRAINS = 60;
 	
 	//NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
 	
-	NSString *message =[[NSString alloc] initWithFormat:@"Your Time: %0.0f", timeRemaining];
-	//NSLog(@"Game Over, here was your time in seconds: %@", message);
-	[finishedLabel setText:message];
-	[message release];
-	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
-	if(timeRemaining > 50)
-	{
-		//message = [[NSString alloc] initWithFormat:@"Your Placement: %d", gamePlacement];
-		message = [[NSString alloc] initWithFormat:@"Too Slow! Try Level %d Again!", [appDelegate getCrawlerDifficulty] + 1];
-	}
-	else {
-		message = [[NSString alloc] initWithFormat:@"Level %d Complete!", [appDelegate getCrawlerDifficulty] + 1];
-	}
-	[finishedLabel2 setText:message];
-	[message release];
+	
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	NSString *message;
+	int currentLevel = [appDelegate getCrawlerDifficulty]; 
+	int levelScore = [appDelegate getCrawlerLevelVotes:crawlerCurrentLevel];
+	
+	if(currentLevel < 0)	
+		levelScore = 999;
 		
 	//int top5Avg = (int) [appDelegate getCrawlerTopFiveAverage];
-	int currentTime =  timeRemaining;
-	
+	//int currentTime =  timeRemaining;
+	int currentTime = levelScore;
 	
 	UIImage *img;
-	if(currentTime <= 20)
+	if(currentTime == -1)
+	{
+	}
+	else if(currentTime <= 20)
 	{
 		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICC]];
 		[self.gameBG setImage:img];
 		self.endGameRank1.hidden = NO;
 		//self.endGameRank2.hidden = NO;
 		//self.endGameRank3.hidden = NO;
-		[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
+		//[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
 		
 
 	}
@@ -567,7 +607,7 @@ int TOTAL_BRAINS = 60;
 		[self.gameBG setImage:img];
 		//self.endGameRank1.hidden = NO;
 		self.endGameRank2.hidden = NO;
-		[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
+		//[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
 		
 	}
 	else if(currentTime <= 50)
@@ -586,6 +626,36 @@ int TOTAL_BRAINS = 60;
 		
 	}
 	
+	
+	if(currentTime > 50 && currentLevel > 0)
+	{
+		//message = [[NSString alloc] initWithFormat:@"Your Placement: %d", gamePlacement];
+		message = [[NSString alloc] initWithFormat:@"Too Slow! Try Level %d Again!", [appDelegate getCrawlerDifficulty] + 1];
+	}
+	else if(currentLevel == -1 || currentTime == -1)
+	{
+		message = [[NSString alloc] initWithFormat:@"Let's Go!", [appDelegate getCrawlerDifficulty] + 1];
+	}
+	else {
+		message = [[NSString alloc] initWithFormat:@"Level %d Complete!", [appDelegate getCrawlerDifficulty] + 1];
+	}
+	
+	NSLog(message);
+	[finishedLabel2 setText:message];
+	[message release];
+	
+	if(currentTime != 999)
+	{
+		message =[[NSString alloc] initWithFormat:@"Your Time: %d", currentTime];
+		
+	}
+	else {
+		message =[[NSString alloc] initWithFormat:@"Start Classic Crawler!"];
+	}
+	
+	NSLog(message);
+	[finishedLabel setText:message];
+	[message release];
 	
 	
 
@@ -613,6 +683,7 @@ int TOTAL_BRAINS = 60;
 	
 	timeSinceLastRightAnswer = 0;
 	hintVisible = NO;
+	setGame.isActive = NO;
 	
 }
 -(void) HideCards
@@ -677,6 +748,7 @@ int TOTAL_BRAINS = 60;
 		self.returnGamePlank.hidden = YES;
 		if(gamePlacement == 1)//You Win!
 		{
+			facebookButton.hidden = NO;
 			
 			self.m_bGun.hidden = NO;
 			//IMG_BG_ENDGAMEB_WIN
@@ -731,6 +803,7 @@ int TOTAL_BRAINS = 60;
 		if(gamePlacement == 1)//You Win!
 		{
 			self.m_bGun.hidden = NO;
+			
 			
 		}
 		else {
@@ -1044,17 +1117,65 @@ int TOTAL_BRAINS = 60;
 	return NO;
 }
 
+-(IBAction) facebookButtonDown:(id)sender{
+	
+	//
+	NSArray* _permissions;
+	
+	_permissions =  [[NSArray arrayWithObjects: 
+                      @"read_stream", @"offline_access",nil] retain];
+	
+	
+	//Facebook *facebook = [[Facebook alloc] init];
+	//[facebook authorize:kAppId permissions:_permissions delegate:self];
+	
+	
+	SBJSON *jsonWriter = [[SBJSON new] autorelease];
+	
+	NSDictionary* actionLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys: 
+														   @"Zombie House",@"text",@"http://www.kaselo.com",@"href", nil], nil];
+	
+	NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
+	NSString *message =[[NSString alloc] initWithFormat:@"%d Zombie Comboz!", setGame.setsComplete];
+	
+	NSDictionary* attachment = [NSDictionary dictionaryWithObjectsAndKeys:
+								@"Zombie House New High Score", @"name",
+								message, @"caption",
+								@"Zombie House Berzerker High Score!", @"description",
+								@"http://www.kaselo.com", @"href", nil];
+	NSString *attachmentStr = [jsonWriter stringWithObject:attachment];
+	NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+								   kFacebookAppId, @"api_key",
+								   @"Share on Facebook",  @"user_message_prompt",
+								   actionLinksStr, @"action_links",
+								   attachmentStr, @"attachment",
+								   nil];
+	
+	
+	[facebook dialog: @"stream.publish"
+		   andParams: params andDelegate:self];
+	
+	[message release];
+	
+	facebookButton.hidden = YES;
+	
+}
+
 -(IBAction) replayButtonDown:(id)sender{
 	self.m_bGun.hidden = YES;
 	[gameTimer invalidate];
 	[gameTimer release];
 	setGame.isActive = NO;
+	crawlerSelection = NO;
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	//[appDelegate PlayNonGameTrack];
 	//[appDelegate StopEatingTrack];
 	//[self dismissModalViewControllerAnimated:NO];
 	if(setGame.gameType == 1){
-		[setGame newGame:1:[appDelegate getCrawlerDifficulty]];
+		int difficulty = [appDelegate getCrawlerDifficulty];
+		if(difficulty < 0)
+			difficulty = 0;
+		[setGame newGame:1:difficulty];
 	}
 	else {
 		[setGame newGame:2:[appDelegate getBerzerkDifficulty]];
@@ -1071,6 +1192,7 @@ int TOTAL_BRAINS = 60;
 	[gameTimer invalidate];
 	[gameTimer release];
 	setGame.isActive = NO;
+	crawlerSelection = YES;
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 		[appDelegate PlayNonGameTrack];
 	[appDelegate StopEatingTrack];
@@ -1243,6 +1365,7 @@ int TOTAL_BRAINS = 60;
 	showPiece1 = 0;
 	showPiece2 = 0;
 	showPiece3 = 0;
+	crawlerSelection = YES;
 	
 	//PLAY START SOUND??
     [super viewDidLoad];
@@ -1256,7 +1379,7 @@ int TOTAL_BRAINS = 60;
 	} */
 	
 	
-	
+	facebook = [[Facebook alloc] init];
 	
 	m_brainView1 = [[UIImageView alloc]init];
 	[self.view addSubview:m_brainView1];
@@ -1468,7 +1591,7 @@ int TOTAL_BRAINS = 60;
 		else
 		{
 			setGame.isActive = NO;
-			[self drawCrawlerFinished];
+			[self updateCrawlerLevel];
 		}
 		
 	}
@@ -1567,7 +1690,7 @@ int TOTAL_BRAINS = 60;
 #ifdef DEBUG
 		timeRemaining= 5;
 #else		
-		timeRemaining = 60;
+		timeRemaining = 5;
 #endif		
 	}
 	
@@ -1578,6 +1701,8 @@ int TOTAL_BRAINS = 60;
 		
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
+	crawlerCurrentLevel = [appDelegate getCrawlerDifficulty];
 	
 	//[appDelegate ShowHint:YES];
 	[appDelegate PauseSound:NO];
@@ -1656,6 +1781,7 @@ int TOTAL_BRAINS = 60;
 
 - (void)dealloc {
     [super dealloc];
+	[facebook release];
 	[finishedLabel release];
 	[finishedLabel2 release];
 	[moveLabel release];

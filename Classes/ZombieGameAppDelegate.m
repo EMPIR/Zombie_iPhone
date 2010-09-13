@@ -11,6 +11,7 @@
 #import "StringConst.h"
 
 
+
 @implementation ZombieGameAppDelegate
 
 @synthesize window;
@@ -57,6 +58,7 @@
 	
 	BOOL ret = FALSE;
 	// Open the database from the users filessytem
+	NSLog(databasePath);
 	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
 		// Setup the SQL Statement and compile it for faster access
 		const char *sqlStatement = "SELECT * FROM sqlite_master WHERE type='table' AND name='highScores'";
@@ -513,7 +515,7 @@
 -(int) getCrawlerDifficulty
 {
 	sqlite3 *database;
-	int ret = 0;
+	int ret = -1;
 	// Init the animals Array
 	
 	// Open the database from the users filessytem
@@ -543,7 +545,7 @@
 -(int) getCrawlerLevelVotes:(int) level
 {
 	sqlite3 *database;
-	int ret = 0;
+	int ret = -1;
 	// Init the animals Array
 	
 	// Open the database from the users filessytem
@@ -567,9 +569,43 @@
 		
 	}
 	sqlite3_close(database);
-	crawlerDiff = ret;
+
 	return ret;
 }
+
+-(void) insertCrawlerDifficulty:(int) _level: (int) _score{
+	
+	// Setup the database object
+	sqlite3 *database;
+	
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+		const char *sql = "insert into levels(level, votes) Values(?,?)";
+		
+		sqlite3_stmt *compiledStatement;
+		
+		if(sqlite3_prepare_v2(database, sql, -1, &compiledStatement, NULL) != SQLITE_OK)
+			NSAssert1(0, @"Error while creating add statement. '%s'", sqlite3_errmsg(database));
+		
+		sqlite3_bind_int(compiledStatement, 1, _level);
+		sqlite3_bind_int(compiledStatement,2, _score);
+		
+		
+		
+		if(SQLITE_DONE != sqlite3_step(compiledStatement)){
+			NSAssert1(0, @"Error while inserting data. '%s'", sqlite3_errmsg(database));
+		}
+		else{
+			//SQLite provides a method to get the last primary key inserted by using sqlite3_last_insert_rowid
+			//int ID = sqlite3_last_insert_rowid(database);
+		}
+		//Reset the add statement.
+		sqlite3_reset(compiledStatement);		
+	}
+	sqlite3_close(database);
+	
+}
+
 
 
 
@@ -619,38 +655,6 @@
 	return ret;
 }
 
--(void) insertCrawlerDifficulty:(int) level: (int) score{
-	
-	// Setup the database object
-	sqlite3 *database;
-	
-	// Open the database from the users filessytem
-	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
-		const char *sql = "insert into levels(level, votes) Values(?, ?)";
-			
-		sqlite3_stmt *compiledStatement;
-		
-		if(sqlite3_prepare_v2(database, sql, -1, &compiledStatement, NULL) != SQLITE_OK)
-			NSAssert1(0, @"Error while creating add statement. '%s'", sqlite3_errmsg(database));
-		
-		sqlite3_bind_int(compiledStatement, 1, level);
-		sqlite3_bind_int(compiledStatement,2,score);
-		
-		
-		
-		if(SQLITE_DONE != sqlite3_step(compiledStatement)){
-			NSAssert1(0, @"Error while inserting data. '%s'", sqlite3_errmsg(database));
-		}
-		else{
-			//SQLite provides a method to get the last primary key inserted by using sqlite3_last_insert_rowid
-			//int ID = sqlite3_last_insert_rowid(database);
-		}
-		//Reset the add statement.
-		sqlite3_reset(compiledStatement);		
-	}
-	sqlite3_close(database);
-	
-}
 
 
 -(void) insertScore:(int) score:(int)gameType:(NSDate *) date{

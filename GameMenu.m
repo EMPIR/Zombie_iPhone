@@ -9,6 +9,10 @@
 #import "MainMenuViewController.h"
 #import "HighScoresViewController.h"
 #import "OptionsViewController.h"
+
+
+
+
 @implementation GameMenu
 
 @synthesize viewController, highScoresViewController, optionsViewController;
@@ -33,11 +37,82 @@
 -(IBAction) options:(id) sender{
 	NSLog(@"options start");
 	
-	[self presentModalViewController:optionsViewController animated:NO];
 	
+	
+	
+	[self presentModalViewController:optionsViewController animated:NO];
 	
 	NSLog(@"options end");
 }
+
+
+
+
+/**
+ * Callback for facebook login
+ */ 
+-(void) fbDidLogin {
+/*	[self.label setText:@"logged in"];
+	_getUserInfoButton.hidden    = NO;
+	_getPublicInfoButton.hidden   = NO;
+	_publishButton.hidden        = NO;
+	_uploadPhotoButton.hidden    = NO;
+	_fbButton.isLoggedIn         = YES;
+	[_fbButton updateImage];*/
+}
+
+/**
+ * Callback for facebook did not login
+ */
+- (void)fbDidNotLogin:(BOOL)cancelled {
+	NSLog(@"did not login");
+}
+
+/**
+ * Callback for facebook logout
+ */ 
+-(void) fbDidLogout {
+/*	[self.label setText:@"Please log in"];
+	_getUserInfoButton.hidden    = YES;
+	_getPublicInfoButton.hidden   = YES;
+	_publishButton.hidden        = YES;
+	_uploadPhotoButton.hidden = YES;
+	_fbButton.isLoggedIn         = NO;
+	[_fbButton updateImage];*/
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// FBRequestDelegate
+
+/**
+ * Callback when a request receives Response
+ */ 
+- (void)request:(FBRequest*)request didReceiveResponse:(NSURLResponse*)response{
+	NSLog(@"received response");
+};
+
+/**
+ * Called when an error prevents the request from completing successfully.
+ */
+- (void)request:(FBRequest*)request didFailWithError:(NSError*)error{
+	//[self.label setText:[error localizedDescription]];
+};
+
+/**
+ * Called when a request returns and its response has been parsed into an object.
+ * The resulting object may be a dictionary, an array, a string, or a number, depending
+ * on thee format of the API response.
+ */
+- (void)request:(FBRequest*)request didLoad:(id)result {
+/*	if ([result isKindOfClass:[NSArray class]]) {
+		result = [result objectAtIndex:0]; 
+	}
+	if ([result objectForKey:@"owner"]) {
+		[self.label setText:@"Photo upload Success"];
+	} else {
+		[self.label setText:[result objectForKey:@"name"]]; 
+	}*/
+};
 
 
 /*

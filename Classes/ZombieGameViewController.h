@@ -6,9 +6,16 @@
 //
 
 #import <UIKit/UIKit.h>
-@class SetGame;
+#import "FBConnect.h"
 
-@interface ZombieGameViewController : UIViewController {
+
+@class SetGame;
+@class Facebook;
+
+@interface ZombieGameViewController : UIViewController
+<FBRequestDelegate,
+FBDialogDelegate,
+FBSessionDelegate>{
 	IBOutlet UIButton *button1;
 	IBOutlet UIButton *button2;
 	IBOutlet UIButton *button3;
@@ -27,7 +34,9 @@
 	IBOutlet UIButton *mainMenuPlank;
 	IBOutlet UIButton *returnGamePlank;
 	IBOutlet UIButton *pauseButton;
-	
+	IBOutlet UIButton *facebookButton;
+	IBOutlet UIButton *prevLevelButton;
+	IBOutlet UIButton *nextLevelButton;
 	
 	IBOutlet UIImageView *selected1View;
 	IBOutlet UIImageView *selected2View;
@@ -172,6 +181,9 @@
 	UIImageView *m_brainView59;
 	UIImageView *m_brainView60;
 	UIImageView *m_bGun;
+	
+	
+	Facebook *facebook;
 }
 
 //@property (nonatomic) BOOL flipper;
@@ -210,6 +222,9 @@
 -(IBAction) finishedButtonDown:(id)sender;
 -(IBAction) replayButtonDown:(id)sender;
 -(IBAction) optionsButtonDown:(id)sender;
+-(IBAction) facebookButtonDown:(id)sender;
+-(IBAction) prevLevelButtonDown:(id)sender;
+-(IBAction) nextLevelButtonDown:(id)sender;
 
 -(BOOL) isButtonPressed:(int) index;
 
@@ -246,7 +261,9 @@
 @property (nonatomic,retain) UIButton *mainMenuPlank;
 @property (nonatomic,retain) UIButton *returnGamePlank;
 @property (nonatomic,retain) UIButton *pauseButton;
-
+@property (nonatomic,retain) UIButton *facebookButton;
+@property (nonatomic,retain) UIButton *prevLevelButton;
+@property (nonatomic,retain) UIButton *nextLevelbookButton;
 
 
 
@@ -308,6 +325,7 @@
 @property (nonatomic,assign) int gamePlacement;
 @property (nonatomic,assign) int berzerkEndTime;
 
+@property (nonatomic, assign) Facebook *facebook;
 
 @property (nonatomic,retain) NSMutableArray *brains;
 

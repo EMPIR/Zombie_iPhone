@@ -111,7 +111,8 @@ typedef enum GameType
 
 //variables: gt = gameType,  gl = game level
 -(void) newGame:(int) gt: (int) gl{
-	
+	if(gl < 0)
+		gl = 0;
 	//[SetLogic DeletePieces:pieces];
 	[pieces release];
 	[state release];
