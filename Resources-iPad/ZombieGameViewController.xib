@@ -672,6 +672,25 @@
 							<string key="NSResourceName">ipad_b_PlayAgain_off.png</string>
 						</object>
 					</object>
+					<object class="IBUIButton" id="1041400344">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{743, 595}, {261, 70}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIFont" ref="1061433150"/>
+						<int key="IBUIButtonType">1</int>
+						<string key="IBUINormalTitle">Play Next</string>
+						<reference key="IBUIHighlightedTitleColor" ref="22053288"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="709534607"/>
+					</object>
 					<object class="IBUIButton" id="733416916">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">-2147483356</int>
@@ -770,8 +789,6 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="709534607"/>
-						<reference key="IBUIHighlightedImage" ref="64169986"/>
-						<reference key="IBUISelectedImage" ref="64169986"/>
 					</object>
 					<object class="IBUIButton" id="742140239">
 						<reference key="NSNextResponder" ref="774585933"/>
@@ -791,8 +808,26 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="709534607"/>
-						<reference key="IBUIHighlightedImage" ref="64169986"/>
-						<reference key="IBUISelectedImage" ref="64169986"/>
+					</object>
+					<object class="IBUIButton" id="1059659877">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">-2147483356</int>
+						<string key="NSFrame">{{375, 634}, {154, 38}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIFont" ref="1061433150"/>
+						<int key="IBUIButtonType">1</int>
+						<string key="IBUISelectedTitle">Post to Facebook</string>
+						<string key="IBUINormalTitle">Post to Facebook</string>
+						<reference key="IBUIHighlightedTitleColor" ref="22053288"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="709534607"/>
 					</object>
 					<object class="IBUIButton" id="673242110">
 						<reference key="NSNextResponder" ref="774585933"/>
@@ -1776,24 +1811,6 @@
 					<int key="connectionID">224</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">finishedButtonDown:</string>
-						<reference key="source" ref="828271637"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">226</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">finishedButtonDown:</string>
-						<reference key="source" ref="742140239"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">228</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">nextLevelButton</string>
 						<reference key="source" ref="372490531"/>
@@ -1811,21 +1828,55 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">nextLevelButtonDown:</string>
-						<reference key="source" ref="742140239"/>
+						<string key="label">playNextLevelButtonDown:</string>
+						<reference key="source" ref="1041400344"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">231</int>
+					<int key="connectionID">237</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">playNextLevelButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="1041400344"/>
+					</object>
+					<int key="connectionID">238</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">facebookButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="1059659877"/>
+					</object>
+					<int key="connectionID">241</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">facebookButtonDown:</string>
+						<reference key="source" ref="1059659877"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">242</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">nextLevelButtonDown:</string>
+						<reference key="source" ref="742140239"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">1</int>
+					</object>
+					<int key="connectionID">243</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">prevLevelButtonDown:</string>
 						<reference key="source" ref="828271637"/>
 						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
+						<int key="IBEventType">1</int>
 					</object>
-					<int key="connectionID">232</int>
+					<int key="connectionID">245</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1906,6 +1957,8 @@
 							<reference ref="853822119"/>
 							<reference ref="828271637"/>
 							<reference ref="742140239"/>
+							<reference ref="1041400344"/>
+							<reference ref="1059659877"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -2174,6 +2227,16 @@
 						<reference key="object" ref="742140239"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">235</int>
+						<reference key="object" ref="1041400344"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">239</int>
+						<reference key="object" ref="1059659877"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -2216,6 +2279,8 @@
 					<string>220.IBPluginDependency</string>
 					<string>225.IBPluginDependency</string>
 					<string>227.IBPluginDependency</string>
+					<string>235.IBPluginDependency</string>
+					<string>239.IBPluginDependency</string>
 					<string>49.IBPluginDependency</string>
 					<string>53.IBPluginDependency</string>
 					<string>55.IBPluginDependency</string>
@@ -2283,7 +2348,9 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{99, 75}, {1024, 748}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>{{99, 79}, {1024, 748}}</string>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">IBCocoaTouchFramework</string>
 						<integer value="0" key="NS.object.0"/>
@@ -2320,7 +2387,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">232</int>
+			<int key="maxID">246</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2374,11 +2441,13 @@
 							<string>finishedButtonDown:</string>
 							<string>nextLevelButtonDown:</string>
 							<string>optionsButtonDown:</string>
+							<string>playNextLevelButtonDown:</string>
 							<string>prevLevelButtonDown:</string>
 							<string>replayButtonDown:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -2443,6 +2512,7 @@
 							<string>finishedButtonDown:</string>
 							<string>nextLevelButtonDown:</string>
 							<string>optionsButtonDown:</string>
+							<string>playNextLevelButtonDown:</string>
 							<string>prevLevelButtonDown:</string>
 							<string>replayButtonDown:</string>
 						</object>
@@ -2561,6 +2631,10 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
+								<string key="name">playNextLevelButtonDown:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
 								<string key="name">prevLevelButtonDown:</string>
 								<string key="candidateClassName">id</string>
 							</object>
@@ -2618,6 +2692,7 @@
 							<string>nextLevelButton</string>
 							<string>pauseButton</string>
 							<string>playAgainButton</string>
+							<string>playNextLevelButton</string>
 							<string>prevLevelButton</string>
 							<string>returnGamePlank</string>
 							<string>selected10View</string>
@@ -2677,6 +2752,7 @@
 							<string>UIButton</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
+							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
@@ -2745,6 +2821,7 @@
 							<string>nextLevelButton</string>
 							<string>pauseButton</string>
 							<string>playAgainButton</string>
+							<string>playNextLevelButton</string>
 							<string>prevLevelButton</string>
 							<string>returnGamePlank</string>
 							<string>selected10View</string>
@@ -2937,6 +3014,10 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">playAgainButton</string>
+								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">playNextLevelButton</string>
 								<string key="candidateClassName">UIButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">

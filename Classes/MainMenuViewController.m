@@ -11,7 +11,7 @@
 #import "SetGame.h"
 
 @implementation MainMenuViewController
-@synthesize viewController,howToPlayController,crawlerLevelsController;
+@synthesize viewController,howToPlayController;
 @synthesize setGame;
 
 -(IBAction) play:(id) sender{

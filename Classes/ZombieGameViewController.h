@@ -37,6 +37,7 @@ FBSessionDelegate>{
 	IBOutlet UIButton *facebookButton;
 	IBOutlet UIButton *prevLevelButton;
 	IBOutlet UIButton *nextLevelButton;
+	IBOutlet UIButton *playNextLevelButton;
 	
 	IBOutlet UIImageView *selected1View;
 	IBOutlet UIImageView *selected2View;
@@ -225,6 +226,8 @@ FBSessionDelegate>{
 -(IBAction) facebookButtonDown:(id)sender;
 -(IBAction) prevLevelButtonDown:(id)sender;
 -(IBAction) nextLevelButtonDown:(id)sender;
+-(IBAction) playNextLevelButtonDown:(id)sender;
+
 
 -(BOOL) isButtonPressed:(int) index;
 
@@ -263,7 +266,8 @@ FBSessionDelegate>{
 @property (nonatomic,retain) UIButton *pauseButton;
 @property (nonatomic,retain) UIButton *facebookButton;
 @property (nonatomic,retain) UIButton *prevLevelButton;
-@property (nonatomic,retain) UIButton *nextLevelbookButton;
+@property (nonatomic,retain) UIButton *nextLevelButton;
+@property (nonatomic,retain) UIButton *playNextLevelButton;
 
 
 

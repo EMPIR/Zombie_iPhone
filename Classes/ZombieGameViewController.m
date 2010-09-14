@@ -25,6 +25,7 @@
 @implementation ZombieGameViewController
 @synthesize button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,button11,button12;
 @synthesize playAgainButton,goBackButton, mainMenuPlank, returnGamePlank, pauseButton,facebookButton;
+@synthesize nextLevelButton, prevLevelButton, playNextLevelButton;
 @synthesize selected1View,selected2View,selected3View;
 @synthesize selected4View,selected5View,selected6View;
 @synthesize selected7View,selected8View,selected9View;
@@ -327,7 +328,9 @@ static NSString* kFacebookAppId = @"146670792037872";
 	self.endGameRank1.hidden = YES;
 	self.endGameRank2.hidden = YES;
 	self.endGameRank3.hidden = YES;
-	
+	self.prevLevelButton.hidden = YES;
+	self.nextLevelButton.hidden =YES;
+	self.playNextLevelButton.hidden = YES;
 	
 	for(int i=0;i<12; ++i)
 	{
@@ -394,7 +397,7 @@ static NSString* kFacebookAppId = @"146670792037872";
 	
 	NSString *message;
 	if(setGame.gameType == 1)
-		message =[[NSString alloc] initWithFormat:@"Move %d of %d, Level %d", setGame.currentMove + 1, setGame.totalMoves, [appDelegate getCachedCrawlerDifficulty] + 1];
+		message =[[NSString alloc] initWithFormat:@"Move %d of %d, Level %d", setGame.currentMove + 1, setGame.totalMoves, crawlerCurrentLevel+1];
 	else {
 		message =[[NSString alloc] initWithFormat:@"Level %d", (setGame.setsComplete / 10) + 1];
 	}
@@ -511,9 +514,20 @@ static NSString* kFacebookAppId = @"146670792037872";
 
 -(IBAction) prevLevelButtonDown:(id)sender
 {
+	NSLog(@"prevLevelButtonDown");
+	if(crawlerCurrentLevel >0)
+		crawlerCurrentLevel --;
+	[self drawCrawlerFinished];
 }
+
+
 -(IBAction) nextLevelButtonDown:(id)sender
 {
+	NSLog(@"nextLevelButtonDown");
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	if(crawlerCurrentLevel < [appDelegate getCrawlerDifficulty])
+		crawlerCurrentLevel ++;
+	[self drawCrawlerFinished];
 }
 
 
@@ -529,7 +543,7 @@ static NSString* kFacebookAppId = @"146670792037872";
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	if(level+ 1 < [SetLogic GetTotalLevels])
 	{
-		[appDelegate setCrawlerDifficulty:level+1 :score];
+		[appDelegate setCrawlerDifficulty:level :score];
 	}
 	
 	
@@ -542,16 +556,25 @@ static NSString* kFacebookAppId = @"146670792037872";
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	
-	if(currentTime <= 20)
+	   
+	
+	int prevTime = [appDelegate getCrawlerLevelVotes:crawlerCurrentLevel];
+	//does this level exists?
+	if(prevTime > 0)
 	{
-		[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
+		//is the new score better than theold school
+		if(currentTime < prevTime)
+		{
+			//update the database
+			[appDelegate updateCrawlerDifficulty:crawlerCurrentLevel:currentTime];
+		}
 	}
-	else if(currentTime <=40)
-	{
-		[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
+	else if(currentTime <= 40){
+		[self incrementCrawlerDifficulty:crawlerCurrentLevel:currentTime];
+	}
+
 		
-	}
-	crawlerCurrentLevel = [appDelegate getCrawlerDifficulty]; 
+	
 	
 	[self drawCrawlerFinished];
 }
@@ -570,16 +593,41 @@ static NSString* kFacebookAppId = @"146670792037872";
 	self.endGameRank2.hidden = YES;
 	self.endGameRank3.hidden = YES;
 	
+	self.prevLevelButton.hidden = YES;
+	self.nextLevelButton.hidden =YES;
+	self.playNextLevelButton.hidden = YES;
+	
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	int maxLevelCompleted = [appDelegate getCrawlerDifficulty]; 
+	
+	if(crawlerCurrentLevel > 0)
+		self.prevLevelButton.hidden = NO;
+	
+	if(crawlerCurrentLevel < maxLevelCompleted)
+	{
+		self.nextLevelButton.hidden =NO;
+	}
+	
+	
+	int levelScore = [appDelegate getCrawlerLevelVotes:crawlerCurrentLevel];
+
+	
+	//show if crawlerCurrentLevel is not 0 and crawlerCurrentLevel is the last completed board and crawlerCurrentLevel is not the last board
+	if(levelScore>0 && crawlerCurrentLevel == maxLevelCompleted && crawlerCurrentLevel != [SetLogic GetTotalLevels]-1)
+	{
+		self.playNextLevelButton.hidden = NO;
+	}
+	
+	
 	//NSTimeInterval timeInterval = [setGame.startDate timeIntervalSinceDate:setGame.finishedDate];
 	
 	
 	
-	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
-	NSString *message;
-	int currentLevel = [appDelegate getCrawlerDifficulty]; 
-	int levelScore = [appDelegate getCrawlerLevelVotes:crawlerCurrentLevel];
 	
-	if(currentLevel < 0)	
+	NSString *message;
+	
+		
+	if(maxLevelCompleted == 0 && levelScore <= 0)	
 		levelScore = 999;
 		
 	//int top5Avg = (int) [appDelegate getCrawlerTopFiveAverage];
@@ -627,17 +675,17 @@ static NSString* kFacebookAppId = @"146670792037872";
 	}
 	
 	
-	if(currentTime > 50 && currentLevel > 0)
+	if(currentTime > 50 && crawlerCurrentLevel > 0)
 	{
 		//message = [[NSString alloc] initWithFormat:@"Your Placement: %d", gamePlacement];
-		message = [[NSString alloc] initWithFormat:@"Too Slow! Try Level %d Again!", [appDelegate getCrawlerDifficulty] + 1];
+		message = [[NSString alloc] initWithFormat:@"Too Slow! Try Level %d Again!", crawlerCurrentLevel+1];
 	}
-	else if(currentLevel == -1 || currentTime == -1)
+	else if(maxLevelCompleted == -1 || currentTime == -1)
 	{
-		message = [[NSString alloc] initWithFormat:@"Let's Go!", [appDelegate getCrawlerDifficulty] + 1];
+		message = [[NSString alloc] initWithFormat:@"Let's Go!", crawlerCurrentLevel+1];
 	}
 	else {
-		message = [[NSString alloc] initWithFormat:@"Level %d Complete!", [appDelegate getCrawlerDifficulty] + 1];
+		message = [[NSString alloc] initWithFormat:@"Crawler Level: %d", crawlerCurrentLevel+1];
 	}
 	
 	NSLog(message);
@@ -982,8 +1030,10 @@ static NSString* kFacebookAppId = @"146670792037872";
 							//[appDelegate readScoresFromDatabase];
 							gamePlacement = (int) [appDelegate getCrawlerPlacement:(int)timeRemaining];
 							
-							[appDelegate insertScore:timeRemaining :setGame.gameType :setGame.finishedDate];
 							
+							/*TO DO: REVISIT HIGH SCORES FOR CRAWLER
+							[appDelegate insertScore:timeRemaining :setGame.gameType :setGame.finishedDate];
+							*/
 							
 							
 						}
@@ -1161,6 +1211,11 @@ static NSString* kFacebookAppId = @"146670792037872";
 	
 }
 
+-(IBAction) playNextLevelButtonDown:(id)sender{
+	crawlerCurrentLevel ++;
+	[self replayButtonDown:sender];
+}
+
 -(IBAction) replayButtonDown:(id)sender{
 	self.m_bGun.hidden = YES;
 	[gameTimer invalidate];
@@ -1172,7 +1227,7 @@ static NSString* kFacebookAppId = @"146670792037872";
 	//[appDelegate StopEatingTrack];
 	//[self dismissModalViewControllerAnimated:NO];
 	if(setGame.gameType == 1){
-		int difficulty = [appDelegate getCrawlerDifficulty];
+		int difficulty = crawlerCurrentLevel;
 		if(difficulty < 0)
 			difficulty = 0;
 		[setGame newGame:1:difficulty];
@@ -1369,6 +1424,9 @@ static NSString* kFacebookAppId = @"146670792037872";
 	
 	//PLAY START SOUND??
     [super viewDidLoad];
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+
+	crawlerCurrentLevel = [appDelegate getCrawlerDifficulty];
 	
 /*	for(int i=0;i<1;++i)
 	{
@@ -1539,8 +1597,7 @@ static NSString* kFacebookAppId = @"146670792037872";
 		return;
 	
 	
-	//ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
-	
+	//	
 	
 	
 	//[setGame GameLoop];
@@ -1702,7 +1759,7 @@ static NSString* kFacebookAppId = @"146670792037872";
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
-	crawlerCurrentLevel = [appDelegate getCrawlerDifficulty];
+	
 	
 	//[appDelegate ShowHint:YES];
 	[appDelegate PauseSound:NO];
