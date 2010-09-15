@@ -135,6 +135,7 @@
 +(NSMutableArray *) CreateLevelPieces:(int) level;
 +(int) GetLevelStart:(int) level;
 +(int) GetLevelTotal:(int) level;
++(int) MatchScore:(SetPiece *)a: (SetPiece *)b: (SetPiece *)c;
 
 +(void) CreateState:(NSMutableArray *)pieces:(NSMutableArray *)state:(int)totalPieces;
 +(void) GetNewPieces:(int)a:(int)b:(int)c: (NSMutableArray *)ret: (NSMutableArray *)pieces:(int) totalPieces;

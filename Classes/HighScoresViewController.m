@@ -70,7 +70,7 @@
 		if(crawlerScores.count > i)
 		{
 			Scores *score = (Scores *)[crawlerScores objectAtIndex:i];
-			NSString *message =[[NSString alloc] initWithFormat:@"%d: %d seconds", i+1, score.score];
+			NSString *message =[[NSString alloc] initWithFormat:@"Level %d",  score.score+1];
 			UILabel *label = [self getLabel:1:i];
 			label.hidden = NO;
 			//rotate label in 45 degrees

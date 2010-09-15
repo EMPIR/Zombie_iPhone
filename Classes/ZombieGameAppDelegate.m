@@ -440,33 +440,24 @@
 	
 	// Init the animals Array
 	NSMutableArray *ret = [[[NSMutableArray alloc] init] autorelease];
+
+	
 	
 	// Open the database from the users filessytem
 	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
 		// Setup the SQL Statement and compile it for faster access
-		const char *sqlStatement = "select * from highScores where gameType = 1 order by score asc";
+		const char *sqlStatement = "select * from levels order by level desc";
 		sqlite3_stmt *compiledStatement;
 		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
 			// Loop through the results and add them to the feeds array
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
 				// Read the data from the result row
-				int _id = sqlite3_column_int(compiledStatement,0);
-				int _gameType = sqlite3_column_int(compiledStatement,1);
-				int _score = sqlite3_column_int(compiledStatement,2);
-				NSDate *_date = [NSDate dateWithTimeIntervalSince1970:sqlite3_column_double(compiledStatement, 3)];
-				
-				/*NSString *aName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
-				 NSString *aDescription = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
-				 NSString *aImageUrl = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
-				 */
-				// Create a new animal object with the data from the database
-				Scores *score = [[Scores alloc] initWithData:_id:_gameType:_score:_date];
-				// Add the animal object to the animals Array
-				
-					[ret addObject:score];
-				
+				int _level = sqlite3_column_int(compiledStatement,0);
+				NSDate *_date = [[[NSDate alloc] init] autorelease];
+				Scores *score = [[Scores alloc] initWithData:0:1:_level:_date];
+				//int _score = sqlite3_column_int(compiledStatement,1);
+				[ret addObject:score];
 				[score release];
-				
 			}
 		}
 		// Release the compiled statement from memory

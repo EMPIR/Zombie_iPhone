@@ -86,6 +86,7 @@
 		ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 		[appDelegate deleteAllScores];
 		
+		
     }
 }
 

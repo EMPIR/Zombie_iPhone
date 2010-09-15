@@ -15,6 +15,7 @@
 	int count;
 	BOOL match;
 	BOOL showHint;
+	int gameScore;
 	int currentMove;
 	int totalMoves;
 	int totalPieces;
@@ -55,7 +56,7 @@
 @property (assign, nonatomic) int selection_a;
 @property (assign, nonatomic) int selection_b;
 @property (assign, nonatomic) int selection_c;
-
+@property (assign, nonatomic) int gameScore;
 
 
 @property (assign, nonatomic) int setsComplete;

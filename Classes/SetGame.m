@@ -13,7 +13,7 @@
 @implementation SetGame
 @synthesize match,state,pieces,matches,count, startDate,currentMove, finishedDate, totalMoves, totalPieces, gameType;
 @synthesize selection_a,selection_b,selection_c;
-@synthesize gameTime, currentTime, setsComplete;
+@synthesize gameTime, currentTime, setsComplete, gameScore;
 @synthesize pressed_state, isActive, showHint, isPaused;
 
 
@@ -72,6 +72,7 @@ typedef enum GameType
 		totalTime = 0;
 		gameTime = 60; //seconds
 		currentTime = 0;
+		gameScore = 0;
 		
 		isActive = NO;
 		showHint = YES;
@@ -101,6 +102,7 @@ typedef enum GameType
 	setsComplete = 0;
 	gameTime = 60; //seconds
 	currentTime = 0;
+	gameScore = 0;
 	
 	isActive = NO;
 	showHint = YES;
@@ -156,6 +158,11 @@ typedef enum GameType
 
 }
 
+-(int) score:(int) a:(int) b: (int) c{
+	return [SetLogic MatchScore:[pieces objectAtIndex:a]:[pieces objectAtIndex:b]:[pieces objectAtIndex:c]];
+	
+}
+
 -(BOOL) moveReady{
 	NSLog(@"Move Ready?");
 	if(count == 3)
@@ -176,6 +183,23 @@ typedef enum GameType
 	
 	count = 0;
 	BOOL ret = [self move:a:b:c];
+	if(ret)
+	{
+		gameScore += [self score:a:b:c];
+	}
+	return ret;
+}
+
+-(int) moveScore{
+	int a = [[state objectAtIndex:selection_a-1] intValue];
+	int b = [[state objectAtIndex:selection_b-1] intValue];
+	int c = [[state objectAtIndex:selection_c-1] intValue];
+	
+	NSLog(@"Making Move %d %d %d", a,b,c);
+	
+	
+	count = 0;
+	BOOL ret = [self score:a:b:c];
 	return ret;
 }
 

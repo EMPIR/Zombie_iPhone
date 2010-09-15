@@ -229,6 +229,8 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 }
 */
 
+
+
 /// <summary>
 /// This routine determines if the set of pieces contains a Set Match.
 /// If there are less than 3 pieces in the list, then the routine automatically
@@ -462,7 +464,34 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 }
 
 
++(int) MatchScore:(SetPiece *)a: (SetPiece *)b: (SetPiece *)c{
+	int ret = 1;
 
+	if(![self ContainsMatch:a:b:c])
+		return 0;
+	
+	if(a.number != b.number)
+	{
+		NSLog(@"Numbers are different");
+		ret = (ret+1); //   always the same currently
+	}
+	if(a.color != b.color)
+	{
+		NSLog(@"Colors are different");
+		ret = (ret+1)*2; // 4
+	}
+	if(a.shape != b.shape)
+	{
+		NSLog(@"Shapes are different");
+		ret = (ret+1)*2; // 10
+	}
+	if(a.fill != b.fill)
+	{
+		NSLog(@"Fill are different");
+		ret = (ret+1)*2; // 22
+	}
+	return ret;
+}
 
 /// <summary>
 /// Creates the set of total pieces into an array

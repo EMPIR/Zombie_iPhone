@@ -68,7 +68,7 @@ int crawlerCurrentLevel = 0;
 
 //http://www.facebook.com/developers/#!/developers/apps.php?app_id=146670792037872
 static NSString* kFacebookAppId = @"146670792037872";
-
+static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/developers/apps.php?app_id=146670792037872";
 
 
 
@@ -408,8 +408,13 @@ static NSString* kFacebookAppId = @"146670792037872";
 	[message release];
 	[match release];
 	
-	
-	 message =[[NSString alloc] initWithFormat:@"Comboz: %d", setGame.setsComplete];
+	if(setGame.gameType == 2)
+		message =[[NSString alloc] initWithFormat:@"Score: %d", setGame.gameScore];
+	else {
+		message =[[NSString alloc] initWithFormat:@"Comboz: %d", setGame.setsComplete];
+	}
+
+	 
 	[moveLabel2 setText:message];
 	
 	[message release];
@@ -556,7 +561,7 @@ static NSString* kFacebookAppId = @"146670792037872";
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	
-	   
+	 
 	
 	int prevTime = [appDelegate getCrawlerLevelVotes:crawlerCurrentLevel];
 	//does this level exists?
@@ -567,6 +572,8 @@ static NSString* kFacebookAppId = @"146670792037872";
 		{
 			//update the database
 			[appDelegate updateCrawlerDifficulty:crawlerCurrentLevel:currentTime];
+			//TO DO: REVISIT HIGH SCORES FOR CRAWLER
+			//[appDelegate insertScore:setGame.gameScore : setGame.gameType];
 		}
 	}
 	else if(currentTime <= 40){
@@ -1031,9 +1038,7 @@ static NSString* kFacebookAppId = @"146670792037872";
 							gamePlacement = (int) [appDelegate getCrawlerPlacement:(int)timeRemaining];
 							
 							
-							/*TO DO: REVISIT HIGH SCORES FOR CRAWLER
-							[appDelegate insertScore:timeRemaining :setGame.gameType :setGame.finishedDate];
-							*/
+							
 							
 							
 						}
@@ -1170,6 +1175,7 @@ static NSString* kFacebookAppId = @"146670792037872";
 -(IBAction) facebookButtonDown:(id)sender{
 	
 	//
+	
 	NSArray* _permissions;
 	
 	_permissions =  [[NSArray arrayWithObjects: 
@@ -1182,30 +1188,59 @@ static NSString* kFacebookAppId = @"146670792037872";
 	
 	SBJSON *jsonWriter = [[SBJSON new] autorelease];
 	
-	NSDictionary* actionLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys: 
+	
+	if(setGame.gameType == 2)
+	{
+		
+		NSDictionary* actionLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys: 
 														   @"Zombie House",@"text",@"http://www.kaselo.com",@"href", nil], nil];
 	
-	NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
-	NSString *message =[[NSString alloc] initWithFormat:@"%d Zombie Comboz!", setGame.setsComplete];
+		NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
+		NSString *message =[[NSString alloc] initWithFormat:@"%d Zombie Comboz!", setGame.setsComplete];
 	
-	NSDictionary* attachment = [NSDictionary dictionaryWithObjectsAndKeys:
+		NSDictionary* attachment = [NSDictionary dictionaryWithObjectsAndKeys:
 								@"Zombie House New High Score", @"name",
 								message, @"caption",
 								@"Zombie House Berzerker High Score!", @"description",
 								@"http://www.kaselo.com", @"href", nil];
-	NSString *attachmentStr = [jsonWriter stringWithObject:attachment];
-	NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+		NSString *attachmentStr = [jsonWriter stringWithObject:attachment];
+		NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
 								   kFacebookAppId, @"api_key",
 								   @"Share on Facebook",  @"user_message_prompt",
 								   actionLinksStr, @"action_links",
 								   attachmentStr, @"attachment",
 								   nil];
-	
-	
-	[facebook dialog: @"stream.publish"
+
+		[facebook dialog: @"stream.publish"
 		   andParams: params andDelegate:self];
-	
-	[message release];
+		[message release];
+	}
+	/*TO DO
+	else {
+		NSDictionary* actionLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys: 
+															   @"Zombie House",@"text",@"http://www.kaselo.com",@"href", nil], nil];
+		
+		NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
+		NSString *message =[[NSString alloc] initWithFormat:@"%d Zombie Comboz!", setGame.setsComplete];
+		
+		NSDictionary* attachment = [NSDictionary dictionaryWithObjectsAndKeys:
+									@"Zombie House New Level!", @"name",
+									message, @"caption",
+									@"Zombie House Crawler High Score!", @"description",
+									@"http://www.kaselo.com", @"href", nil];
+		NSString *attachmentStr = [jsonWriter stringWithObject:attachment];
+		NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+									   kFacebookAppId, @"api_key",
+									   @"Share on Facebook",  @"user_message_prompt",
+									   actionLinksStr, @"action_links",
+									   attachmentStr, @"attachment",
+									   nil];
+		
+		[facebook dialog: @"stream.publish"
+			   andParams: params andDelegate:self];
+		[message release];
+	}*/
+
 	
 	facebookButton.hidden = YES;
 	
@@ -1247,10 +1282,12 @@ static NSString* kFacebookAppId = @"146670792037872";
 	[gameTimer invalidate];
 	[gameTimer release];
 	setGame.isActive = NO;
-	crawlerSelection = YES;
+	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	if(!crawlerSelection)
 		[appDelegate PlayNonGameTrack];
 	[appDelegate StopEatingTrack];
+	crawlerSelection = YES;
 	
 	[self dismissModalViewControllerAnimated:NO];
 	//[[self parentViewController] dismissModalViewControllerAnimated:NO];
@@ -1613,7 +1650,7 @@ static NSString* kFacebookAppId = @"146670792037872";
 			{
 				[ZombieGameHelpers  playSound:0:3];
 				gamePlacement = (int) [appDelegate getBerzerkPlacement:setGame.setsComplete];
-				[appDelegate insertScore:setGame.setsComplete :setGame.gameType :setGame.finishedDate];
+				[appDelegate insertScore:setGame.gameScore :setGame.gameType :setGame.finishedDate];
 				
 				brains = [[BrainPieces CreatePieces] retain];
 				
@@ -1747,7 +1784,7 @@ static NSString* kFacebookAppId = @"146670792037872";
 #ifdef DEBUG
 		timeRemaining= 5;
 #else		
-		timeRemaining = 5;
+		timeRemaining = 60;
 #endif		
 	}
 	
@@ -1773,7 +1810,7 @@ static NSString* kFacebookAppId = @"146670792037872";
 		
 		[appDelegate PlayBerzerkTrack];
 	}
-	else {
+	else if(!crawlerSelection){
 		[appDelegate PlayCrawlerTrack];
 	}
 
