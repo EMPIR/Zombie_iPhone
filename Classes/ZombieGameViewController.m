@@ -408,11 +408,11 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	[message release];
 	[match release];
 	
-	if(setGame.gameType == 2)
-		message =[[NSString alloc] initWithFormat:@"Score: %d", setGame.gameScore];
-	else {
+	//if(setGame.gameType == 2)
+	//	message =[[NSString alloc] initWithFormat:@"Score: %d", setGame.gameScore];
+	//else {
 		message =[[NSString alloc] initWithFormat:@"Comboz: %d", setGame.setsComplete];
-	}
+	//}
 
 	 
 	[moveLabel2 setText:message];
