@@ -10,6 +10,10 @@
 #ifndef STRINGCONST
 #define STRINGCONST
 
+
+static const char IMG_BRONZESKULL []				= "http://www.thepiratetradingco.com/1196_1_.jpg";
+static const char IMG_SILVERSKULL []				= "http://images.quickblogcast.com/5/7/7/4/1/122959-114775/silver_skull_art_quinn_gregory_winston_mini.jpg";
+static const char IMG_GOLDSKULL	[]					= "http://www.panik-design.com/acatalog/skull-koff-gold-xtra-1.jpg";
 #ifdef IPAD
 static const char	IMG_ALLBAD []				= "ipad_allBad.png";
 static const char	IMG_ALLGOOD []				= "ipad_allGood.png";

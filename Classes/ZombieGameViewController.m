@@ -331,6 +331,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	self.prevLevelButton.hidden = YES;
 	self.nextLevelButton.hidden =YES;
 	self.playNextLevelButton.hidden = YES;
+	self.facebookButton.hidden = YES;
 	
 	for(int i=0;i<12; ++i)
 	{
@@ -412,7 +413,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	//	message =[[NSString alloc] initWithFormat:@"Score: %d", setGame.gameScore];
 	//else {
 		message =[[NSString alloc] initWithFormat:@"Comboz: %d", setGame.setsComplete];
-	//}
+	//	}
 
 	 
 	[moveLabel2 setText:message];
@@ -603,6 +604,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	self.prevLevelButton.hidden = YES;
 	self.nextLevelButton.hidden =YES;
 	self.playNextLevelButton.hidden = YES;
+	facebookButton.hidden = NO;
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	int maxLevelCompleted = [appDelegate getCrawlerDifficulty]; 
@@ -656,7 +658,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		
 
 	}
-	else if(currentTime <=40)
+	else if(currentTime <=30)
 	{
 		img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICB]];
 		[self.gameBG setImage:img];
@@ -665,7 +667,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		//[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
 		
 	}
-	else if(currentTime <= 50)
+	else if(currentTime <= 40)
 	{
 		//IMG_BG_CLASSICA
 		img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICA]];
@@ -682,7 +684,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	}
 	
 	
-	if(currentTime > 50 && crawlerCurrentLevel > 0)
+	if(currentTime > 40 && crawlerCurrentLevel > 0)
 	{
 		//message = [[NSString alloc] initWithFormat:@"Your Placement: %d", gamePlacement];
 		message = [[NSString alloc] initWithFormat:@"Too Slow! Try Level %d Again!", crawlerCurrentLevel+1];
@@ -1215,20 +1217,84 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		   andParams: params andDelegate:self];
 		[message release];
 	}
-	/*TO DO
+
 	else {
+		ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+
+		
+		int levelScore = [appDelegate getCrawlerLevelVotes:crawlerCurrentLevel];
+		int currentTime = levelScore;
+		UIImage *img;
+		NSString *message;
+		NSString *imageURL;
+		
+		if(currentTime == -1)
+		{
+		}
+		else if(currentTime <= 20)
+		{
+			img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICC]];
+			message =[[NSString alloc] initWithFormat:@"Gold Skull on Level %d!", crawlerCurrentLevel];
+			imageURL =[StringConst GetImgConst: IMG_GOLDSKULL];
+			//self.endGameRank2.hidden = NO;
+			//self.endGameRank3.hidden = NO;
+			//[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
+			
+			
+		}
+		else if(currentTime <=30)
+		{
+			img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICB]];
+			message =[[NSString alloc] initWithFormat:@"Silver Skull on Level %d!", crawlerCurrentLevel];
+			imageURL =[StringConst GetImgConst: IMG_SILVERSKULL];
+			//[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
+			
+			
+		}
+		else if(currentTime <= 40)
+		{
+			message =[[NSString alloc] initWithFormat:@"Bronze Skull on Level %d!", crawlerCurrentLevel+1];
+			imageURL =[StringConst GetImgConst: IMG_BRONZESKULL];
+			//IMG_BG_CLASSICA
+			img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICA]];
+						
+		}
+		
+		
 		NSDictionary* actionLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys: 
-															   @"Zombie House",@"text",@"http://www.kaselo.com",@"href", nil], nil];
+															   @"Zombie House",@"text",
+															   @"http://www.kaselo.com",@"href", 
+															   nil], nil];
 		
 		NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
-		NSString *message =[[NSString alloc] initWithFormat:@"%d Zombie Comboz!", setGame.setsComplete];
+		//http://www.panik-design.com/acatalog/skull-koff-gold-xtra-1.jpg
+		
+		NSLog(actionLinksStr);		
+		NSDictionary* mediaLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys: 
+															  @"Zombie House",@"text",
+															  @"http://www.kaselo.com",@"href", 
+															  nil],nil];
+		
+		NSDictionary* imageShare = [NSDictionary dictionaryWithObjectsAndKeys:
+									 @"image", @"type",
+									imageURL, @"src",
+									@"http://www.kaselo.com", @"href",
+									nil];
+		
+		NSString *mediaStr = [jsonWriter stringWithObject:mediaLinks];
+		NSLog(mediaStr);
 		
 		NSDictionary* attachment = [NSDictionary dictionaryWithObjectsAndKeys:
-									@"Zombie House New Level!", @"name",
+									@"Zombie House Crawler Score!", @"name",
 									message, @"caption",
-									@"Zombie House Crawler High Score!", @"description",
-									@"http://www.kaselo.com", @"href", nil];
+									@"Zombie House Crawler!", @"description",
+									@"http://www.kaselo.com", @"href", 
+									[NSArray arrayWithObjects:imageShare, nil ], @"media",
+									nil];
+		
 		NSString *attachmentStr = [jsonWriter stringWithObject:attachment];
+		NSLog(attachmentStr);
+		
 		NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
 									   kFacebookAppId, @"api_key",
 									   @"Share on Facebook",  @"user_message_prompt",
@@ -1236,13 +1302,12 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 									   attachmentStr, @"attachment",
 									   nil];
 		
-		[facebook dialog: @"stream.publish"
-			   andParams: params andDelegate:self];
+		[facebook dialog: @"stream.publish" andParams: params andDelegate:self];
 		[message release];
-	}*/
+	}
 
 	
-	facebookButton.hidden = YES;
+	//facebookButton.hidden = YES;
 	
 }
 
