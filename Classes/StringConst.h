@@ -14,6 +14,54 @@
 static const char IMG_BRONZESKULL []				= "http://www.thepiratetradingco.com/1196_1_.jpg";
 static const char IMG_SILVERSKULL []				= "http://images.quickblogcast.com/5/7/7/4/1/122959-114775/silver_skull_art_quinn_gregory_winston_mini.jpg";
 static const char IMG_GOLDSKULL	[]					= "http://www.panik-design.com/acatalog/skull-koff-gold-xtra-1.jpg";
+
+
+#ifdef DOGHOUSE
+#ifdef IPAD
+#else
+static const char	IMG_ALLBAD []				= "allBad.png";
+static const char	IMG_ALLGOOD []				= "allGood.png";
+static const char	IMG_BG_CLASSICA []			= "bg_EndGame_win.jpg";
+static const char	IMG_BG_CLASSICB []			= "bg_EndGame_win.jpg";
+static const char	IMG_BG_CLASSICC []			= "bg_EndGame_lose.jpg";
+static const char   IMG_BG_CLASSIC_WIN[]		= "bg_EndGame_win.jpg";
+static const char   IMG_BG_CLASSIC_LOSE[]		= "bg_EndGame_lose.jpg";
+static const char	IMG_BG_ENDGAMEB_WIN []		= "bg_EndGameB_win.jpg";
+static const char	IMG_BG_ENDGAMEB_LOSE []		= "bg_EndGameB_lose.jpg";
+static const char	IMG_BG_GAMEPLAY []			= "bg_GamePlay.jpg";
+static const char	IMG_BRAIN1 []				= "brain_1.png";
+static const char	IMG_BRAIN2 []				= "brain_2.png";
+static const char	IMG_BRAIN3 []				= "brain_3.png";
+static const char	IMG_ENDGAME_GUN[]			= "EndGame_Gun.png";
+static const char	IMG_PAUSE_OFF []			= "b_Pause_off.png";
+static const char	IMG_PAUSE_ON []				= "b_Pause_on.png";
+static const char	IMG_FX_ON []				= "b_FX_on.png";
+static const char	IMG_FX_OFF []				= "b_FX_off.png";
+static const char	IMG_HINTS_ON []				= "b_Hints_on.png";
+static const char	IMG_HINTS_OFF []			= "b_Hints_off.png";
+static const char	IMG_SLIDER_BALL []			= "slider_eyeball.png";
+static const char   IMG_PIECE_A		[]			= "%d%d%d0a.png";
+static const char   IMG_PIECE_B		[]			= "%d%d%d0b.png";
+static const char	IMG_BRAINS		[]			= "brains_%d.png";
+static const char	SND_NONGAME_TRACK	[]		= "%@/Audio_BG02.mp3";
+static const char	SND_CRAWLER_TRACK	[]		= "%@/Audio_BG01.mp3";
+static const char	SND_BERZERK_TRACK	[]		= "%@/Audio_BG03.mp3";
+
+static const char	SND_BRAIN_PUMP	[]			= "/brainPump.wav";
+static const char	SND_WRONG	[]				= "/wrong.wav";
+static const char	SND_CORRECT	[]				= "/correct.wav";
+static const char	SND_SCREAM	[]				= "/wilhelm.wav";
+static const char	SND_SHOTGUN	[]				= "/ShotGun_pumps.wav";
+static const char	SND_GAME_START	[]			= "/Game_Start_faster.wav";
+static const char	SND_BRAIN_EXPLODE	[]		= "/brainExplode.wav";
+static const char	SND_ZOMBIE_EXP_1	[]		= "/%d%d.wav";
+static const char	SND_ZOMBIE_EXP_2	[]		= "/%d6.wav";
+static const char	SND_ZOMBIE_EXP_3	[]		= "/%d7.wav";
+static const char	SND_ZOMBIE_EXP_4	[]		= "/%d8.wav";
+static const char	SND_ZOMBIE_EXP_5	[]		= "/%d9.wav";
+static const char	SND_EATING			[]		= "%@/zombiesEating.mp3";
+#endif // IPAD
+#else
 #ifdef IPAD
 static const char	IMG_ALLBAD []				= "ipad_allBad.png";
 static const char	IMG_ALLGOOD []				= "ipad_allGood.png";
@@ -94,11 +142,12 @@ static const char	SND_ZOMBIE_EXP_3	[]		= "/%d7.wav";
 static const char	SND_ZOMBIE_EXP_4	[]		= "/%d8.wav";
 static const char	SND_ZOMBIE_EXP_5	[]		= "/%d9.wav";
 static const char	SND_EATING			[]		= "%@/zombiesEating.mp3";
-#endif 
+#endif //IPAD
 
 
 
-#endif
+#endif//DOGHOUSE
+#endif//STRINGCONST
 
 @interface StringConst : NSObject {
 

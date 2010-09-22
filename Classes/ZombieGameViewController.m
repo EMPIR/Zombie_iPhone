@@ -644,12 +644,25 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	int currentTime = levelScore;
 	
 	UIImage *img;
-	if(currentTime == -1)
+	if(currentTime == -1 && maxLevelCompleted > 0)
 	{
+#ifdef DOGHOUSE
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_LOSE]];
+#else
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICA]];
+		
+#endif
+		[self.gameBG setImage:img];
+		self.endGameRank3.hidden = NO;
 	}
 	else if(currentTime <= 20)
 	{
+#ifdef DOGHOUSE
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_WIN]];
+#else
 		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICC]];
+
+#endif
 		[self.gameBG setImage:img];
 		self.endGameRank1.hidden = NO;
 		//self.endGameRank2.hidden = NO;
@@ -660,7 +673,12 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	}
 	else if(currentTime <=30)
 	{
-		img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICB]];
+#ifdef DOGHOUSE
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_WIN]];
+#else
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICB]];
+		
+#endif
 		[self.gameBG setImage:img];
 		//self.endGameRank1.hidden = NO;
 		self.endGameRank2.hidden = NO;
@@ -670,14 +688,24 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	else if(currentTime <= 40)
 	{
 		//IMG_BG_CLASSICA
-		img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICA]];
+#ifdef DOGHOUSE
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_WIN]];
+#else
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICA]];
+		
+#endif
 		[self.gameBG setImage:img];
 		self.endGameRank3.hidden = NO;
 
 	}
 	else
 	{
-		img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICA]];
+#ifdef DOGHOUSE
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_LOSE]];
+#else
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICA]];
+		
+#endif
 		[self.gameBG setImage:img];
 
 		
@@ -689,7 +717,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		//message = [[NSString alloc] initWithFormat:@"Your Placement: %d", gamePlacement];
 		message = [[NSString alloc] initWithFormat:@"Too Slow! Try Level %d Again!", crawlerCurrentLevel+1];
 	}
-	else if(maxLevelCompleted == -1 || currentTime == -1)
+	else if(maxLevelCompleted == -1 && currentTime == -1)
 	{
 		message = [[NSString alloc] initWithFormat:@"Let's Go!", crawlerCurrentLevel+1];
 	}
@@ -703,7 +731,11 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	
 	if(currentTime != 999)
 	{
-		message =[[NSString alloc] initWithFormat:@"Your Time: %d", currentTime];
+		if(currentTime < 0)
+			
+			message =[[NSString alloc] initWithFormat:@"Too slow, try again!"];
+		else
+			message =[[NSString alloc] initWithFormat:@"Your Time: %d", currentTime];
 		
 	}
 	else {

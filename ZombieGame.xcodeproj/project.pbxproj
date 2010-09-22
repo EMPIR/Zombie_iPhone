@@ -554,6 +554,10 @@
 		2732091312456263004F2F9F /* wilhelm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2732073812456263004F2F9F /* wilhelm.wav */; };
 		2732091412456263004F2F9F /* wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2732073912456263004F2F9F /* wrong.wav */; };
 		2732091512456263004F2F9F /* zombiesEating.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2732073A12456263004F2F9F /* zombiesEating.mp3 */; };
+		27320CC412499A9B004F2F9F /* bg_endgame_win.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27320CC012499A9B004F2F9F /* bg_endgame_win.jpg */; };
+		27320CC512499A9B004F2F9F /* bg_endgame_win@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27320CC112499A9B004F2F9F /* bg_endgame_win@2x.jpg */; };
+		27320CC612499A9B004F2F9F /* bg_endgame_lose.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27320CC212499A9B004F2F9F /* bg_endgame_lose.jpg */; };
+		27320CC712499A9B004F2F9F /* bg_endgame_lose@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27320CC312499A9B004F2F9F /* bg_endgame_lose@2x.jpg */; };
 		2741D1661186723D001BD582 /* GameLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2741D1651186723D001BD582 /* GameLogic.m */; };
 		2754AFEE121CCC8000CFC130 /* b_MainMenuL_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 2754AFEA121CCC8000CFC130 /* b_MainMenuL_on.png */; };
 		2754AFEF121CCC8000CFC130 /* b_MainMenuL_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2754AFEB121CCC8000CFC130 /* b_MainMenuL_off.png */; };
@@ -1723,6 +1727,10 @@
 		2732073812456263004F2F9F /* wilhelm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = wilhelm.wav; path = MEDIA_Doghouse_iPhone/wilhelm.wav; sourceTree = "<group>"; };
 		2732073912456263004F2F9F /* wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = wrong.wav; path = MEDIA_Doghouse_iPhone/wrong.wav; sourceTree = "<group>"; };
 		2732073A12456263004F2F9F /* zombiesEating.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = zombiesEating.mp3; path = MEDIA_Doghouse_iPhone/zombiesEating.mp3; sourceTree = "<group>"; };
+		27320CC012499A9B004F2F9F /* bg_endgame_win.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg_endgame_win.jpg; path = MEDIA_Doghouse_iPhone/bg_endgame_win.jpg; sourceTree = "<group>"; };
+		27320CC112499A9B004F2F9F /* bg_endgame_win@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "bg_endgame_win@2x.jpg"; path = "MEDIA_Doghouse_iPhone/bg_endgame_win@2x.jpg"; sourceTree = "<group>"; };
+		27320CC212499A9B004F2F9F /* bg_endgame_lose.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg_endgame_lose.jpg; path = MEDIA_Doghouse_iPhone/bg_endgame_lose.jpg; sourceTree = "<group>"; };
+		27320CC312499A9B004F2F9F /* bg_endgame_lose@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "bg_endgame_lose@2x.jpg"; path = "MEDIA_Doghouse_iPhone/bg_endgame_lose@2x.jpg"; sourceTree = "<group>"; };
 		2741D1641186723D001BD582 /* GameLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLogic.h; sourceTree = "<group>"; };
 		2741D1651186723D001BD582 /* GameLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLogic.m; sourceTree = "<group>"; };
 		2754AFEA121CCC8000CFC130 /* b_MainMenuL_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_MainMenuL_on.png; sourceTree = "<group>"; };
@@ -2513,6 +2521,10 @@
 		27320413124561AF004F2F9F /* MEDIA_Dog_iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				27320CC012499A9B004F2F9F /* bg_endgame_win.jpg */,
+				27320CC112499A9B004F2F9F /* bg_endgame_win@2x.jpg */,
+				27320CC212499A9B004F2F9F /* bg_endgame_lose.jpg */,
+				27320CC312499A9B004F2F9F /* bg_endgame_lose@2x.jpg */,
 				2732055A12456263004F2F9F /* 21.wav */,
 				2732055B12456263004F2F9F /* 22.wav */,
 				2732055C12456263004F2F9F /* 23.wav */,
@@ -3848,7 +3860,14 @@
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ZombieGame" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -4720,6 +4739,10 @@
 				2732091312456263004F2F9F /* wilhelm.wav in Resources */,
 				2732091412456263004F2F9F /* wrong.wav in Resources */,
 				2732091512456263004F2F9F /* zombiesEating.mp3 in Resources */,
+				27320CC412499A9B004F2F9F /* bg_endgame_win.jpg in Resources */,
+				27320CC512499A9B004F2F9F /* bg_endgame_win@2x.jpg in Resources */,
+				27320CC612499A9B004F2F9F /* bg_endgame_lose.jpg in Resources */,
+				27320CC712499A9B004F2F9F /* bg_endgame_lose@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
