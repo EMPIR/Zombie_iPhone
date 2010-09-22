@@ -1381,8 +1381,12 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	setGame.isActive = NO;
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
-	if(!crawlerSelection)
+	
+	//DG 9-22-10 - if game type is berzerk, or game type is crawler and crawlerSelection is false, plan non game track
+	if([setGame gameType] != 1 || !crawlerSelection)
 		[appDelegate PlayNonGameTrack];
+	
+	
 	[appDelegate StopEatingTrack];
 	crawlerSelection = YES;
 	
