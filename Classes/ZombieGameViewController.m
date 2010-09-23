@@ -646,6 +646,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	UIImage *img;
 	if(currentTime == -1 && maxLevelCompleted > 0)
 	{
+		facebookButton.hidden = YES;
 #ifdef DOGHOUSE
 		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_LOSE]];
 #else
@@ -1383,6 +1384,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	//DG 9-22-10 - if game type is berzerk, or game type is crawler and crawlerSelection is false, plan non game track
+	//If you are on crawlerSelection, PlayNonGameTrack is already playing so don't end it to preserve continuity of track
 	if([setGame gameType] != 1 || !crawlerSelection)
 		[appDelegate PlayNonGameTrack];
 	

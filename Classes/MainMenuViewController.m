@@ -22,11 +22,14 @@
 	[self presentModalViewController:viewController animated:NO];
 }
 -(IBAction) playRamero:(id) sender{
+#ifndef DEMO
+	NSLog(@"playRamero!");
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	[setGame newGame:2:[appDelegate getBerzerkDifficulty]];
 	self.viewController.setGame = self.setGame;
 	NSLog(@"Play Clicked, now load Game View!");
 	[self presentModalViewController:viewController animated:NO];
+#endif
 }
 
 
