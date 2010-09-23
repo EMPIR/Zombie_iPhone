@@ -176,7 +176,7 @@
 		vrLen = 1666;
 		vrLoc = 0;
 	};
-	2732008B1242F925004F2F9F /* ZombieGameViewController.m:1306 */ = {
+	2732008B1242F925004F2F9F /* ZombieGameViewController.m:1445 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -188,9 +188,9 @@
 		functionName = "-facebookButtonDown:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 1306;
-		location = ZombieGame;
-		modificationTime = 306890768.206961;
+		lineNumber = 1445;
+		location = "Dog House";
+		modificationTime = 306897247.955497;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -284,7 +284,7 @@
 		vrLen = 1021;
 		vrLoc = 292;
 	};
-	27320CA9124997A1004F2F9F /* StringConst.h:105 */ = {
+	27320CA9124997A1004F2F9F /* StringConst.h:128 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -295,8 +295,8 @@
 		fileReference = 2772D1F311C9AB48009C23BD /* StringConst.h */;
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 105;
-		modificationTime = 306890791.599959;
+		lineNumber = 128;
+		modificationTime = 306897331.196302;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -315,12 +315,12 @@
 		fRef = 2772D1F311C9AB48009C23BD /* StringConst.h */;
 		name = "StringConst.h: 27";
 		rLen = 18;
-		rLoc = 896;
+		rLoc = 2429;
 		rType = 0;
 		vrLen = 1625;
 		vrLoc = 548;
 	};
-	27320CF612499E1F004F2F9F /* ZombieGameViewController.m:704 */ = {
+	27320CF612499E1F004F2F9F /* ZombieGameViewController.m:709 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -332,13 +332,13 @@
 		functionName = "-drawCrawlerFinished";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 704;
-		location = ZombieGame;
-		modificationTime = 306890768.286307;
+		lineNumber = 709;
+		location = "Dog House";
+		modificationTime = 306897247.95584;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
-	27320CFF12499E68004F2F9F /* ZombieGameViewController.m:561 */ = {
+	27320CFF12499E68004F2F9F /* ZombieGameViewController.m:566 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -350,9 +350,9 @@
 		functionName = "-updateCrawlerLevel";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 561;
-		location = ZombieGame;
-		modificationTime = 306890768.393845;
+		lineNumber = 566;
+		location = "Dog House";
+		modificationTime = 306897247.955985;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -361,7 +361,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1767";
 		rLen = 50;
-		rLoc = 44403;
+		rLoc = 49385;
 		rType = 0;
 		vrLen = 1481;
 		vrLoc = 42968;
@@ -371,7 +371,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1716";
 		rLen = 43;
-		rLoc = 42732;
+		rLoc = 47714;
 		rType = 0;
 		vrLen = 1311;
 		vrLoc = 41470;
@@ -388,7 +388,7 @@
 	};
 	2741D1641186723D001BD582 /* GameLogic.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1046, 484}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1064, 379}}";
 			sepNavSelRange = "{234, 0}";
 			sepNavVisRange = "{0, 370}";
 		};
@@ -503,9 +503,9 @@
 	};
 	2772D1F311C9AB48009C23BD /* StringConst.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1132, 2171}}";
-			sepNavSelRange = "{896, 18}";
-			sepNavVisRange = "{547, 1627}";
+			sepNavIntBoundsRect = "{{0, 0}, {1132, 2392}}";
+			sepNavSelRange = "{2429, 18}";
+			sepNavVisRange = "{1724, 1627}";
 			sepNavWindowFrame = "{{38, 98}, {1384, 754}}";
 		};
 	};
@@ -670,7 +670,7 @@
 		vrLen = 819;
 		vrLoc = 249;
 	};
-	2791330C124A9D5E0061FD1B /* ZombieGameViewController.m:1379 */ = {
+	2791330C124A9D5E0061FD1B /* ZombieGameViewController.m:1518 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -682,9 +682,9 @@
 		functionName = "-finishedButtonDown:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 1379;
-		location = ZombieGame;
-		modificationTime = 306890768.471774;
+		lineNumber = 1518;
+		location = "Dog House";
+		modificationTime = 306897247.956127;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -731,7 +731,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1378";
 		rLen = 0;
-		rLoc = 32745;
+		rLoc = 37727;
 		rType = 0;
 		vrLen = 843;
 		vrLoc = 32603;
@@ -785,7 +785,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1772";
 		rLen = 50;
-		rLoc = 44403;
+		rLoc = 49385;
 		rType = 0;
 		vrLen = 1414;
 		vrLoc = 43355;
@@ -795,7 +795,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1721";
 		rLen = 43;
-		rLoc = 42732;
+		rLoc = 47714;
 		rType = 0;
 		vrLen = 1315;
 		vrLoc = 41738;
@@ -849,7 +849,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1772";
 		rLen = 50;
-		rLoc = 44403;
+		rLoc = 49385;
 		rType = 0;
 		vrLen = 1414;
 		vrLoc = 43355;
@@ -859,7 +859,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1721";
 		rLen = 43;
-		rLoc = 42732;
+		rLoc = 47714;
 		rType = 0;
 		vrLen = 1315;
 		vrLoc = 41738;
@@ -874,11 +874,11 @@
 		delayBeforeContinue = 0;
 		fileReference = 27C2A4AD11910D880049EFEB /* MainMenuViewController.m */;
 		functionName = "-playRamero:";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 24;
-		location = ZombieGame;
-		modificationTime = 306890778.657195;
+		location = "Dog House";
+		modificationTime = 306897247.956273;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -895,7 +895,7 @@
 		fRef = 2772D1F311C9AB48009C23BD /* StringConst.h */;
 		name = "StringConst.h: 27";
 		rLen = 18;
-		rLoc = 896;
+		rLoc = 2429;
 		rType = 0;
 		vrLen = 1627;
 		vrLoc = 547;
@@ -915,7 +915,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1417";
 		rLen = 0;
-		rLoc = 34002;
+		rLoc = 38984;
 		rType = 0;
 		vrLen = 950;
 		vrLoc = 32607;
@@ -945,7 +945,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1772";
 		rLen = 50;
-		rLoc = 44403;
+		rLoc = 49385;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 43355;
@@ -955,7 +955,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1721";
 		rLen = 43;
-		rLoc = 42732;
+		rLoc = 47714;
 		rType = 0;
 		vrLen = 1313;
 		vrLoc = 41738;
@@ -975,7 +975,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1772";
 		rLen = 50;
-		rLoc = 44403;
+		rLoc = 49385;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 43355;
@@ -985,7 +985,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1721";
 		rLen = 43;
-		rLoc = 42732;
+		rLoc = 47714;
 		rType = 0;
 		vrLen = 1313;
 		vrLoc = 41738;
@@ -1005,7 +1005,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1772";
 		rLen = 50;
-		rLoc = 44403;
+		rLoc = 49385;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 43355;
@@ -1015,7 +1015,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1721";
 		rLen = 43;
-		rLoc = 42732;
+		rLoc = 47714;
 		rType = 0;
 		vrLen = 1313;
 		vrLoc = 41738;
@@ -1035,7 +1035,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1772";
 		rLen = 50;
-		rLoc = 44403;
+		rLoc = 49385;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 43355;
@@ -1045,7 +1045,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1721";
 		rLen = 43;
-		rLoc = 42732;
+		rLoc = 47714;
 		rType = 0;
 		vrLen = 1313;
 		vrLoc = 41738;
@@ -1065,7 +1065,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1772";
 		rLen = 50;
-		rLoc = 44403;
+		rLoc = 49385;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 43355;
@@ -1075,7 +1075,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1721";
 		rLen = 43;
-		rLoc = 42732;
+		rLoc = 47714;
 		rType = 0;
 		vrLen = 1313;
 		vrLoc = 41738;
@@ -1095,7 +1095,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1772";
 		rLen = 50;
-		rLoc = 44403;
+		rLoc = 49385;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 43355;
@@ -1105,7 +1105,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1721";
 		rLen = 43;
-		rLoc = 42732;
+		rLoc = 47714;
 		rType = 0;
 		vrLen = 1313;
 		vrLoc = 41738;
@@ -1125,7 +1125,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1772";
 		rLen = 50;
-		rLoc = 44403;
+		rLoc = 49385;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 43355;
@@ -1135,7 +1135,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1721";
 		rLen = 43;
-		rLoc = 42732;
+		rLoc = 47714;
 		rType = 0;
 		vrLen = 1313;
 		vrLoc = 41738;
@@ -1155,7 +1155,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1772";
 		rLen = 50;
-		rLoc = 44403;
+		rLoc = 49385;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 43355;
@@ -1165,7 +1165,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1721";
 		rLen = 43;
-		rLoc = 42732;
+		rLoc = 47714;
 		rType = 0;
 		vrLen = 1313;
 		vrLoc = 41738;
@@ -1185,7 +1185,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1772";
 		rLen = 50;
-		rLoc = 44403;
+		rLoc = 49385;
 		rType = 0;
 		vrLen = 1414;
 		vrLoc = 43355;
@@ -1195,7 +1195,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1721";
 		rLen = 43;
-		rLoc = 42732;
+		rLoc = 47714;
 		rType = 0;
 		vrLen = 1315;
 		vrLoc = 41738;
@@ -1215,7 +1215,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1772";
 		rLen = 50;
-		rLoc = 44403;
+		rLoc = 49385;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 43355;
@@ -1225,7 +1225,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1721";
 		rLen = 43;
-		rLoc = 42732;
+		rLoc = 47714;
 		rType = 0;
 		vrLen = 1313;
 		vrLoc = 41738;
@@ -1269,7 +1269,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 607";
 		rLen = 0;
-		rLoc = 14360;
+		rLoc = 14563;
 		rType = 0;
 		vrLen = 939;
 		vrLoc = 14089;
@@ -1291,7 +1291,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1773";
 		rLen = 50;
-		rLoc = 44403;
+		rLoc = 49385;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 43386;
@@ -1301,10 +1301,486 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
 		name = "ZombieGameViewController.m: 1722";
 		rLen = 43;
-		rLoc = 42732;
+		rLoc = 47714;
 		rType = 0;
 		vrLen = 1389;
 		vrLoc = 41686;
+	};
+	279135C8124AD4040061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1324";
+		rLen = 0;
+		rLoc = 31540;
+		rType = 0;
+		vrLen = 591;
+		vrLoc = 31511;
+	};
+	279135C9124AD4040061FD1B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ZombieGame-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			UIPrerenderedIcon,
+		);
+		name = "/Users/dguinnip/Build/ZombieGame/ZombieGame-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	279135CA124AD4040061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1913";
+		rLen = 50;
+		rLoc = 49385;
+		rType = 0;
+		vrLen = 1752;
+		vrLoc = 43260;
+	};
+	279135CB124AD4040061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1862";
+		rLen = 43;
+		rLoc = 47714;
+		rType = 0;
+		vrLen = 1077;
+		vrLoc = 40943;
+	};
+	279135CE124AD55A0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 73";
+		rLen = 0;
+		rLoc = 3128;
+		rType = 0;
+		vrLen = 974;
+		vrLoc = 2385;
+	};
+	279135CF124AD55A0061FD1B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ZombieGame-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			UIPrerenderedIcon,
+		);
+		name = "/Users/dguinnip/Build/ZombieGame/ZombieGame-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	279135D0124AD55A0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1918";
+		rLen = 50;
+		rLoc = 49385;
+		rType = 0;
+		vrLen = 1752;
+		vrLoc = 43170;
+	};
+	279135D1124AD55A0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1867";
+		rLen = 43;
+		rLoc = 47714;
+		rType = 0;
+		vrLen = 1086;
+		vrLoc = 40993;
+	};
+	279135D4124AD7880061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 73";
+		rLen = 0;
+		rLoc = 3128;
+		rType = 0;
+		vrLen = 1052;
+		vrLoc = 2385;
+	};
+	279135D5124AD7880061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2772D1F311C9AB48009C23BD /* StringConst.h */;
+		name = "StringConst.h: 15";
+		rLen = 0;
+		rLoc = 924;
+		rType = 0;
+		vrLen = 1068;
+		vrLoc = 3;
+	};
+	279135D6124AD7880061FD1B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ZombieGame-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			UIPrerenderedIcon,
+		);
+		name = "/Users/dguinnip/Build/ZombieGame/ZombieGame-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	279135D7124AD7880061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1918";
+		rLen = 50;
+		rLoc = 49385;
+		rType = 0;
+		vrLen = 1752;
+		vrLoc = 43170;
+	};
+	279135D8124AD7880061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1867";
+		rLen = 43;
+		rLoc = 47714;
+		rType = 0;
+		vrLen = 1086;
+		vrLoc = 40993;
+	};
+	279135E5124ADBFA0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1375";
+		rLen = 0;
+		rLoc = 32819;
+		rType = 0;
+		vrLen = 528;
+		vrLoc = 31858;
+	};
+	279135E6124ADBFA0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2772D1F311C9AB48009C23BD /* StringConst.h */;
+		name = "StringConst.h: 16";
+		rLen = 0;
+		rLoc = 832;
+		rType = 0;
+		vrLen = 1103;
+		vrLoc = 0;
+	};
+	279135E7124ADBFA0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2772D1F311C9AB48009C23BD /* StringConst.h */;
+		name = "StringConst.h: 15";
+		rLen = 0;
+		rLoc = 832;
+		rType = 0;
+		vrLen = 1118;
+		vrLoc = 3;
+	};
+	279135E8124ADBFA0061FD1B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ZombieGame-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			UIPrerenderedIcon,
+		);
+		name = "/Users/dguinnip/Build/ZombieGame/ZombieGame-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	279135E9124ADBFA0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1918";
+		rLen = 50;
+		rLoc = 49385;
+		rType = 0;
+		vrLen = 1752;
+		vrLoc = 43248;
+	};
+	279135EA124ADBFA0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1867";
+		rLen = 43;
+		rLoc = 47714;
+		rType = 0;
+		vrLen = 1061;
+		vrLoc = 41054;
+	};
+	27913601124AE0A30061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2741D1641186723D001BD582 /* GameLogic.h */;
+		name = "GameLogic.h: 17";
+		rLen = 0;
+		rLoc = 234;
+		rType = 0;
+		vrLen = 370;
+		vrLoc = 0;
+	};
+	27913602124AE0A30061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* ZombieGameViewController.h */;
+		name = "ZombieGameViewController.h: 48";
+		rLen = 0;
+		rLoc = 1274;
+		rType = 0;
+		vrLen = 992;
+		vrLoc = 321;
+	};
+	27913603124AE0A30061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2772D1F311C9AB48009C23BD /* StringConst.h */;
+		name = "StringConst.h: 27";
+		rLen = 0;
+		rLoc = 1185;
+		rType = 0;
+		vrLen = 1904;
+		vrLoc = 176;
+	};
+	27913604124AE0A30061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1325";
+		rLen = 0;
+		rLoc = 31583;
+		rType = 0;
+		vrLen = 1234;
+		vrLoc = 27653;
+	};
+	27913605124AE0A30061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1242";
+		rLen = 0;
+		rLoc = 28332;
+		rType = 0;
+		vrLen = 352;
+		vrLoc = 27183;
+	};
+	27913606124AE0A30061FD1B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ZombieGame-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			UIPrerenderedIcon,
+		);
+		name = "/Users/dguinnip/Build/ZombieGame/ZombieGame-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	27913607124AE0A30061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1912";
+		rLen = 50;
+		rLoc = 49385;
+		rType = 0;
+		vrLen = 1752;
+		vrLoc = 43447;
+	};
+	27913608124AE0A30061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1861";
+		rLen = 43;
+		rLoc = 47714;
+		rType = 0;
+		vrLen = 1061;
+		vrLoc = 41192;
+	};
+	27913609124AE0D50061FD1B /* ZombieGameViewController.m:1228 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		functionName = "-facebookButtonDown:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 1228;
+		location = "Dog House";
+		modificationTime = 306897268.090094;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	2791360D124AE0DA0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1227";
+		rLen = 0;
+		rLoc = 27658;
+		rType = 0;
+		vrLen = 767;
+		vrLoc = 27400;
+	};
+	2791360E124AE0DA0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1227";
+		rLen = 0;
+		rLoc = 27658;
+		rType = 0;
+		vrLen = 726;
+		vrLoc = 27441;
+	};
+	2791360F124AE0DA0061FD1B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ZombieGame-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			UIPrerenderedIcon,
+		);
+		name = "/Users/dguinnip/Build/ZombieGame/ZombieGame-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	27913610124AE0DA0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1912";
+		rLen = 50;
+		rLoc = 49385;
+		rType = 0;
+		vrLen = 1752;
+		vrLoc = 43447;
+	};
+	27913611124AE0DA0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1861";
+		rLen = 43;
+		rLoc = 47714;
+		rType = 0;
+		vrLen = 1061;
+		vrLoc = 41192;
+	};
+	27913613124AE10A0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1227";
+		rLen = 0;
+		rLoc = 27658;
+		rType = 0;
+		vrLen = 1209;
+		vrLoc = 29233;
+	};
+	27913614124AE10A0061FD1B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ZombieGame-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			UIPrerenderedIcon,
+		);
+		name = "/Users/dguinnip/Build/ZombieGame/ZombieGame-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	27913615124AE10A0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1912";
+		rLen = 50;
+		rLoc = 49385;
+		rType = 0;
+		vrLen = 1835;
+		vrLoc = 43447;
+	};
+	27913616124AE10A0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1861";
+		rLen = 43;
+		rLoc = 47714;
+		rType = 0;
+		vrLen = 1120;
+		vrLoc = 41192;
+	};
+	2791361D124AE15B0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1326";
+		rLen = 0;
+		rLoc = 31646;
+		rType = 0;
+		vrLen = 548;
+		vrLoc = 31961;
+	};
+	2791361E124AE15B0061FD1B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ZombieGame-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			UIPrerenderedIcon,
+		);
+		name = "/Users/dguinnip/Build/ZombieGame/ZombieGame-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	2791361F124AE15B0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1912";
+		rLen = 50;
+		rLoc = 49385;
+		rType = 0;
+		vrLen = 1752;
+		vrLoc = 43460;
+	};
+	27913620124AE15B0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1861";
+		rLen = 43;
+		rLoc = 47714;
+		rType = 0;
+		vrLen = 1061;
+		vrLoc = 41205;
+	};
+	2791362D124AE3DE0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1326";
+		rLen = 0;
+		rLoc = 31646;
+		rType = 0;
+		vrLen = 1150;
+		vrLoc = 30915;
+	};
+	2791362E124AE3DE0061FD1B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ZombieGame-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			UIPrerenderedIcon,
+		);
+		name = "/Users/dguinnip/Build/ZombieGame/ZombieGame-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	2791362F124AE3DE0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1912";
+		rLen = 50;
+		rLoc = 49385;
+		rType = 0;
+		vrLen = 1752;
+		vrLoc = 43460;
+	};
+	27913630124AE3DE0061FD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */;
+		name = "ZombieGameViewController.m: 1861";
+		rLen = 43;
+		rLoc = 47714;
+		rType = 0;
+		vrLen = 1061;
+		vrLoc = 41205;
 	};
 	27C29E20118F913D0049EFEB /* PBXBookmarkGroup */ = {
 		isa = PBXBookmarkGroup;
@@ -2486,8 +2962,8 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 442;
-		location = ZombieGame;
-		modificationTime = 306890768.142523;
+		location = "Dog House";
+		modificationTime = 306897247.955448;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2609,16 +3085,16 @@
 	};
 	28D7ACF60DDB3853001CB0EB /* ZombieGameViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 5356}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1064, 5447}}";
 			sepNavSelRange = "{1274, 0}";
-			sepNavVisRange = "{292, 1021}";
+			sepNavVisRange = "{321, 992}";
 		};
 	};
 	28D7ACF70DDB3853001CB0EB /* ZombieGameViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1325, 25402}}";
-			sepNavSelRange = "{42732, 43}";
-			sepNavVisRange = "{41686, 1389}";
+			sepNavIntBoundsRect = "{{0, 0}, {1064, 28561}}";
+			sepNavSelRange = "{14124, 0}";
+			sepNavVisRange = "{15610, 787}";
 			sepNavWindowFrame = "{{56, 107}, {1384, 754}}";
 		};
 	};
@@ -2626,19 +3102,20 @@
 		activeArchitecturePreference = armv6;
 		activeBuildConfigurationName = Release;
 		activeExecutable = 273203EE12456002004F2F9F /* DogHouse */;
-		activeSDKPreference = iphonesimulator3.2;
+		activeSDKPreference = iphoneos3.2;
 		activeTarget = 273201EA12456002004F2F9F /* DogHouse */;
 		addToTargets = (
 			27913317124AA0080061FD1B /* ZombieGameLite */,
 		);
 		breakpoints = (
 			27F4FCE512405839002068A2 /* ZombieGameAppDelegate.m:442 */,
-			2732008B1242F925004F2F9F /* ZombieGameViewController.m:1306 */,
-			27320CA9124997A1004F2F9F /* StringConst.h:105 */,
-			27320CF612499E1F004F2F9F /* ZombieGameViewController.m:704 */,
-			27320CFF12499E68004F2F9F /* ZombieGameViewController.m:561 */,
-			2791330C124A9D5E0061FD1B /* ZombieGameViewController.m:1379 */,
+			2732008B1242F925004F2F9F /* ZombieGameViewController.m:1445 */,
+			27320CA9124997A1004F2F9F /* StringConst.h:128 */,
+			27320CF612499E1F004F2F9F /* ZombieGameViewController.m:709 */,
+			27320CFF12499E68004F2F9F /* ZombieGameViewController.m:566 */,
+			2791330C124A9D5E0061FD1B /* ZombieGameViewController.m:1518 */,
 			27913537124AC7500061FD1B /* MainMenuViewController.m:24 */,
+			27913609124AE0D50061FD1B /* ZombieGameViewController.m:1228 */,
 		);
 		codeSenseManager = 27F6DF4E11852130007705A9 /* Code sense */;
 		executables = (
@@ -2873,6 +3350,50 @@
 			279135C3124AD1CD0061FD1B /* PlistBookmark */ = 279135C3124AD1CD0061FD1B /* PlistBookmark */;
 			279135C4124AD1CD0061FD1B /* PBXTextBookmark */ = 279135C4124AD1CD0061FD1B /* PBXTextBookmark */;
 			279135C5124AD1CD0061FD1B /* PBXTextBookmark */ = 279135C5124AD1CD0061FD1B /* PBXTextBookmark */;
+			279135C8124AD4040061FD1B /* PBXTextBookmark */ = 279135C8124AD4040061FD1B /* PBXTextBookmark */;
+			279135C9124AD4040061FD1B /* PlistBookmark */ = 279135C9124AD4040061FD1B /* PlistBookmark */;
+			279135CA124AD4040061FD1B /* PBXTextBookmark */ = 279135CA124AD4040061FD1B /* PBXTextBookmark */;
+			279135CB124AD4040061FD1B /* PBXTextBookmark */ = 279135CB124AD4040061FD1B /* PBXTextBookmark */;
+			279135CE124AD55A0061FD1B /* PBXTextBookmark */ = 279135CE124AD55A0061FD1B /* PBXTextBookmark */;
+			279135CF124AD55A0061FD1B /* PlistBookmark */ = 279135CF124AD55A0061FD1B /* PlistBookmark */;
+			279135D0124AD55A0061FD1B /* PBXTextBookmark */ = 279135D0124AD55A0061FD1B /* PBXTextBookmark */;
+			279135D1124AD55A0061FD1B /* PBXTextBookmark */ = 279135D1124AD55A0061FD1B /* PBXTextBookmark */;
+			279135D4124AD7880061FD1B /* PBXTextBookmark */ = 279135D4124AD7880061FD1B /* PBXTextBookmark */;
+			279135D5124AD7880061FD1B /* PBXTextBookmark */ = 279135D5124AD7880061FD1B /* PBXTextBookmark */;
+			279135D6124AD7880061FD1B /* PlistBookmark */ = 279135D6124AD7880061FD1B /* PlistBookmark */;
+			279135D7124AD7880061FD1B /* PBXTextBookmark */ = 279135D7124AD7880061FD1B /* PBXTextBookmark */;
+			279135D8124AD7880061FD1B /* PBXTextBookmark */ = 279135D8124AD7880061FD1B /* PBXTextBookmark */;
+			279135E5124ADBFA0061FD1B /* PBXTextBookmark */ = 279135E5124ADBFA0061FD1B /* PBXTextBookmark */;
+			279135E6124ADBFA0061FD1B /* PBXTextBookmark */ = 279135E6124ADBFA0061FD1B /* PBXTextBookmark */;
+			279135E7124ADBFA0061FD1B /* PBXTextBookmark */ = 279135E7124ADBFA0061FD1B /* PBXTextBookmark */;
+			279135E8124ADBFA0061FD1B /* PlistBookmark */ = 279135E8124ADBFA0061FD1B /* PlistBookmark */;
+			279135E9124ADBFA0061FD1B /* PBXTextBookmark */ = 279135E9124ADBFA0061FD1B /* PBXTextBookmark */;
+			279135EA124ADBFA0061FD1B /* PBXTextBookmark */ = 279135EA124ADBFA0061FD1B /* PBXTextBookmark */;
+			27913601124AE0A30061FD1B /* PBXTextBookmark */ = 27913601124AE0A30061FD1B /* PBXTextBookmark */;
+			27913602124AE0A30061FD1B /* PBXTextBookmark */ = 27913602124AE0A30061FD1B /* PBXTextBookmark */;
+			27913603124AE0A30061FD1B /* PBXTextBookmark */ = 27913603124AE0A30061FD1B /* PBXTextBookmark */;
+			27913604124AE0A30061FD1B /* PBXTextBookmark */ = 27913604124AE0A30061FD1B /* PBXTextBookmark */;
+			27913605124AE0A30061FD1B /* PBXTextBookmark */ = 27913605124AE0A30061FD1B /* PBXTextBookmark */;
+			27913606124AE0A30061FD1B /* PlistBookmark */ = 27913606124AE0A30061FD1B /* PlistBookmark */;
+			27913607124AE0A30061FD1B /* PBXTextBookmark */ = 27913607124AE0A30061FD1B /* PBXTextBookmark */;
+			27913608124AE0A30061FD1B /* PBXTextBookmark */ = 27913608124AE0A30061FD1B /* PBXTextBookmark */;
+			2791360D124AE0DA0061FD1B /* PBXTextBookmark */ = 2791360D124AE0DA0061FD1B /* PBXTextBookmark */;
+			2791360E124AE0DA0061FD1B /* PBXTextBookmark */ = 2791360E124AE0DA0061FD1B /* PBXTextBookmark */;
+			2791360F124AE0DA0061FD1B /* PlistBookmark */ = 2791360F124AE0DA0061FD1B /* PlistBookmark */;
+			27913610124AE0DA0061FD1B /* PBXTextBookmark */ = 27913610124AE0DA0061FD1B /* PBXTextBookmark */;
+			27913611124AE0DA0061FD1B /* PBXTextBookmark */ = 27913611124AE0DA0061FD1B /* PBXTextBookmark */;
+			27913613124AE10A0061FD1B /* PBXTextBookmark */ = 27913613124AE10A0061FD1B /* PBXTextBookmark */;
+			27913614124AE10A0061FD1B /* PlistBookmark */ = 27913614124AE10A0061FD1B /* PlistBookmark */;
+			27913615124AE10A0061FD1B /* PBXTextBookmark */ = 27913615124AE10A0061FD1B /* PBXTextBookmark */;
+			27913616124AE10A0061FD1B /* PBXTextBookmark */ = 27913616124AE10A0061FD1B /* PBXTextBookmark */;
+			2791361D124AE15B0061FD1B /* PBXTextBookmark */ = 2791361D124AE15B0061FD1B /* PBXTextBookmark */;
+			2791361E124AE15B0061FD1B /* PlistBookmark */ = 2791361E124AE15B0061FD1B /* PlistBookmark */;
+			2791361F124AE15B0061FD1B /* PBXTextBookmark */ = 2791361F124AE15B0061FD1B /* PBXTextBookmark */;
+			27913620124AE15B0061FD1B /* PBXTextBookmark */ = 27913620124AE15B0061FD1B /* PBXTextBookmark */;
+			2791362D124AE3DE0061FD1B /* PBXTextBookmark */ = 2791362D124AE3DE0061FD1B /* PBXTextBookmark */;
+			2791362E124AE3DE0061FD1B /* PlistBookmark */ = 2791362E124AE3DE0061FD1B /* PlistBookmark */;
+			2791362F124AE3DE0061FD1B /* PBXTextBookmark */ = 2791362F124AE3DE0061FD1B /* PBXTextBookmark */;
+			27913630124AE3DE0061FD1B /* PBXTextBookmark */ = 27913630124AE3DE0061FD1B /* PBXTextBookmark */;
 			27D690271224B42A00EBB0FC = 27D690271224B42A00EBB0FC /* PBXBookmark */;
 			27D690281224B42A00EBB0FC = 27D690281224B42A00EBB0FC /* PBXBookmark */;
 			27D690291224B42A00EBB0FC = 27D690291224B42A00EBB0FC /* PBXBookmark */;

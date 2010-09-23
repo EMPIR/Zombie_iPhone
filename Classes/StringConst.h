@@ -10,10 +10,33 @@
 #ifndef STRINGCONST
 #define STRINGCONST
 
+static const char WEBISTE_URL []					= "http://www.kaselo.com";
+#ifdef DOGHOUSE
+static const char COMBO_NAME []						= "Dog Combos";
+static const char GAME_MODE_1_SCORE []				= "Dog House Crawler Score!";
+static const char GAME_HIGH_SCORE []				= "Dog House New High Score!";
+static const char GAME_MODE_2_HIGH_SCORE []			= "Dog House Barking Mad High Score!";
+static const char GAME_MODE_1_FIRST_PLACE []		= "Earned a Steak on Level";
+static const char GAME_MODE_1_SECOND_PLACE []		= "Earned a Bone on Level";
+static const char GAME_MODE_1_THIRD_PLACE []		= "Earned a Stick on Level";
+static const char APP_NAME []						= "Dog House";
+static const char IMG_BRONZESKULL []				= "http://emmaguinnip.com/Graphics/EndGameClassic03.png";
+static const char IMG_SILVERSKULL []				= "http://emmaguinnip.com/Graphics/EndGameClassic02.png";
+static const char IMG_GOLDSKULL	[]					= "http://emmaguinnip.com/Graphics/EndGameClassic01.png";
+#else
+static const char COMBO_NAME []						= "Zombie Comboz";
+static const char GAME_MODE_1_SCORE []				= "Zombie House Crawler Score!";
+static const char GAME_HIGH_SCORE []				= "Zombie House New High Score!";
+static const char GAME_MODE_2_HIGH_SCORE []			= "Zombie House Berzerker High Score!";
+static const char GAME_MODE_1_FIRST_PLACE []		= "Earned a Golden Skull on Level";
+static const char GAME_MODE_1_SECOND_PLACE []		= "Earned a Silver Skull on Level";
+static const char GAME_MODE_1_THIRD_PLACE []		= "Earned a Bronze Skull on Level";
 
+static const char APP_NAME []						= "Zombie House";
 static const char IMG_BRONZESKULL []				= "http://www.thepiratetradingco.com/1196_1_.jpg";
 static const char IMG_SILVERSKULL []				= "http://images.quickblogcast.com/5/7/7/4/1/122959-114775/silver_skull_art_quinn_gregory_winston_mini.jpg";
 static const char IMG_GOLDSKULL	[]					= "http://www.panik-design.com/acatalog/skull-koff-gold-xtra-1.jpg";
+#endif
 
 
 #ifdef DOGHOUSE
@@ -24,8 +47,8 @@ static const char	IMG_ALLGOOD []				= "allGood.png";
 static const char	IMG_BG_CLASSICA []			= "bg_EndGame_win.jpg";
 static const char	IMG_BG_CLASSICB []			= "bg_EndGame_win.jpg";
 static const char	IMG_BG_CLASSICC []			= "bg_EndGame_lose.jpg";
-static const char   IMG_BG_CLASSIC_WIN[]		= "bg_EndGame_win.jpg";
-static const char   IMG_BG_CLASSIC_LOSE[]		= "bg_EndGame_lose.jpg";
+static const char   IMG_BG_CLASSIC_WIN[]		= "bg_endgame_win.jpg";
+static const char   IMG_BG_CLASSIC_LOSE[]		= "bg_endgame_lose.jpg";
 static const char	IMG_BG_ENDGAMEB_WIN []		= "bg_EndGameB_win.jpg";
 static const char	IMG_BG_ENDGAMEB_LOSE []		= "bg_EndGameB_lose.jpg";
 static const char	IMG_BG_GAMEPLAY []			= "bg_GamePlay.jpg";

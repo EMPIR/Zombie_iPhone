@@ -67,9 +67,14 @@ BOOL crawlerSelection = YES;
 int crawlerCurrentLevel = 0;
 
 //http://www.facebook.com/developers/#!/developers/apps.php?app_id=146670792037872
+
+#ifdef DOGHOUSE
+static NSString* kFacebookAppId = @"155974964426893";
+static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/developers/apps.php?app_id=155974964426893";
+#else
 static NSString* kFacebookAppId = @"146670792037872";
 static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/developers/apps.php?app_id=146670792037872";
-
+#endif
 
 
 
@@ -1207,9 +1212,10 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	return NO;
 }
 
+
 -(IBAction) facebookButtonDown:(id)sender{
 	
-	//
+	
 	
 	NSArray* _permissions;
 	
@@ -1217,8 +1223,6 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
                       @"read_stream", @"offline_access",nil] retain];
 	
 	
-	//Facebook *facebook = [[Facebook alloc] init];
-	//[facebook authorize:kAppId permissions:_permissions delegate:self];
 	
 	
 	SBJSON *jsonWriter = [[SBJSON new] autorelease];
@@ -1228,7 +1232,142 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	{
 		
 		NSDictionary* actionLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys: 
-														   @"Zombie House",@"text",@"http://www.kaselo.com",@"href", nil], nil];
+															  [StringConst GetImgConst:APP_NAME],@"text",[StringConst GetImgConst:WEBISTE_URL],@"href", nil], nil];
+		
+		NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
+		NSString *message =[[NSString alloc] initWithFormat:@"%d %@!", setGame.setsComplete, [StringConst GetImgConst:COMBO_NAME]];
+		
+		NSDictionary* attachment = [NSDictionary dictionaryWithObjectsAndKeys:
+									[StringConst GetImgConst: GAME_HIGH_SCORE], @"name",
+									message, @"caption",
+									[StringConst GetImgConst:GAME_MODE_2_HIGH_SCORE], @"description",
+									[StringConst GetImgConst:WEBISTE_URL], @"href", nil];
+		NSString *attachmentStr = [jsonWriter stringWithObject:attachment];
+		NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+									   kFacebookAppId, @"api_key",
+									   @"Share on Facebook",  @"user_message_prompt",
+									   actionLinksStr, @"action_links",
+									   attachmentStr, @"attachment",
+									   nil];
+		
+		[facebook dialog: @"stream.publish"
+			   andParams: params andDelegate:self];
+		[message release];
+	}
+	
+	else {
+		ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+		
+		
+		int levelScore = [appDelegate getCrawlerLevelVotes:crawlerCurrentLevel];
+		int currentTime = levelScore;
+		UIImage *img;
+		NSString *message;
+		NSString *imageURL;
+		
+		if(currentTime == -1)
+		{
+		}
+		else if(currentTime <= 20)
+		{
+			img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICC]];
+			message =[[NSString alloc] initWithFormat:@"%@ %d!", [StringConst GetImgConst:GAME_MODE_1_FIRST_PLACE], crawlerCurrentLevel];
+			imageURL =[StringConst GetImgConst: IMG_GOLDSKULL];
+			//self.endGameRank2.hidden = NO;
+			//self.endGameRank3.hidden = NO;
+			//[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
+			
+			
+		}
+		else if(currentTime <=30)
+		{
+			img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICB]];
+			message =[[NSString alloc] initWithFormat:@"%@ %d!", [StringConst GetImgConst:GAME_MODE_1_SECOND_PLACE], crawlerCurrentLevel];
+			imageURL =[StringConst GetImgConst: IMG_SILVERSKULL];
+			//[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
+			
+			
+		}
+		else if(currentTime <= 40)
+		{
+			message =[[NSString alloc] initWithFormat:@"%@ %d!", [StringConst GetImgConst:GAME_MODE_1_THIRD_PLACE], crawlerCurrentLevel];
+			imageURL =[StringConst GetImgConst: IMG_BRONZESKULL];
+			//IMG_BG_CLASSICA
+			img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICA]];
+			
+		}
+		
+		
+		NSDictionary* actionLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys: 
+															   [StringConst GetImgConst: APP_NAME],@"text",
+															   [StringConst GetImgConst: WEBISTE_URL],@"href", 
+															   nil], nil];
+		
+		NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
+		NSLog(actionLinksStr);		
+		NSDictionary* mediaLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys: 
+															  [StringConst GetImgConst: APP_NAME],@"text",
+															  [StringConst GetImgConst: WEBISTE_URL],@"href", 
+															  nil],nil];
+		
+		NSDictionary* imageShare = [NSDictionary dictionaryWithObjectsAndKeys:
+									@"image", @"type",
+									imageURL, @"src",
+									[StringConst GetImgConst: WEBISTE_URL], @"href",
+									nil];
+		
+		NSString *mediaStr = [jsonWriter stringWithObject:mediaLinks];
+		NSLog(mediaStr);
+		
+		NSDictionary* attachment = [NSDictionary dictionaryWithObjectsAndKeys:
+									[StringConst GetImgConst:GAME_MODE_1_SCORE], @"name",
+									message, @"caption",
+									[StringConst GetImgConst:GAME_MODE_1_SCORE], @"description",
+									[StringConst GetImgConst:WEBISTE_URL], @"href", 
+									[NSArray arrayWithObjects:imageShare, nil ], @"media",
+									nil];
+		
+		NSString *attachmentStr = [jsonWriter stringWithObject:attachment];
+		NSLog(attachmentStr);
+		
+		NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+									   kFacebookAppId, @"api_key",
+									   @"Share on Facebook",  @"user_message_prompt",
+									   actionLinksStr, @"action_links",
+									   attachmentStr, @"attachment",
+									   nil];
+		
+		[facebook dialog: @"stream.publish" andParams: params andDelegate:self];
+		[message release];
+	}
+	
+	
+	//facebookButton.hidden = YES;
+	
+}
+
+/*
+//ZombieHouse version of this function
+-(IBAction) facebookButtonDown:(id)sender{
+	
+	
+	
+	NSArray* _permissions;
+	
+	_permissions =  [[NSArray arrayWithObjects: 
+                      @"read_stream", @"offline_access",nil] retain];
+	
+	
+	
+	
+	SBJSON *jsonWriter = [[SBJSON new] autorelease];
+	
+	
+	if(setGame.gameType == 2)
+	{
+		
+		NSDictionary* actionLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys: 
+														   [StringConst GetImgConst: APP_NAME],@"text",[StringConst GetImgConst: WEBISTE_URL],@"href", nil], nil];
 	
 		NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
 		NSString *message =[[NSString alloc] initWithFormat:@"%d Zombie Comboz!", setGame.setsComplete];
@@ -1237,7 +1376,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 								@"Zombie House New High Score", @"name",
 								message, @"caption",
 								@"Zombie House Berzerker High Score!", @"description",
-								@"http://www.kaselo.com", @"href", nil];
+								[StringConst GetImgConst: WEBISTE_URL], @"href", nil];
 		NSString *attachmentStr = [jsonWriter stringWithObject:attachment];
 		NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
 								   kFacebookAppId, @"api_key",
@@ -1342,7 +1481,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	
 	//facebookButton.hidden = YES;
 	
-}
+}*/
 
 -(IBAction) playNextLevelButtonDown:(id)sender{
 	crawlerCurrentLevel ++;
