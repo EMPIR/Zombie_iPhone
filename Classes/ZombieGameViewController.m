@@ -848,6 +848,8 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 			facebookButton.hidden = NO;
 #ifndef DOGHOUSE			
 			self.m_bGun.hidden = NO;
+#else
+			self.m_bGun.hidden = YES;
 #endif			
 			//IMG_BG_ENDGAMEB_WIN
 			img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_ENDGAMEB_WIN]];
@@ -885,8 +887,12 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 			[ZombieGameHelpers playSound:0:4];
 		if(gamePlacement == 1)//You Win!
 		{
-			
+#ifndef DOGHOUSE
 			self.m_bGun.hidden = NO;
+#else
+			self.m_bGun.hidden = YES;	
+#endif			
+			
 		}
 		else {
 			self.m_bGun.hidden = YES;
@@ -903,6 +909,8 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		{
 #ifndef DOGHOUSE			
 			self.m_bGun.hidden = NO;
+#else			
+			self.m_bGun.hidden = YES;
 #endif			
 			
 		}
@@ -929,6 +937,8 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		{
 #ifndef DOGHOUSE			
 			self.m_bGun.hidden = NO;
+#else			
+			self.m_bGun.hidden = YES;			
 #endif			
 		}
 		else {
@@ -2004,7 +2014,11 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (event.type == UIEventSubtypeMotionShake) {
 		NSLog(@"Shaking!");
+#ifdef DOGHOSE		
 		[ZombieGameHelpers  playSound:0:3];
+#else
+		[ZombieGameHelpers  playSound:0:3];
+#endif	
     }
 }
 

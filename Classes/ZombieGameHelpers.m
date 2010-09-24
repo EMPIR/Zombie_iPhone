@@ -33,7 +33,7 @@
 	
 	
 	
-	NSLog(@"%",path);
+	NSLog(@"AUDIO PATH: %@",path);
 	
 	//declare a system sound id
 	SystemSoundID soundID;
@@ -43,6 +43,7 @@
 	
 	//Use audio sevices to create the sound
 	AudioServicesCreateSystemSoundID((CFURLRef)filePath, &soundID);
+
 	
 	//Use audio services to play the sound
 	AudioServicesPlaySystemSound(soundID);
