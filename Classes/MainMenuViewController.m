@@ -32,7 +32,6 @@
 #endif
 }
 
-
 -(IBAction) howToPlay:(id) sender{
 	[self presentModalViewController:howToPlayController animated:NO];
 }

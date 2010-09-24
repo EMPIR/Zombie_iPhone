@@ -11,6 +11,7 @@
 #define STRINGCONST
 
 static const char WEBISTE_URL []					= "http://www.kaselo.com";
+
 #ifdef DOGHOUSE
 static const char COMBO_NAME []						= "Dog Combos";
 static const char GAME_MODE_1_SCORE []				= "Dog House Crawler Score!";
@@ -31,11 +32,11 @@ static const char GAME_MODE_2_HIGH_SCORE []			= "Zombie House Berzerker High Sco
 static const char GAME_MODE_1_FIRST_PLACE []		= "Earned a Golden Skull on Level";
 static const char GAME_MODE_1_SECOND_PLACE []		= "Earned a Silver Skull on Level";
 static const char GAME_MODE_1_THIRD_PLACE []		= "Earned a Bronze Skull on Level";
-
 static const char APP_NAME []						= "Zombie House";
-static const char IMG_BRONZESKULL []				= "http://www.thepiratetradingco.com/1196_1_.jpg";
-static const char IMG_SILVERSKULL []				= "http://images.quickblogcast.com/5/7/7/4/1/122959-114775/silver_skull_art_quinn_gregory_winston_mini.jpg";
-static const char IMG_GOLDSKULL	[]					= "http://www.panik-design.com/acatalog/skull-koff-gold-xtra-1.jpg";
+static const char IMG_BRONZESKULL []				= "http://emmaguinnip.com/Graphics/Z_EndGameClassic03.png";
+static const char IMG_SILVERSKULL []				= "http://emmaguinnip.com/Graphics/Z_EndGameClassic02.png";
+static const char IMG_GOLDSKULL	[]					= "http://emmaguinnip.com/Graphics/Z_EndGameClassic01.png";
+
 #endif
 
 

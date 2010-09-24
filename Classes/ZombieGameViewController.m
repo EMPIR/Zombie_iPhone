@@ -804,6 +804,8 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	
 }
 
+
+
 -(void) drawBerzerkFinished
 {
 	
@@ -844,8 +846,9 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		if(gamePlacement == 1)//You Win!
 		{
 			facebookButton.hidden = NO;
-			
+#ifndef DOGHOUSE			
 			self.m_bGun.hidden = NO;
+#endif			
 			//IMG_BG_ENDGAMEB_WIN
 			img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_ENDGAMEB_WIN]];
 		}
@@ -882,6 +885,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 			[ZombieGameHelpers playSound:0:4];
 		if(gamePlacement == 1)//You Win!
 		{
+			
 			self.m_bGun.hidden = NO;
 		}
 		else {
@@ -897,8 +901,9 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	{
 		if(gamePlacement == 1)//You Win!
 		{
+#ifndef DOGHOUSE			
 			self.m_bGun.hidden = NO;
-			
+#endif			
 			
 		}
 		else {
@@ -922,8 +927,9 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		
 		if(gamePlacement == 1)//You Win!
 		{
+#ifndef DOGHOUSE			
 			self.m_bGun.hidden = NO;
-			
+#endif			
 		}
 		else {
 			self.m_bGun.hidden = YES;
@@ -1987,6 +1993,23 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	
 	}
 	
+}
+
+
+-(BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (event.type == UIEventSubtypeMotionShake) {
+		NSLog(@"Shaking!");
+		[ZombieGameHelpers  playSound:0:3];
+    }
+}
+
+-(void) viewDidAppear:(BOOL)animated{
+	[self becomeFirstResponder];
 }
 
 -(void) viewWillAppear:(BOOL)animated{
