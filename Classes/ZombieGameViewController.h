@@ -13,7 +13,7 @@
 @class Facebook;
 
 @interface ZombieGameViewController : UIViewController
-<FBRequestDelegate,
+<UIScrollViewDelegate, FBRequestDelegate,
 FBDialogDelegate,
 FBSessionDelegate>{
 	IBOutlet UIButton *button1;
@@ -38,6 +38,7 @@ FBSessionDelegate>{
 	IBOutlet UIButton *prevLevelButton;
 	IBOutlet UIButton *nextLevelButton;
 	IBOutlet UIButton *playNextLevelButton;
+	
 	
 	IBOutlet UIImageView *selected1View;
 	IBOutlet UIImageView *selected2View;
@@ -80,6 +81,9 @@ FBSessionDelegate>{
 	
 	IBOutlet UILabel *finishedLabel;
 	IBOutlet UILabel *finishedLabel2;
+	IBOutlet UILabel *crawlerLevelLabel;
+	IBOutlet UILabel *crawlerTimeLabel;
+	IBOutlet UILabel *crawlerBestTimeLabel;
 	IBOutlet UILabel *moveLabel;
 	IBOutlet UILabel *timerLabel;
 	IBOutlet UILabel *moveLabel2;
@@ -185,7 +189,20 @@ FBSessionDelegate>{
 	
 	
 	Facebook *facebook;
+	
+	UIScrollView *scrollView;
+	UIPageControl *pageControl;
+    NSMutableArray *viewControllers;
+	
+    // To be used when scrolls originate from the UIPageControl
+    BOOL pageControlUsed;
+	
 }
+
+@property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, retain) NSMutableArray *viewControllers;
+
+- (IBAction)changePage:(id)sender;
 
 //@property (nonatomic) BOOL flipper;
 //@property (nonatomic, retain) GameLogic *theGame;
@@ -237,8 +254,12 @@ FBSessionDelegate>{
 -(BOOL) isGameFinished;
 
 @property (nonatomic, retain) UILabel *finishedLabel;
-
 @property (nonatomic, retain) UILabel *finishedLabel2;
+
+@property (nonatomic, retain) UILabel *crawlerLevelLabel;
+@property (nonatomic, retain) UILabel *crawlerTimeLabel;
+@property (nonatomic, retain) UILabel *crawlerBestTimeLabel;
+
 @property (nonatomic, retain) UILabel *moveLabel;
 @property (nonatomic, retain) UILabel *moveLabel2;
 @property (nonatomic, retain) UILabel *timerLabel;

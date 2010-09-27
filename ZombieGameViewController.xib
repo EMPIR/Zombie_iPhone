@@ -557,6 +557,65 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 					</object>
+					<object class="IBUILabel" id="294092798">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{335, 0}, {100, 25}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<int key="IBUIContentMode">7</int>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<string key="IBUIText">Level 1</string>
+						<object class="NSFont" key="IBUIFont">
+							<string key="NSName">Helvetica</string>
+							<double key="NSSize">17</double>
+							<int key="NSfFlags">16</int>
+						</object>
+						<reference key="IBUITextColor" ref="352072574"/>
+						<nil key="IBUIHighlightedColor"/>
+						<int key="IBUIBaselineAdjustment">1</int>
+						<float key="IBUIMinimumFontSize">10</float>
+					</object>
+					<object class="IBUILabel" id="687199548">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{335, 17}, {92, 25}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<int key="IBUIContentMode">7</int>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<string key="IBUIText">Your Best Time:</string>
+						<object class="NSFont" key="IBUIFont" id="144735455">
+							<string key="NSName">Helvetica</string>
+							<double key="NSSize">12</double>
+							<int key="NSfFlags">16</int>
+						</object>
+						<reference key="IBUITextColor" ref="352072574"/>
+						<nil key="IBUIHighlightedColor"/>
+						<int key="IBUIBaselineAdjustment">1</int>
+						<float key="IBUIMinimumFontSize">10</float>
+					</object>
+					<object class="IBUILabel" id="327421370">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{430, 17}, {42, 25}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<int key="IBUIContentMode">7</int>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<string key="IBUIText">20</string>
+						<reference key="IBUIFont" ref="144735455"/>
+						<reference key="IBUITextColor" ref="352072574"/>
+						<nil key="IBUIHighlightedColor"/>
+						<int key="IBUIBaselineAdjustment">1</int>
+						<float key="IBUIMinimumFontSize">10</float>
+					</object>
 					<object class="IBUILabel" id="473984963">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
@@ -584,11 +643,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">Label</string>
-						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Helvetica</string>
-							<double key="NSSize">12</double>
-							<int key="NSfFlags">16</int>
-						</object>
+						<reference key="IBUIFont" ref="144735455"/>
 						<reference key="IBUITextColor" ref="352072574"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -702,14 +757,13 @@
 					<object class="IBUIButton" id="528089198">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">-2147483356</int>
-						<string key="NSFrame">{{137, 256}, {139, 33}}</string>
+						<string key="NSFrame">{{335, 37}, {119, 41}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="1061433150"/>
-						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">Post to Facebook</string>
 						<reference key="IBUIHighlightedTitleColor" ref="22053288"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
@@ -717,6 +771,10 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="709534607"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">level_facebook.png</string>
+						</object>
 					</object>
 					<object class="IBUIButton" id="611572031">
 						<reference key="NSNextResponder" ref="774585933"/>
@@ -861,7 +919,7 @@
 					<object class="IBUIImageView" id="98523724">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{303, 78}, {130, 137}}</string>
+						<string key="NSFrame">{{323, 88}, {130, 137}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -873,7 +931,7 @@
 					<object class="IBUIImageView" id="1044150128">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{303, 78}, {130, 137}}</string>
+						<string key="NSFrame">{{323, 88}, {130, 137}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -885,7 +943,7 @@
 					<object class="IBUIImageView" id="873200380">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{303, 78}, {130, 137}}</string>
+						<string key="NSFrame">{{323, 88}, {130, 137}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -893,6 +951,15 @@
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">EndGameClassic03.png</string>
 						</object>
+					</object>
+					<object class="IBUIScrollView" id="41798081">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{15, 51}, {287, 206}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<bool key="IBUIMultipleTouchEnabled">YES</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</object>
 				<string key="NSFrameSize">{480, 300}</string>
@@ -1873,6 +1940,38 @@
 					</object>
 					<int key="connectionID">242</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">scrollView</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="41798081"/>
+					</object>
+					<int key="connectionID">244</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">crawlerLevelLabel</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="294092798"/>
+					</object>
+					<int key="connectionID">250</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">crawlerTimeLabel</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="327421370"/>
+					</object>
+					<int key="connectionID">251</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">crawlerBestTimeLabel</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="687199548"/>
+					</object>
+					<int key="connectionID">252</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -1954,6 +2053,10 @@
 							<reference ref="63660600"/>
 							<reference ref="284421775"/>
 							<reference ref="528089198"/>
+							<reference ref="294092798"/>
+							<reference ref="687199548"/>
+							<reference ref="327421370"/>
+							<reference ref="41798081"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -2232,6 +2335,26 @@
 						<reference key="object" ref="528089198"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">243</int>
+						<reference key="object" ref="41798081"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">247</int>
+						<reference key="object" ref="294092798"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">248</int>
+						<reference key="object" ref="687199548"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">249</int>
+						<reference key="object" ref="327421370"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -2244,8 +2367,10 @@
 					<string>101.IBPluginDependency</string>
 					<string>102.IBPluginDependency</string>
 					<string>112.IBPluginDependency</string>
+					<string>112.IBViewBoundsToFrameTransform</string>
 					<string>114.IBPluginDependency</string>
 					<string>116.IBPluginDependency</string>
+					<string>116.IBViewBoundsToFrameTransform</string>
 					<string>118.IBPluginDependency</string>
 					<string>132.IBPluginDependency</string>
 					<string>133.IBPluginDependency</string>
@@ -2273,9 +2398,18 @@
 					<string>22.IBPluginDependency</string>
 					<string>220.IBPluginDependency</string>
 					<string>226.IBPluginDependency</string>
+					<string>226.IBViewBoundsToFrameTransform</string>
 					<string>230.IBPluginDependency</string>
 					<string>232.IBPluginDependency</string>
 					<string>234.IBPluginDependency</string>
+					<string>243.IBPluginDependency</string>
+					<string>243.IBViewBoundsToFrameTransform</string>
+					<string>247.IBPluginDependency</string>
+					<string>247.IBViewBoundsToFrameTransform</string>
+					<string>248.IBPluginDependency</string>
+					<string>248.IBViewBoundsToFrameTransform</string>
+					<string>249.IBPluginDependency</string>
+					<string>249.IBViewBoundsToFrameTransform</string>
 					<string>49.IBPluginDependency</string>
 					<string>53.IBPluginDependency</string>
 					<string>55.IBPluginDependency</string>
@@ -2306,6 +2440,14 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">AUNrAABB6AAAA</bytes>
+					</object>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABDhQAAwhQAAA</bytes>
+					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -2333,18 +2475,35 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABDp4AAwpgAAA</bytes>
+					</object>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABBcAAAw3YAAA</bytes>
+					</object>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">AUOngAAAAAAAA</bytes>
+					</object>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">AUOngABBiAAAA</bytes>
+					</object>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABDqgAAweAAAA</bytes>
+					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{63, 380}, {480, 320}}</string>
+					<string>{{468, 474}, {480, 320}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -2377,7 +2536,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">242</int>
+			<int key="maxID">252</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2427,6 +2586,7 @@
 							<string>button8Up:</string>
 							<string>button9Down:</string>
 							<string>button9Up:</string>
+							<string>changePage:</string>
 							<string>facebookButtonDown:</string>
 							<string>finishedButtonDown:</string>
 							<string>nextLevelButtonDown:</string>
@@ -2437,6 +2597,7 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -2498,6 +2659,7 @@
 							<string>button8Up:</string>
 							<string>button9Down:</string>
 							<string>button9Up:</string>
+							<string>changePage:</string>
 							<string>facebookButtonDown:</string>
 							<string>finishedButtonDown:</string>
 							<string>nextLevelButtonDown:</string>
@@ -2605,6 +2767,10 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
+								<string key="name">changePage:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
 								<string key="name">facebookButtonDown:</string>
 								<string key="candidateClassName">id</string>
 							</object>
@@ -2656,6 +2822,9 @@
 							<string>button7</string>
 							<string>button8</string>
 							<string>button9</string>
+							<string>crawlerBestTimeLabel</string>
+							<string>crawlerLevelLabel</string>
+							<string>crawlerTimeLabel</string>
 							<string>endGameRank1</string>
 							<string>endGameRank2</string>
 							<string>endGameRank3</string>
@@ -2685,6 +2854,7 @@
 							<string>playNextLevelButton</string>
 							<string>prevLevelButton</string>
 							<string>returnGamePlank</string>
+							<string>scrollView</string>
 							<string>selected10View</string>
 							<string>selected11View</string>
 							<string>selected12View</string>
@@ -2719,6 +2889,9 @@
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
 							<string>UIImageView</string>
 							<string>UIImageView</string>
 							<string>UIImageView</string>
@@ -2748,6 +2921,7 @@
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
+							<string>UIScrollView</string>
 							<string>UIImageView</string>
 							<string>UIImageView</string>
 							<string>UIImageView</string>
@@ -2785,6 +2959,9 @@
 							<string>button7</string>
 							<string>button8</string>
 							<string>button9</string>
+							<string>crawlerBestTimeLabel</string>
+							<string>crawlerLevelLabel</string>
+							<string>crawlerTimeLabel</string>
 							<string>endGameRank1</string>
 							<string>endGameRank2</string>
 							<string>endGameRank3</string>
@@ -2814,6 +2991,7 @@
 							<string>playNextLevelButton</string>
 							<string>prevLevelButton</string>
 							<string>returnGamePlank</string>
+							<string>scrollView</string>
 							<string>selected10View</string>
 							<string>selected11View</string>
 							<string>selected12View</string>
@@ -2901,6 +3079,18 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">button9</string>
 								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">crawlerBestTimeLabel</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">crawlerLevelLabel</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">crawlerTimeLabel</string>
+								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">endGameRank1</string>
@@ -3017,6 +3207,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">returnGamePlank</string>
 								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">scrollView</string>
+								<string key="candidateClassName">UIScrollView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">selected10View</string>
@@ -3237,6 +3431,14 @@
 					<reference key="sourceIdentifier" ref="953641683"/>
 				</object>
 				<object class="IBPartialClassDescription">
+					<string key="className">UIScrollView</string>
+					<string key="superclassName">UIView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">UIKit.framework/Headers/UIScrollView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
 					<string key="className">UISearchBar</string>
 					<string key="superclassName">UIView</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -3338,6 +3540,7 @@
 				<string>bg_GamePlay.jpg</string>
 				<string>brain_1.png</string>
 				<string>checkHover.png</string>
+				<string>level_facebook.png</string>
 				<string>selected.png</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
@@ -3348,8 +3551,8 @@
 				<string>{130, 137}</string>
 				<string>{61, 33}</string>
 				<string>{61, 33}</string>
-				<string>{160, 60}</string>
-				<string>{160, 60}</string>
+				<string>{160, 61}</string>
+				<string>{160, 61}</string>
 				<string>{70, 33}</string>
 				<string>{123, 33}</string>
 				<string>{123, 33}</string>
@@ -3358,6 +3561,7 @@
 				<string>{480, 320}</string>
 				<string>{62, 45}</string>
 				<string>{105, 71}</string>
+				<string>{119, 41}</string>
 				<string>{105, 71}</string>
 			</object>
 		</object>

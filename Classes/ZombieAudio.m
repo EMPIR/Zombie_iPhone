@@ -73,8 +73,12 @@ expressionID 0-5				"Game_Start.wav"
 	
 }
 */
-
+#ifndef DOGHOUSE
 static int TOTAL_EXPRESSIONS  = 5;
+#else
+static int TOTAL_EXPRESSIONS  = 2;
+#endif
+
 
 +(NSString *) getZombieAudioFile:(int) zombieID: (int) expression
 {
@@ -95,6 +99,10 @@ static int TOTAL_EXPRESSIONS  = 5;
 			return [NSString stringWithFormat:[StringConst GetImgConst:SND_GAME_START]];
 		if(expression == 6)
 			return [NSString stringWithFormat:[StringConst GetImgConst:SND_BRAIN_EXPLODE]];
+#ifdef DOGHOUSE		
+		if(expression == 7)
+			return [NSString stringWithFormat:[StringConst GetImgConst:SND_MEOW]];
+#endif			
 		//number = [GameLogic randomNumber:1,TOTAL_EXPRESSIONS];
 	}
 	else {
@@ -107,7 +115,7 @@ static int TOTAL_EXPRESSIONS  = 5;
 		else if(expression == 4)
 			return  [NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_4], zombieID];
 		else if(expression == 5)
-			return  [NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_5], zombieID];
+			return  [NSString stringWithFormat:[StringConst GetImgConst:SND_ZOMBIE_EXP_5], zombieID];		
 		else if(expression == 6)
 		{//start game
 			int number = [GameLogic randomNumber:10,14];

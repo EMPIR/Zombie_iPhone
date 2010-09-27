@@ -14,7 +14,7 @@ static const char WEBISTE_URL []					= "http://www.kaselo.com";
 
 #ifdef DOGHOUSE
 static const char COMBO_NAME []						= "Dog Combos";
-static const char GAME_MODE_1_SCORE []				= "Dog House Crawler Score!";
+static const char GAME_MODE_1_SCORE []				= "Dog House Classic Score!";
 static const char GAME_HIGH_SCORE []				= "Dog House New High Score!";
 static const char GAME_MODE_2_HIGH_SCORE []			= "Dog House Barking Mad High Score!";
 static const char GAME_MODE_1_FIRST_PLACE []		= "Earned a Steak on Level";
@@ -71,19 +71,22 @@ static const char	SND_NONGAME_TRACK	[]		= "%@/Audio_BG02.mp3";
 static const char	SND_CRAWLER_TRACK	[]		= "%@/Audio_BG01.mp3";
 static const char	SND_BERZERK_TRACK	[]		= "%@/Audio_BG03.mp3";
 
-static const char	SND_BRAIN_PUMP	[]			= "/brainPump.wav";
+static const char	SND_BRAIN_PUMP	[]			= "/waterhit.wav";
 static const char	SND_WRONG	[]				= "/wrong.wav";
 static const char	SND_CORRECT	[]				= "/correct.wav";
-static const char	SND_SCREAM	[]				= "/wilhelm.wav";
-static const char	SND_SHOTGUN	[]				= "/ShotGun_pumps.wav";
+static const char	SND_SCREAM	[]				= "/Pickles.wav";
+static const char	SND_SHOTGUN	[]				= "/Pickles.wav";
 static const char	SND_GAME_START	[]			= "/Game_Start_faster.wav";
 static const char	SND_BRAIN_EXPLODE	[]		= "/brainExplode.wav";
+static const char   SND_MEOW 		[]		= "/Pickles.wav";
 static const char	SND_ZOMBIE_EXP_1	[]		= "/%d%d.wav";
-static const char	SND_ZOMBIE_EXP_2	[]		= "/%d1.wav";//"/%d6.wav";
+static const char	SND_ZOMBIE_EXP_2	[]		= "/%d6.wav";
 static const char	SND_ZOMBIE_EXP_3	[]		= "/%d7.wav";
 static const char	SND_ZOMBIE_EXP_4	[]		= "/%d8.wav";
 static const char	SND_ZOMBIE_EXP_5	[]		= "/%d9.wav";
 static const char	SND_EATING			[]		= "%@/zombiesEating.mp3";
+static const char	SND_WATERSPLASH		[]		= "@watersplash.wav";
+static const char   SND_WATERHIT		[]		= "@wate	rhit.wav";
 #endif // IPAD
 #else
 #ifdef IPAD
@@ -129,6 +132,7 @@ static const char	SND_EATING			[]		= "%@/ipad_zombiesEating.mp3";
 #else
 static const char	IMG_ALLBAD []				= "allBad.png";
 static const char	IMG_ALLGOOD []				= "allGood.png";
+static const char   IMG_BG_CLASSIC_LEVELS[]		= "bg_LevelsClassic.jpg";
 static const char	IMG_BG_CLASSICA []			= "bg_EndGameClassicA.jpg";
 static const char	IMG_BG_CLASSICB []			= "bg_EndGameClassicB.jpg";
 static const char	IMG_BG_CLASSICC []			= "bg_EndGameClassicC.jpg";

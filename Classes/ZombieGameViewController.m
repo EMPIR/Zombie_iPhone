@@ -20,9 +20,24 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import "FBConnect.h"
+#import "ClassicLevels.h"
+
+
+
+static NSUInteger kNumberOfPages = 3;
+
+@interface ZombieGameViewController (PrivateMethods)
+
+- (void)loadScrollViewWithPage:(int)page;
+- (void)scrollViewDidScroll:(UIScrollView *)sender;
+
+@end
 
 
 @implementation ZombieGameViewController
+
+@synthesize crawlerLevelLabel,crawlerTimeLabel,crawlerBestTimeLabel;
+@synthesize scrollView, viewControllers;
 @synthesize button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,button11,button12;
 @synthesize playAgainButton,goBackButton, mainMenuPlank, returnGamePlank, pauseButton,facebookButton;
 @synthesize nextLevelButton, prevLevelButton, playNextLevelButton;
@@ -319,6 +334,11 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		[self drawCrawlerFinished];
 		return;
 	}
+	
+	self.crawlerBestTimeLabel.hidden = YES;
+	self.crawlerTimeLabel.hidden = YES;
+	self.crawlerLevelLabel.hidden = YES;
+	self.scrollView.hidden = YES;
 	self.brainView.hidden = NO;
 	self.moveLabel.hidden = NO;
 	self.timerLabel.hidden = NO;
@@ -417,7 +437,11 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	//if(setGame.gameType == 2)
 	//	message =[[NSString alloc] initWithFormat:@"Score: %d", setGame.gameScore];
 	//else {
+#ifndef DOGHOUSE	
 		message =[[NSString alloc] initWithFormat:@"Comboz: %d", setGame.setsComplete];
+#else
+		message =[[NSString alloc] initWithFormat:@"Combos: %d", setGame.setsComplete];
+#endif
 	//	}
 
 	 
@@ -594,7 +618,10 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 
 -(void) drawCrawlerFinished
 {
-	
+	self.crawlerBestTimeLabel.hidden = NO;
+	self.crawlerTimeLabel.hidden = NO;
+	self.crawlerLevelLabel.hidden = NO;
+	self.scrollView.hidden = NO;
 	self.timerLabel.hidden = YES;
 	self.brainView.hidden = YES;
 	self.playAgainButton.hidden = NO;
@@ -655,7 +682,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 #ifdef DOGHOUSE
 		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_LOSE]];
 #else
-		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICA]];
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_LEVELS]];
 		
 #endif
 		[self.gameBG setImage:img];
@@ -666,7 +693,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 #ifdef DOGHOUSE
 		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_WIN]];
 #else
-		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICC]];
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_LEVELS]];
 
 #endif
 		[self.gameBG setImage:img];
@@ -682,7 +709,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 #ifdef DOGHOUSE
 		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_WIN]];
 #else
-		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICB]];
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_LEVELS]];
 		
 #endif
 		[self.gameBG setImage:img];
@@ -697,7 +724,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 #ifdef DOGHOUSE
 		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_WIN]];
 #else
-		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICA]];
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_LEVELS]];
 		
 #endif
 		[self.gameBG setImage:img];
@@ -709,7 +736,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 #ifdef DOGHOUSE
 		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_LOSE]];
 #else
-		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICA]];
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_LEVELS]];
 		
 #endif
 		[self.gameBG setImage:img];
@@ -756,8 +783,8 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 
 	self.moveLabel.hidden = YES;
 	self.moveLabel2.hidden = YES;
-	self.finishedLabel.hidden = NO;
-	self.finishedLabel2.hidden = NO;
+	self.finishedLabel.hidden = YES;
+	self.finishedLabel2.hidden = YES;
 	for(int i=0;i<12; ++i)
 	{
 		[self getView:i].hidden = YES;
@@ -808,16 +835,23 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 
 -(void) drawBerzerkFinished
 {
-	
-	
-	
+
+	self.crawlerBestTimeLabel.hidden = YES;
+	self.crawlerTimeLabel.hidden = YES;
+	self.crawlerLevelLabel.hidden = YES;
+	self.scrollView.hidden = YES;
 	self.timerLabel.hidden = YES;
 	self.pauseButton.hidden = YES;
 	self.endGameRank1.hidden = YES;
 	self.endGameRank2.hidden = YES;
 	self.endGameRank3.hidden = YES;
 	
-	NSString *message =[[NSString alloc] initWithFormat:@"%d Zombie Comboz!", setGame.setsComplete];
+	NSString *message;
+#ifndef DOGHOUSE	
+	message=[[NSString alloc] initWithFormat:@"%d Zombie Comboz!", setGame.setsComplete];
+#else
+	message=[[NSString alloc] initWithFormat:@"%d Combos!", setGame.setsComplete];
+#endif	
 	[finishedLabel setText:message];
 	[message release];
 	
@@ -1361,144 +1395,6 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	//facebookButton.hidden = YES;
 	
 }
-
-/*
-//ZombieHouse version of this function
--(IBAction) facebookButtonDown:(id)sender{
-	
-	
-	
-	NSArray* _permissions;
-	
-	_permissions =  [[NSArray arrayWithObjects: 
-                      @"read_stream", @"offline_access",nil] retain];
-	
-	
-	
-	
-	SBJSON *jsonWriter = [[SBJSON new] autorelease];
-	
-	
-	if(setGame.gameType == 2)
-	{
-		
-		NSDictionary* actionLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys: 
-														   [StringConst GetImgConst: APP_NAME],@"text",[StringConst GetImgConst: WEBISTE_URL],@"href", nil], nil];
-	
-		NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
-		NSString *message =[[NSString alloc] initWithFormat:@"%d Zombie Comboz!", setGame.setsComplete];
-	
-		NSDictionary* attachment = [NSDictionary dictionaryWithObjectsAndKeys:
-								@"Zombie House New High Score", @"name",
-								message, @"caption",
-								@"Zombie House Berzerker High Score!", @"description",
-								[StringConst GetImgConst: WEBISTE_URL], @"href", nil];
-		NSString *attachmentStr = [jsonWriter stringWithObject:attachment];
-		NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-								   kFacebookAppId, @"api_key",
-								   @"Share on Facebook",  @"user_message_prompt",
-								   actionLinksStr, @"action_links",
-								   attachmentStr, @"attachment",
-								   nil];
-
-		[facebook dialog: @"stream.publish"
-		   andParams: params andDelegate:self];
-		[message release];
-	}
-
-	else {
-		ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
-
-		
-		int levelScore = [appDelegate getCrawlerLevelVotes:crawlerCurrentLevel];
-		int currentTime = levelScore;
-		UIImage *img;
-		NSString *message;
-		NSString *imageURL;
-		
-		if(currentTime == -1)
-		{
-		}
-		else if(currentTime <= 20)
-		{
-			img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSICC]];
-			message =[[NSString alloc] initWithFormat:@"Gold Skull on Level %d!", crawlerCurrentLevel];
-			imageURL =[StringConst GetImgConst: IMG_GOLDSKULL];
-			//self.endGameRank2.hidden = NO;
-			//self.endGameRank3.hidden = NO;
-			//[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
-			
-			
-		}
-		else if(currentTime <=30)
-		{
-			img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICB]];
-			message =[[NSString alloc] initWithFormat:@"Silver Skull on Level %d!", crawlerCurrentLevel];
-			imageURL =[StringConst GetImgConst: IMG_SILVERSKULL];
-			//[self incrementCrawlerDifficulty:[appDelegate getCrawlerDifficulty]:currentTime];
-			
-			
-		}
-		else if(currentTime <= 40)
-		{
-			message =[[NSString alloc] initWithFormat:@"Bronze Skull on Level %d!", crawlerCurrentLevel+1];
-			imageURL =[StringConst GetImgConst: IMG_BRONZESKULL];
-			//IMG_BG_CLASSICA
-			img  = [UIImage imageNamed: [StringConst GetImgConst: IMG_BG_CLASSICA]];
-						
-		}
-		
-		
-		NSDictionary* actionLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys: 
-															   @"Zombie House",@"text",
-															   @"http://www.kaselo.com",@"href", 
-															   nil], nil];
-		
-		NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
-		//http://www.panik-design.com/acatalog/skull-koff-gold-xtra-1.jpg
-		
-		NSLog(actionLinksStr);		
-		NSDictionary* mediaLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys: 
-															  @"Zombie House",@"text",
-															  @"http://www.kaselo.com",@"href", 
-															  nil],nil];
-		
-		NSDictionary* imageShare = [NSDictionary dictionaryWithObjectsAndKeys:
-									 @"image", @"type",
-									imageURL, @"src",
-									@"http://www.kaselo.com", @"href",
-									nil];
-		
-		NSString *mediaStr = [jsonWriter stringWithObject:mediaLinks];
-		NSLog(mediaStr);
-		
-		NSDictionary* attachment = [NSDictionary dictionaryWithObjectsAndKeys:
-									@"Zombie House Crawler Score!", @"name",
-									message, @"caption",
-									@"Zombie House Crawler!", @"description",
-									@"http://www.kaselo.com", @"href", 
-									[NSArray arrayWithObjects:imageShare, nil ], @"media",
-									nil];
-		
-		NSString *attachmentStr = [jsonWriter stringWithObject:attachment];
-		NSLog(attachmentStr);
-		
-		NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-									   kFacebookAppId, @"api_key",
-									   @"Share on Facebook",  @"user_message_prompt",
-									   actionLinksStr, @"action_links",
-									   attachmentStr, @"attachment",
-									   nil];
-		
-		[facebook dialog: @"stream.publish" andParams: params andDelegate:self];
-		[message release];
-	}
-
-	
-	//facebookButton.hidden = YES;
-	
-}*/
-
 -(IBAction) playNextLevelButtonDown:(id)sender{
 	crawlerCurrentLevel ++;
 	[self replayButtonDown:sender];
@@ -1707,11 +1603,119 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 */
 
 
+- (void)loadScrollViewWithPage:(int)page {
+    if (page < 0) return;
+    if (page >= kNumberOfPages) return;
+	
+    // replace the placeholder if necessary
+    ClassicLevels *controller = [viewControllers objectAtIndex:page];
+    if ((NSNull *)controller == [NSNull null]) {
+        controller = [[ClassicLevels alloc] initWithPageNumber:page];
+        [viewControllers replaceObjectAtIndex:page withObject:controller];
+        [controller release];
+    }
+	if(nil == controller.view)
+	{
+		int debug = 0;
+	}
+	
+    // add the controller's view to the scroll view
+    if (nil == controller.view.superview) {
+        CGRect frame = scrollView.frame;
+        frame.origin.x = frame.size.width * page;
+        frame.origin.y = 0;
+        controller.view.frame = frame;
+        [scrollView addSubview:controller.view];
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)sender {
+    // We don't want a "feedback loop" between the UIPageControl and the scroll delegate in
+    // which a scroll event generated from the user hitting the page control triggers updates from
+    // the delegate method. We use a boolean to disable the delegate logic when the page control is used.
+    if (pageControlUsed) {
+        // do nothing - the scroll was initiated from the page control, not the user dragging
+        return;
+    }
+	
+    // Switch the indicator when more than 50% of the previous/next page is visible
+    CGFloat pageWidth = scrollView.frame.size.width;
+    int page = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    pageControl.currentPage = page;
+	
+    // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
+    [self loadScrollViewWithPage:page - 1];
+    [self loadScrollViewWithPage:page];
+    [self loadScrollViewWithPage:page + 1];
+	
+    // A possible optimization would be to unload the views+controllers which are no longer visible
+}
+
+// At the begin of scroll dragging, reset the boolean used when scrolls originate from the UIPageControl
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    pageControlUsed = NO;
+}
+
+// At the end of scroll animation, reset the boolean used when scrolls originate from the UIPageControl
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    pageControlUsed = NO;
+}
+
+- (IBAction)changePage:(id)sender {
+    int page = pageControl.currentPage;
+	
+    // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
+    [self loadScrollViewWithPage:page - 1];
+    [self loadScrollViewWithPage:page];
+    [self loadScrollViewWithPage:page + 1];
+    
+	// update the scroll view to the appropriate page
+    CGRect frame = scrollView.frame;
+    frame.origin.x = frame.size.width * page;
+    frame.origin.y = 0;
+    [scrollView scrollRectToVisible:frame animated:YES];
+    
+	// Set the boolean used when scrolls originate from the UIPageControl. See scrollViewDidScroll: above.
+    pageControlUsed = YES;
+}
 
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+	
+	//paging stuff
+	// view controllers are created lazily
+    // in the meantime, load the array with placeholders which will be replaced on demand
+    NSMutableArray *controllers = [[NSMutableArray alloc] init];
+    for (unsigned i = 0; i < kNumberOfPages; i++) {
+        [controllers addObject:[NSNull null]];
+    }
+    self.viewControllers = controllers;
+    [controllers release];
+	
+    // a page is the width of the scroll view
+    scrollView.pagingEnabled = YES;
+    scrollView.contentSize = CGSizeMake(scrollView.frame.size.width * kNumberOfPages, scrollView.frame.size.height);
+	scrollView.showsHorizontalScrollIndicator = NO;
+    scrollView.showsVerticalScrollIndicator = NO;
+    scrollView.scrollsToTop = NO;
+    scrollView.delegate = self;
+	
+    pageControl.numberOfPages = kNumberOfPages;
+    pageControl.currentPage = 0;
+	
+    // pages are created on demand
+    // load the visible page
+    // load the page on either side to avoid flashes when the user starts scrolling
+    [self loadScrollViewWithPage:0];
+    [self loadScrollViewWithPage:1];
+	
+	
+	
+	
+	
+	
 	showPiece1 = 0;
 	showPiece2 = 0;
 	showPiece3 = 0;
@@ -1906,9 +1910,13 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		if(setGame.gameType == 2){
 			if(berzerkEndTime ==0)
 			{
+#ifndef DOGHOUSE				
 				[ZombieGameHelpers  playSound:0:3];
+#else
+				[ZombieGameHelpers  playSound:0:3];
+#endif				
 				gamePlacement = (int) [appDelegate getBerzerkPlacement:setGame.setsComplete];
-				[appDelegate insertScore:setGame.gameScore :setGame.gameType :setGame.finishedDate];
+				[appDelegate insertScore:setGame.setsComplete :setGame.gameType :setGame.finishedDate];
 				
 				brains = [[BrainPieces CreatePieces] retain];
 				
@@ -2014,10 +2022,17 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (event.type == UIEventSubtypeMotionShake) {
 		NSLog(@"Shaking!");
-#ifdef DOGHOSE		
-		[ZombieGameHelpers  playSound:0:3];
+#ifdef DOGHOUSE		
+		[ZombieGameHelpers  playSound:0:7];
+		[ZombieGameHelpers  playSound:1:6];
+		[ZombieGameHelpers  playSound:2:6];
+		[ZombieGameHelpers  playSound:3:6];
+
 #else
 		[ZombieGameHelpers  playSound:0:3];
+		[ZombieGameHelpers  playSound:1:6];
+		[ZombieGameHelpers  playSound:2:6];
+		[ZombieGameHelpers  playSound:3:6];
 #endif	
     }
 }
@@ -2206,7 +2221,9 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	[endGameRank1 release];
 	[endGameRank2 release];
 	[endGameRank3 release];
-	
+	[crawlerLevelLabel release];
+	[crawlerTimeLabel release];
+	[crawlerBestTimeLabel release];
 	
 	[setGame release];
 }
