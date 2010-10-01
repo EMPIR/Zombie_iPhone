@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
-		<int key="IBDocument.SystemTarget">800</int>
+		<int key="IBDocument.SystemTarget">1024</int>
 		<string key="IBDocument.SystemVersion">10F569</string>
 		<string key="IBDocument.InterfaceBuilderVersion">804</string>
 		<string key="IBDocument.AppKitVersion">1038.29</string>
@@ -690,14 +690,14 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="NSCustomResource" key="IBUIHighlightedImage" id="678895344">
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="549626698">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">b_PlayAgain_on.png</string>
+							<string key="NSResourceName">b_PlayGame_on.png</string>
 						</object>
-						<reference key="IBUISelectedImage" ref="678895344"/>
+						<reference key="IBUISelectedImage" ref="549626698"/>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">b_PlayAgain_off.png</string>
+							<string key="NSResourceName">b_PlayGame_off.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="131048735">
@@ -3511,7 +3511,7 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.iPhoneOS</string>
-			<integer value="800" key="NS.object.0"/>
+			<integer value="1024" key="NS.object.0"/>
 		</object>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.InterfaceBuilder3</string>
@@ -3533,8 +3533,8 @@
 				<string>b_MainMenuL_off.png</string>
 				<string>b_MainMenuL_on.png</string>
 				<string>b_Pause_off.png</string>
-				<string>b_PlayAgain_off.png</string>
-				<string>b_PlayAgain_on.png</string>
+				<string>b_PlayGame_off.png</string>
+				<string>b_PlayGame_on.png</string>
 				<string>b_ReturnGame_off.png</string>
 				<string>b_ReturnGame_on.png</string>
 				<string>bg_GamePlay.jpg</string>
@@ -3554,8 +3554,8 @@
 				<string>{160, 61}</string>
 				<string>{160, 61}</string>
 				<string>{70, 33}</string>
-				<string>{123, 33}</string>
-				<string>{123, 33}</string>
+				<string>{113, 33}</string>
+				<string>{113, 33}</string>
 				<string>{206, 64}</string>
 				<string>{206, 64}</string>
 				<string>{480, 320}</string>

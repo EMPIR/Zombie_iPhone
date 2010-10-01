@@ -13,6 +13,26 @@
 	UILabel *pageNumberLabel;
     int pageNumber;
 	
+	int score1;
+	int score2;
+	int score3;
+	int score4;
+	int score5;
+	
+	int score6;
+	int score7;
+	int score8;
+	int score9;
+	int score10;
+	
+	int score11;
+	int score12;
+	int score13;
+	int score14;
+	int score15;
+	
+
+	
 	//level buttons
 	IBOutlet UIButton *button1;
 	IBOutlet UIButton *button2;
@@ -85,7 +105,25 @@
 	
 }
 
+/*
+@property (nonatomic,retain) int score1;
+@property (nonatomic,retain) int score2;
+@property (nonatomic,retain) int score3;
+@property (nonatomic,retain) int score4;
+@property (nonatomic,retain) int score5;
 
+@property (nonatomic,retain) int score6;
+@property (nonatomic,retain) int score7;
+@property (nonatomic,retain) int score8;
+@property (nonatomic,retain) int score9;
+@property (nonatomic,retain) int score10;
+
+@property (nonatomic,retain) int score11;
+@property (nonatomic,retain) int score12;
+@property (nonatomic,retain) int score13;
+@property (nonatomic,retain) int score14;
+@property (nonatomic,retain) int score15;
+*/
 
 @property (nonatomic,retain) UIButton *button1;
 @property (nonatomic,retain) UIButton *button2;
@@ -156,6 +194,8 @@
 
 
 @property (nonatomic, retain) IBOutlet UILabel *pageNumberLabel;
+
+-(IBAction) buttonHover:(id)sender;
 
 - (id)initWithPageNumber:(int)page;
 

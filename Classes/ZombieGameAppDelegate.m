@@ -9,6 +9,7 @@
 #import "Scores.h"
 #import <AVFoundation/AVFoundation.h>
 #import "StringConst.h"
+#import "ZombieGameViewController.h";
 
 
 
@@ -25,7 +26,7 @@
 @synthesize eatingSoundPlayer;
 @synthesize crawlerDiff;
 @synthesize berzerkDiff;
-
+@synthesize theGame;
 
 
 
@@ -39,6 +40,24 @@
 	[databasePath release];
 	[super dealloc];
 	
+}
+
+-(void) SetCrawlerLevel:(int) index{
+	theGame.crawlerCurrentLevel = index;
+	[theGame drawCrawlerFinished];
+}
+
+-(BOOL) EligibleCrawlerBoard:(int) index
+{
+	if(index <= [self getCrawlerDifficulty]+2)
+		return YES;
+	return NO;
+	
+}
+
+-(void) SetGame:(ZombieGameViewController *)c
+{
+	theGame = c;
 }
 
 -(id) init{
@@ -534,6 +553,23 @@
 }
 
 
+-(int) getCrawlerMedal:(int) level
+{
+	int score = [self getCrawlerLevelVotes:level-1];
+	if(score == -1)
+	{
+		return -1;
+	}
+	if(score <= 20)
+		return 1;
+	else if(score <=30)
+		return 2;
+	else if(score <=40)
+		return 3;
+	return -1; //too slow, no medal!
+}
+
+
 -(int) getCrawlerLevelVotes:(int) level
 {
 	sqlite3 *database;
@@ -632,7 +668,6 @@
 	sqlite3_close(database);
 	
 }
-
 
 
 

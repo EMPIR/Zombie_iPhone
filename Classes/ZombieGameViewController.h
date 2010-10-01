@@ -16,6 +16,7 @@
 <UIScrollViewDelegate, FBRequestDelegate,
 FBDialogDelegate,
 FBSessionDelegate>{
+	
 	IBOutlet UIButton *button1;
 	IBOutlet UIButton *button2;
 	IBOutlet UIButton *button3;
@@ -101,6 +102,8 @@ FBSessionDelegate>{
 	int twitchRate;
 	int brain_randomTwitch;
 	int brain_twitchRate;
+	BOOL crawlerSelection;
+	int crawlerCurrentLevel;
 	
 	int timeSinceLastRightAnswer;
 	BOOL hintVisible;
@@ -247,7 +250,7 @@ FBSessionDelegate>{
 
 
 -(BOOL) isButtonPressed:(int) index;
-
++(void) setCrawlerLevel:(int) index;
 -(void) HideCards;
 -(void) ShowCards;
 
@@ -326,7 +329,8 @@ FBSessionDelegate>{
 @property (nonatomic,retain) UIImageView *endGameRank2;
 @property (nonatomic,retain) UIImageView *endGameRank3;
 
-
+@property (nonatomic,assign) BOOL crawlerSelection;
+@property (nonatomic,assign) int crawlerCurrentLevel;
 
 @property (nonatomic,assign) BOOL firstClick;
 @property (nonatomic,assign) int showWrong;

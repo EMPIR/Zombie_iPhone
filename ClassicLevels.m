@@ -7,6 +7,8 @@
 //
 
 #import "ClassicLevels.h"
+#import "ZombieGameAppDelegate.h"
+
 
 static NSArray *__pageControlColorList = nil;
 
@@ -48,6 +50,8 @@ static NSArray *__pageControlColorList = nil;
     if (self = [super initWithNibName:@"ClassicLevels" bundle:nil]) {
         pageNumber = page;
     }
+	
+		
     return self;
 }
 
@@ -62,11 +66,232 @@ static NSArray *__pageControlColorList = nil;
 */
 
 
+-(IBAction) buttonHover:(id)sender
+{
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	for(int i=1;i<=15;++i)
+	{
+		UIButton *button = [self getLevelButton:i];
+		UIImageView *hover = [self getLevelHover:i];
+		hover.hidden = YES;
+		
+		if(sender == button && [appDelegate EligibleCrawlerBoard:i+(pageNumber)* 15]){
+			
+			hover.hidden = NO;
+			//[ZombieGameViewController setCrawler:i-1];
+			[appDelegate SetCrawlerLevel:i-1];
+		}
+	}
+}
+
+-(UIImageView *) getLevelHover:(int) val
+{
+	if( val == 1)
+		return hover1;
+	else if( val == 2)
+		return hover2;
+	else if( val == 3)
+		return hover3;
+	else if( val == 4)
+		return hover4;
+	else if( val == 5)
+		return hover5;
+	else if( val == 6)
+		return hover6;
+	else if( val == 7)
+		return hover7;
+	else if( val == 8)
+		return hover8;
+	else if( val == 9)
+		return hover9;
+	else if( val == 10)
+		return hover10;
+	else if( val == 11)
+		return hover11;
+	else if( val == 12)
+		return hover12;
+	else if( val == 13)
+		return hover13;
+	else if( val == 14)
+		return hover14;
+	else if( val == 15)
+		return hover15;
+	return NULL;
+	
+}
+
+-(UIButton *) getLevelButton:(int) val
+{
+	if( val == 1)
+		return button1;
+	else if( val == 2)
+		return button2;
+	else if( val == 3)
+		return button3;
+	else if( val == 4)
+		return button4;
+	else if( val == 5)
+		return button5;
+	else if( val == 6)
+		return button6;
+	else if( val == 7)
+		return button7;
+	else if( val == 8)
+		return button8;
+	else if( val == 9)
+		return button9;
+	else if( val == 10)
+		return button10;
+	else if( val == 11)
+		return button11;
+	else if( val == 12)
+		return button12;
+	else if( val == 13)
+		return button13;
+	else if( val == 14)
+		return button14;
+	else if( val == 15)
+		return button15;
+	return NULL;
+	
+}
+
+-(UILabel *) getLevelLabel:(int) val
+{
+	
+	if( val == 1)
+		return level1;
+	else if( val == 2)
+		return level2;
+	else if( val == 3)
+		return level3;
+	else if( val == 4)
+		return level4;
+	else if( val == 5)
+		return level5;
+	else if( val == 6)
+		return level6;
+	else if( val == 7)
+		return level7;
+	else if( val == 8)
+		return level8;
+	else if( val == 9)
+		return level9;
+	else if( val == 10)
+		return level10;
+	else if( val == 11)
+		return level11;
+	else if( val == 12)
+		return level12;
+	else if( val == 13)
+		return level13;
+	else if( val == 14)
+		return level14;
+	else if( val == 15)
+		return level15;
+	return NULL;
+	
+	
+}
+-(UIImageView *) getBadge:(int) val
+{
+	
+	if( val == 1)
+		return badge1;
+	else if( val == 2)
+		return badge2;
+	else if( val == 3)
+		return badge3;
+	else if( val == 4)
+		return badge4;
+	else if( val == 5)
+		return badge5;
+	else if( val == 6)
+		return badge6;
+	else if( val == 7)
+		return badge7;
+	else if( val == 8)
+		return badge8;
+	else if( val == 9)
+		return badge9;
+	else if( val == 10)
+		return badge10;
+	else if( val == 11)
+		return badge11;
+	else if( val == 12)
+		return badge12;
+	else if( val == 13)
+		return badge13;
+	else if( val == 14)
+		return badge14;
+	else if( val == 15)
+		return badge15;
+	return NULL;
+	
+	
+}
+
+-(void)setPageLabels:(int)label{
+	
+	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
+	NSMutableArray *crawlerScores = [appDelegate getCrawlerTopScores];
+	int crawlerLevel = crawlerScores.count + 1;
+	int score;
+	
+	score = [appDelegate getCrawlerMedal:0];
+		NSLog(@"Score %d", score);
+	
+	NSString *message;
+	
+	UIImage  *img;
+	
+	for(int i=1;i<=15; ++i)
+	{
+		UILabel *label = [self getLevelLabel:i];
+		message = [[NSString alloc] initWithFormat:@"%d", i+(pageNumber)* 15];
+		[label setText:message];
+		[message release];	
+		
+		UIImageView *badge = [self getBadge:i];
+		
+		score = [appDelegate getCrawlerMedal:i+(pageNumber)* 15];
+		if(score ==1)
+		{
+			img = [UIImage  imageNamed:@"lb_skullGold.png"];
+		}
+		else if (score ==2)
+		{
+			img = [UIImage  imageNamed:@"lb_skullSilver.png"];
+		}
+		else if(score == 3){
+			img = [UIImage  imageNamed:@"lb_skullBronze.png"];
+		}
+		else if ([appDelegate EligibleCrawlerBoard:i+(pageNumber)* 15])
+		{
+			img = [UIImage  imageNamed:@"lb_green.png"];
+
+		}
+		
+		else {
+			img = [UIImage  imageNamed:@"lb_locked.png"];
+		}
+
+		
+		badge.image = img;
+		
+	}
+	
+	
+		
+}
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
 	pageNumberLabel.text = [NSString stringWithFormat:@"Page %d", pageNumber + 1];
 	//self.view.backgroundColor = [ClassicLevels pageControlColorWithIndex:pageNumber];
+	[self setPageLabels:pageNumber];
+		
 }
 
 

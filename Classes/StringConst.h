@@ -77,7 +77,7 @@ static const char	SND_CORRECT	[]				= "/correct.wav";
 static const char	SND_SCREAM	[]				= "/Pickles.wav";
 static const char	SND_SHOTGUN	[]				= "/Pickles.wav";
 static const char	SND_GAME_START	[]			= "/Game_Start_faster.wav";
-static const char	SND_BRAIN_EXPLODE	[]		= "/brainExplode.wav";
+static const char	SND_BRAIN_EXPLODE	[]		= "/watersplash.wav";
 static const char   SND_MEOW 		[]		= "/Pickles.wav";
 static const char	SND_ZOMBIE_EXP_1	[]		= "/%d%d.wav";
 static const char	SND_ZOMBIE_EXP_2	[]		= "/%d6.wav";
@@ -86,7 +86,7 @@ static const char	SND_ZOMBIE_EXP_4	[]		= "/%d8.wav";
 static const char	SND_ZOMBIE_EXP_5	[]		= "/%d9.wav";
 static const char	SND_EATING			[]		= "%@/zombiesEating.mp3";
 static const char	SND_WATERSPLASH		[]		= "@watersplash.wav";
-static const char   SND_WATERHIT		[]		= "@wate	rhit.wav";
+static const char   SND_WATERHIT		[]		= "@watersplash.wav";
 #endif // IPAD
 #else
 #ifdef IPAD

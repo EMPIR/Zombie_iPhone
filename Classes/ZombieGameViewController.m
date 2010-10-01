@@ -72,14 +72,14 @@ static NSUInteger kNumberOfPages = 3;
 @synthesize m_brainView51, m_brainView52, m_brainView53,m_brainView54, m_brainView55;
 @synthesize m_brainView56, m_brainView57, m_brainView58,m_brainView59, m_brainView60;
 
-
+@synthesize crawlerSelection, crawlerCurrentLevel;
 @synthesize m_bGun;
 @synthesize facebook;
 
 int TOTAL_BRAINS = 60;
+crawlerSelection = YES;
+crawlerCurrentLevel = 0;
 
-BOOL crawlerSelection = YES;
-int crawlerCurrentLevel = 0;
 
 //http://www.facebook.com/developers/#!/developers/apps.php?app_id=146670792037872
 
@@ -90,6 +90,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 static NSString* kFacebookAppId = @"146670792037872";
 static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/developers/apps.php?app_id=146670792037872";
 #endif
+
 
 
 
@@ -610,11 +611,17 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		[self incrementCrawlerDifficulty:crawlerCurrentLevel:currentTime];
 	}
 
-		
 	
+	
+	//UPDATE THE ClassicLevels!!!!!!!!!!
+		
+    // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
+    [self loadScrollViewWithPage:pageControl.currentPage];
 	
 	[self drawCrawlerFinished];
 }
+
+
 
 -(void) drawCrawlerFinished
 {
@@ -641,12 +648,14 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	int maxLevelCompleted = [appDelegate getCrawlerDifficulty]; 
 	
-	if(crawlerCurrentLevel > 0)
-		self.prevLevelButton.hidden = NO;
+	//if(crawlerCurrentLevel > 0)
+	//	self.prevLevelButton.hidden = NO;
 	
 	if(crawlerCurrentLevel < maxLevelCompleted)
 	{
-		self.nextLevelButton.hidden =NO;
+		//	self.nextLevelButton.hidden =NO;
+	
+		//SET THE PLAY BUTTON TO SAY PLAY AGAIN?
 	}
 	
 	
@@ -656,7 +665,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	//show if crawlerCurrentLevel is not 0 and crawlerCurrentLevel is the last completed board and crawlerCurrentLevel is not the last board
 	if(levelScore>0 && crawlerCurrentLevel == maxLevelCompleted && crawlerCurrentLevel != [SetLogic GetTotalLevels]-1)
 	{
-		self.playNextLevelButton.hidden = NO;
+		//self.playNextLevelButton.hidden = NO;
 	}
 	
 	
@@ -808,6 +817,12 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	setGame.isActive = NO;
 	
 }
+
++(void) setCrawlerLevel:(int) index
+{
+	crawlerCurrentLevel = index;
+	setGame.isActive = YES;
+}
 -(void) HideCards
 {
 	for(int i=0;i<12; ++i)
@@ -917,8 +932,10 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	}
 	else if(berzerkEndTime < firstMark && gamePlacement == 1)
 	{
+#ifndef DOGHOUSE		
 		if(berzerkEndTime == 0)
 			[ZombieGameHelpers playSound:0:4];
+#endif		
 		if(gamePlacement == 1)//You Win!
 		{
 #ifndef DOGHOUSE
@@ -1696,20 +1713,15 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	
     // a page is the width of the scroll view
     scrollView.pagingEnabled = YES;
+	NSLog(@"Scroll Size %d", scrollView.frame.size.width);
+	//scrollView.contentSize = CGSizeMake(267 * kNumberOfPages, 200);
     scrollView.contentSize = CGSizeMake(scrollView.frame.size.width * kNumberOfPages, scrollView.frame.size.height);
 	scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.showsVerticalScrollIndicator = NO;
     scrollView.scrollsToTop = NO;
     scrollView.delegate = self;
 	
-    pageControl.numberOfPages = kNumberOfPages;
-    pageControl.currentPage = 0;
-	
-    // pages are created on demand
-    // load the visible page
-    // load the page on either side to avoid flashes when the user starts scrolling
-    [self loadScrollViewWithPage:0];
-    [self loadScrollViewWithPage:1];
+    
 	
 	
 	
@@ -1726,6 +1738,8 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 
 	crawlerCurrentLevel = [appDelegate getCrawlerDifficulty];
+	
+	[appDelegate SetGame:self];
 	
 /*	for(int i=0;i<1;++i)
 	{
@@ -1942,7 +1956,9 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 			berzerkEndTime ++;
 			if(berzerkEndTime >= 40)
 			{
+#ifndef DOGHOUSE
 				[appDelegate PlayEatingTrack];
+#endif				
 				setGame.isActive = NO;
 				[self drawBerzerkFinished];
 			}
@@ -2027,7 +2043,6 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		[ZombieGameHelpers  playSound:1:6];
 		[ZombieGameHelpers  playSound:2:6];
 		[ZombieGameHelpers  playSound:3:6];
-
 #else
 		[ZombieGameHelpers  playSound:0:3];
 		[ZombieGameHelpers  playSound:1:6];
@@ -2078,9 +2093,17 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 #ifdef DEBUG
 		timeRemaining= 5;
 #else		
-		timeRemaining = 60;
+		timeRemaining = 5;
 #endif		
 	}
+	pageControl.numberOfPages = kNumberOfPages;
+    pageControl.currentPage = 0;
+	
+    // pages are created on demand
+    // load the visible page
+    // load the page on either side to avoid flashes when the user starts scrolling
+    [self loadScrollViewWithPage:0];
+    [self loadScrollViewWithPage:1];
 	
 	UIImage *img;
 	

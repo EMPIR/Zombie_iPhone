@@ -12,11 +12,13 @@
 //@class MainMenuViewController;
 @class GameMenu;
 @class AVAudioPlayer;
-
+@class ZombieGameViewController;
 
 @interface ZombieGameAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
    GameMenu *viewController;
+	
+	ZombieGameViewController *theGame;
 	
 	// Database variables
 	NSString *databaseName;
@@ -59,11 +61,16 @@
 
 -(NSMutableArray *) getCrawlerTopScores;
 -(NSMutableArray *) getBerserkTopScores;
+
+-(int) getCrawlerMedal:(int) level;
 -(int) getCachedCrawlerDifficulty;
 -(int) getCrawlerDifficulty;
 -(int) getBerzerkDifficulty;
 -(void) setCrawlerDifficulty:(int) level:(int) score;
 -(void) setBerzerkDifficulty:(int) val;
+-(void) SetCrawlerLevel:(int) index;
+-(void) SetGame:(ZombieGameViewController *)c;
+-(BOOL) EligibleCrawlerBoard:(int)index;
 //-(BOOL) createHSTable;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -73,6 +80,8 @@
 @property (nonatomic, retain) NSString *databaseName;
 @property (nonatomic, retain) AVAudioPlayer *audioPlayer;
 @property (nonatomic, retain) AVAudioPlayer *eatingSoundPlayer;
+@property (nonatomic, assign) ZombieGameViewController *theGame;
+
 
 @property (nonatomic, assign) BOOL soundFX;
 @property (nonatomic, assign) double volume;

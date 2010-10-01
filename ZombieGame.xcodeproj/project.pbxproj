@@ -1041,6 +1041,9 @@
 		27808CC911C7150400306D7B /* ipad_3330a.png in Resources */ = {isa = PBXBuildFile; fileRef = 27808C6011C7150400306D7B /* ipad_3330a.png */; };
 		27808CCA11C7150400306D7B /* ipad_3330b.png in Resources */ = {isa = PBXBuildFile; fileRef = 27808C6111C7150400306D7B /* ipad_3330b.png */; };
 		27808CCB11C7150400306D7B /* rename.pl in Resources */ = {isa = PBXBuildFile; fileRef = 27808C6211C7150400306D7B /* rename.pl */; };
+		278F1C0B12557EC30034C4D9 /* lb_skullGold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 278F1C0812557EC30034C4D9 /* lb_skullGold@2x.png */; };
+		278F1C0C12557EC30034C4D9 /* lb_skullSilver@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 278F1C0912557EC30034C4D9 /* lb_skullSilver@2x.png */; };
+		278F1C0D12557EC30034C4D9 /* lb_skullBronze@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 278F1C0A12557EC30034C4D9 /* lb_skullBronze@2x.png */; };
 		278FA46211A36A9300F20538 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 278FA46111A36A9300F20538 /* AVFoundation.framework */; };
 		27913319124AA0080061FD1B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		2791331A124AA0080061FD1B /* ZombieGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* ZombieGameViewController.xib */; };
@@ -1662,7 +1665,7 @@
 		2717095612505D2C00C0AEBA /* watersplash.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = watersplash.wav; path = MEDIA_Doghouse_iPhone/watersplash.wav; sourceTree = "<group>"; };
 		2717095912505E1A00C0AEBA /* waterhit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = waterhit.wav; path = MEDIA_Doghouse_iPhone/waterhit.wav; sourceTree = "<group>"; };
 		271F9A3C11FD2D2A00DAADDE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = iPad/Icon.png; sourceTree = "<group>"; };
-		273203ED12456002004F2F9F /* Dog House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		273203ED12456002004F2F9F /* ZombieGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZombieGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27320414124561ED004F2F9F /* 1110a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1110a.png; path = MEDIA_Doghouse_iPhone/Pieces/1110a.png; sourceTree = "<group>"; };
 		27320415124561ED004F2F9F /* 1110a@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "1110a@2x.png"; path = "MEDIA_Doghouse_iPhone/Pieces/1110a@2x.png"; sourceTree = "<group>"; };
 		27320416124561ED004F2F9F /* 1110b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1110b.png; path = MEDIA_Doghouse_iPhone/Pieces/1110b.png; sourceTree = "<group>"; };
@@ -2593,8 +2596,11 @@
 		27808C6011C7150400306D7B /* ipad_3330a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad_3330a.png; sourceTree = "<group>"; };
 		27808C6111C7150400306D7B /* ipad_3330b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad_3330b.png; sourceTree = "<group>"; };
 		27808C6211C7150400306D7B /* rename.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = rename.pl; sourceTree = "<group>"; };
+		278F1C0812557EC30034C4D9 /* lb_skullGold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lb_skullGold@2x.png"; path = "MEDIA_Doghouse_iPhone/lb_skullGold@2x.png"; sourceTree = "<group>"; };
+		278F1C0912557EC30034C4D9 /* lb_skullSilver@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lb_skullSilver@2x.png"; path = "MEDIA_Doghouse_iPhone/lb_skullSilver@2x.png"; sourceTree = "<group>"; };
+		278F1C0A12557EC30034C4D9 /* lb_skullBronze@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lb_skullBronze@2x.png"; path = "MEDIA_Doghouse_iPhone/lb_skullBronze@2x.png"; sourceTree = "<group>"; };
 		278FA46111A36A9300F20538 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		279134AD124AA0080061FD1B /* ZombieHouseLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZombieHouseLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		279134AD124AA0080061FD1B /* ZombieGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZombieGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279134BE124ABF260061FD1B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = MEDIA_ZombieLite_iPhone/Icon.png; sourceTree = "<group>"; };
 		279134BF124ABF260061FD1B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "MEDIA_ZombieLite_iPhone/Icon@2x.png"; sourceTree = "<group>"; };
 		279134CB124AC08D0061FD1B /* b_Berzerk_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = b_Berzerk_off.png; path = MEDIA_ZombieLite_iPhone/b_Berzerk_off.png; sourceTree = "<group>"; };
@@ -2844,8 +2850,8 @@
 			children = (
 				1D6058910D05DD3D006BFB54 /* ZombieGame.app */,
 				27E645C011C1799700D91ADF /* ZombieGame-iPad.app */,
-				273203ED12456002004F2F9F /* Dog House.app */,
-				279134AD124AA0080061FD1B /* ZombieHouseLite.app */,
+				273203ED12456002004F2F9F /* ZombieGame.app */,
+				279134AD124AA0080061FD1B /* ZombieGame.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2892,6 +2898,9 @@
 		27320413124561AF004F2F9F /* MEDIA_Dog_iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				278F1C0812557EC30034C4D9 /* lb_skullGold@2x.png */,
+				278F1C0912557EC30034C4D9 /* lb_skullSilver@2x.png */,
+				278F1C0A12557EC30034C4D9 /* lb_skullBronze@2x.png */,
 				2717095912505E1A00C0AEBA /* waterhit.wav */,
 				2717095612505D2C00C0AEBA /* watersplash.wav */,
 				271708BE12504BDB00C0AEBA /* b_PlayGame_off.png */,
@@ -4178,7 +4187,7 @@
 			);
 			name = DogHouse;
 			productName = ZombieGame;
-			productReference = 273203ED12456002004F2F9F /* Dog House.app */;
+			productReference = 273203ED12456002004F2F9F /* ZombieGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 		27913317124AA0080061FD1B /* ZombieGameLite */ = {
@@ -4195,7 +4204,7 @@
 			);
 			name = ZombieGameLite;
 			productName = ZombieGame;
-			productReference = 279134AD124AA0080061FD1B /* ZombieHouseLite.app */;
+			productReference = 279134AD124AA0080061FD1B /* ZombieGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 		27E644E211C1799700D91ADF /* ZombieGame-iPad */ = {
@@ -5081,6 +5090,9 @@
 				271708D912504BDB00C0AEBA /* bg_LevelsClassic.jpg in Resources */,
 				2717095712505D2C00C0AEBA /* watersplash.wav in Resources */,
 				2717095A12505E1A00C0AEBA /* waterhit.wav in Resources */,
+				278F1C0B12557EC30034C4D9 /* lb_skullGold@2x.png in Resources */,
+				278F1C0C12557EC30034C4D9 /* lb_skullSilver@2x.png in Resources */,
+				278F1C0D12557EC30034C4D9 /* lb_skullBronze@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5881,7 +5893,7 @@
 				INFOPLIST_FILE = "ZombieGame-Info.plist";
 				INFOPLIST_PREPROCESSOR_DEFINITIONS = DEBUG;
 				PRODUCT_NAME = ZombieGame;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos4.1;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -5915,10 +5927,11 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ZombieGame_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "DOGHOUSE=1";
 				INFOPLIST_FILE = "ZombieGame-Info copy.plist";
 				INFOPLIST_PREPROCESSOR_DEFINITIONS = DEBUG;
 				PRODUCT_NAME = ZombieGame;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos4.1;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
