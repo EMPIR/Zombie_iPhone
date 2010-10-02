@@ -81,7 +81,7 @@ ZombieGameAppDelegate *appDelegate;
 			
 			hover.hidden = NO;
 			//[ZombieGameViewController setCrawler:i-1];
-			[appDelegate SetCrawlerLevel:i-1];
+			[appDelegate SetCrawlerLevel:(i-1)+(pageNumber)* 15];
 		}
 	}
 }
