@@ -51,7 +51,7 @@ static NSUInteger kNumberOfPages = 3;
 @synthesize hint7View,hint8View,hint9View;
 @synthesize hint10View,hint11View,hint12View;
 @synthesize finishedLabel, finishedLabel2, moveLabel,moveLabel2,timerLabel;
-@synthesize endGameRank1, endGameRank2, endGameRank3;
+@synthesize endGameRank1, endGameRank2, endGameRank3, endGameRankUnknown, endGameRankLocked;
 @synthesize setGame;
 @synthesize firstClick, showWrong, showRight, showPiece1, showPiece2, showPiece3;
 @synthesize randomTwitch, twitchRate, brain_randomTwitch, brain_twitchRate;
@@ -354,6 +354,9 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	self.endGameRank1.hidden = YES;
 	self.endGameRank2.hidden = YES;
 	self.endGameRank3.hidden = YES;
+	self.endGameRankUnknown.hidden = YES;
+	self.endGameRankLocked.hidden = YES;
+	
 	self.prevLevelButton.hidden = YES;
 	self.nextLevelButton.hidden =YES;
 	self.playNextLevelButton.hidden = YES;
@@ -614,7 +617,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	
 	
 	//UPDATE THE ClassicLevels!!!!!!!!!!
-		
+	int maxLevelCompleted = [appDelegate getCrawlerDifficulty]; 	
     // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
     [self loadScrollViewWithPage:pageControl.currentPage];
 	
@@ -639,6 +642,8 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	self.endGameRank1.hidden = YES;
 	self.endGameRank2.hidden = YES;
 	self.endGameRank3.hidden = YES;
+	self.endGameRankUnknown.hidden = YES;
+	self.endGameRankLocked.hidden = YES;
 	
 	self.prevLevelButton.hidden = YES;
 	self.nextLevelButton.hidden =YES;
@@ -685,17 +690,17 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	int currentTime = levelScore;
 	
 	UIImage *img;
-	if(currentTime == -1 && maxLevelCompleted > 0)
+	if(currentTime == 999 || (currentTime == -1 && maxLevelCompleted > 0))
 	{
 		facebookButton.hidden = YES;
 #ifdef DOGHOUSE
-		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_LOSE]];
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_WIN]];
 #else
 		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_LEVELS]];
 		
 #endif
 		[self.gameBG setImage:img];
-		self.endGameRank3.hidden = NO;
+		self.endGameRankUnknown.hidden = NO;
 	}
 	else if(currentTime <= 20)
 	{
@@ -743,18 +748,19 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	else
 	{
 #ifdef DOGHOUSE
-		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_LOSE]];
+		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_WIN]];
 #else
 		img  = [UIImage imageNamed:[StringConst GetImgConst: IMG_BG_CLASSIC_LEVELS]];
 		
 #endif
 		[self.gameBG setImage:img];
+		self.endGameRankUnknown.hidden = NO;
 
 		
 	}
 	
 	
-	if(currentTime > 40 && crawlerCurrentLevel > 0)
+	/*if(currentTime > 40 && crawlerCurrentLevel > 0)
 	{
 		//message = [[NSString alloc] initWithFormat:@"Your Placement: %d", gamePlacement];
 		message = [[NSString alloc] initWithFormat:@"Too Slow! Try Level %d Again!", crawlerCurrentLevel+1];
@@ -763,27 +769,30 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	{
 		message = [[NSString alloc] initWithFormat:@"Let's Go!", crawlerCurrentLevel+1];
 	}
-	else {
-		message = [[NSString alloc] initWithFormat:@"Crawler Level: %d", crawlerCurrentLevel+1];
-	}
+	else {*/
+		message = [[NSString alloc] initWithFormat:@"Level: %d", crawlerCurrentLevel+1];
+	//}
 	
 	NSLog(message);
+	[crawlerLevelLabel setText:message];
 	[finishedLabel2 setText:message];
 	[message release];
 	
-	if(currentTime != 999)
+	if(currentTime > 0 && currentTime != 999)
 	{
-		if(currentTime < 0)
+		//if(currentTime < 0)
 			
-			message =[[NSString alloc] initWithFormat:@"Too slow, try again!"];
-		else
-			message =[[NSString alloc] initWithFormat:@"Your Time: %d", currentTime];
+		//	message =[[NSString alloc] initWithFormat:@"Too slow, try again!"];
+		//else
+		//	message =[[NSString alloc] initWithFormat:@"Your Time: %d", currentTime];
+		message =[[NSString alloc] initWithFormat:@"%d", currentTime];
+		
 		
 	}
 	else {
-		message =[[NSString alloc] initWithFormat:@"Start Classic Crawler!"];
+		message =[[NSString alloc] initWithFormat:@"?"];
 	}
-	
+	[crawlerTimeLabel setText:message];
 	NSLog(message);
 	[finishedLabel setText:message];
 	[message release];
@@ -860,6 +869,8 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	self.endGameRank1.hidden = YES;
 	self.endGameRank2.hidden = YES;
 	self.endGameRank3.hidden = YES;
+	self.endGameRankUnknown.hidden = YES;
+	self.endGameRankLocked.hidden = YES;
 	
 	NSString *message;
 #ifndef DOGHOUSE	
@@ -1631,6 +1642,11 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
         [viewControllers replaceObjectAtIndex:page withObject:controller];
         [controller release];
     }
+	else {
+		[controller setPageLabels:page];
+		
+	}
+
 	if(nil == controller.view)
 	{
 		int debug = 0;
@@ -1738,6 +1754,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 
 	crawlerCurrentLevel = [appDelegate getCrawlerDifficulty];
+	[appDelegate LoadCachedCrawlerScores];
 	
 	[appDelegate SetGame:self];
 	
@@ -2086,6 +2103,8 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	self.endGameRank1.hidden = YES;
 	self.endGameRank2.hidden = YES;
 	self.endGameRank3.hidden = YES;
+	self.endGameRankUnknown.hidden = YES;
+	self.endGameRankLocked.hidden = YES;
 	
 	if(setGame.gameType == 1)
 		timeRemaining = 0;
@@ -2093,7 +2112,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 #ifdef DEBUG
 		timeRemaining= 5;
 #else		
-		timeRemaining = 5;
+		timeRemaining = 60;
 #endif		
 	}
 	pageControl.numberOfPages = kNumberOfPages;
@@ -2244,6 +2263,9 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	[endGameRank1 release];
 	[endGameRank2 release];
 	[endGameRank3 release];
+	[endGameRankUnknown release];
+	[endGameRankLocked release];
+	
 	[crawlerLevelLabel release];
 	[crawlerTimeLabel release];
 	[crawlerBestTimeLabel release];

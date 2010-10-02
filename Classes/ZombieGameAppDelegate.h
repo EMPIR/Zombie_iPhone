@@ -34,10 +34,15 @@
 	BOOL showHint;
 	int crawlerDiff;
 	int berzerkDiff;
+	int crawlerScores[45];
+	
 	
 	
 	
 }
+
+-(void) LoadCachedCrawlerScores;
+-(int) GetCachedCrawlerScore:(int) index;
 -(void) readScoresFromDatabase;
 -(void) insertScore:(int) score:(int)gameType:(NSDate *) date;
 -(void) deleteAllScores;
@@ -55,6 +60,7 @@
 -(int) getCrawlerTopFiveAverage;
 -(int) getBerzerkPlacement:(int) score;
 
+
 -(NSMutableArray *) getCrawlerTopScores;
 -(NSMutableArray *) getBerserkTopScores;
 
@@ -69,6 +75,7 @@
 -(void) setCrawlerDifficulty:(int) level:(int) score;
 -(void) setBerzerkDifficulty:(int) val;
 -(void) SetCrawlerLevel:(int) index;
+-(int) GetCrawlerLevel;
 -(void) SetGame:(ZombieGameViewController *)c;
 -(BOOL) EligibleCrawlerBoard:(int)index;
 //-(BOOL) createHSTable;

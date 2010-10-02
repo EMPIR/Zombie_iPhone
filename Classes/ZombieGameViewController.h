@@ -70,6 +70,8 @@ FBSessionDelegate>{
 	IBOutlet UIImageView *endGameRank1;
 	IBOutlet UIImageView *endGameRank2;
 	IBOutlet UIImageView *endGameRank3;
+	IBOutlet UIImageView *endGameRankUnknown;
+	IBOutlet UIImageView *endGameRankLocked;
 	
 	IBOutlet UIImageView *brainView1;
 	IBOutlet UIImageView *brainView2;
@@ -328,6 +330,8 @@ FBSessionDelegate>{
 @property (nonatomic,retain) UIImageView *endGameRank1;
 @property (nonatomic,retain) UIImageView *endGameRank2;
 @property (nonatomic,retain) UIImageView *endGameRank3;
+@property (nonatomic,retain) UIImageView *endGameRankUnknown;
+@property (nonatomic,retain) UIImageView *endGameRankLocked;
 
 @property (nonatomic,assign) BOOL crawlerSelection;
 @property (nonatomic,assign) int crawlerCurrentLevel;

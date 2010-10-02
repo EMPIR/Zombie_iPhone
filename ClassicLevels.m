@@ -8,7 +8,7 @@
 
 #import "ClassicLevels.h"
 #import "ZombieGameAppDelegate.h"
-
+#import "ZombieGameViewController.h"
 
 static NSArray *__pageControlColorList = nil;
 
@@ -33,6 +33,9 @@ static NSArray *__pageControlColorList = nil;
 @synthesize label1, label2, label3, label4, label5;
 @synthesize label6, label7, label8, label9, label10;
 @synthesize label11, label12, label13, label14, label15;
+
+ZombieGameAppDelegate *appDelegate;
+
 
 // Creates the color list the first time this method is invoked. Returns one color object from the list.
 + (UIColor *)pageControlColorWithIndex:(NSUInteger)index {
@@ -68,7 +71,6 @@ static NSArray *__pageControlColorList = nil;
 
 -(IBAction) buttonHover:(id)sender
 {
-	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	for(int i=1;i<=15;++i)
 	{
 		UIButton *button = [self getLevelButton:i];
@@ -80,6 +82,24 @@ static NSArray *__pageControlColorList = nil;
 			hover.hidden = NO;
 			//[ZombieGameViewController setCrawler:i-1];
 			[appDelegate SetCrawlerLevel:i-1];
+		}
+	}
+}
+
+-(void) drawCurrentHover{
+	
+	for(int i=1;i<=15;++i)
+	{
+		UIButton *button = [self getLevelButton:i];
+		UIImageView *hover = [self getLevelHover:i];
+		hover.hidden = YES;
+		
+		
+		if([appDelegate GetCrawlerLevel] +1 == i+(pageNumber)* 15){
+			
+			hover.hidden = NO;
+			//[ZombieGameViewController setCrawler:i-1];
+			//[appDelegate SetCrawlerLevel:i-1];
 		}
 	}
 }
@@ -233,13 +253,11 @@ static NSArray *__pageControlColorList = nil;
 
 -(void)setPageLabels:(int)label{
 	
-	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
-	NSMutableArray *crawlerScores = [appDelegate getCrawlerTopScores];
-	int crawlerLevel = crawlerScores.count + 1;
+	int crawlerLevel = [appDelegate GetCrawlerLevel];
 	int score;
 	
-	score = [appDelegate getCrawlerMedal:0];
-		NSLog(@"Score %d", score);
+	//score = [appDelegate getCrawlerMedal:0];
+	//	NSLog(@"Score %d", score);
 	
 	NSString *message;
 	
@@ -269,6 +287,8 @@ static NSArray *__pageControlColorList = nil;
 		else if ([appDelegate EligibleCrawlerBoard:i+(pageNumber)* 15])
 		{
 			img = [UIImage  imageNamed:@"lb_green.png"];
+			//UIImageView *hover = [self getLevelHover:i];
+			//hover.hidden = NO;
 
 		}
 		
@@ -280,14 +300,21 @@ static NSArray *__pageControlColorList = nil;
 		badge.image = img;
 		
 	}
-	
+	[self drawCurrentHover];
 	
 		
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+	[super viewWillAppear:animated];
+	//[self setPageLabels:pageNumber];
+	
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	pageNumberLabel.text = [NSString stringWithFormat:@"Page %d", pageNumber + 1];
 	//self.view.backgroundColor = [ClassicLevels pageControlColorWithIndex:pageNumber];
 	[self setPageLabels:pageNumber];

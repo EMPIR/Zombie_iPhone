@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="6"/>
+			<integer value="254"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -950,6 +950,30 @@
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">EndGameClassic03.png</string>
+						</object>
+					</object>
+					<object class="IBUIImageView" id="760419775">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{323, 88}, {130, 137}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">level_locked.png</string>
+						</object>
+					</object>
+					<object class="IBUIImageView" id="529081526">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{323, 88}, {130, 137}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">level_skullUnknown.png</string>
 						</object>
 					</object>
 					<object class="IBUIScrollView" id="41798081">
@@ -1972,6 +1996,22 @@
 					</object>
 					<int key="connectionID">252</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">endGameRankLocked</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="760419775"/>
+					</object>
+					<int key="connectionID">255</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">endGameRankUnknown</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="529081526"/>
+					</object>
+					<int key="connectionID">256</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -2057,6 +2097,8 @@
 							<reference ref="687199548"/>
 							<reference ref="327421370"/>
 							<reference ref="41798081"/>
+							<reference ref="760419775"/>
+							<reference ref="529081526"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -2355,6 +2397,16 @@
 						<reference key="object" ref="327421370"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">253</int>
+						<reference key="object" ref="760419775"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">254</int>
+						<reference key="object" ref="529081526"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -2392,6 +2444,7 @@
 					<string>196.IBPluginDependency</string>
 					<string>197.IBPluginDependency</string>
 					<string>198.IBPluginDependency</string>
+					<string>198.IBViewBoundsToFrameTransform</string>
 					<string>21.IBPluginDependency</string>
 					<string>212.IBPluginDependency</string>
 					<string>218.IBPluginDependency</string>
@@ -2410,6 +2463,9 @@
 					<string>248.IBViewBoundsToFrameTransform</string>
 					<string>249.IBPluginDependency</string>
 					<string>249.IBViewBoundsToFrameTransform</string>
+					<string>253.IBPluginDependency</string>
+					<string>253.IBViewBoundsToFrameTransform</string>
+					<string>254.IBPluginDependency</string>
 					<string>49.IBPluginDependency</string>
 					<string>53.IBPluginDependency</string>
 					<string>55.IBPluginDependency</string>
@@ -2469,6 +2525,9 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">AUOhgABCsAAAA</bytes>
+					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -2497,6 +2556,11 @@
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABDqgAAweAAAA</bytes>
 					</object>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">AUOhgABCsAAAA</bytes>
+					</object>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -2536,7 +2600,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">252</int>
+			<int key="maxID">256</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2828,6 +2892,8 @@
 							<string>endGameRank1</string>
 							<string>endGameRank2</string>
 							<string>endGameRank3</string>
+							<string>endGameRankLocked</string>
+							<string>endGameRankUnknown</string>
 							<string>facebookButton</string>
 							<string>finishedLabel</string>
 							<string>finishedLabel2</string>
@@ -2892,6 +2958,8 @@
 							<string>UILabel</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
+							<string>UIImageView</string>
+							<string>UIImageView</string>
 							<string>UIImageView</string>
 							<string>UIImageView</string>
 							<string>UIImageView</string>
@@ -2965,6 +3033,8 @@
 							<string>endGameRank1</string>
 							<string>endGameRank2</string>
 							<string>endGameRank3</string>
+							<string>endGameRankLocked</string>
+							<string>endGameRankUnknown</string>
 							<string>facebookButton</string>
 							<string>finishedLabel</string>
 							<string>finishedLabel2</string>
@@ -3102,6 +3172,14 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">endGameRank3</string>
+								<string key="candidateClassName">UIImageView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">endGameRankLocked</string>
+								<string key="candidateClassName">UIImageView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">endGameRankUnknown</string>
 								<string key="candidateClassName">UIImageView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
@@ -3541,6 +3619,8 @@
 				<string>brain_1.png</string>
 				<string>checkHover.png</string>
 				<string>level_facebook.png</string>
+				<string>level_locked.png</string>
+				<string>level_skullUnknown.png</string>
 				<string>selected.png</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
@@ -3562,6 +3642,8 @@
 				<string>{62, 45}</string>
 				<string>{105, 71}</string>
 				<string>{119, 41}</string>
+				<string>{133, 170}</string>
+				<string>{142, 150}</string>
 				<string>{105, 71}</string>
 			</object>
 		</object>

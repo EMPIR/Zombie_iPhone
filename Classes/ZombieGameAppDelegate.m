@@ -41,6 +41,9 @@
 	[super dealloc];
 	
 }
+-(int) GetCrawlerLevel{
+	return theGame.crawlerCurrentLevel;
+}
 
 -(void) SetCrawlerLevel:(int) index{
 	theGame.crawlerCurrentLevel = index;
@@ -49,7 +52,7 @@
 
 -(BOOL) EligibleCrawlerBoard:(int) index
 {
-	if(index <= [self getCrawlerDifficulty]+2)
+	if(index <= [self getCachedCrawlerDifficulty]+1)
 		return YES;
 	return NO;
 	
@@ -537,7 +540,7 @@
 			// Loop through the results and add them to the feeds array
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
 				// Read the data from the result row
-				int _level = sqlite3_column_int(compiledStatement,0);
+				int _level = sqlite3_column_int(compiledStatement,0) + 1;
 				//int _score = sqlite3_column_int(compiledStatement,1);
 				ret = _level;
 				break;
@@ -555,7 +558,7 @@
 
 -(int) getCrawlerMedal:(int) level
 {
-	int score = [self getCrawlerLevelVotes:level-1];
+	int score = [self GetCachedCrawlerScore:level-1];
 	if(score == -1)
 	{
 		return -1;
@@ -569,6 +572,16 @@
 	return -1; //too slow, no medal!
 }
 
+-(int) GetCachedCrawlerScore:(int) index
+{
+	return crawlerScores[index];
+}
+-(void) LoadCachedCrawlerScores{
+	for(int i=0;i<45;++i)
+	{
+		crawlerScores[i] = [self getCrawlerLevelVotes:i];
+	}
+}
 
 -(int) getCrawlerLevelVotes:(int) level
 {
@@ -601,8 +614,10 @@
 	return ret;
 }
 
+
+
 -(void) insertCrawlerDifficulty:(int) _level: (int) _score{
-	
+	crawlerScores[_level] = _score;
 	// Setup the database object
 	sqlite3 *database;
 	
@@ -638,6 +653,7 @@
 
 -(void) updateCrawlerDifficulty:(int) _level: (int) _score{
 	
+	crawlerScores[_level] = _score;
 	// Setup the database object
 	sqlite3 *database;
 	
