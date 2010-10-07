@@ -21,7 +21,7 @@
 
 @implementation HowToPlayViewController
 @synthesize button1, button2, button3, scrollView;
-
+@synthesize textView;
 
 -(IBAction) backMainMenu:(id) sender
 {
@@ -37,12 +37,36 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+#ifndef DOGHOUSE	
+	//[textView setText:@"Zombie House!"];
+	//[textView performSelectorOnMainThread:@selector(setText:) withObject:@"Zombie House" waitUntilDone:YES];
+	textView.text = @"In Zombie House each card has three features:\n   Zombie (Baldy, Nerdy, Girly)\n   Color (Blue, Purple, Green)\n   Shade (Full Color, Monotone, Outline)\n\nYou make Zombie Comboz by selecting 3 Zombies. A correct answer will have all the same or all different values for each feature.\nClick the Zombies Cards to the right to generate Zombie Comboz!\n\n\Zombie House has two Game Modes, Classic Crawler and Berzerker.\n\nClassic Crawler:\n  Solve 10 Comboz in the shortest amount of time possible. Your score is the number of seconds it takes to complete all 10 Comboz. Advance to the next level by completing a board in 40 seconds or less.\n\nBerzerker:\n  Play against the clock to see how many Comboz you can get before you run out of time.  Beat your high score and get out of Zombie House alive!";// +
+	
+	
+#else
+	//[textView setText:@"Dog House!"];
+	//[textView performSelectorOnMainThread:@selector(setText:) withObject:@"Dog House" waitUntilDone:YES];
+	textView.text = @"In Dog House each card has three features:\n   Dog (Andy, Blue, Slips)\n   Color (Blue, Purple, Green)\n   Shade (Full Color, Monotone, Outline)\n\nYou make Combos by selecting 3 Dogs. A correct answer will have all the same or all different values for each feature.\nClick the Dog Cards to the right to generate Doggie Combos!\n\n\nDog House has two Game Modes, Classic and Barking Mad.\n\nClassic:\n  Solve 10 Combos in the shortest amount of time possible. Your score is the number of seconds it takes to complete all 10 Combos. Advance to the next level by completing a board in 40 seconds or less.\n\nBarking Mad:\n  Play against the clock to see how many Combos you can get before you run out of time!";// +
+	
+	//@"" +
+	//@"";
+	/*
+	
+	
+	 
+	
+	
+	
+	
+	
+	";*/
+#endif	
 }
-*/
+
 
 
 // Override to allow orientations other than the default portrait orientation.
@@ -187,9 +211,11 @@
 
 
 - (void)dealloc {
+	[textView release];
 	[button1 release];
 	[button2 release];
 	[button3 release];
+	[scrollView release];
     [super dealloc];
 }
 

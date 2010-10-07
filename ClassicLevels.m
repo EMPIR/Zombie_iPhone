@@ -71,31 +71,31 @@ ZombieGameAppDelegate *appDelegate;
 
 -(IBAction) buttonHover:(id)sender
 {
-	for(int i=1;i<=15;++i)
+	for(int i=0;i<15;++i)
 	{
-		UIButton *button = [self getLevelButton:i];
-		UIImageView *hover = [self getLevelHover:i];
+		UIButton *button = [self getLevelButton:i+1];
+		UIImageView *hover = [self getLevelHover:i+1];
 		hover.hidden = YES;
 		
 		if(sender == button && [appDelegate EligibleCrawlerBoard:i+(pageNumber)* 15]){
 			
 			hover.hidden = NO;
 			//[ZombieGameViewController setCrawler:i-1];
-			[appDelegate SetCrawlerLevel:(i-1)+(pageNumber)* 15];
+			[appDelegate SetCrawlerLevel:(i)+(pageNumber)* 15];
 		}
 	}
 }
 
 -(void) drawCurrentHover{
 	
-	for(int i=1;i<=15;++i)
+	for(int i=0;i<15;++i)
 	{
-		UIButton *button = [self getLevelButton:i];
-		UIImageView *hover = [self getLevelHover:i];
+		UIButton *button = [self getLevelButton:i+1];
+		UIImageView *hover = [self getLevelHover:i+1];
 		hover.hidden = YES;
 		
 		
-		if([appDelegate GetCrawlerLevel] +1 == i+(pageNumber)* 15){
+		if([appDelegate GetCrawlerLevel] == i+(pageNumber)* 15){
 			
 			hover.hidden = NO;
 			//[ZombieGameViewController setCrawler:i-1];
@@ -263,14 +263,14 @@ ZombieGameAppDelegate *appDelegate;
 	
 	UIImage  *img;
 	
-	for(int i=1;i<=15; ++i)
+	for(int i=0;i<15; ++i)
 	{
-		UILabel *label = [self getLevelLabel:i];
-		message = [[NSString alloc] initWithFormat:@"%d", i+(pageNumber)* 15];
+		UILabel *label = [self getLevelLabel:i+1];
+		message = [[NSString alloc] initWithFormat:@"%d", 1+(i+(pageNumber)* 15)];
 		[label setText:message];
 		[message release];	
 		
-		UIImageView *badge = [self getBadge:i];
+		UIImageView *badge = [self getBadge:i+1];
 		
 		score = [appDelegate getCrawlerMedal:i+(pageNumber)* 15];
 		if(score ==1)

@@ -580,7 +580,9 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
-	if(level+ 1 < [SetLogic GetTotalLevels])
+	
+	//THIS IS WHERE THE LEVEL PROBLEM IS!!! FIX ME!!!
+	if(level+ 1 <= [SetLogic GetTotalLevels])
 	{
 		[appDelegate setCrawlerDifficulty:level :score];
 	}
@@ -617,9 +619,19 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	
 	
 	//UPDATE THE ClassicLevels!!!!!!!!!!
-	int maxLevelCompleted = [appDelegate getCrawlerDifficulty]; 	
+	crawlerCurrentLevel = ([appDelegate getCrawlerDifficulty] - 1); 
+	if(crawlerCurrentLevel < 0)
+		crawlerCurrentLevel = 0;
     // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
-    [self loadScrollViewWithPage:pageControl.currentPage];
+    
+	
+    // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
+    [self loadScrollViewWithPage:pageControl.currentPage  - 1];
+    [self loadScrollViewWithPage:pageControl.currentPage ];
+    [self loadScrollViewWithPage:pageControl.currentPage  + 1];
+	[self loadScrollViewWithPage:pageControl.currentPage  + 2];
+	
+	//[self changePage:pageControl.currentPage];
 	
 	[self drawCrawlerFinished];
 }
@@ -2002,9 +2014,8 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		timeRemaining +=0.1;
 	else
 	{
-		int level  = pow((setGame.setsComplete / 10),3);
+		int level  = pow((setGame.setsComplete / 10),2);
 		double levelPenalty = 0.002 * level;
-		
 		timeRemaining -= (0.1 + levelPenalty);
 								
 	}	

@@ -52,7 +52,7 @@
 
 -(BOOL) EligibleCrawlerBoard:(int) index
 {
-	if(index <= [self getCachedCrawlerDifficulty]+1)
+	if(index <= [self getCachedCrawlerDifficulty])
 		return YES;
 	return NO;
 	
@@ -226,6 +226,7 @@
 	sqlite3_close(database);
 	
 	[self deleteCrawlerDifficulty];
+	[self UnloadCachedCrawlerScores];
 	
 }
 
@@ -558,7 +559,7 @@
 
 -(int) getCrawlerMedal:(int) level
 {
-	int score = [self GetCachedCrawlerScore:level-1];
+	int score = [self GetCachedCrawlerScore:level];
 	if(score == -1)
 	{
 		return -1;
@@ -575,6 +576,13 @@
 -(int) GetCachedCrawlerScore:(int) index
 {
 	return crawlerScores[index];
+}
+
+-(void) UnloadCachedCrawlerScores{
+	for(int i=0;i<45;++i)
+	{
+		crawlerScores[i] = -1;
+	}
 }
 -(void) LoadCachedCrawlerScores{
 	for(int i=0;i<45;++i)

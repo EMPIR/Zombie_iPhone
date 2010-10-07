@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">800</int>
 		<string key="IBDocument.SystemVersion">10F569</string>
-		<string key="IBDocument.InterfaceBuilderVersion">788</string>
+		<string key="IBDocument.InterfaceBuilderVersion">804</string>
 		<string key="IBDocument.AppKitVersion">1038.29</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">117</string>
+			<string key="NS.object.0">123</string>
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -291,6 +291,14 @@ Y29yZSBhbmQgZ2V0IG91dCBvZiBab21iaWUgSG91c2UgYWxpdmUhCgoKCgoKA</string>
 					</object>
 					<int key="connectionID">39</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">textView</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="838152411"/>
+					</object>
+					<int key="connectionID">44</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -387,7 +395,7 @@ Y29yZSBhbmQgZ2V0IG91dCBvZiBab21iaWUgSG91c2UgYWxpdmUhCgoKCgoKA</string>
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>HowToPlayViewController</string>
 					<string>UIResponder</string>
-					<string>{{89, 486}, {480, 320}}</string>
+					<string>{{13, 273}, {480, 320}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -414,7 +422,7 @@ Y29yZSBhbmQgZ2V0IG91dCBvZiBab21iaWUgSG91c2UgYWxpdmUhCgoKCgoKA</string>
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">40</int>
+			<int key="maxID">44</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -462,6 +470,7 @@ Y29yZSBhbmQgZ2V0IG91dCBvZiBab21iaWUgSG91c2UgYWxpdmUhCgoKCgoKA</string>
 							<string>button2</string>
 							<string>button3</string>
 							<string>scrollView</string>
+							<string>textView</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -469,6 +478,7 @@ Y29yZSBhbmQgZ2V0IG91dCBvZiBab21iaWUgSG91c2UgYWxpdmUhCgoKCgoKA</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIScrollView</string>
+							<string>UITextView</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -479,6 +489,7 @@ Y29yZSBhbmQgZ2V0IG91dCBvZiBab21iaWUgSG91c2UgYWxpdmUhCgoKCgoKA</string>
 							<string>button2</string>
 							<string>button3</string>
 							<string>scrollView</string>
+							<string>textView</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -498,11 +509,29 @@ Y29yZSBhbmQgZ2V0IG91dCBvZiBab21iaWUgSG91c2UgYWxpdmUhCgoKCgoKA</string>
 								<string key="name">scrollView</string>
 								<string key="candidateClassName">UIScrollView</string>
 							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">textView</string>
+								<string key="candidateClassName">UITextView</string>
+							</object>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Classes/HowToPlayViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">../facebook/facebook-ios-sdk/src/JSON/NSObject+SBJSON.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">../facebook/facebook-ios-sdk/src/JSON/SBJsonWriter.h</string>
 					</object>
 				</object>
 			</object>
@@ -765,12 +794,12 @@ Y29yZSBhbmQgZ2V0IG91dCBvZiBab21iaWUgSG91c2UgYWxpdmUhCgoKCgoKA</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>{105, 70}</string>
+				<string>{105, 71}</string>
 				<string>{61, 33}</string>
 				<string>{61, 33}</string>
 				<string>{480, 320}</string>
 			</object>
 		</object>
-		<string key="IBCocoaTouchPluginVersion">117</string>
+		<string key="IBCocoaTouchPluginVersion">123</string>
 	</data>
 </archive>

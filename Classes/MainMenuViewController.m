@@ -16,7 +16,7 @@
 
 -(IBAction) play:(id) sender{
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
-	[setGame newGame:1:[appDelegate getCrawlerDifficulty]];
+	[setGame newGame:1:[appDelegate getCrawlerDifficulty]-1];
 	self.viewController.setGame = self.setGame;
 	NSLog(@"Play Clicked, now load Game View!");
 	[self presentModalViewController:viewController animated:NO];

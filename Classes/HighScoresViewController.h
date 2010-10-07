@@ -20,6 +20,8 @@
 	IBOutlet UILabel *berserk3;
 	IBOutlet UILabel *berserk4;
 	IBOutlet UILabel *berserk5;
+	
+	
 }
 
 -(IBAction) highScores:(id) sender;

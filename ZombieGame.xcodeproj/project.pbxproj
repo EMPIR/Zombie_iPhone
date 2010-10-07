@@ -6093,7 +6093,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				APPLICATION_BUNDLE_IDENTIFIER = zombiehouse;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -6114,7 +6113,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APPLICATION_BUNDLE_IDENTIFIER = doghouse;
 				APPLICATION_DISPLAY_NAME = "Dog House";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ZombieGame_Prefix.pch;

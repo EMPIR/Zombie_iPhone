@@ -14,10 +14,12 @@
 	IBOutlet UIButton *button2;
 	IBOutlet UIButton *button3;
 	IBOutlet UIScrollView *scrollView;
+	
+	IBOutlet UITextView *textView;
 }
 
 
-
+@property (nonatomic, retain) UITextView *textView;
 @property (nonatomic,retain) UIButton *button1;
 @property (nonatomic,retain) UIButton *button2;
 @property (nonatomic,retain) UIButton *button3;

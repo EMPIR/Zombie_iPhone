@@ -14,6 +14,7 @@
 @synthesize crawler1,crawler2,crawler3,crawler4,crawler5;
 @synthesize berserk1, berserk2, berserk3,berserk4,berserk5;
 
+
 -(IBAction) highScores:(id) sender{
 	[[self parentViewController] dismissModalViewControllerAnimated:NO];
 }
@@ -63,8 +64,7 @@
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	NSMutableArray *crawlerScores = [appDelegate getCrawlerTopScores];
 	NSMutableArray *berserkScores = [appDelegate getBerserkTopScores];
-	
-	
+
 	for(int i=0; i< 5; ++i)
 	{
 		if(crawlerScores.count > i)
@@ -90,7 +90,11 @@
 		if(berserkScores.count > i)
 		{
 			Scores *score = (Scores *)[berserkScores objectAtIndex:i];
+#ifndef DOGHOUSE			
 			NSString *message =[[NSString alloc] initWithFormat:@"%d: %d Zombies", i+1,score.score];
+#else
+			NSString *message =[[NSString alloc] initWithFormat:@"%d: %d Combos", i+1,score.score];
+#endif			
 			UILabel *label = [self getLabel:2:i];
 			label.hidden = NO;
 			label.transform = CGAffineTransformMakeRotation( 0.015);
@@ -153,7 +157,20 @@
 
 - (void)dealloc {
     [super dealloc];
+
+	[crawler1 release];
+	[crawler2 release];
+	[crawler3 release];
+	[crawler4 release];
+	[crawler5 release];
+	
+	[berserk1 release];
+	[berserk2 release];
+	[berserk3 release];
+	[berserk4 release];
+	[berserk5 release];
 }
+
 
 
 @end
