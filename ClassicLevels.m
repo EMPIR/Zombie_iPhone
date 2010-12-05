@@ -76,15 +76,40 @@ ZombieGameAppDelegate *appDelegate;
 		UIButton *button = [self getLevelButton:i+1];
 		UIImageView *hover = [self getLevelHover:i+1];
 		hover.hidden = YES;
-		
+#ifdef DEMO
+		if(sender == button &&  (i+(pageNumber)* 15) > 16){
+			UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Get the Full Version!" message:@"Upgrade Zombie House?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil] autorelease];
+			// optional - add more buttons:
+			[alert addButtonWithTitle:@"Yes"];
+			[alert show];
+			
+		}
+		else if(sender == button && [appDelegate EligibleCrawlerBoard:i+(pageNumber)* 15]){
+			
+			hover.hidden = NO;
+			//[ZombieGameViewController setCrawler:i-1];
+			[appDelegate SetCrawlerLevel:(i)+(pageNumber)* 15];
+		}
+#else		
 		if(sender == button && [appDelegate EligibleCrawlerBoard:i+(pageNumber)* 15]){
 			
 			hover.hidden = NO;
 			//[ZombieGameViewController setCrawler:i-1];
 			[appDelegate SetCrawlerLevel:(i)+(pageNumber)* 15];
 		}
+#endif		
 	}
 }
+
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        
+		
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://itunes.apple.com/us/app/zombie-house/id391274957?mt=8"]];
+    }
+}
+
 
 -(void) drawCurrentHover{
 	
@@ -266,6 +291,7 @@ ZombieGameAppDelegate *appDelegate;
 	for(int i=0;i<15; ++i)
 	{
 		UILabel *label = [self getLevelLabel:i+1];
+		UIButton *button = [self getLevelButton:i+1];
 		message = [[NSString alloc] initWithFormat:@"%d", 1+(i+(pageNumber)* 15)];
 		[label setText:message];
 		[message release];	
@@ -273,7 +299,18 @@ ZombieGameAppDelegate *appDelegate;
 		UIImageView *badge = [self getBadge:i+1];
 		
 		score = [appDelegate getCrawlerMedal:i+(pageNumber)* 15];
+#ifdef DEMO
+		if(1+(i+(pageNumber)* 15) > 16)
+		{
+			img = [UIImage  imageNamed:@"lb_grey.png"];
+		}
+#else		
 		if(score ==1)
+		{
+			img = [UIImage  imageNamed:@"lb_skullGold.png"];
+		}
+#endif	
+		else if(score ==1)
 		{
 			img = [UIImage  imageNamed:@"lb_skullGold.png"];
 		}
@@ -296,6 +333,7 @@ ZombieGameAppDelegate *appDelegate;
 			img = [UIImage  imageNamed:@"lb_locked.png"];
 		}
 
+
 		
 		badge.image = img;
 		
@@ -314,6 +352,7 @@ ZombieGameAppDelegate *appDelegate;
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
 	appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	pageNumberLabel.text = [NSString stringWithFormat:@"Page %d", pageNumber + 1];
 	//self.view.backgroundColor = [ClassicLevels pageControlColorWithIndex:pageNumber];

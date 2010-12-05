@@ -581,14 +581,36 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
-	//THIS IS WHERE THE LEVEL PROBLEM IS!!! FIX ME!!!
+#ifndef DEMO
 	if(level+ 1 <= [SetLogic GetTotalLevels])
+#else
+	if(level+ 1 <= 15)
+#endif
+		
 	{
 		[appDelegate setCrawlerDifficulty:level :score];
 	}
+#ifdef DEMO
+	if(level+ 1 == 15)
+	{
+		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Get the Full Version!" message:@"Upgrade Zombie House?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil] autorelease];
+		// optional - add more buttons:
+		[alert addButtonWithTitle:@"Yes"];
+		[alert show];
+		//[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://itunes.apple.com/us/app/zombie-house/id391274957?mt=8"]];
+	}
+#endif
 	
 	
-	
+}
+
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        
+		
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://itunes.apple.com/us/app/zombie-house/id391274957?mt=8"]];
+    }
 }
 
 -(void) updateCrawlerLevel
@@ -915,9 +937,10 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		self.goBackButton.hidden = NO;
 		self.mainMenuPlank.hidden = YES;
 		self.returnGamePlank.hidden = YES;
+		facebookButton.hidden = NO;
 		if(gamePlacement == 1)//You Win!
 		{
-			facebookButton.hidden = NO;
+			
 #ifndef DOGHOUSE			
 			self.m_bGun.hidden = NO;
 #else

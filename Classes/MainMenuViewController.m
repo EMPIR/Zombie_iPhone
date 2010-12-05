@@ -29,6 +29,8 @@
 	self.viewController.setGame = self.setGame;
 	NSLog(@"Play Clicked, now load Game View!");
 	[self presentModalViewController:viewController animated:NO];
+#else
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://itunes.apple.com/us/app/zombie-house/id391274957?mt=8"]];
 #endif
 }
 
