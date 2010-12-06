@@ -267,19 +267,20 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FAAC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
-									<integer>2</integer>
+									<integer>51</integer>
+									<integer>40</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {312, 685}}</string>
+							<string>{{0, 412}, {312, 685}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -298,7 +299,7 @@
 							<real>312</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>0 134 1440 744 0 0 1440 878 </string>
+						<string>93 92 1440 744 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -314,7 +315,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>OptionsViewController.h</string>
+								<string>ZombieGameViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,11 +323,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>OptionsViewController.h</string>
+										<string>ZombieGameViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2720F12E12A94D87000D9CB9</string>
+										<string>2720F72312AC98E5000D9CB9</string>
 										<key>history</key>
 										<array>
 											<string>276069871189182A008E1327</string>
@@ -610,7 +611,6 @@
 											<string>27913687124C22B10061FD1B</string>
 											<string>271705A1124C50B600C0AEBA</string>
 											<string>2717067D124D7A9100C0AEBA</string>
-											<string>2717085712503F5700C0AEBA</string>
 											<string>2737A7FB125173E6003C5CD3</string>
 											<string>2737A88E12518868003C5CD3</string>
 											<string>2737A8A512518AAE003C5CD3</string>
@@ -619,10 +619,8 @@
 											<string>2737A9351252EEBC003C5CD3</string>
 											<string>2737AAB012555BFC003C5CD3</string>
 											<string>2737AB4512556301003C5CD3</string>
-											<string>2737AB4612556301003C5CD3</string>
 											<string>2737AB4F125563B2003C5CD3</string>
 											<string>2737AB571255641C003C5CD3</string>
-											<string>2737AC0512557435003C5CD3</string>
 											<string>278F1C46125598C80034C4D9</string>
 											<string>278F1C711257ABBB0034C4D9</string>
 											<string>278F1C721257ABBB0034C4D9</string>
@@ -648,11 +646,7 @@
 											<string>27EBEBBD126D379300EC43F3</string>
 											<string>27EBEBBE126D379300EC43F3</string>
 											<string>27EBEBC1126D379300EC43F3</string>
-											<string>27EBEC39126DE08200EC43F3</string>
 											<string>27EBEC3A126DE08200EC43F3</string>
-											<string>27038A2A128A3DED004422AA</string>
-											<string>27F9B1A81293981E001A1F03</string>
-											<string>27F9B1A91293981E001A1F03</string>
 											<string>270B984212A36EF600C6AA3E</string>
 											<string>270B984312A36EF600C6AA3E</string>
 											<string>270B984412A36EF600C6AA3E</string>
@@ -660,7 +654,14 @@
 											<string>270B984612A36EF600C6AA3E</string>
 											<string>2720F12C12A94D87000D9CB9</string>
 											<string>2720F12D12A94D87000D9CB9</string>
-											<string>27F80802123F2D860069BC60</string>
+											<string>2720F64E12AC802C000D9CB9</string>
+											<string>2720F64F12AC802C000D9CB9</string>
+											<string>2720F65012AC802C000D9CB9</string>
+											<string>2720F65112AC802C000D9CB9</string>
+											<string>2720F71F12AC98E5000D9CB9</string>
+											<string>2720F72012AC98E5000D9CB9</string>
+											<string>2720F72112AC98E5000D9CB9</string>
+											<string>2720F72212AC98E5000D9CB9</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -674,7 +675,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1106, 493}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 134 1440 744 0 0 1440 878 </string>
+								<string>93 92 1440 744 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -694,7 +695,7 @@
 								<key>Frame</key>
 								<string>{{0, 498}, {1106, 205}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 134 1440 744 0 0 1440 878 </string>
+								<string>93 92 1440 744 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -858,12 +859,17 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>2720F72412AC98E5000D9CB9</string>
+		<string>2720F65512AC802C000D9CB9</string>
+		<string>2720F65612AC802C000D9CB9</string>
+		<string>2720F65712AC802C000D9CB9</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>27F6E11B11852B5A007705A9</string>
 		<string>/Users/dguinnip/Build/ZombieGame/ZombieGame.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>0 134 1440 744 0 0 1440 878 </string>
+	<string>93 92 1440 744 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -901,6 +907,8 @@
 							<string>463pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1222,7 +1230,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>27EBEB7F126D250500EC43F3</string>
+				<string>2720F38812AC2752000D9CB9</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
