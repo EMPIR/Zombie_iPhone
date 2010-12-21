@@ -82,13 +82,19 @@ crawlerCurrentLevel = 0;
 
 
 //http://www.facebook.com/developers/#!/developers/apps.php?app_id=146670792037872
+#ifdef SEASONHOUSE
 
+static NSString* kFacebookAppId = @"111624085577299";
+static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/developers/apps.php?app_id=111624085577299";
+
+#else
 #ifdef DOGHOUSE
 static NSString* kFacebookAppId = @"155974964426893";
 static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/developers/apps.php?app_id=155974964426893";
 #else
 static NSString* kFacebookAppId = @"146670792037872";
 static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/developers/apps.php?app_id=146670792037872";
+#endif
 #endif
 
 
@@ -591,6 +597,17 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		[appDelegate setCrawlerDifficulty:level :score];
 	}
 #ifdef DEMO
+	
+#ifdef DOGHOUSE
+	if(level+ 1 == 15)
+	{
+		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Get the Full Version!" message:@"Upgrade Dog House?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil] autorelease];
+		// optional - add more buttons:
+		[alert addButtonWithTitle:@"Yes"];
+		[alert show];
+		//[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://itunes.apple.com/us/app/dog-house/id397054437?mt=8"]];
+	}
+#else	
 	if(level+ 1 == 15)
 	{
 		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Get the Full Version!" message:@"Upgrade Zombie House?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil] autorelease];
@@ -600,6 +617,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		//[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://itunes.apple.com/us/app/zombie-house/id391274957?mt=8"]];
 	}
 #endif
+#endif
 	
 	
 }
@@ -608,9 +626,12 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
         
-		
+#ifdef DOGHOUSE
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://itunes.apple.com/us/app/dog-house/id397054437?mt=8"]];
+#else		
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://itunes.apple.com/us/app/zombie-house/id391274957?mt=8"]];
-    }
+#endif    
+	}
 }
 
 -(void) updateCrawlerLevel
@@ -853,6 +874,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	randomTwitch = 0;
 	twitchRate = 30;
 	brain_randomTwitch = 1;
+	
 	brain_twitchRate = 30;
 	
 	timeSinceLastRightAnswer = 0;
@@ -1327,8 +1349,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 
 
 -(IBAction) facebookButtonDown:(id)sender{
-	
-	
+		
 	
 	NSArray* _permissions;
 	
@@ -2061,12 +2082,19 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		//double timeLeft = ((setGame.gameTime - timeInterval) / (double) setGame.gameTime);
 		double timeLeft = timeRemaining / 60.0;
 		
-		
+#ifdef 	SEASONHOUSE	
+		if(timeLeft < 0)
+			timeLeft = 0.004;
+#else
 		if(timeLeft < 0)
 			timeLeft = 0.001;
-		
+#endif		
 		twitchRate = 30 * timeLeft;
+#ifdef SEASONHOUSE
+		brain_twitchRate = 100 * timeLeft * 2;
+#else		
 		brain_twitchRate = 40 * timeLeft;
+#endif		
 		if(brain_twitchRate < 2)
 			brain_twitchRate = 2;
 		if(twitchRate < 5)
@@ -2131,7 +2159,11 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	randomTwitch = 1;
 	twitchRate = 30;
 	brain_randomTwitch = 1;
-	brain_twitchRate = 30;
+#ifdef SEASONHOUSE
+	brain_twitchRate = 100;
+#else	
+	brain_twitchRate = 30;//don't think this matters
+#endif	
 	gamePlacement = 0;
 	berzerkEndTime = 0;
 	self.endGameRank1.hidden = YES;

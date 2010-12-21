@@ -41,12 +41,14 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+#ifdef 	SEASONHOUSE
+	textView.text = @"In the game House, each card has three Features: Shape, Color, and Shade.\n\nYou make a Match by selecting 3 Cards. A correct answer will have all the same or all different values for each feature.\nClick the cards to the right to generate Matches!\nHouse has two Game Modes: Classic and Arcade.\n\nClassic:\nPlay all 40+ levels and hone your skills at making House matches!  The game increases difficulty as you complete boards in time.\n\nArcade:\nPlay against the clock to see how many matches you can get before you run out of time.Try to beat your high score, and share your results in Facebook!";// +
+
+#else 
 #ifndef DOGHOUSE	
 	//[textView setText:@"Zombie House!"];
 	//[textView performSelectorOnMainThread:@selector(setText:) withObject:@"Zombie House" waitUntilDone:YES];
 	textView.text = @"In Zombie House each card has three features:\n   Zombie (Baldy, Nerdy, Girly)\n   Color (Blue, Purple, Green)\n   Shade (Full Color, Monotone, Outline)\n\nYou make Zombie Comboz by selecting 3 Zombies. A correct answer will have all the same or all different values for each feature.\nClick the Zombies Cards to the right to generate Zombie Comboz!\n\n\Zombie House has two Game Modes, Classic Crawler and Berzerker.\n\nClassic Crawler:\n  Solve 10 Comboz in the shortest amount of time possible. Your score is the number of seconds it takes to complete all 10 Comboz. Advance to the next level by completing a board in 40 seconds or less.\n\nBerzerker:\n  Play against the clock to see how many Comboz you can get before you run out of time.  Beat your high score and get out of Zombie House alive!";// +
-	
-	
 #else
 	//[textView setText:@"Dog House!"];
 	//[textView performSelectorOnMainThread:@selector(setText:) withObject:@"Dog House" waitUntilDone:YES];
@@ -64,6 +66,7 @@
 	
 	
 	";*/
+#endif
 #endif	
 }
 

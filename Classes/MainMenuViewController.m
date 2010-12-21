@@ -30,7 +30,11 @@
 	NSLog(@"Play Clicked, now load Game View!");
 	[self presentModalViewController:viewController animated:NO];
 #else
+#ifdef DOGHOUSE
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://itunes.apple.com/us/app/dog-house/id397054437?mt=8"]];
+#else
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://itunes.apple.com/us/app/zombie-house/id391274957?mt=8"]];
+#endif	
 #endif
 }
 

@@ -77,6 +77,22 @@ ZombieGameAppDelegate *appDelegate;
 		UIImageView *hover = [self getLevelHover:i+1];
 		hover.hidden = YES;
 #ifdef DEMO
+#ifdef DOGHOUSE
+		
+		if(sender == button &&  (i+(pageNumber)* 15) > 16){
+			UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Get the Full Version!" message:@"Upgrade Dog House?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil] autorelease];
+			// optional - add more buttons:
+			[alert addButtonWithTitle:@"Yes"];
+			[alert show];
+			
+		}
+		else if(sender == button && [appDelegate EligibleCrawlerBoard:i+(pageNumber)* 15]){
+			
+			hover.hidden = NO;
+			//[ZombieGameViewController setCrawler:i-1];
+			[appDelegate SetCrawlerLevel:(i)+(pageNumber)* 15];
+		}
+#else
 		if(sender == button &&  (i+(pageNumber)* 15) > 16){
 			UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Get the Full Version!" message:@"Upgrade Zombie House?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil] autorelease];
 			// optional - add more buttons:
@@ -90,6 +106,7 @@ ZombieGameAppDelegate *appDelegate;
 			//[ZombieGameViewController setCrawler:i-1];
 			[appDelegate SetCrawlerLevel:(i)+(pageNumber)* 15];
 		}
+#endif		
 #else		
 		if(sender == button && [appDelegate EligibleCrawlerBoard:i+(pageNumber)* 15]){
 			
@@ -104,9 +121,13 @@ ZombieGameAppDelegate *appDelegate;
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
-        
+#ifdef DOGHOUSE
 		
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://itunes.apple.com/us/app/dog-house/id397054437?mt=8"]];
+#else
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://itunes.apple.com/us/app/zombie-house/id391274957?mt=8"]];
+#endif
+		
     }
 }
 

@@ -11,6 +11,19 @@
 #define STRINGCONST
 
 static const char WEBISTE_URL []					= "http://www.kaselo.com";
+#ifdef SEASONHOUSE
+static const char COMBO_NAME []						= "Combos";
+static const char GAME_MODE_1_SCORE []				= "House Classic Score!";
+static const char GAME_HIGH_SCORE []				= "House New High Score!";
+static const char GAME_MODE_2_HIGH_SCORE []			= "House Arcade High Score!";
+static const char GAME_MODE_1_FIRST_PLACE []		= "Top Score on Level";
+static const char GAME_MODE_1_SECOND_PLACE []		= "Middle Score on Level";
+static const char GAME_MODE_1_THIRD_PLACE []		= "Just Made it on Level";
+static const char APP_NAME []						= "House";
+static const char IMG_BRONZESKULL []				= "http://emmaguinnip.com/Graphics/endgameclassic03_xmas.png";
+static const char IMG_SILVERSKULL []				= "http://emmaguinnip.com/Graphics/endgameclassic02_xmas.png";
+static const char IMG_GOLDSKULL	[]					= "http://emmaguinnip.com/Graphics/endgameclassic01_xmas.png";
+#else
 
 #ifdef DOGHOUSE
 static const char COMBO_NAME []						= "Dog Combos";
@@ -24,6 +37,7 @@ static const char APP_NAME []						= "Dog House";
 static const char IMG_BRONZESKULL []				= "http://emmaguinnip.com/Graphics/EndGameClassic03.png";
 static const char IMG_SILVERSKULL []				= "http://emmaguinnip.com/Graphics/EndGameClassic02.png";
 static const char IMG_GOLDSKULL	[]					= "http://emmaguinnip.com/Graphics/EndGameClassic01.png";
+
 #else
 static const char COMBO_NAME []						= "Zombie Comboz";
 static const char GAME_MODE_1_SCORE []				= "Zombie House Crawler Score!";
@@ -37,6 +51,7 @@ static const char IMG_BRONZESKULL []				= "http://emmaguinnip.com/Graphics/Z_End
 static const char IMG_SILVERSKULL []				= "http://emmaguinnip.com/Graphics/Z_EndGameClassic02.png";
 static const char IMG_GOLDSKULL	[]					= "http://emmaguinnip.com/Graphics/Z_EndGameClassic01.png";
 
+#endif
 #endif
 
 
