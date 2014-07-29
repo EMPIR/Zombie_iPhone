@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+	<script type="text/javascript" src="sprintf.min.js"></script>
+	<script type="text/javascript" src="zh.js"></script>
+	<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+	
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body onload="init()">
+    <canvas id="myCanvas" width="480" height="720"></canvas>
+    <script type="text/javascript">
+
+	var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+
+	
+
+	var theGame = new ZH.Game(canvas,context,init);
+	
+	
+	function init(){
+		console.log('init the game!!!');
+		//theGame.startGame();
+		//theGame.draw();
+	};
+
+	 
+    </script>
+
+	<span id="dummy" onclick="playSound(this, '../MEDIA_Zombie_iPhone/audio/11.wav');">
+	      <img src="../MEDIA_Zombie_iPhone/allGood.png" name="Bottom-1" width="105" height="70" border="0" id="Bottom-1"/>
+	    </span>
+  </body>
+</html>

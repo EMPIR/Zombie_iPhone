@@ -10,7 +10,7 @@
 
 @synthesize id,gameType,score,date;
 
--(id)initWithData:(int) _id:(int) _gameType:(int) _score:(NSDate *) _date{
+-(id)initWithData:(int) _id : (int) _gameType : (int) _score : (NSDate *) _date{
 	
 	if(self = [super init]){
 		self.id = _id;

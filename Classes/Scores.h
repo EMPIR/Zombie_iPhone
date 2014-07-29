@@ -21,6 +21,6 @@
 @property (assign, nonatomic) int score;
 @property (copy,nonatomic) NSDate *date;
 
--(id)initWithData:(int) id:(int) gameType:(int) score:(NSDate *) date;
+-(id)initWithData:(int) id : (int) gameType : (int) score : (NSDate *) date;
 
 @end

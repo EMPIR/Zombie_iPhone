@@ -28,7 +28,7 @@ BOOL seed = NO;
 	return rd;
 }
 
-+(int) randomNumber:(int) floor, int ceiling
++(int) randomNumber:(int) floor : (int) ceiling
 {
 	double r = [self randomNumber];
 	

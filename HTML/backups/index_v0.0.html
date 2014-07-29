@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+	<script type="text/javascript" src="sprintf.min.js"></script>
+	<script type="text/javascript" src="zh.js"></script>
+	<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+	
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="480" height="720"></canvas>
+    <script>
+	var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+	var width = 4;
+	var height = 0;
+	var selectedIndices = new Array();
+	function contains(a, obj) {
+	    for (var i = 0; i < a.length; i++) {
+	        if (a[i] === obj) {
+	            return true;
+	        }
+	    }
+	    return false;
+	}
+	function remove(a, obj) {
+	    for (var i = 0; i < a.length; i++) {
+	        if (a[i] === obj) {
+	            a.splice(i,1);
+	        }
+	    }
+	    return false;
+	}
+	var pOffX = 30;
+	var pOffY = 60;
+	
+	$(document).ready(function(){
+		canvas.addEventListener('click', function(e) {
+			
+			height = 0;
+			context.clearRect(0, 0, canvas.width, canvas.height);
+			/*for(var i=0;i<setGame.state.length;++i)
+			{
+				console.log(i+' '+setGame.state[i]);
+				if(i>0 && (i)%width == 0)
+					height ++;
+				context.drawImage(setGame.pieces[setGame.state[i]].image, (i%width)*105,height*70);
+				//context.drawImage(selectedImg, (i%width)*105,height*70);
+			}*/
+			redrawPieces();
+			var column = 0;
+			var row = 0;
+			//0-105,106-211,212-307,308-413
+			if(e.offsetX < pOffX + 105)
+			{
+				column = 0;
+			}
+			else if(e.offsetX < pOffX + 211)
+			{
+				column = 1;
+			}
+			else if(e.offsetX < pOffX + 316)
+			{
+				column = 2;
+			}
+			else{
+				column = 3;
+			}
+			if(e.offsetY < pOffY + 70)
+			{
+				row=  0;
+			}
+			else if(e.offsetY < pOffY + 140)
+			{
+				row = 1;
+			}
+			else 
+			{
+				row = 2;
+			}
+			console.log('click: ' + e.offsetX + '/' + e.offsetY);
+			
+			console.log('row = ' + row +' column = '+ column);
+			var selectedIndex =  (row * width + column);
+			console.log('selected index = ' + selectedIndex);
+			if(selectedIndices.length < 3)
+			{
+				
+			}
+			else{
+				selectedIndices = [];
+			}
+			if(!contains(selectedIndices,selectedIndex))
+			{
+				selectedIndices.push(selectedIndex);
+			}
+			else{
+				remove(selectedIndices,selectedIndex);
+			}
+			height = 0;
+			redrawSelected();
+			//context.drawImage(selectedImg, (column)*105,row*70);
+			/*for(var i=0;i<selectedIndices.length;++i)
+			{
+				var index= selectedIndices[i];
+				console.log('index= ' + index+' '+setGame.state[index]);
+				//if(index>0 && (index)%width == 0)
+				//	height ++;
+				height = parseInt(index / width);
+				//console.log('height = ' + height);	
+				context.drawImage(setGame.pieces[setGame.state[index]].image, (index%width)*105,height*70);
+				context.drawImage(selectedImg, (index%width)*105,height*70);
+				console.log(setGame.pieces[setGame.state[index]].image.src);
+			}*/
+			if(selectedIndices.length == 3)
+			{
+				var index1 = setGame.state[selectedIndices[0]];
+				var index2 = setGame.state[selectedIndices[1]];
+				var index3 = setGame.state[selectedIndices[2]];
+				var piece1 = setGame.pieces[index1];
+				var piece2 = setGame.pieces[index2];
+				var piece3 = setGame.pieces[index3];
+				console.log('index = ' + selectedIndices[0]);
+				console.log('index = ' + selectedIndices[1]);
+				console.log('index = ' + selectedIndices[2]);
+				piece1.print();
+				piece2.print();
+				piece3.print();
+				//console.log('MatchScore = '+setGame.MatchScore(piece1,piece2,piece3));
+				var moveRes = setGame.move(index1,index2,index3);
+				console.log('MatchScore = '+ moveRes);
+				if(moveRes == true)
+				{
+					redrawCorrect();
+					setTimeout(function(){
+						setGame.GetNewPieces(selectedIndices[0],selectedIndices[1],selectedIndices[2]);	
+						selectedIndices= [];
+
+
+						redrawSelected();
+						}, 250);
+					
+					//alert("match!");
+					//setGame.setLogic.GetNewPieces: function(a,b,c,ret,pieces,totalPieces)
+					//for(var j=0;j<setGame.state.length;++j)
+					//console.log('state = ' + setGame.state[j]);
+						//setGame.setLogic.GetNewPieces(selectedIndices[0],selectedIndices[1],selectedIndices[2],setGame.state,setGame.pieces,setGame.totalPieces);
+					
+				}
+				else{
+					redrawWrong();
+					setTimeout(function(){
+						selectedIndices= [];
+						redrawSelected();
+					},250);
+					
+				}
+				
+			}
+			
+			
+		});
+		console.log("READY!!!!!!");
+		console.log('setGame.state.length  ' + setGame.state.length);
+		var backgroundImg = new Image();
+		var wrongImg = new Image();
+		var correctImg = new Image();
+		
+		 var imageObj = new Image();
+		var selectedImg = new Image();
+		 backgroundImg.onload = function(){
+			redrawSelected();
+		};
+		imageObj.src = ZH.MEDIA_ROOT + 'allBad.png';
+		selectedImg.src = ZH.MEDIA_ROOT + "selected.png";
+		backgroundImg.src = ZH.MEDIA_ROOT + 'bg_GameMode.jpg';
+		wrongImg.src = ZH.MEDIA_ROOT + 'allBad.png';
+		correctImg.src = ZH.MEDIA_ROOT + 'allGood.png';
+		function redrawPieces(){
+			context.drawImage(backgroundImg,0,0);
+			height = 0;
+			for(var i=0;i<setGame.state.length;++i)
+			{
+				console.log(i+' '+setGame.state[i]);
+				if(i>0 && (i)%width == 0)
+					height ++;
+				context.drawImage(setGame.pieces[setGame.state[i]].image, pOffX + (i%width)*105, pOffY + height*70);
+				//context.drawImage(selectedImg, (i%width)*105,height*70);
+			}
+		} 
+		function redrawSelected()
+		{
+			
+			redrawPieces();
+			height = 0;
+			for(var i=0;i<selectedIndices.length;++i)
+			{
+				var index= selectedIndices[i];
+				console.log('index= ' + index+' '+setGame.state[index]);
+				//if(index>0 && (index)%width == 0)
+				//	height ++;
+				height = parseInt(index / width);
+				//console.log('height = ' + height);	
+				context.drawImage(setGame.pieces[setGame.state[index]].image, pOffX + (index%width)*105,pOffY + height*70);
+				context.drawImage(selectedImg, pOffX + (index%width)*105,pOffY + height*70);
+				console.log(setGame.pieces[setGame.state[index]].image.src);
+			}
+		}
+		function redrawWrong()
+		{
+			
+			redrawPieces();
+			height = 0;
+			for(var i=0;i<selectedIndices.length;++i)
+			{
+				var index= selectedIndices[i];
+				console.log('index= ' + index+' '+setGame.state[index]);
+				//if(index>0 && (index)%width == 0)
+				//	height ++;
+				height = parseInt(index / width);
+				//console.log('height = ' + height);	
+				context.drawImage(setGame.pieces[setGame.state[index]].image, pOffX + (index%width)*105,pOffY + height*70);
+				context.drawImage(wrongImg, pOffX + (index%width)*105,pOffY + height*70);
+				console.log(setGame.pieces[setGame.state[index]].image.src);
+			}
+		}
+		
+		function redrawCorrect()
+		{
+			
+			redrawPieces();
+			height = 0;
+			for(var i=0;i<selectedIndices.length;++i)
+			{
+				var index= selectedIndices[i];
+				console.log('index= ' + index+' '+setGame.state[index]);
+				//if(index>0 && (index)%width == 0)
+				//	height ++;
+				height = parseInt(index / width);
+				//console.log('height = ' + height);	
+				context.drawImage(setGame.pieces[setGame.state[index]].image, pOffX + (index%width)*105,pOffY + height*70);
+				context.drawImage(correctImg, pOffX + (index%width)*105,pOffY + height*70);
+				console.log(setGame.pieces[setGame.state[index]].image.src);
+			}
+		}
+		
+		
+		
+	});
+	//console.log(brainPieces);
+	 
+	
+	  /*console.log(Number.randomNumber(0, 5));*/
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var imageObj = new Image();
+	  h=parseInt(canvas.getAttribute("height"));
+	  w=parseInt(canvas.getAttribute("width"));
+
+      imageObj.onload = function() {
+     	console.log(setPieces.length);
+		/*for(var i=0;i<brainPieces.pieces.length;++i){
+			context.drawImage(brainPieces.pieces[i].image, brainPieces.pieces[i].x,brainPieces.pieces[i].y);
+			
+		}*/
+	
+		/*for(var i=0;i<setPieces.length;++i)
+		{
+			console.log(i+' '+height);
+			if(i>0 && (i)%width == 0)
+				height ++;
+			context.drawImage(setPieces[i].image, (i%width)*105,height*70);
+		}*/
+		
+		/*for(var i=0;setGame.pieces.length;++i)
+		{
+			console.log(i+' '+height);
+			if(i>0 && (i)%width == 0)
+				height ++;
+			context.drawImage(setGame.pieces[i].image, (i%width)*105,height*70);
+		}*/
+		/*console.log('setGame.state.length  ' + setGame.state.length);
+		for(var i=0;i<setGame.state.length;++i)
+		{
+			console.log(i+' '+setGame.state[i]);
+			if(i>0 && (i)%width == 0)
+				height ++;
+			//context.drawImage(setGame.pieces[i].image, (i%width)*105,height*70);
+			context.drawImage(setGame.pieces[setGame.state[i]].image, (i%width)*105,height*70);
+		}*/
+		
+      };
+		
+      
+	  
+	 function playSound(el,soundfile) {
+	 	if (el.mp3) {
+			el.mp3.currentTime= 0;
+			el.mp3.play();
+	    	/*if(el.mp3.paused) 
+	        else el.mp3.pause();*/
+	    } else {
+	    	el.mp3 = new Audio(soundfile);
+	       	el.mp3.play();
+	    }
+	 }	 
+	 
+    </script>
+
+	<span id="dummy" onclick="playSound(this, '../MEDIA_Zombie_iPhone/audio/11.wav');">
+	      <img src="../MEDIA_Zombie_iPhone/allGood.png" name="Bottom-1" width="105" height="70" border="0" id="Bottom-1"/>
+	    </span>
+  </body>
+</html>

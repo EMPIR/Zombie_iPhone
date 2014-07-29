@@ -22,7 +22,7 @@
 
 }
 
--(id) initPiece:(int)_shape:(int)_color:(int)_fill:(int)_number:(NSString *)_image:(NSString *)_image2;
+-(id) initPiece:(int)_shape : (int)_color : (int)_fill : (int)_number : (NSString *)_image : (NSString *)_image2;
 - (BOOL)isEqual:(id)other;
 
 

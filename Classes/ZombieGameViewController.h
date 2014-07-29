@@ -6,16 +6,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FBConnect.h"
+//#import "FBConnect.h"
 
 
 @class SetGame;
 @class Facebook;
 
 @interface ZombieGameViewController : UIViewController
-<UIScrollViewDelegate, FBRequestDelegate,
+<UIScrollViewDelegate/*, FBRequestDelegate,
 FBDialogDelegate,
-FBSessionDelegate>{
+FBSessionDelegate*/>{
 	
 	IBOutlet UIButton *button1;
 	IBOutlet UIButton *button2;
@@ -213,7 +213,7 @@ FBSessionDelegate>{
 //@property (nonatomic, retain) GameLogic *theGame;
 @property (nonatomic, retain) SetGame *setGame;
 
--(BOOL) buttonDown:(int) index:(id)sender;
+-(BOOL) buttonDown:(int) index : (id) sender;
 
 -(IBAction) button1Down:(id)sender;
 -(IBAction) button2Down:(id)sender;
@@ -252,7 +252,7 @@ FBSessionDelegate>{
 
 
 -(BOOL) isButtonPressed:(int) index;
-+(void) setCrawlerLevel:(int) index;
+//+(void) setCrawlerLevel:(int) index;
 -(void) HideCards;
 -(void) ShowCards;
 

@@ -52,7 +52,7 @@ enum NumberType
 }
 
 
--(id) initPiece:(int)_shape:(int)_color:(int)_fill:(int)_number:(NSString *)_image:(NSString *) _image2{
+-(id) initPiece:(int)_shape : (int)_color : (int)_fill : (int)_number : (NSString *)_image : (NSString *) _image2{
 	if(self = [super init]){
 		self.shape = _shape;
 		self.color = _color;

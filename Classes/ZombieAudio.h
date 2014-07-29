@@ -12,7 +12,7 @@
 	
 }
 
-+(NSString *) getZombieAudioFile:(int) zombieID: (int) expression;
++(NSString *) getZombieAudioFile:(int) zombieID : (int) expression;
 
 
 @end

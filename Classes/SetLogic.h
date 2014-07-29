@@ -25,14 +25,14 @@
 +(SetPiece *) CreateSimplePiece;
 
 
-+(BOOL) Contains:(SetPiece *)piece:(NSMutableArray *)pieces;
++(BOOL) Contains:(SetPiece *)piece : (NSMutableArray *)pieces;
 
 /// <summary>
 /// Creates a Set Piece with Random color, number, shape, fill that does not exist in the
 /// given list of pieces
 /// </summary>
 /// <returns></returns>
-+(SetPiece *)CreatePiece:(NSMutableArray *) pieces;
++(SetPiece *)CreatePiece : (NSMutableArray *) pieces;
 
 /// <summary>
 /// Creates a List of total Set Pieces with Random color, number, shape. Fill is constant
@@ -48,7 +48,7 @@
 /// <returns></returns>
 +(NSMutableArray *) CreateSimplePieces:(int) total;
 
-+(NSMutableArray *)CreateRandomSet;
+//+(NSMutableArray *)CreateRandomSet;
 
 
 /// <summary>
@@ -61,8 +61,8 @@
 /// </summary>
 /// <param name="pieces"></param>
 /// <returns></returns>
-+(NSMutableArray *) ContainsMatch:(NSMutableArray *) pieces: (NSMutableArray *) state;
-+(BOOL) isMatch:(NSMutableArray *) pieces: (NSMutableArray *) state;
++(NSMutableArray *) ContainsMatch:(NSMutableArray *) pieces :  (NSMutableArray *) state;
++(BOOL) isMatch:(NSMutableArray *) pieces : (NSMutableArray *) state;
 
 /// <summary>
 /// Given 3 set pieces, this routine determines is there is a Match.
@@ -74,8 +74,8 @@
 /// <param name="b"></param>
 /// <param name="c"></param>
 /// <returns></returns>
-+(BOOL) ContainsMatch:(SetPiece *)a: (SetPiece *)b: (SetPiece *)c;
-+(NSMutableArray *) GetMatchIndices:(NSMutableArray *) pieces: (NSMutableArray *) state;
++(BOOL) ContainsMatch:(SetPiece *)a : (SetPiece *)b : (SetPiece *)c;
++(NSMutableArray *) GetMatchIndices:(NSMutableArray *) pieces : (NSMutableArray *) state;
 
 /// <summary>
 /// Match Contains the matching logic, which is the 3 numbers
@@ -86,7 +86,7 @@
 /// <param name="b"></param>
 /// <param name="c"></param>
 /// <returns></returns>
-+(BOOL) Match:(int) a:(int) b:(int) c;
++(BOOL) Match:(int) a : (int) b : (int) c;
 
 
 /// <summary>
@@ -98,7 +98,7 @@
 /// <param name="b"></param>
 /// <param name="c"></param>
 /// <returns></returns>
-+(BOOL) Match:(int) a: (int) b:(int) c;
++(BOOL) Match:(int) a : (int) b : (int) c;
 
 /// <summary>
 /// Creates the set of total pieces into an array
@@ -106,7 +106,7 @@
 +(NSMutableArray *) CreateEasyPieces;
 +(NSMutableArray *) CreateMediumPieces;
 +(NSMutableArray *) CreateHardPieces;
-+(void) DeletePieces:(NSMutableArray *)array;
+//+(void) DeletePieces:(NSMutableArray *)array;
 
 /*+(NSMutableArray *) CreateLevel1Pieces;
 +(NSMutableArray *) CreateLevel2Pieces;
@@ -135,11 +135,11 @@
 +(NSMutableArray *) CreateLevelPieces:(int) level;
 +(int) GetLevelStart:(int) level;
 +(int) GetLevelTotal:(int) level;
-+(int) MatchScore:(SetPiece *)a: (SetPiece *)b: (SetPiece *)c;
++(int) MatchScore:(SetPiece *)a : (SetPiece *)b : (SetPiece *)c;
 
-+(void) CreateState:(NSMutableArray *)pieces:(NSMutableArray *)state:(int)totalPieces;
-+(void) GetNewPieces:(int)a:(int)b:(int)c: (NSMutableArray *)ret: (NSMutableArray *)pieces:(int) totalPieces;
-+(NSMutableArray *) CreateState:(NSMutableArray *)pieces:(int)totalPieces;
++(void) CreateState:(NSMutableArray *)pieces : (NSMutableArray *)state : (int)totalPieces;
++(void) GetNewPieces:(int)a : (int)b : (int)c : (NSMutableArray *)ret : (NSMutableArray *)pieces : (int) totalPieces;
++(NSMutableArray *) CreateState:(NSMutableArray *)pieces : (int)totalPieces;
 
 
 @end

@@ -19,7 +19,7 @@
 
 -(IBAction) playGame:(id) sender{
 	NSLog(@"playGame start");
-	[self presentModalViewController:viewController animated:NO];
+	[self presentViewController:viewController animated:NO completion:nil];
 	NSLog(@"playGame end");
 }
 -(IBAction) playDemo:(id) sender{
@@ -30,7 +30,7 @@
 
 -(IBAction) highScores:(id) sender{
 	NSLog(@"highScores start");
-	[self presentModalViewController:highScoresViewController animated:NO];
+	[self presentViewController:highScoresViewController animated:NO completion:nil];
 	NSLog(@"highScores end");
 }
 
@@ -40,7 +40,7 @@
 	
 	
 	
-	[self presentModalViewController:optionsViewController animated:NO];
+	[self presentViewController:optionsViewController animated:NO completion:nil];
 	
 	NSLog(@"options end");
 }
@@ -87,32 +87,32 @@
 /**
  * Callback when a request receives Response
  */ 
-- (void)request:(FBRequest*)request didReceiveResponse:(NSURLResponse*)response{
+/*- (void)request:(FBRequest*)request didReceiveResponse:(NSURLResponse*)response{
 	NSLog(@"received response");
-};
+};*/
 
 /**
  * Called when an error prevents the request from completing successfully.
  */
-- (void)request:(FBRequest*)request didFailWithError:(NSError*)error{
+/*- (void)request:(FBRequest*)request didFailWithError:(NSError*)error{
 	//[self.label setText:[error localizedDescription]];
-};
+};*/
 
 /**
  * Called when a request returns and its response has been parsed into an object.
  * The resulting object may be a dictionary, an array, a string, or a number, depending
  * on thee format of the API response.
  */
-- (void)request:(FBRequest*)request didLoad:(id)result {
-/*	if ([result isKindOfClass:[NSArray class]]) {
+/*- (void)request:(FBRequest*)request didLoad:(id)result {
+	if ([result isKindOfClass:[NSArray class]]) {
 		result = [result objectAtIndex:0]; 
 	}
 	if ([result objectForKey:@"owner"]) {
 		[self.label setText:@"Photo upload Success"];
 	} else {
 		[self.label setText:[result objectForKey:@"name"]]; 
-	}*/
-};
+	}
+};*/
 
 
 /*
@@ -131,6 +131,7 @@
     [super viewDidLoad];
 }
 */
+
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

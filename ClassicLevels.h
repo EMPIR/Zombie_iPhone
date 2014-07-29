@@ -198,5 +198,6 @@
 -(IBAction) buttonHover:(id)sender;
 
 - (id)initWithPageNumber:(int)page;
+-(void)setPageLabels:(int)label;
 
 @end

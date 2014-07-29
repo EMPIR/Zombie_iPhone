@@ -136,7 +136,7 @@ ZombieGameAppDelegate *appDelegate;
 	
 	for(int i=0;i<15;++i)
 	{
-		UIButton *button = [self getLevelButton:i+1];
+		//UIButton *button = [self getLevelButton:i+1];
 		UIImageView *hover = [self getLevelHover:i+1];
 		hover.hidden = YES;
 		
@@ -299,7 +299,7 @@ ZombieGameAppDelegate *appDelegate;
 
 -(void)setPageLabels:(int)label{
 	
-	int crawlerLevel = [appDelegate GetCrawlerLevel];
+	//int crawlerLevel = [appDelegate GetCrawlerLevel];
 	int score;
 	
 	//score = [appDelegate getCrawlerMedal:0];
@@ -312,7 +312,7 @@ ZombieGameAppDelegate *appDelegate;
 	for(int i=0;i<15; ++i)
 	{
 		UILabel *label = [self getLevelLabel:i+1];
-		UIButton *button = [self getLevelButton:i+1];
+		//UIButton *button = [self getLevelButton:i+1];
 		message = [[NSString alloc] initWithFormat:@"%d", 1+(i+(pageNumber)* 15)];
 		[label setText:message];
 		[message release];	

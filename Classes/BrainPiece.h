@@ -18,7 +18,7 @@
 	int width;
 }
 
--(id) initPiece:(int)_speed: (int) x: (int) y: (int) width: (int) height: (NSString *)_image;
+-(id) initPiece:(int)_speed :(int) _x : (int) _y : (int) _width : (int) _height : (NSString *) _image;
 -(void) randomize;
 @property (nonatomic, assign) int speed;
 @property (nonatomic, retain) NSString *image;

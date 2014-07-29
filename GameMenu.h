@@ -6,7 +6,7 @@
 
 
 #import <UIKit/UIKit.h>
-#import "FBConnect.h"
+//#import "FBConnect.h"
 
 
 @class MainMenuViewController;
@@ -14,10 +14,7 @@
 @class OptionsViewController;
 
 
-@interface GameMenu : UIViewController 
-	<FBRequestDelegate,
-	FBDialogDelegate,
-	FBSessionDelegate>{
+@interface GameMenu : UIViewController{
 	
 	
 	MainMenuViewController *viewController;

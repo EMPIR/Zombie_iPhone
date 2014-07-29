@@ -13,6 +13,6 @@
 
 }
 
-+(void) playSound:(int) pieceID:(int) expression;
++(void) playSound:(int) pieceID : (int) expression;
 
 @end

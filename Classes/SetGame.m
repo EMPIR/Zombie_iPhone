@@ -112,7 +112,7 @@ typedef enum GameType
 }
 
 //variables: gt = gameType,  gl = game level
--(void) newGame:(int) gt: (int) gl{
+-(void) newGame:(int) gt : (int) gl{
 	if(gl < 0)
 		gl = 0;
 	//[SetLogic DeletePieces:pieces];
@@ -149,7 +149,7 @@ typedef enum GameType
 	isPaused = NO;*/
 }
 
--(BOOL) move:(int) a:(int) b: (int) c{
+-(BOOL) move:(int) a :(int) b : (int) c{
 	if([SetLogic ContainsMatch:[pieces objectAtIndex:a]:[pieces objectAtIndex:b]:[pieces objectAtIndex:c]])
 	{
 		return YES;
@@ -158,7 +158,7 @@ typedef enum GameType
 
 }
 
--(int) score:(int) a:(int) b: (int) c{
+-(int) score:(int) a :(int) b : (int) c{
 	return [SetLogic MatchScore:[pieces objectAtIndex:a]:[pieces objectAtIndex:b]:[pieces objectAtIndex:c]];
 	
 }

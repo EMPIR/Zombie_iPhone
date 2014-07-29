@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+	<script type="text/javascript" src="sprintf.min.js"></script>
+	<script type="text/javascript" src="zh.js"></script>
+	<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+	
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+	
+	<canvas id="myCanvas" width="480" height="720"></canvas>
+	<span id="dummy" onclick="playSound(this, ZH.MEDIA_ROOT + 'audio/11.wav');">
+	      <img src="../MEDIA_Zombie_iPhone/allGood.png" name="Bottom-1" width="105" height="70" border="0" id="Bottom-1"/>
+	</span>
+	
+    <script type="text/javascript">
+	function contains(a, obj) {
+	    for (var i = 0; i < a.length; i++) {
+	        if (a[i] === obj) {
+	            return true;
+	        }
+	    }
+	    return false;
+	}
+	function remove(a, obj) {
+	    for (var i = 0; i < a.length; i++) {
+	        if (a[i] === obj) {
+	            a.splice(i,1);
+	        }
+	    }
+	    return false;
+	}
+		var GamePieces = function()
+		{
+			this.indices = new Array();
+		};
+		
+		GamePieces.prototype={
+			contains: function(obj) {
+		    	for (var i = 0; i < this.indices.length; i++) {
+		        	if (this.indices[i] === obj) {
+		            	return true;
+		        	}
+		    	}
+		    	return false;
+			},
+
+			remove: function(obj) {
+		    	for (var i = 0; i < this.indices.length; i++) {
+		        	if (this.indices[i] === obj) {
+		            	this.indices.splice(i,1);
+		        	}
+		    	}
+		    	return false;
+			}
+			
+		};
+		
+		var Game = function(canvas,context, setGame, callback)
+		{
+			this.canvas = canvas;
+			this.context = context;
+			this.columns = 4;
+			this.pOffX = 30;
+			this.pOffY = 60;
+			this.selectedIndices = new Array();
+			this.backgroundImg = new Image();
+			this.wrongImg = new Image();
+			this.correctImg = new Image();
+		
+		 	this.imageObj = new Image();
+			this.selectedImg = new Image();
+			this.setGame = setGame;
+			this.imageObj.src = ZH.MEDIA_ROOT + 'allBad.png';
+			this.selectedImg.src = ZH.MEDIA_ROOT + "selected.png";
+			this.backgroundImg.src = ZH.MEDIA_ROOT + 'bg_GameMode.jpg';
+			this.wrongImg.src = ZH.MEDIA_ROOT + 'allBad.png';
+			this.correctImg.src = ZH.MEDIA_ROOT + 'allGood.png';
+			
+			function afterLoad(thisObj)
+			{
+				//alert('afterLoad');
+				callback();
+			};
+		 	this.backgroundImg.onload = afterLoad(this);
+		
+			
+			
+			
+			
+		
+			
+			
+			
+		};
+
+		Game.prototype={
+			
+			
+		};
+
+
+		var canvas = document.getElementById('myCanvas');
+    	var context = canvas.getContext('2d');
+
+		function callback()
+		{
+			//redrawSelected();
+		};
+		
+		var theGame = new Game(canvas,context,setGame, callback);
+
+/*
+		var width = 4; //total pieces in any row
+		var height = 0;
+		var pOffX = 30;
+		var pOffY = 60;
+		
+		var selectedIndices = new Array();
+	
+		function contains(a, obj) {
+	    	for (var i = 0; i < a.length; i++) {
+	        	if (a[i] === obj) {
+	            	return true;
+	        	}
+	    	}
+	    	return false;
+		}
+	
+		function remove(a, obj) {
+	    	for (var i = 0; i < a.length; i++) {
+	        	if (a[i] === obj) {
+	            	a.splice(i,1);
+	        	}
+	    	}
+	    	return false;
+		}
+	*/
+	
+		$(document).ready(function(){
+			canvas.addEventListener('click', function(e) {
+		
+				redrawPieces();
+				var column = 0;
+				var row = 0;
+				var selectedIndex = 0;
+				
+				var coords = getSelectedPiece(e);
+				column = coords[0];
+				row = coords[1];
+				selectedIndex = coords[2];
+				console.log('click: ' + e.offsetX + '/' + e.offsetY);
+				console.log('row = ' + row +' column = '+ column);
+				
+				console.log('selected index = ' + selectedIndex);
+				if(theGame.selectedIndices.length < 3)
+				{
+				
+				}
+				else{
+					theGame.selectedIndices = [];
+				}
+				if(!contains(theGame.selectedIndices,selectedIndex))
+				{
+					theGame.selectedIndices.push(selectedIndex);
+				}
+				else{
+					remove(selectedIndices,selectedIndex);
+				}
+				height = 0;
+				redrawSelected();
+			
+				if(selectedIndices.length == 3)
+				{
+					var index1 = setGame.state[selectedIndices[0]];
+					var index2 = setGame.state[selectedIndices[1]];
+					var index3 = setGame.state[selectedIndices[2]];
+				
+					var piece1 = setGame.pieces[index1];
+					var piece2 = setGame.pieces[index2];
+					var piece3 = setGame.pieces[index3];
+				
+					var moveRes = setGame.move(index1,index2,index3);
+					console.log('MatchScore = '+ moveRes);
+					if(moveRes == true)
+					{
+						redrawCorrect();
+						setTimeout(function(){
+							setGame.GetNewPieces(selectedIndices[0],selectedIndices[1],selectedIndices[2]);	
+							selectedIndices= [];
+							redrawSelected();
+							},250);
+					}
+					else{
+						redrawWrong();
+						setTimeout(function(){
+							selectedIndices= [];
+							redrawSelected();
+							},250);	
+					}
+				
+				}
+			});
+			
+	
+		
+		
+		
+		}); //end $(document).ready(function(){
+		
+		
+  			function redrawPieces(){
+				theGame.context.clearRect(0, 0, canvas.width, canvas.height);
+				theGame.context.drawImage(theGame.backgroundImg,0,0);
+				var height = 0;
+				for(var i=0;i<theGame.setGame.state.length;++i)
+				{
+					if(i>0 && (i)%theGame.width == 0)
+						height ++;
+					theGame.context.drawImage(theGame.setGame.pieces[theGame.setGame.state[i]].image, theGame.pOffX + (i%this.width)*105, theGame.pOffY + height*70);
+				}
+			};
+
+			function redrawSelectedOverPieces(img){
+				console.log('img = ' + img);
+				redrawPieces();
+				var height = 0;
+				for(var i=0;i<theGame.selectedIndices.length;++i)
+				{
+					var index= theGame.selectedIndices[i];
+					console.log('index= ' + index+' '+theGame.setGame.state[index]);
+					//if(index>0 && (index)%width == 0)
+					//	height ++;
+					height = parseInt(index / this.width);
+					//console.log('height = ' + height);	
+					context.drawImage(setGame.pieces[theGame.setGame.state[index]].image, theGame.pOffX + (index% this.width)*105, theGame.pOffY + height*70);
+					theGame.context.drawImage(img, pOffX + (index%width)*105, theGame.pOffY + height*70);
+					console.log(theGame.setGame.pieces[theGame.setGame.state[index]].image.src);
+				}
+			};
+
+			function redrawSelected(){
+				console.log('theGame = ' + theGame);
+				redrawSelectedOverPieces(theGame.selectedImg);
+			};
+
+			function redrawWrong(){
+				this.redrawSelectedOverPieces(theGame.wrongImg);
+			};
+
+			function redrawCorrect(){
+				this.redrawSelectedOverPieces(theGame.correctImg);
+			};
+
+			function getSelectedPiece (e,column,row){
+				var column,row,selectedIndex;
+				var pOffX = theGame.pOffX;
+				var pOffY = theGame.pOffY;
+				var width = theGame.width;
+				//0-105,106-211,212-307,308-413
+				if(e.offsetX < pOffX + 105)
+				{
+					column = 0;
+				}
+				else if(e.offsetX < pOffX + 211)
+				{
+					column = 1;
+				}
+				else if(e.offsetX < pOffX + 316)
+				{
+					column = 2;
+				}
+				else{
+					column = 3;
+				}
+				if(e.offsetY < pOffY + 70)
+				{
+					row=  0;
+				}
+				else if(e.offsetY < pOffY + 140)
+				{
+					row = 1;
+				}
+				else 
+				{
+					row = 2;
+				}
+				selectedIndex =  (row * width + column);
+				return [column,row,selectedIndex];
+			};
+      
+	  
+		 function playSound(el,soundfile) {
+		 	if (el.mp3) {
+				el.mp3.currentTime= 0;
+				el.mp3.play();
+		    	
+		    } else {
+		    	el.mp3 = new Audio(soundfile);
+		       	el.mp3.play();
+		    }
+		 }	 
+	 
+    </script>
+
+
+	
+  </body>
+</html>

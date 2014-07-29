@@ -44,7 +44,7 @@
 -(void) LoadCachedCrawlerScores;
 -(int) GetCachedCrawlerScore:(int) index;
 -(void) readScoresFromDatabase;
--(void) insertScore:(int) score:(int)gameType:(NSDate *) date;
+-(void) insertScore:(int) score : (int)gameType : (NSDate *) date;
 -(void) deleteAllScores;
 -(void) BackgroundVolume:(double) val;
 -(void) SoundFX:(BOOL)val;
@@ -72,7 +72,7 @@
 -(int) getCachedCrawlerDifficulty;
 -(int) getCrawlerDifficulty;
 -(int) getBerzerkDifficulty;
--(void) setCrawlerDifficulty:(int) level:(int) score;
+-(void) setCrawlerDifficulty:(int) level : (int) score;
 -(void) setBerzerkDifficulty:(int) val;
 -(void) SetCrawlerLevel:(int) index;
 -(int) GetCrawlerLevel;

@@ -116,16 +116,16 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 
 +(SetPiece *) CreatePiece{
 	SetPiece *p = [[[SetPiece alloc] init] autorelease];
-	p.color =  [GameLogic randomNumber:1,3];
-	p.shape =  [GameLogic randomNumber:1,3];
-	p.fill =   [GameLogic randomNumber:1,3];
-	p.number = [GameLogic randomNumber:1,3];
+	p.color =  [GameLogic randomNumber:1:3];
+    p.shape =  [GameLogic randomNumber:1:3];
+	p.fill =   [GameLogic randomNumber:1:3];
+	p.number = [GameLogic randomNumber:1:3];
 	
 	return p;
 }
 
 
-+(BOOL) Contains:(SetPiece *)piece:(NSMutableArray *)pieces{
++(BOOL) Contains:(SetPiece *)piece : (NSMutableArray *)pieces{
 
 	NSEnumerator *enumerator = [pieces objectEnumerator];
 	SetPiece *object;
@@ -152,10 +152,10 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 	
 	while(cont)
 	{
-		p.color =  [GameLogic randomNumber:1,3];
-		p.shape =  [GameLogic randomNumber:1,3];
-		p.fill =   [GameLogic randomNumber:1,3];
-		p.number = [GameLogic randomNumber:1,3];
+		p.color =  [GameLogic randomNumber:1:3];
+		p.shape =  [GameLogic randomNumber:1:3];
+		p.fill =   [GameLogic randomNumber:1:3];
+		p.number = [GameLogic randomNumber:1:3];
 		if(![self Contains:p:pieces])
 			cont = NO;
 	}
@@ -166,9 +166,9 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 
 +(SetPiece *) CreateSimplePiece{
 	SetPiece *p = [[[SetPiece alloc] init]autorelease];
-	p.color =  [GameLogic randomNumber:1,3];
-	p.shape =  [GameLogic randomNumber:1,3];
-	p.number = [GameLogic randomNumber:1,3];
+	p.color =  [GameLogic randomNumber:1:3];
+	p.shape =  [GameLogic randomNumber:1:3];
+	p.number = [GameLogic randomNumber:1:3];
 	p.fill =   1;
 	return p;
 }
@@ -241,7 +241,7 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 /// </summary>
 /// <param name="pieces"></param>
 /// <returns></returns>
-+(NSMutableArray *) ContainsMatch:(NSMutableArray *) pieces: (NSMutableArray *) state{
++(NSMutableArray *) ContainsMatch:(NSMutableArray *) pieces : (NSMutableArray *) state{
 	NSMutableArray *ret = [[[NSMutableArray alloc]init]autorelease];
 	
 	NSLog (@"ContainsMatch Start");
@@ -307,7 +307,7 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 /// </summary>
 /// <param name="pieces"></param>
 /// <returns></returns>
-+(BOOL) isMatch:(NSMutableArray *) pieces: (NSMutableArray *) state{
++(BOOL) isMatch:(NSMutableArray *) pieces : (NSMutableArray *) state{
 	
 	NSLog (@"isMacth Start");
 	if (pieces.count < 3)
@@ -362,7 +362,7 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 /// </summary>
 /// <param name="pieces"></param>
 /// <returns></returns>
-+(NSMutableArray *) GetMatchIndices:(NSMutableArray *) pieces: (NSMutableArray *) state{
++(NSMutableArray *) GetMatchIndices:(NSMutableArray *) pieces : (NSMutableArray *) state{
 	NSMutableArray *ret = [[[NSMutableArray alloc]init]autorelease];
 	
 	if (pieces.count < 3)
@@ -431,7 +431,7 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 /// <param name="b"></param>
 /// <param name="c"></param>
 /// <returns></returns>
-+(BOOL) Match:(int) a: (int) b:(int) c{
++(BOOL) Match:(int) a : (int) b : (int) c{
 	if ((a == b && b == c) || (a != b && b != c && a != c))
 	{
 		return YES;
@@ -450,7 +450,7 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 /// <param name="b"></param>
 /// <param name="c"></param>
 /// <returns></returns>
-+(BOOL) ContainsMatch:(SetPiece *)a: (SetPiece *)b: (SetPiece *)c{
++(BOOL) ContainsMatch:(SetPiece *)a : (SetPiece *)b : (SetPiece *)c{
 	if (![self Match:a.number: b.number: c.number])
 		return NO;
 	if (![self Match:a.color: b.color: c.color])
@@ -464,7 +464,7 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 }
 
 
-+(int) MatchScore:(SetPiece *)a: (SetPiece *)b: (SetPiece *)c{
++(int) MatchScore:(SetPiece *)a : (SetPiece *)b : (SetPiece *)c{
 	int ret = 1;
 
 	if(![self ContainsMatch:a:b:c])
@@ -584,12 +584,12 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 
 
 
-+(NSMutableArray *) CreateState:(NSMutableArray *)pieces:(int)totalPieces{
++(NSMutableArray *) CreateState:(NSMutableArray *)pieces : (int)totalPieces{
 	NSMutableArray *ret = [[[NSMutableArray alloc]init] autorelease];
 	BOOL again = YES;
 	while(again){
 		for(int i=0;i<12;++i){
-			int ra = [GameLogic randomNumber:0,(totalPieces-1)];
+			int ra = [GameLogic randomNumber:0:(totalPieces-1)];
 			NSNumber *ns = [NSNumber numberWithInt:ra];
 			NSLog(@"Creating State: %d %d", i, ra);
 			[ret addObject: ns];
@@ -611,11 +611,11 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 	return ret;
 }
 
-+(void) CreateState:(NSMutableArray *)pieces:(NSMutableArray *)state:(int) totalPieces{
++(void) CreateState:(NSMutableArray *)pieces : (NSMutableArray *)state : (int) totalPieces{
 	BOOL again = YES;
 	while(again){
 		for(int i=0;i<12;++i){
-			int ra = [GameLogic randomNumber:0,(totalPieces-1)];
+			int ra = [GameLogic randomNumber:0:(totalPieces-1)];
 			NSNumber *ns = [NSNumber numberWithInt:ra];
 			NSLog(@"Creating State: %d %d", i, ra);
 			[state replaceObjectAtIndex:i withObject:ns];
@@ -632,24 +632,24 @@ int levelstartstop[] = {1,1, 1,3, 1,1, //level 1  - 1 head, 3 color, 1 shade = 3
 }
 
 
-+(void) GetNewPieces:(int)a:(int)b:(int)c: (NSMutableArray *)ret: (NSMutableArray *)pieces:(int) totalPieces{
++(void) GetNewPieces:(int)a : (int)b : (int)c : (NSMutableArray *)ret : (NSMutableArray *)pieces : (int) totalPieces{
 	
 	NSLog( @"GetNewPieces Start");
 	BOOL again = YES;
 	while(again){
-		int ra = [GameLogic randomNumber:0,(totalPieces-1)];
+		int ra = [GameLogic randomNumber:0:(totalPieces-1)];
 		NSNumber *ns = [NSNumber numberWithInt:ra];
 		//NSUInteger r = a;
 		//[ret replaceObjectAtIndex:r: withObject:ns];
 		[ret replaceObjectAtIndex:a withObject:ns];
 		
-		ra = [GameLogic randomNumber:0,(totalPieces-1)];
+		ra = [GameLogic randomNumber:0:(totalPieces-1)];
 		ns = [NSNumber numberWithInt:ra];
 		//r = b;
 		//[ret replaceObjectAtIndex:r: withObject:ns];
 		[ret replaceObjectAtIndex:b withObject:ns];
 		
-		ra = [GameLogic randomNumber:0,(totalPieces-1)];
+		ra = [GameLogic randomNumber:0:(totalPieces-1)];
 		ns = [NSNumber numberWithInt:ra];
 		//r = c;
 		//[ret replaceObjectAtIndex:r: withObject:ns];

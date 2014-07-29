@@ -16,7 +16,7 @@
 
 
 
--(void) playSound2:(int) pieceID:(int) expression {
+-(void) playSound2:(int) pieceID : (int) expression {
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	if(!appDelegate.soundFX)
 		return;
@@ -67,7 +67,7 @@
 	[gameTimer invalidate];
 	[gameTimer release];
 
-	[[self parentViewController] dismissModalViewControllerAnimated:NO];
+	[self dismissViewControllerAnimated:NO completion:nil];
 }
 
 
@@ -159,7 +159,7 @@
 	if(randomTwitch == 0)
 	{
 
-		[self playSound2:[GameLogic randomNumber:1,3]:[GameLogic randomNumber:1,2]];
+		[self playSound2:[GameLogic randomNumber:1:3]:[GameLogic randomNumber:1:2]];
 	}
 }
 

@@ -25,7 +25,8 @@
 
 -(IBAction) backMainMenu:(id) sender
 {
-	[[self parentViewController] dismissModalViewControllerAnimated:NO];
+	//[[self parentViewController] dismissModalViewControllerAnimated:NO];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -48,7 +49,7 @@
 #ifndef DOGHOUSE	
 	//[textView setText:@"Zombie House!"];
 	//[textView performSelectorOnMainThread:@selector(setText:) withObject:@"Zombie House" waitUntilDone:YES];
-	textView.text = @"In Zombie House each card has three features:\n   Zombie (Baldy, Nerdy, Girly)\n   Color (Blue, Purple, Green)\n   Shade (Full Color, Monotone, Outline)\n\nYou make Zombie Comboz by selecting 3 Zombies. A correct answer will have all the same or all different values for each feature.\nClick the Zombies Cards to the right to generate Zombie Comboz!\n\n\Zombie House has two Game Modes, Classic Crawler and Berzerker.\n\nClassic Crawler:\n  Solve 10 Comboz in the shortest amount of time possible. Your score is the number of seconds it takes to complete all 10 Comboz. Advance to the next level by completing a board in 40 seconds or less.\n\nBerzerker:\n  Play against the clock to see how many Comboz you can get before you run out of time.  Beat your high score and get out of Zombie House alive!";// +
+	textView.text = @"In Zombie House each card has three features:\n   Zombie (Baldy, Nerdy, Girly)\n   Color (Blue, Purple, Green)\n   Shade (Full Color, Monotone, Outline)\n\nYou make Zombie Comboz by selecting 3 Zombies. A correct answer will have all the same or all different values for each feature.\nClick the Zombies Cards to the right to generate Zombie Comboz!\n\n Zombie House has two Game Modes, Classic Crawler and Berzerker.\n\nClassic Crawler:\n  Solve 10 Comboz in the shortest amount of time possible. Your score is the number of seconds it takes to complete all 10 Comboz. Advance to the next level by completing a board in 40 seconds or less.\n\nBerzerker:\n  Play against the clock to see how many Comboz you can get before you run out of time.  Beat your high score and get out of Zombie House alive!";// +
 #else
 	//[textView setText:@"Dog House!"];
 	//[textView performSelectorOnMainThread:@selector(setText:) withObject:@"Dog House" waitUntilDone:YES];
@@ -128,13 +129,13 @@
 	
 	
 		
-	int i = [GameLogic randomNumber:1,3];
-	int j = [GameLogic randomNumber:1,3];
-	int k = [GameLogic randomNumber:1,3];
+	int i = [GameLogic randomNumber:1:3];
+	int j = [GameLogic randomNumber:1:3];
+	int k = [GameLogic randomNumber:1:3];
 	
-	int allSame1 = [GameLogic randomNumber:0,11];
-	int allSame2 = [GameLogic randomNumber:0,11];
-	int allSame3 = [GameLogic randomNumber:0,11];
+	int allSame1 = [GameLogic randomNumber:0:11];
+	int allSame2 = [GameLogic randomNumber:0:11];
+	int allSame3 = [GameLogic randomNumber:0:11];
 
 	
 	
@@ -189,7 +190,7 @@
 	[button3 setImage:img forState:UIControlStateNormal];
 	[button3 setShowsTouchWhenHighlighted:YES];
 	
-	int exp = [GameLogic randomNumber:1,2];
+	int exp = [GameLogic randomNumber:1:2];
 	[ZombieGameHelpers playSound:i:exp];
 	//[imagestr1 release];
 	//[imagestr2 release];

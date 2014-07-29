@@ -19,7 +19,7 @@
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <CoreGraphics/CoreGraphics.h>
-#import "FBConnect.h"
+//#import "FBConnect.h"
 #import "ClassicLevels.h"
 
 
@@ -77,16 +77,14 @@ static NSUInteger kNumberOfPages = 3;
 @synthesize facebook;
 
 int TOTAL_BRAINS = 60;
-crawlerSelection = YES;
-crawlerCurrentLevel = 0;
+BOOL crawlerSelection = YES;
+int crawlerCurrentLevel = 0;
 
-
+/*
 //http://www.facebook.com/developers/#!/developers/apps.php?app_id=146670792037872
 #ifdef SEASONHOUSE
-
 static NSString* kFacebookAppId = @"111624085577299";
 static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/developers/apps.php?app_id=111624085577299";
-
 #else
 #ifdef DOGHOUSE
 static NSString* kFacebookAppId = @"155974964426893";
@@ -96,7 +94,7 @@ static NSString* kFacebookAppId = @"146670792037872";
 static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/developers/apps.php?app_id=146670792037872";
 #endif
 #endif
-
+*/
 
 
 
@@ -388,13 +386,13 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	NSMutableArray *match = [[setGame getMatch]retain];
 	NSNumber *aa = (NSNumber *) [match objectAtIndex:0];
 	NSNumber *bb = (NSNumber *) [match objectAtIndex:1];
-	NSNumber *cc = (NSNumber *) [match objectAtIndex:2];
+	//NSNumber *cc = (NSNumber *) [match objectAtIndex:2];
 	int a = [aa intValue];
 	int b = [bb intValue];
 	//int c = [cc intValue];
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
-	NSLog(@"appDelegate.showHint %B", appDelegate.showHint);
+	//NSLog(@"appDelegate.showHint %B", appDelegate.showHint);
 	
 	if(setGame.isActive && appDelegate.showHint == YES && hintVisible == YES)
 	{
@@ -417,7 +415,9 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	int brain_twitchey = -1;
 	if(randomTwitch == 0)
 	{
-		twitchey = (int)[GameLogic randomNumber:0,11];
+		twitchey = (int)[GameLogic randomNumber:0 :11];
+                         
+                         
 	}
 	
 	if(brain_randomTwitch == 0)
@@ -576,13 +576,13 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 }
 
 
--(void) setButtonPressed:(int) index:(int) value
+-(void) setButtonPressed:(int) index : (int) value
 {
 	[setGame.pressed_state replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:value]];
 }
 
 
--(void) incrementCrawlerDifficulty:(int) level:(int) score{
+-(void) incrementCrawlerDifficulty:(int) level : (int) score{
 	
 	
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -642,7 +642,8 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	
 	 
 	
-	int prevTime = [appDelegate getCrawlerLevelVotes:crawlerCurrentLevel];
+	//int prevTime = [appDelegate getCrawlerLevelVotes:crawlerCurrentLevel];
+    int prevTime = [appDelegate GetCrawlerLevel];
 	//does this level exists?
 	if(prevTime > 0)
 	{
@@ -650,7 +651,9 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		if(currentTime < prevTime)
 		{
 			//update the database
-			[appDelegate updateCrawlerDifficulty:crawlerCurrentLevel:currentTime];
+			//[appDelegate updateCrawlerDifficulty:crawlerCurrentLevel:currentTime];
+            [appDelegate setCrawlerDifficulty:crawlerCurrentLevel:currentTime];
+            
 			//TO DO: REVISIT HIGH SCORES FOR CRAWLER
 			//[appDelegate insertScore:setGame.gameScore : setGame.gameType];
 		}
@@ -719,7 +722,10 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	}
 	
 	
-	int levelScore = [appDelegate getCrawlerLevelVotes:crawlerCurrentLevel];
+    //BUG!!!
+    int levelScore = 0;
+	//int levelScore = [appDelegate getCrawlerLevelVotes:crawlerCurrentLevel];
+    
 
 	
 	//show if crawlerCurrentLevel is not 0 and crawlerCurrentLevel is the last completed board and crawlerCurrentLevel is not the last board
@@ -828,7 +834,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		message = [[NSString alloc] initWithFormat:@"Level: %d", crawlerCurrentLevel+1];
 	//}
 	
-	NSLog(message);
+	 //NSLog(message);
 	[crawlerLevelLabel setText:message];
 	[finishedLabel2 setText:message];
 	[message release];
@@ -848,8 +854,8 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		message =[[NSString alloc] initWithFormat:@"?"];
 	}
 	[crawlerTimeLabel setText:message];
-	NSLog(message);
-	[finishedLabel setText:message];
+	//NSLog(message);
+    [finishedLabel setText:message];
 	[message release];
 	
 	
@@ -883,7 +889,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	
 }
 
-+(void) setCrawlerLevel:(int) index
+-(void) setCrawlerLevel:(int) index
 {
 	crawlerCurrentLevel = index;
 	setGame.isActive = YES;
@@ -1091,7 +1097,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 }
 
 
--(BOOL) buttonDown:(int) index:(id)sender
+-(BOOL) buttonDown:(int) index : (id)sender
 {
 	//added this check to prevent state changes after game finishes
 	if([self isGameFinished])
@@ -1350,7 +1356,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 
 -(IBAction) facebookButtonDown:(id)sender{
 		
-	
+	/*
 	NSArray* _permissions;
 	
 	_permissions =  [[NSArray arrayWithObjects: 
@@ -1474,7 +1480,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		[facebook dialog: @"stream.publish" andParams: params andDelegate:self];
 		[message release];
 	}
-	
+	*/
 	
 	//facebookButton.hidden = YES;
 	
@@ -1527,7 +1533,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	[appDelegate StopEatingTrack];
 	crawlerSelection = YES;
 	
-	[self dismissModalViewControllerAnimated:NO];
+	[self dismissViewControllerAnimated:NO completion:nil];
 	//[[self parentViewController] dismissModalViewControllerAnimated:NO];
 }
 
@@ -1622,7 +1628,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 		theGame.flipper = NO;
 	}*/
 }
--(BOOL) buttonUp:(int) index:(id)sender
+-(BOOL) buttonUp:(int) index : (id)sender
 {
 	//button was released
 	[self setButtonPressed:index-1:0];
@@ -1700,13 +1706,14 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
     }
 	else {
 		[controller setPageLabels:page];
+
 		
 	}
 
-	if(nil == controller.view)
+	/*if(nil == controller.view)
 	{
 		int debug = 0;
-	}
+	}*/
 	
     // add the controller's view to the scroll view
     if (nil == controller.view.superview) {
@@ -1823,7 +1830,7 @@ static NSString* FacebookAppLink = @"http://www.facebook.com/developers/#!/devel
 	} */
 	
 	
-	facebook = [[Facebook alloc] init];
+	//facebook = [[Facebook alloc] init];
 	
 	m_brainView1 = [[UIImageView alloc]init];
 	[self.view addSubview:m_brainView1];

@@ -9,7 +9,7 @@
 #import "Scores.h"
 #import <AVFoundation/AVFoundation.h>
 #import "StringConst.h"
-#import "ZombieGameViewController.h";
+#import "ZombieGameViewController.h"
 
 
 
@@ -80,7 +80,7 @@
 	
 	BOOL ret = FALSE;
 	// Open the database from the users filessytem
-	NSLog(databasePath);
+	//NSLog(databasePath);
 	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
 		// Setup the SQL Statement and compile it for faster access
 		const char *sqlStatement = "SELECT * FROM sqlite_master WHERE type='table' AND name='highScores'";
@@ -624,7 +624,7 @@
 
 
 
--(void) insertCrawlerDifficulty:(int) _level: (int) _score{
+-(void) insertCrawlerDifficulty:(int) _level : (int) _score{
 	crawlerScores[_level] = _score;
 	// Setup the database object
 	sqlite3 *database;
@@ -659,7 +659,7 @@
 
 
 
--(void) updateCrawlerDifficulty:(int) _level: (int) _score{
+-(void) updateCrawlerDifficulty:(int) _level : (int) _score{
 	
 	crawlerScores[_level] = _score;
 	// Setup the database object
@@ -743,7 +743,7 @@
 
 
 
--(void) insertScore:(int) score:(int)gameType:(NSDate *) date{
+-(void) insertScore:(int) score : (int)gameType : (NSDate *) date{
 	// Setup the database object
 	sqlite3 *database;
 	
@@ -783,7 +783,7 @@
 	return berzerkDiff;
 }
 
--(void) setCrawlerDifficulty:(int) level:(int)score
+-(void) setCrawlerDifficulty:(int) level : (int)score
 {
 	crawlerDiff = level;
 	
@@ -893,7 +893,6 @@
 	
 	// Now try to set the orientation to landscape (right)
 	[[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeRight];
-	
 	
 	return YES;
 }

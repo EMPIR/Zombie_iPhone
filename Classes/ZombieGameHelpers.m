@@ -15,7 +15,7 @@
 
 @implementation ZombieGameHelpers
 
-+(void) playSound:(int) pieceID:(int) expression {
++(void) playSound:(int) pieceID : (int) expression {
 	ZombieGameAppDelegate *appDelegate = (ZombieGameAppDelegate *)[[UIApplication sharedApplication] delegate];
 	if(!appDelegate.soundFX)
 		return;

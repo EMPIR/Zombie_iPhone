@@ -19,7 +19,7 @@
 	[setGame newGame:1:[appDelegate getCrawlerDifficulty]-1];
 	self.viewController.setGame = self.setGame;
 	NSLog(@"Play Clicked, now load Game View!");
-	[self presentModalViewController:viewController animated:NO];
+	[self presentViewController:viewController animated:NO completion:nil];
 }
 -(IBAction) playRamero:(id) sender{
 #ifndef DEMO
@@ -28,7 +28,7 @@
 	[setGame newGame:2:[appDelegate getBerzerkDifficulty]];
 	self.viewController.setGame = self.setGame;
 	NSLog(@"Play Clicked, now load Game View!");
-	[self presentModalViewController:viewController animated:NO];
+	[self presentViewController:viewController animated:NO completion:nil];
 #else
 #ifdef DOGHOUSE
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://itunes.apple.com/us/app/dog-house/id397054437?mt=8"]];
@@ -39,12 +39,16 @@
 }
 
 -(IBAction) howToPlay:(id) sender{
-	[self presentModalViewController:howToPlayController animated:NO];
-}
+	[self presentViewController:howToPlayController animated:NO completion:nil];
+    
+   }
 
 -(IBAction) mainMenu:(id)sender{
 	
-	[[self parentViewController] dismissModalViewControllerAnimated:NO];
+	//[[self parentViewController] dismissModalViewControllerAnimated:NO];
+    [self  dismissViewControllerAnimated:NO completion:nil];
+    //[[self parentViewController] dismissModalViewControllerAnimated:NO completion:nil];
+
 }
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.

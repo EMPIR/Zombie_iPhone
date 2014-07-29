@@ -15,7 +15,7 @@
 +(double) randomNumber;
 
 //returns a random number between the specidied bounds
-+(int) randomNumber:(int) floor, int ceiling;
++(int) randomNumber:(int) floor : (int) ceiling;
 
 //@property (nonatomic,assign) BOOL seed;
 

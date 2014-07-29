@@ -63,7 +63,7 @@
 @property (assign, nonatomic) int gameTime;
 @property (assign, nonatomic) int currentTime;
 
--(BOOL) move:(int) a:(int) b: (int) c;
+-(BOOL) move:(int) a : (int) b : (int) c;
 
 -(BOOL) makeMove;
 -(NSMutableArray *) getMatch;
