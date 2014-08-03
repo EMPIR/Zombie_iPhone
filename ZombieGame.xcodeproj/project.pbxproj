@@ -2421,7 +2421,7 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2701035112386AC6004688AF /* Default-LandscapeLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-LandscapeLeft.png"; path = "iPad/Default-LandscapeLeft.png"; sourceTree = "<group>"; };
 		2701035F12386B4E004688AF /* Default-LandscapeRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-LandscapeRight.png"; path = "iPad/Default-LandscapeRight.png"; sourceTree = "<group>"; };
-		270A3F0212BE8A6300166380 /* ZombieHouseLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ZombieHouseLite.app; path = ZombieGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		270A3F0212BE8A6300166380 /* ZombieGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZombieGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		270A3F0412BE8A6300166380 /* ZombieGame-Info copy 3.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZombieGame-Info copy 3.plist"; sourceTree = "<group>"; };
 		270A3F5F12BE8D6B00166380 /* allBad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allBad.png; sourceTree = "<group>"; };
 		270A3F6012BE8D6B00166380 /* allBad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "allBad@2x.png"; sourceTree = "<group>"; };
@@ -2875,7 +2875,7 @@
 		2717095912505E1A00C0AEBA /* waterhit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = waterhit.wav; path = MEDIA_Doghouse_iPhone/waterhit.wav; sourceTree = "<group>"; };
 		27175F631986E80500357AD7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		271F9A3C11FD2D2A00DAADDE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = iPad/Icon.png; sourceTree = "<group>"; };
-		2720F37A12AC2346000D9CB9 /* Dog House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Dog House.app"; path = ZombieGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2720F37A12AC2346000D9CB9 /* ZombieGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZombieGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2720F37C12AC2346000D9CB9 /* ZombieGame-Info copy 2.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZombieGame-Info copy 2.plist"; sourceTree = "<group>"; };
 		273203ED12456002004F2F9F /* Dog House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27320414124561ED004F2F9F /* 1110a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1110a.png; path = MEDIA_Doghouse_iPhone/Pieces/1110a.png; sourceTree = "<group>"; };
@@ -4428,8 +4428,8 @@
 				27E645C011C1799700D91ADF /* ZombieGame-iPad.app */,
 				273203ED12456002004F2F9F /* Dog House.app */,
 				279134AD124AA0080061FD1B /* ZombieGame.app */,
-				2720F37A12AC2346000D9CB9 /* Dog House.app */,
-				270A3F0212BE8A6300166380 /* ZombieHouseLite.app */,
+				2720F37A12AC2346000D9CB9 /* ZombieGame.app */,
+				270A3F0212BE8A6300166380 /* ZombieGame.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -6553,7 +6553,7 @@
 			);
 			name = DogHouseLite;
 			productName = ZombieGame;
-			productReference = 270A3F0212BE8A6300166380 /* ZombieHouseLite.app */;
+			productReference = 270A3F0212BE8A6300166380 /* ZombieGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2720F18412AC2346000D9CB9 /* Seasonal */ = {
@@ -6570,7 +6570,7 @@
 			);
 			name = Seasonal;
 			productName = ZombieGame;
-			productReference = 2720F37A12AC2346000D9CB9 /* Dog House.app */;
+			productReference = 2720F37A12AC2346000D9CB9 /* ZombieGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 		273201EA12456002004F2F9F /* DogHouse */ = {

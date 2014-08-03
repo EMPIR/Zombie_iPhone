@@ -888,11 +888,12 @@
 	[self PlayNonGameTrack];
 
 	// Override point for customization after app launch    
-    [window addSubview:viewController.view];
+    //[window addSubview:viewController.view];
+    [self.window setRootViewController:viewController];
     [window makeKeyAndVisible];
 	
 	// Now try to set the orientation to landscape (right)
-	[[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeRight];
+	//[[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeRight];
 	
 	return YES;
 }
